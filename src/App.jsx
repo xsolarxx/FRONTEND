@@ -1,10 +1,12 @@
 import "./App.css";
-import { Company } from "./pages/Company/Company";
+import { Footer } from "./components";
+
 
 const App = () => {
   return (
     <>
-      <Company />
+   
+      <Footer/>
     </>
   );
 };

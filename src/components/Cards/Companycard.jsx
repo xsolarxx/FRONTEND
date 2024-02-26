@@ -1,4 +1,4 @@
-export const Companycard = ({ company }) =>
+export const CompanyCard = ({ company }) =>
   //     {
   //   userCompanyRatings,
   //   userCompanyReviews,

@@ -21,7 +21,7 @@ export const Company = () => {
   return (
     <div>
       <h1> Company Page </h1>
-      <CompanyListings companies={companies} />
+      <CompanyListings>{companies}</CompanyListings>{" "}
     </div>
   );
 };

@@ -45,7 +45,7 @@ export const deleteComment = async (idComment) => {
 export const update = async (id) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.get(`/comment/update/${id}`)
+  return APIGeneral.patch(`/comment/update/${id}`)
     .then((res) => res)
     .catch((error) => error);
 };

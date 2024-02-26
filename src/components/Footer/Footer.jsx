@@ -1,5 +1,4 @@
 import "./Footer.css";
-
 export const Footer = () => {
   return (
     <footer className="footer">
@@ -18,7 +17,6 @@ export const Footer = () => {
         </div>
         <div className="column-center">
           <h2 className="navegacion">Navegación</h2>
-   
         </div>
       </div>
       <p>2024 © All rights reserved</p>

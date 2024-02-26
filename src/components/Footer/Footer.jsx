@@ -5,9 +5,9 @@ export const Footer = () => {
       <div className="footer-content">
         <div className="column-center">
           <h2>Síguenos</h2>
-          <p>Linkdien</p>
+          <p>Linkdin</p>
           <p>Twitter</p>
-          <p>Instagran</p>
+          <p>Instagram</p>
           <p>PodCast</p>
         </div>
         <div className="column-center">

@@ -5,7 +5,7 @@ export const Footer = () => {
       <div className="footer-content">
         <div className="column-center">
           <h2>Síguenos</h2>
-          <p>Linkdin</p>
+          <p>Linkedin</p>
           <p>Twitter</p>
           <p>Instagram</p>
           <p>PodCast</p>

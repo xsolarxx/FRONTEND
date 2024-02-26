@@ -9,6 +9,7 @@
   width: 100%;
   height: 300px;
   box-sizing: border-box;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .footer-content {

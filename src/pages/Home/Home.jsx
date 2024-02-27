@@ -1,4 +1,4 @@
-import "./Home.css";
+import './Home.css';
 
 export const Home = () => {
   return (
@@ -11,12 +11,11 @@ export const Home = () => {
       </div>
       <h2>Energias Renováveis</h2>
       <p>
-        As energias renováveis, incluindo solar, eólica, hidrelétrica, biomassa
-        e geotérmica, oferecem uma alternativa ecologicamente correta para a
-        produção de eletricidade. Ao aproveitar os recursos naturais
-        disponíveis, podemos reduzir significativamente as emissões de gases de
-        efeito estufa, combater as mudanças climáticas e garantir um futuro mais
-        limpo para as gerações futuras.
+        As energias renováveis, incluindo solar, eólica, hidrelétrica, biomassa e
+        geotérmica, oferecem uma alternativa ecologicamente correta para a produção de
+        eletricidade. Ao aproveitar os recursos naturais disponíveis, podemos reduzir
+        significativamente as emissões de gases de efeito estufa, combater as mudanças
+        climáticas e garantir um futuro mais limpo para as gerações futuras.
       </p>
 
       <h2>O Que Você Encontrará?</h2>
@@ -29,8 +28,8 @@ export const Home = () => {
       </ul>
 
       <p>
-        Explore nosso site para descobrir como você pode se envolver e
-        contribuir para um futuro mais sustentável e limpo!
+        Explore nosso site para descobrir como você pode se envolver e contribuir para um
+        futuro mais sustentável e limpo!
       </p>
     </div>
   );

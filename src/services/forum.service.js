@@ -1,10 +1,10 @@
-import { extraConfig } from "./serviceApiGeneral.config";
+import { extraConfig } from './serviceApiGeneral.config';
 
 export const createForum = async (formData) => {
   const APIGeneral = extraConfig();
 
   return APIGeneral.post(`/forum/create`, formData, {
-    headers: { "Content-Type": "multipart/form-data" },
+    headers: { 'Content-Type': 'multipart/form-data' },
   })
     .then((res) => res)
     .catch((error) => error);
@@ -14,7 +14,7 @@ export const update = async (id, formData) => {
   const APIGeneral = extraConfig();
 
   return APIGeneral.patch(`/forum/update/${id}`, formData, {
-    headers: { "Content-Type": "form-data" },
+    headers: { 'Content-Type': 'form-data' },
   })
     .then((res) => res)
     .catch((error) => error);

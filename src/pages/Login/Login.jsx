@@ -1,10 +1,11 @@
-import "./Login.css";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { Link, Navigate } from "react-router-dom";
-import { useAuth } from "../context/authContext";
-import { loginUserService } from "../services/user.service";
-import { useLoginError } from "../hooks";
+//*import "./Login.css";
+import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Link, Navigate } from 'react-router-dom';
+
+import { useAuth } from '../../context/authContext';
+import { useLoginError } from '../../hooks/useLoginError';
+import { loginUserService } from '../../services/user.service';
 
 export const Login = () => {
   //!--------------------------------------------------------------------------------------------
@@ -31,7 +32,7 @@ export const Login = () => {
      * El formData es un parametro que recibe un objeto con todas las claves con los valores registrados
      */
 
-    console.log("FORMDATA", formData);
+    console.log('FORMDATA', formData);
     setSend(true);
     setRes(await loginUserService(formData));
     setSend(false);
@@ -54,7 +55,7 @@ export const Login = () => {
 
   useEffect(() => {
     setUser(() => null);
-    localStorage.removeItem("user");
+    localStorage.removeItem('user');
   }, []);
 
   //!--------------------------------------------------------------------------------------------
@@ -82,7 +83,7 @@ export const Login = () => {
               id="email"
               name="email"
               autoComplete="false"
-              {...register("email", { required: true })}
+              {...register('email', { required: true })}
             />
             <label htmlFor="custom-input" className="custom-placeholder">
               email
@@ -95,7 +96,7 @@ export const Login = () => {
                 id="password"
                 name="password"
                 autoComplete="false"
-                {...register("password", { required: true })}
+                {...register('password', { required: true })}
               />
               <label htmlFor="custom-input" className="custom-placeholder">
                 password
@@ -108,7 +109,7 @@ export const Login = () => {
               className="btn"
               type="submit"
               disabled={send}
-              style={{ background: send ? "#49c1a388" : "#49c1a2" }}
+              style={{ background: send ? '#49c1a388' : '#49c1a2' }}
             >
               LOGIN
             </button>

@@ -1,35 +1,33 @@
-import App from "../App";
-import { createBrowserRouter } from "react-router-dom";
-import {
-  Home,
-  Register,
-  Login,
-  Profile,
-  Dashboard,
-  ForgotPassword,
-  CheckCode,
-  FormProfile,
-  ChangePassword,
-} from "../pages";
+import { createBrowserRouter } from 'react-router-dom';
+
+import App from '../App';
+import { Home } from '../pages/Home/Home';
+import { Login } from '../pages/Login/Login';
+/*import {Dashboard} from "../pages/Dashboard/Dashboard"
+import {ForgotPassword} from "../pages/Login/ForgotPassword"
+import {CheckCode} from "../pages/Login/CheckCode"
+import {Profile} from "../pages/Login/Profile"
+import {ChangePassword} from "../pages/Login/ChangePassword"
+import {FormProfile} from "../pages/Login/FormProfile"*/
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
-      {
+      /*{
         path: "/register",
         element: <Register />,
-      },
+      },*/
       {
-        path: "/login",
+        path: '/login',
         element: <Login />,
       },
-      {
+      /*{
         path: "/dashboard",
         element: <Dashboard />,
       },
@@ -54,7 +52,7 @@ export const router = createBrowserRouter([
             element: <FormProfile />,
           },
         ],
-      },
+      },*/
     ],
   },
 ]);

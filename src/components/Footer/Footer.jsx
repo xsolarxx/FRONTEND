@@ -1,4 +1,4 @@
-import "./Footer.css";
+import './Footer.css';
 export const Footer = () => {
   return (
     <footer className="footer">
@@ -12,8 +12,12 @@ export const Footer = () => {
         </div>
         <div className="column-center">
           <h2 className="contacto">Contacto</h2>
-          <strong><p>Email:</p></strong><p>xsolarxcompany@gmail.com</p>
-         <strong>Dirección:</strong><p>Plaza Jose Rinaldo,18882, Madri</p>
+          <strong>
+            <p>Email:</p>
+          </strong>
+          <p>xsolarxcompany@gmail.com</p>
+          <strong>Dirección:</strong>
+          <p>Plaza Jose Rinaldo,18882, Madri</p>
         </div>
         <div className="column-center">
           <h2 className="navegacion">Navegación</h2>

@@ -1,14 +1,13 @@
 .header-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Para cubrir todo el contenedor */
-    margin-top: 15 px;
-  }
-  
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Para ocultar partes del video que exceden del contenedor */
-  }
-  
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para cubrir todo el contenedor */
+  margin-top: 15 px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Para ocultar partes del video que exceden del contenedor */
+}

@@ -5,14 +5,7 @@ export const CompanyCard = ({ company }) =>
   //   userLikedCompany,
   //   likesCount,}
   {
-    const {
-      id,
-      companyName,
-      description,
-      companyType,
-      companyServices,
-      image,
-    } = company;
+    const { id, companyName, description, companyType, companyServices, image } = company;
 
     return (
       <div className="company-card">

@@ -1,6 +1,14 @@
+import "./Home.css";
+
 export const Home = () => {
   return (
     <div>
+      <div className="video-container">
+        <video className="header-video" autoPlay loop muted>
+          <source src="/wind.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <h2>Energias Renováveis</h2>
       <p>
         As energias renováveis, incluindo solar, eólica, hidrelétrica, biomassa

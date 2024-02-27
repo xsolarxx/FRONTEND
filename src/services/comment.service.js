@@ -1,16 +1,12 @@
 import { extraConfig } from "./serviceApiGeneral.config";
 
-// CommentRoutes.get("/getall", getAll);
-
-export const getAll = async (id) => {
+export const getAll = async () => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.get(`/comment/getAll/${id}`)
+  return APIGeneral.get(`/comment/getAll/`)
     .then((res) => res)
     .catch((error) => error);
 };
-
-// CommentRoutes.get("/getbyid/:id", getById);
 
 export const getById = async (id) => {
   const APIGeneral = extraConfig();
@@ -20,8 +16,6 @@ export const getById = async (id) => {
     .catch((error) => error);
 };
 
-// CommentRoutes.post("/create/:idRecipient", [isAuth], createComment);
-
 export const createComment = async (idRecipient, formData) => {
   const APIGeneral = extraConfig();
 
@@ -29,8 +23,6 @@ export const createComment = async (idRecipient, formData) => {
     .then((res) => res)
     .catch((error) => error);
 };
-
-// CommentRoutes.delete("/comments/:idComment", [isAuth], deleteComment);
 
 export const deleteComment = async (idComment) => {
   const APIGeneral = extraConfig();
@@ -40,12 +32,10 @@ export const deleteComment = async (idComment) => {
     .catch((error) => error);
 };
 
-// CommentRoutes.patch("/update/:id", update);
-
-export const update = async (id) => {
+export const update = async (id, formData) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.patch(`/comment/update/${id}`)
+  return APIGeneral.patch(`/comment/update/${id}`, formData)
     .then((res) => res)
     .catch((error) => error);
 };

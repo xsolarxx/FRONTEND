@@ -14,10 +14,10 @@ export const createCompany = async (formData) => {
 
 //---------------------- * GET BY NAME COMPANY * --------------------------------------------------
 
-export const getByNameCompany = async (companyName) => {
+export const getByNameCompany = async (formData) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.get(`/company/byName/${companyName}`)
+  return APIGeneral.get(`/company/byName`, formData)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -34,12 +34,10 @@ export const getAllCompany = async () => {
 
 //---------------------- * GET BY SERVICES COMPANY * --------------------------------------------------
 
-export const getByServicesCompany = async (companyServices) => {
+export const getByServicesCompany = async (formData) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.get(
-    `/company/companybyservices/services/${companyServices}`
-  )
+  return APIGeneral.get(`/company/companybyservices/services/`, formData)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -66,14 +64,15 @@ export const getByDescLikesCompany = async () => {
 
 //---------------------- * UPDATE COMPANY * --------------------------------------------------
 
-export const updateCompany = async (id) => {
+export const updateCompany = async (id, formData) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.patch(`/company/update/${id}`)
+  return APIGeneral.patch(`/company/update/${id}`, formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  })
     .then((res) => res)
     .catch((error) => error);
 };
-
 //---------------------- * DELETE COMPANY * --------------------------------------------------
 
 export const deleteCompany = async (idCompany) => {

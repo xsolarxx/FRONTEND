@@ -1,41 +1,33 @@
 import { extraConfig } from "./serviceApiGeneral.config";
 
-// RatingRoutes.get("/getall", getAll);
-
-export const getAll = async (id) => {
+export const getAll = async () => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.get(`/Rating/getAll/${id}`)
+  return APIGeneral.get(`/rating/getAll`)
     .then((res) => res)
     .catch((error) => error);
 };
-
-// RatingRoutes.get("/getbyid/:id", getById);
 
 export const getById = async (id) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.get(`/Rating/getbyid/${id}`)
+  return APIGeneral.get(`/rating/getbyid/${id}`)
     .then((res) => res)
     .catch((error) => error);
 };
 
-// RatingRoutes.post("/create/:idRecipient", [isAuth], ratingComment);
-
-export const createRating = async (customBody) => {
+export const createRating = async (formData) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.post(`/Rating/create/${customBody}`, )
+  return APIGeneral.post(`/rating/create/`, formData)
     .then((res) => res)
     .catch((error) => error);
 };
 
-// RatingRoutes.patch("/update/:id", update);
-
-export const update = async (id) => {
+export const update = async (id, formData) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.get(`/Rating/update/${id}`)
+  return APIGeneral.get(`/rating/update/${id}`, formData)
     .then((res) => res)
     .catch((error) => error);
 };

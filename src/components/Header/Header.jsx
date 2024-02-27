@@ -49,12 +49,12 @@ export const Header = () => {
             />
           </NavLink>
           {user !== null && (
-            <img
-              src="https://res.cloudinary.com/dq186ej4c/image/upload/v1685706203/9e3c325bca17c2147d249237c5a0906b_qhqifa.png"
-              alt=""
-              className="iconNav iconLogout"
-              onClick={() => logout()}
-            />
+            <button className="iconNav iconLogout" onClick={() => logout()}>
+              <img
+                src="https://res.cloudinary.com/dq186ej4c/image/upload/v1685706203/9e3c325bca17c2147d249237c5a0906b_qhqifa.png"
+                alt="Foto"
+              />
+            </button>
           )}
           {user !== null ? (
             <>

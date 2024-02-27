@@ -11,7 +11,7 @@ export const Header = () => {
       <header>
         <div className="titleFatherContainer">
           <img
-            src="https://res.cloudinary.com/dq186ej4c/image/upload/v1685704450/user-3296_rtszbc.png"
+            src="https://media.discordapp.net/attachments/1201292840450404382/1212154696673005638/image.png?ex=65f0ce08&is=65de5908&hm=5fda8a6bb1decf8f1933607fd8f7ebe5da2f8f35b3e3ac10031a3e80decb9325&=&format=webp&quality=lossless&width=417&height=417"
             alt="logo"
             className="logo"
           />
@@ -24,7 +24,7 @@ export const Header = () => {
           {user == null && (
             <NavLink to="/login">
               <img
-                src="https://res.cloudinary.com/dq186ej4c/image/upload/v1685705523/login_ljn9fb.png"
+                src="https://media.discordapp.net/attachments/1201292840450404382/1212155952997072986/image.png?ex=65f0cf33&is=65de5a33&hm=a11064b401fbc0896e7abed448dbe3572e55d115575181c75ab54218caafe0bd&=&format=webp&quality=lossless&width=417&height=417"
                 alt=""
                 className="iconNav"
               />
@@ -43,7 +43,7 @@ export const Header = () => {
 
           <NavLink to="/">
             <img
-              src="https://res.cloudinary.com/dq186ej4c/image/upload/v1685705455/home_circle_outline_icon_139029_xdnnt2.png"
+              src="https://media.discordapp.net/attachments/1201292840450404382/1212154939879592116/image.png?ex=65f0ce42&is=65de5942&hm=dce3dbcf25894eddf48154df82aea23bb44b80cdc4227b09d63608a0697c25ad&=&format=webp&quality=lossless&width=417&height=417"
               alt=""
               className="iconNav home"
             />
@@ -51,7 +51,7 @@ export const Header = () => {
           {user !== null && (
             <button className="iconNav iconLogout" onClick={() => logout()}>
               <img
-                src="https://res.cloudinary.com/dq186ej4c/image/upload/v1685706203/9e3c325bca17c2147d249237c5a0906b_qhqifa.png"
+                src="https://media.discordapp.net/attachments/1201292840450404382/1212156762640359514/image.png?ex=65f0cff4&is=65de5af4&hm=20c39b23b257bb87f871a83ffa6ba452fab47eaadef9de037eebbd052f69e354&=&format=webp&quality=lossless&width=417&height=417"
                 alt="Foto"
               />
             </button>

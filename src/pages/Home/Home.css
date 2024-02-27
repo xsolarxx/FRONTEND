@@ -11,3 +11,7 @@
   height: 100%;
   overflow: hidden; /* Para ocultar partes del video que exceden del contenedor */
 }
+
+.home1{
+  background-image: url("../../../public/photovoltaic.jpg");
+}

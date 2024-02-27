@@ -1,0 +1,71 @@
+.form-wrap {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+  }
+
+.form-wrap h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: 10px;
+  }
+  
+  .form-wrap p {
+    font-size: var(--font-size-h4);
+    color: var(--primary-color-green);
+    margin-bottom: 20px;
+  }
+  
+  .input_user {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color-green);
+    border-radius: 5px;
+  }
+  
+  .custom-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input_user:focus + .custom-placeholder,
+  .input_user:valid + .custom-placeholder {
+    font-size: 10px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  
+  /* Disabled button styling */
+  .btn:disabled {
+    background-color: var(--disabled-color-green);
+    cursor: not-allowed;
+  }
+  
+  Link styling
+  .anchorCustom {
+    color: #49c1a2;
+    text-decoration: none;
+  }
+  
+  /* Footer section styling */
+  .footerForm {
+    margin-top: 20px;
+  }
+  
+  .parrafoLogin {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .parrafoLogin a {
+    color: #49c1a2;
+    text-decoration: none;
+  }

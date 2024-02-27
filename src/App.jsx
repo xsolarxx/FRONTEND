@@ -1,16 +1,16 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import { Footer, ImageHome } from "./components";
+import { Footer } from "./components";
 import { Header } from "./components/Header/Header";
-import { Home } from "./pages";
-
 
 const App = () => {
   return (
     <>
-      <Header/>
-      <ImageHome/>
-      <Home/>
-      <Footer/>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </>
   );
 };

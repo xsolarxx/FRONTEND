@@ -15,15 +15,16 @@
  * -width (la cuantidad que falta de el scroll)
  */
 
-import { motion } from "framer-motion";
-import "./ImageHome.css";
-import { useEffect, useState, useRef } from "react";
+import './ImageHome.css';
 
-import image1 from "/1.webp";
-import image2 from "/2.jpg";
-import image3 from "/3.jpg";
-import image4 from "/4.jpg";
-import image5 from "/5.jpg";
+import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+
+import image1 from '/1.webp';
+import image2 from '/2.jpg';
+import image3 from '/3.jpg';
+import image4 from '/4.jpg';
+import image5 from '/5.jpg';
 
 const images = [image1, image2, image3, image4, image5];
 
@@ -38,11 +39,7 @@ export const ImageHome = () => {
 
   return (
     <div className="imageHome">
-      <motion.div
-        ref={carrosel}
-        className="carrosel"
-        whileTap={{ cursor: "grabbing" }}
-      >
+      <motion.div ref={carrosel} className="carrosel" whileTap={{ cursor: 'grabbing' }}>
         <motion.div
           className="inner"
           drag="x"

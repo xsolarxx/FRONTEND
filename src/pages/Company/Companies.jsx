@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
-import { CompanyListings } from "../../components/Listings/CompanyListings";
-import { companies } from "../../data/mockCompanyData";
+import { CompanyListings } from '../../components/Listings/CompanyListings';
+import { companies } from '../../data/mockCompanyData';
 
 export const Company = () => {
   //   const [companies, setCompanies] = useState([]);
@@ -21,7 +21,7 @@ export const Company = () => {
   return (
     <div>
       <h1> Company Page </h1>
-      <CompanyListings>{companies}</CompanyListings>{" "}
+      <CompanyListings>{companies}</CompanyListings>{' '}
     </div>
   );
 };

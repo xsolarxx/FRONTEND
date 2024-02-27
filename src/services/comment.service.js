@@ -1,4 +1,4 @@
-import { extraConfig } from "./serviceApiGeneral.config";
+import { extraConfig } from './serviceApiGeneral.config';
 
 export const getAll = async () => {
   const APIGeneral = extraConfig();

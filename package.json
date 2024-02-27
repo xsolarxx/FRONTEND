@@ -2,12 +2,13 @@
   "name": "frontxsolarx",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:fix": "eslint ./src --ext .jsx,.js, --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,css,md,json}\" ",
+    "lint": "npm run lint:format && npm run lint:fix "
   },
   "dependencies": {
     "axios": "^1.6.7",
@@ -21,13 +22,22 @@
     "sweetalert2": "^11.10.5"
   },
   "devDependencies": {
-    "@types/react": "^18.2.56",
+    "@types/react": "^18.2.60",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.2.5",
     "vite": "^5.1.4"
-  }
+  },
+  "pre-commit": "lint",
+  "license": "MIT"
 }

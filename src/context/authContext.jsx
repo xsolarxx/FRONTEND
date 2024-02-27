@@ -10,7 +10,7 @@
 // const login = (data =>)
 // const logout = ()
 
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useMemo, useState } from 'react';
 
 // ) crear el contexto y guardarlo en una variable
 const AuthContext = createContext();
@@ -21,7 +21,7 @@ export const AuthContextProvider = ({ children }) => {
   // 1) El estado del user autenticado
 
   const [user, setUser] = useState(() => {
-    const user = localStorage.getItem("user");
+    const user = localStorage.getItem('user');
 
     return user ? JSON.parse(user) : null;
   });
@@ -30,13 +30,13 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = (data) => {
     // esta data viene en string
-    localStorage.setItem("user", data);
+    localStorage.setItem('user', data);
     const parseUser = JSON.parse(data);
     setUser(parseUser);
   };
 
   const logout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem('user');
     setUser(null);
   };
 

@@ -3,13 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   /* Colors */
-  
+
   /* Spacing */
 
   /* Typography */
   --font-family: Arial, sans-serif;
   --base-font-size: 18px;
-
 }
 
 * {
@@ -18,9 +17,8 @@
   box-sizing: border-box;
 }
 
-
 html {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* a {

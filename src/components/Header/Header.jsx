@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
-import "./Header.css";
-import { useAuth } from "../context/authContext";
+import './Header.css';
+
+import { NavLink } from 'react-router-dom';
+
+import { useAuth } from '../../context/authContext';
 
 export const Header = () => {
   const { user, logout } = useAuth();
@@ -57,11 +59,7 @@ export const Header = () => {
           {user !== null ? (
             <>
               <NavLink to="/profile">
-                <img
-                  className="profileCircle"
-                  src={user.image}
-                  alt={user.user}
-                />
+                <img className="profileCircle" src={user.image} alt={user.user} />
               </NavLink>
             </>
           ) : null}

@@ -1,4 +1,4 @@
-import { extraConfig } from "./serviceApiGeneral.config";
+import { extraConfig } from './serviceApiGeneral.config';
 
 //---------------------- * CREATE * ----------------------------------------
 
@@ -6,7 +6,7 @@ export const createCompany = async (formData) => {
   const APIGeneral = extraConfig();
 
   return APIGeneral.post(`/company/create`, formData, {
-    headers: { "Content-Type": "multipart/form-data" },
+    headers: { 'Content-Type': 'multipart/form-data' },
   })
     .then((res) => res)
     .catch((error) => error);
@@ -68,7 +68,7 @@ export const updateCompany = async (id, formData) => {
   const APIGeneral = extraConfig();
 
   return APIGeneral.patch(`/company/update/${id}`, formData, {
-    headers: { "Content-Type": "multipart/form-data" },
+    headers: { 'Content-Type': 'multipart/form-data' },
   })
     .then((res) => res)
     .catch((error) => error);

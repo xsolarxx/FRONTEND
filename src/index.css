@@ -2,12 +2,25 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  /* Colors */
+  
+  /* Spacing */
+
+  /* Typography */
+  --font-family: Arial, sans-serif;
+  --base-font-size: 18px;
+
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+
+html {
+    font-family: Arial, sans-serif;
 }
 
 /* a {

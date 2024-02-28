@@ -8,7 +8,7 @@ export const Header = () => {
   const { user, logout } = useAuth();
   return (
     <>
-      <header>
+      <header className="max-width-container">
         <div className="titleFatherContainer">
           <img
             src="https://media.discordapp.net/attachments/1201292840450404382/1212154696673005638/image.png?ex=65f0ce08&is=65de5908&hm=5fda8a6bb1decf8f1933607fd8f7ebe5da2f8f35b3e3ac10031a3e80decb9325&=&format=webp&quality=lossless&width=417&height=417"
@@ -16,8 +16,7 @@ export const Header = () => {
             className="logo"
           />
           <div className="titleContainer">
-            <h1 className="titleHeader">USER PAGE</h1>
-            <h1 className="titleHeaderBlack">USER PAGE</h1>
+            <h4 className="titleHeaderBlack">USER PAGE</h4>
           </div>
         </div>
         <nav>

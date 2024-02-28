@@ -12,10 +12,6 @@ body {
   line-height: 1.8;
 }
 
-.parrafoLogin {
-  margin-bottom: 40px;
-}
-
 #imagen {
   display: block;
 }
@@ -27,12 +23,12 @@ a {
 .form-wrap {
   margin-top: 2rem;
   background: #f7fffa;
-  padding: 15px 25px 30px;
+  padding: 20px 25px 30px;
   color: #333;
-  border-radius: 5px;
+  font-size: medium;
 }
 
-.form-wrap h1,
+.form-wrap h2,
 .form-wrap p {
   text-align: center;
 }
@@ -92,9 +88,11 @@ a {
   text-decoration: underline;
 }
 
-.parrafoLogin {
+.login-text {
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 40px;
+  color: black;
 }
 
 footer a {
@@ -133,7 +131,7 @@ input[type="radio"] {
 .label-radio {
   background: #37a08e57;
   color: #fff;
-  padding: 10px;
+  padding: 7px;
   text-align: center;
   width: 49.5%;
 }

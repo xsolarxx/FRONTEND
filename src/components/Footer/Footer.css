@@ -9,7 +9,7 @@
   box-sizing: border-box;
   background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
 }
-/*Nos queda resolver lo de los márgenes blancos. */
+/*Hay que hacerlo responsive ya que en pantallas externas se ven márgenes blancos verticales. En portátiles se ve correctamente */
 
 .footer-content {
   display: flex;
@@ -23,9 +23,9 @@
 }
 
 .column-center h2 {
-  margin: 0; /* Remova qualquer margem padrão para garantir o alinhamento correto */
+  margin: 0;  /*Elimina los márgenes para garantizar el alineamiento correcto*/
 }
 
 .rights {
-  margin-top: 70px;
+  margin-top: 30px;
 }

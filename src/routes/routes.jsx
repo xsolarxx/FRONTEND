@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import { Home } from '../pages/Home/Home';
 import { Login } from '../pages/Login/Login';
-import {Register} from '../pages/Register/Register'
+import { Register } from '../pages/Register/Register';
 /*import {Dashboard} from "../pages/Dashboard/Dashboard"
 import {ForgotPassword} from "../pages/Login/ForgotPassword"
 import {CheckCode} from "../pages/Login/CheckCode"
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/register",
+        path: '/register',
         element: <Register />,
       },
       {

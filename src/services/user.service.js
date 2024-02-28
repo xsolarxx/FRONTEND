@@ -1,13 +1,13 @@
-//*import { updateToken } from "../utils/updateToken";
-import { extraConfig } from "./serviceApiGeneral.config";
+import { updateToken } from '../utils/updateToken';
+import { extraConfig } from './serviceApiGeneral.config';
 
 //* ------------------ endPoints sin auth ---------------------------------------
 
 //* Register with redirect
 export const registerWithRedirect = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.post("/users/register", formData, {
-    headers: { "Content-Type": "multipart/form-data" },
+  return APIGeneral.post('/users/register', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
   })
     .then((res) => res)
     .catch((error) => error);
@@ -16,7 +16,7 @@ export const registerWithRedirect = async (formData) => {
 //*Resend code
 export const resendConfirmationCode = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.post("/users/resend", formData)
+  return APIGeneral.post('/users/resend', formData)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -24,7 +24,7 @@ export const resendConfirmationCode = async (formData) => {
 //*Check new user
 export const checkNewUser = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.post("/users/check", formData)
+  return APIGeneral.post('/users/check', formData)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -33,14 +33,14 @@ export const checkNewUser = async (formData) => {
 
 export const loginUserService = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.post("/users/login", formData)
+  return APIGeneral.post('/users/login', formData)
     .then((res) => res)
     .catch((error) => error);
 };
 //* autologin
 export const autoLogin = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.post("/users/login/autologin", formData)
+  return APIGeneral.post('/users/login/autologin', formData)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -48,7 +48,7 @@ export const autoLogin = async (formData) => {
 //*GetAll
 export const getAll = async () => {
   const APIGeneral = extraConfig();
-  return APIGeneral.get("/users/getall")
+  return APIGeneral.get('/users/getall')
     .then((res) => res)
     .catch((error) => error);
 };
@@ -64,7 +64,7 @@ export const getById = async (id) => {
 
 export const changePassword = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch("/users/forgotpassword", formData)
+  return APIGeneral.patch('/users/forgotpassword', formData)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -97,7 +97,7 @@ export const deleteUser = async (id) => {
 
 export const modifyPassword = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch("/users/changepassword", formData)
+  return APIGeneral.patch('/users/changepassword', formData)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -105,8 +105,8 @@ export const modifyPassword = async (formData) => {
 //*Update user
 export const update = async (formData) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch("users/update/update", formData, {
-    headers: { "Content-Type": "multipart/form-data" },
+  return APIGeneral.patch('users/update/update', formData, {
+    headers: { 'Content-Type': 'multipart/form-data' },
   })
     .then((res) => res)
     .catch((error) => error);

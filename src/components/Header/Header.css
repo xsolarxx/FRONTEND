@@ -1,95 +1,94 @@
 header {
-    min-height: 20vh;
-    background-color: var(--primary-color-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .titleHeaderBlack {
-    size: var(--font-size-h5);
-    position: absolute;
-    color: white;
-    top: 2px;
-  }
-  
-  .titleContainer {
-    color: #183f35;
-    width: 360px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .titleFatherContainer {
-    color: #183f35;
-    width: 360px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 50px;
-  }
-  
-  .iconNav {
-    width: 50px;
-  }
-  
-  .iconNav.home {
-    width: 50px;
-    /* transform: scale(1.2); */
-  }
-  
-  nav {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  /* .whiteContainer {
+  min-height: 20vh;
+  background-color: var(--primary-color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleHeaderBlack {
+  size: var(--font-size-h5);
+  position: absolute;
+  color: white;
+  top: 2px;
+}
+
+.titleContainer {
+  color: #183f35;
+  width: 360px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleFatherContainer {
+  color: #183f35;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+}
+
+.iconNav {
+  width: 50px;
+}
+
+.iconNav.home {
+  width: 50px;
+  /* transform: scale(1.2); */
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* .whiteContainer {
     width: 100vw;
     height: 1vh;
     background-color: white;
   } */
-  
-  .iconLogout {
-    transform: scale(0.8);
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border: solid 7px black;
-    border-radius: 50%;
-  }
-  
-  .profileCircle {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-  }
-  
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* .iconDashBoard {
+
+.iconLogout {
+  transform: scale(0.8);
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: solid 7px black;
+  border-radius: 50%;
+}
+
+.profileCircle {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .iconDashBoard {
     width: 60px;
     height: 60px;
     border-radius: 50px;
   } */
-  
-  @media (max-width: 700px) {
-    header {
-      flex-direction: column;
-    }
-    .logo {
-      width: 50px;
-    }
-    .titleFatherContainer {
-      width: 263px;
-    }
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
   }
-  
+  .logo {
+    width: 50px;
+  }
+  .titleFatherContainer {
+    width: 263px;
+  }
+}

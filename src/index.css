@@ -3,7 +3,7 @@
 .max-width-container {
   width: 100vw;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 body {
@@ -122,4 +122,3 @@ a:hover {
   margin: 0;
   box-sizing: content-box;
 }
-

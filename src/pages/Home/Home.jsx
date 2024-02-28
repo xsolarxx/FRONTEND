@@ -15,7 +15,7 @@ export const Home = () => {
       </div>
 
       <div className="section2">
-        <h2>¿alguna vez te has preguntado sobre las energéas renovables? </h2>
+        <h2>¿Alguna vez te has preguntado sobre las energías renovables? </h2>
       </div>
 
       <div className="section3">

@@ -148,5 +148,11 @@ a {
 }
 
 .anchorCustom {
-  color: #276052;
+  color: #49c1a2;
+}
+
+.bottom-text {
+    color: black;
+    text-align: center;
+    margin-top: 15px;
 }

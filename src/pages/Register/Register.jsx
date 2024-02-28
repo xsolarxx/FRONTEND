@@ -17,15 +17,14 @@ export const Register = () => {
   const [res, setRes] = useState({});
   const [send, setSend] = useState(false);
   const [okRegister, setOkRegister] = useState(false);
-  //! ------------------------------------------------------------------------------
-  //? 1) funcion que se encarga del formulario - de la data del formulario
-  //! ------------------------------------------------------------------------------
+
+  //------------------------------* Función para el formulario *-------------------------------------------------------------
 
   const formSubmit = async (formData) => {
     const inputFile = document.getElementById('file-upload').files;
 
     if (inputFile.length != 0) {
-      // si es diferente a cero quiere decir que tenemos una imagen
+      // Si no es 0 --> Hay una imagen
       const custonFormData = {
         ...formData,
         image: inputFile[0],
@@ -35,7 +34,7 @@ export const Register = () => {
       setRes(await registerWithRedirect(custonFormData));
       setSend(false);
     } else {
-      // en este caso no hay imagen y nos quedamos con lo que tenemos en el form data
+      // Si no hay imagen --> Nos quedamos con lo que hay por default en nuestra form
       const custonFormData = {
         ...formData,
       };
@@ -46,9 +45,7 @@ export const Register = () => {
     }
   };
 
-  //! ------------------------------------------------------------------------------
-  //? 2) funcion que se encarga del formulario- de la data del formulario
-  //! ------------------------------------------------------------------------------
+  //------------------------------* Parte 2: Función para el formulario *-------------------------------------------------------------
   useEffect(() => {
     console.log(res);
     useRegisterError(res, setOkRegister, setRes);
@@ -63,9 +60,7 @@ export const Register = () => {
     setDeleteUser(() => false);
   }, []);
 
-  //! ------------------------------------------------------------------------------
-  //? 3) Estados de navegacion ----> lo veremos en siguiente proyectos
-  //! ------------------------------------------------------------------------------
+  //------------------------------* Estados de navegación *-------------------------------------------------------------
   if (okRegister) {
     return <Navigate to="/verifyCode" />;
   }
@@ -76,65 +71,66 @@ export const Register = () => {
         <h1>Sign Up</h1>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="user_container form-group">
-            <input
-              className="input_user"
-              type="text"
-              id="userName"
-              name="userName"
-              autoComplete="false"
-              {...register('userName', { required: true })}
-            />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              username
+            <label htmlFor="input_user">
+              Username
+              <input
+                className="input_user"
+                type="text"
+                id="userName"
+                name="userName"
+                autoComplete="false"
+                {...register('userName', { required: true })}
+              />
             </label>
           </div>
+
           <div className="password_container form-group">
-            <input
-              className="input_user"
-              type="password"
-              id="password"
-              name="password"
-              autoComplete="false"
-              {...register('password', { required: true })}
-            />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              password
+            <label htmlFor="input_password">
+              Password
+              <input
+                className="input_password"
+                type="password"
+                id="password"
+                name="password"
+                autoComplete="false"
+                {...register('password', { required: true })}
+              />
             </label>
           </div>
 
           <div className="email_container form-group">
-            <input
-              className="input_user"
-              type="email"
-              id="email"
-              name="email"
-              autoComplete="false"
-              {...register('email', { required: true })}
-            />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              email
+            <label htmlFor="input_email">
+              Email
+              <input
+                className="input_email"
+                type="email"
+                id="email"
+                name="email"
+                autoComplete="false"
+                {...register('email', { required: true })}
+              />
             </label>
 
             <div className="sexo">
-              <input
-                type="radio"
-                name="sexo"
-                id="Hombre"
-                value="Hombre"
-                {...register('gender')}
-              />
               <label htmlFor="Hombre" className="label-radio hombre">
                 Hombre
+                <input
+                  type="radio"
+                  name="sexo"
+                  id="Hombre"
+                  value="Hombre"
+                  {...register('gender')}
+                />
               </label>
-              <input
-                type="radio"
-                name="sexo"
-                id="Mujer"
-                value="Mujer"
-                {...register('gender')}
-              />
               <label htmlFor="Mujer" className="label-radio mujer">
                 Mujer
+                <input
+                  type="radio"
+                  name="sexo"
+                  id="Mujer"
+                  value="Mujer"
+                  {...register('gender')}
+                />
               </label>
             </div>
             <Uploadfile />
@@ -150,16 +146,15 @@ export const Register = () => {
               Register
             </button>
           </div>
-          <p className="bottom-text">
-            <small>
-              By clicking the Sign Up button, you agree to our{' '}
-              <Link className="anchorCustom">Terms & Conditions</Link> and{' '}
-              <Link className="anchorCustom">Privacy Policy</Link>.
-            </small>
-          </p>
         </form>
       </div>
+
       <div className="footerForm">
+        <p className="bottom-text">
+          By clicking the Sign Up button, you agree to our{' '}
+          <Link className="anchorCustom">Terms & Conditions</Link> and{' '}
+          <Link className="anchorCustom">Privacy Policy</Link>.
+        </p>
         <p className="parrafoLogin">
           Already have an account? <Link to="/login">Login Here</Link>
         </p>

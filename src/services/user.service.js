@@ -1,6 +1,7 @@
 import { updateToken } from '../utils/updateToken';
 import { extraConfig } from './serviceApiGeneral.config';
 
+
 //* ------------------ endPoints sin auth ---------------------------------------
 
 //* Register with redirect

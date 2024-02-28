@@ -80,10 +80,10 @@ export const Register = () => {
             <input
               className="input_user"
               type="text"
-              id="name"
-              name="name"
+              id="userName"
+              name="userName"
               autoComplete="false"
-              {...register('name', { required: true })}
+              {...register('userName', { required: true })}
             />
             <label htmlFor="custom-input" className="custom-placeholder">
               username
@@ -120,21 +120,21 @@ export const Register = () => {
               <input
                 type="radio"
                 name="sexo"
-                id="hombre"
-                value="hombre"
+                id="Hombre"
+                value="Hombre"
                 {...register('gender')}
               />
-              <label htmlFor="hombre" className="label-radio hombre">
+              <label htmlFor="Hombre" className="label-radio hombre">
                 Hombre
               </label>
               <input
                 type="radio"
                 name="sexo"
-                id="mujer"
-                value="mujer"
+                id="Mujer"
+                value="Mujer"
                 {...register('gender')}
               />
-              <label htmlFor="mujer" className="label-radio mujer">
+              <label htmlFor="Mujer" className="label-radio mujer">
                 Mujer
               </label>
             </div>

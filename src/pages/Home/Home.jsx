@@ -3,11 +3,12 @@ import './Home.css';
 export const Home = () => {
   return (
     <>
-      {/* <video className="header-video" autoPlay loop muted>
-        <source src="/wind.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-
+      <div className="videoSection">
+        <video className="video" autoPlay loop muted>
+          <source src="/wind.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="section1">
         <h1>Transformando el Futuro con Energía Renovable </h1>
         <h5>Conéctate con la Innovación Sostenible en xSolar</h5>

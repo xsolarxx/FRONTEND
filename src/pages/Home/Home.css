@@ -1,15 +1,21 @@
+.video {
+  z-index: -40;
+ }
 
+.videoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  content: cover;
+}
 
-/* .header-video {
-  width: 1600px;
-  height: 80vh;
-} */
-
-/* .section1 {
+.section1 {
   margin: 3rem;
   padding: 3rem;
   text-align: center;
-} */
+  text-size-adjust: var(--);
+}
 
 
 .section2 {
@@ -17,7 +23,6 @@
   margin: 5rem 0 5rem 0;
   padding: 7rem ;
   color: var(--text-white)
-
 }
 
 .section3 {

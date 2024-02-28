@@ -74,7 +74,6 @@ export const Register = () => {
     <>
       <div className="form-wrap">
         <h1>Sign Up</h1>
-        <p>It’s free and only takes a minute.</p>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="user_container form-group">
             <input

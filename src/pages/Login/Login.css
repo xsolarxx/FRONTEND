@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border:2px solid black;
+  margin-top :10px;
+  border-radius:20px;
+background-color: whitesmoke;
 }
 
 .form-wrap h1 {
@@ -36,10 +40,12 @@
 }
 
 .input_user:focus + .custom-placeholder,
-.input_user:valid + .custom-placeholder {
+.input_user:valid + .custom-placeholder,
+.input_user:hover {
   font-size: 10px;
   top: 5px;
   left: 5px;
+  background-color: azure;
 }
 
 /* Disabled button styling */

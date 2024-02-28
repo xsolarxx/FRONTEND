@@ -74,8 +74,7 @@ export const Login = () => {
   return (
     <>
       <div className="form-wrap">
-        <h1>Sign In</h1>
-        <p>We are happy to see you again 💌</p>
+        <h1>Log In</h1>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="email_container form-group">
             <input

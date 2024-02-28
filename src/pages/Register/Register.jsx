@@ -68,7 +68,7 @@ export const Register = () => {
   return (
     <>
       <div className="form-wrap">
-        <h1>Sign Up</h1>
+        <h2>Sign Up</h2>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="user_container form-group">
             <label htmlFor="input_user">
@@ -155,7 +155,7 @@ export const Register = () => {
           <Link className="anchorCustom">Terms & Conditions</Link> and{' '}
           <Link className="anchorCustom">Privacy Policy</Link>.
         </p>
-        <p className="parrafoLogin">
+        <p className="login-text">
           Already have an account? <Link to="/login">Login Here</Link>
         </p>
       </div>

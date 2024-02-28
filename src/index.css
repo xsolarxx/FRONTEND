@@ -1,3 +1,14 @@
+/* spacing for header and footer */
+
+.max-width-container {
+  width: 100vw;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
 body {
   /* Spacing */
   max-width: 1280px;
@@ -115,3 +126,4 @@ a:hover {
   margin: 0;
   box-sizing: border-box;
 }
+

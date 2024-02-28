@@ -1,6 +1,6 @@
 .video {
   z-index: -40;
- }
+}
 
 .videoSection {
   display: flex;
@@ -17,17 +17,17 @@
   text-size-adjust: var(--);
 }
 
-
 .section2 {
-  background-image: url("../../../public/photovoltaic.jpg");
+  background-image: url('../../../public/photovoltaic.jpg');
   margin: 5rem 0 5rem 0;
-  padding: 7rem ;
-  color: var(--text-white)
+  padding: 7rem;
+  color: var(--text-white);
 }
 
-.section3 {
-
+.section3 h2,
+h4 {
   margin: 5rem 0 5rem 0;
   padding: 0;
-
+  color: rgb(0, 7, 7);
+  font-size: 30px;
 }

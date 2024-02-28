@@ -1,5 +1,7 @@
 import './Home.css';
 
+import AnimatedHeading from '../../components/AnimationScroll/AnimationScroll';
+
 export const Home = () => {
   return (
     <>
@@ -19,9 +21,7 @@ export const Home = () => {
       </div>
 
       <div className="section3">
-        <h2>¿Que encontraras? </h2>
-        <h4>Descubre tu Socio Energético: Encuentra Empresas Renovables</h4>
-        <h4>Descubre tu Socio Energético: Encuentra Empresas Renovables</h4>
+        <AnimatedHeading />
       </div>
     </>
   );

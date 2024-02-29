@@ -1,4 +1,4 @@
-import { CompanyCard } from '../Cards/CompanyCard';
+import { CompanyCard } from '../Cards/Companycard';
 
 export const CompanyListings = ({ companies }) => {
   return (

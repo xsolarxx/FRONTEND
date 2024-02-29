@@ -1,0 +1,25 @@
+.containerNavProfile {
+  background-color: #2f7a67;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  border-radius: 20px;
+  margin-top: 5vh;
+  gap: 1rem;
+}
+
+.iconChangeProfile {
+  object-fit: cover;
+  transform: scale(1.15);
+}
+
+.fluidContainerProfile {
+  min-height: 55vh;
+  margin-bottom: 5vh;
+}
+
+.iconDeleteUser {
+  border-radius: 50%;
+}

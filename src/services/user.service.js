@@ -14,7 +14,7 @@ export const registerWithRedirect = async (formData) => {
 };
 
 //*Resend code
-export const resendConfirmationCode = async (formData) => {
+export const resendCode = async (formData) => {
   const APIGeneral = extraConfig();
   return APIGeneral.post('/users/resend', formData)
     .then((res) => res)

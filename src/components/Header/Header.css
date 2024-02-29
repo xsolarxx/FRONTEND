@@ -1,19 +1,18 @@
 header {
-    min-height: 10vh;
-    background-color: var(--text-navy-blue);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+  min-height: 10vh;
+  background-color: var(--text-navy-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-  nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 1140px;
-  }
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1140px;
+}
 
-  .icon {
-    width: 50px;
-  }
-  
+.icon {
+  width: 50px;
+}

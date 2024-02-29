@@ -6,7 +6,7 @@
   --primary-color-blue: #056fc7;
   --disabled-color-green: #9ad9b7;
   --disabled-color-blue: #63869f;
-  
+
   --text-navy-blue: #001842;
   --text-white: #ffff;
   --text-gray: #828282;
@@ -40,8 +40,8 @@ button {
 
 }
 button:hover {
-  border-color: var(--primary-color-blue);
-  color: var(--primary-color-blue);
+  border-color: var(--text-navy-blue);
+  color: var(--text-navy-blue);
   background-color: var(--text-white)
 
 }

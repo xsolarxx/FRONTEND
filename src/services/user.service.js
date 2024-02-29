@@ -71,14 +71,14 @@ export const changePassword = async (formData) => {
 //*Send code
 export const sendCode = async (id) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.post(`/users/register/sendMail${id}`)
+  return APIGeneral.post(`/users/register/sendMail/${id}`)
     .then((res) => res)
     .catch((error) => error);
 };
 //*Send password
 export const sendPassword = async (id) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.post(`/users/sendPassword${id}`)
+  return APIGeneral.post(`/users/sendPassword/${id}`)
     .then((res) => res)
     .catch((error) => error);
 };
@@ -88,10 +88,12 @@ export const sendPassword = async (id) => {
 //*Delete user
 
 export const deleteUser = async (id) => {
+  console.log('🚀 ~ deleteUser ~ id:', id);
   const APIGeneral = extraConfig();
-  return APIGeneral.delete(`/users/deleteUser${id}`)
-    .then((res) => res)
-    .catch((error) => error);
+  return APIGeneral.delete(`/users/${id}`).then((res) => {
+    console.log('🚀 ~ deleteUser ~ res:', res);
+    return res;
+  });
 };
 //*Change password with authentification
 
@@ -116,42 +118,42 @@ export const update = async (formData) => {
 
 export const toggleFavComments = async (idComment) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch(`/users/commentFav${idComment}`)
+  return APIGeneral.patch(`/users/commentFav/${idComment}`)
     .then((res) => res)
     .catch((error) => error);
 };
 //* Toggle like company
 export const toggleLikedCompany = async (idCompany) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch(`/users/likedCompany${idCompany}`)
+  return APIGeneral.patch(`/users/likedCompany/${idCompany}`)
     .then((res) => res)
     .catch((error) => error);
 };
 //* Toggle like news
 export const toggleLikedNews = async (idNews) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch(`/users/likedNews${idNews}`)
+  return APIGeneral.patch(`/users/likedNews/${idNews}`)
     .then((res) => res)
     .catch((error) => error);
 };
 //* Toggle like Forum
 export const toggleLikedForum = async (idForum) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch(`/users/likedForum${idForum}`)
+  return APIGeneral.patch(`/users/likedForum/${idForum}`)
     .then((res) => res)
     .catch((error) => error);
 };
 //* Toggle follow user
 export const toggleFollow = async (userToFollow) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch(`/users/follow${userToFollow}`)
+  return APIGeneral.patch(`/users/follow/${userToFollow}`)
     .then((res) => res)
     .catch((error) => error);
 };
 //* Toggle follow forum
 export const toggleFollowedForum = async (idForum) => {
   const APIGeneral = extraConfig();
-  return APIGeneral.patch(`/users/follow/forum${idForum}`)
+  return APIGeneral.patch(`/users/follow/forum/${idForum}`)
     .then((res) => res)
     .catch((error) => error);
 };

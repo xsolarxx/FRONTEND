@@ -1,6 +1,6 @@
 header {
     min-height: 10vh;
-    background-color: var(--primary-color-blue);
+    background-color: var(--text-navy-blue);
     display: flex;
     align-items: center;
     justify-content: space-evenly;

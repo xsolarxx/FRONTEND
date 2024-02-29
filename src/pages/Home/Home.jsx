@@ -26,7 +26,18 @@ export const Home = () => {
         <AnimatedHeading />
       </div>
 
-      <div></div>
+      <div className="section4">
+        <div className="column1">
+          <h1> Global by Nature </h1>
+        </div>
+        <div className="column2">
+          <h6>
+            Greenvolt is increasingly recognised in the European market as a major player
+            in the promotion and development of renewable energy projects
+          </h6>
+          <button className="button2"> Sustainability </button>
+        </div>
+      </div>
     </>
   );
 };

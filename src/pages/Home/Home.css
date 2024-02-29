@@ -1,20 +1,25 @@
 .video {
-  z-index: -40;
+  z-index: -1;
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  max-width: none;
+
 }
 
 .videoSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40vh;
-  content: cover;
+  overflow: hidden;
+  max-width: none;
 }
 
 .section1 {
   margin: 3rem;
   padding: 3rem;
   text-align: center;
-  text-size-adjust: var(--);
+  color: var(--text-navy-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 40px
 }
 
 .section2 {
@@ -22,6 +27,7 @@
   margin: 5rem 0 5rem 0;
   padding: 7rem;
   color: var(--text-white);
+  object-fit: contain;
 }
 
 .section3 h2,

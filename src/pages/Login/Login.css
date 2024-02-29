@@ -64,12 +64,8 @@ Link styling .anchorCustom {
   margin-top: 20px;
 }
 
-.parrafoLogin {
-  font-size: 14px;
-  color: #666;
-}
-
 .parrafoLogin a {
   color: #49c1a2;
   text-decoration: none;
 }
+

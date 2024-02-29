@@ -1,5 +1,5 @@
 header {
-    min-height: 20vh;
+    min-height: 10vh;
     background-color: var(--primary-color-blue);
     display: flex;
     align-items: center;
@@ -15,44 +15,5 @@ header {
 
   .icon {
     width: 50px;
-    color: white;
-    fill: white;
-    transform: hue(120deg);
-  }
-  
-  
-  /* .titleContainer {
-    color: #183f35;
-    width: 360px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-  
-  /* .titleFatherContainer {
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  } */
-
-/* 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-   */
-  @media (max-width: 700px) {
-    header {
-      flex-direction: column;
-    }
-    .logo {
-      width: 50px;
-    }
-    .titleFatherContainer {
-      width: 263px;
-    }
   }
   

@@ -22,33 +22,61 @@
   --font-size-h4: calc(var(--base-font-size) * 1.75);
   --font-size-h5: calc(var(--base-font-size) * 1.5);
   --font-size-h6: calc(var(--base-font-size) * 1.375);
+
+  button {
+    border-radius: 50px;
+    color: var(--text-white);
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: var(--base-font-size);
+    font-family: inherit;
+    background-color: var(--primary-color-green);
+    cursor: pointer;
+    transition: border-color 0.25s;
+    background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
+  
+  }
+  button:hover {
+    border-color: var(--text-navy-blue);
+    color: var(--text-navy-blue);
+    background-color: var(--text-white)
+  
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+
+  .button2 {
+    border-radius: 50px;
+    color: var(--text-white);
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: var(--base-font-size);
+    font-family: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  
+  }
+  button:hover {
+    border-color: var(--text-navy-blue);
+    color: var(--text-navy-blue);
+    background-color: var(--text-white)
+  
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+
 }
 
-/* BUTTON  */
+/* BUTTON*/
 
-button {
-  border-radius: 50px;
-  color: var(--text-white);
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: var(--base-font-size);
-  font-family: inherit;
-  background-color: var(--primary-color-green);
-  cursor: pointer;
-  transition: border-color 0.25s;
-  background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
 
-}
-button:hover {
-  border-color: var(--text-navy-blue);
-  color: var(--text-navy-blue);
-  background-color: var(--text-white)
-
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 
 /* TITLES */

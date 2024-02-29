@@ -111,26 +111,26 @@ export const Register = () => {
               />
             </label>
 
-            <div className="sexo">
+            <div className="gender">
+              <input
+                type="radio"
+                name="gender"
+                id="Hombre"
+                value="Hombre"
+                {...register('gender')}
+              />
               <label htmlFor="Hombre" className="label-radio hombre">
                 Hombre
-                <input
-                  type="radio"
-                  name="sexo"
-                  id="Hombre"
-                  value="Hombre"
-                  {...register('gender')}
-                />
               </label>
+              <input
+                type="radio"
+                name="gender"
+                id="Mujer"
+                value="Mujer"
+                {...register('gender')}
+              />
               <label htmlFor="Mujer" className="label-radio mujer">
                 Mujer
-                <input
-                  type="radio"
-                  name="sexo"
-                  id="Mujer"
-                  value="Mujer"
-                  {...register('gender')}
-                />
               </label>
             </div>
             <Uploadfile />

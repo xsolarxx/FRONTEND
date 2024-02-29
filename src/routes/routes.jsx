@@ -2,14 +2,14 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import App from '../App';
 import { Home } from '../pages/Home/Home';
+import { ChangePassword } from '../pages/Login/ChangePassword';
+import { CheckCode } from '../pages/Login/CheckCode';
+import { ForgotPassword } from '../pages/Login/ForgotPassword';
+import { FormProfile } from '../pages/Login/FormProfile';
 import { Login } from '../pages/Login/Login';
+import { Profile } from '../pages/Login/Profile';
 import { Register } from '../pages/Register/Register';
-/*import {Dashboard} from "../pages/Dashboard/Dashboard"
-import {ForgotPassword} from "../pages/Login/ForgotPassword"
-import {CheckCode} from "../pages/Login/CheckCode"
-import {Profile} from "../pages/Login/Profile"
-import {ChangePassword} from "../pages/Login/ChangePassword"
-import {FormProfile} from "../pages/Login/FormProfile"*/
+/*import {Dashboard} from "../pages/Dashboard/Dashboard"*/
 
 export const router = createBrowserRouter([
   {
@@ -31,29 +31,29 @@ export const router = createBrowserRouter([
       /*{
         path: "/dashboard",
         element: <Dashboard />,
-      },
+      },*/
       {
-        path: "/forgotPassword",
+        path: '/forgotPassword',
         element: <ForgotPassword />,
       },
       {
-        path: "/verifyCode",
+        path: '/verifyCode',
         element: <CheckCode />,
       },
       {
-        path: "/profile",
+        path: '/profile',
         element: <Profile />,
         children: [
           {
-            path: "/profile/changePassword",
+            path: '/profile/changePassword',
             element: <ChangePassword />,
           },
           {
-            path: "/profile/",
+            path: '/profile/',
             element: <FormProfile />,
           },
         ],
-      },*/
+      },
     ],
   },
 ]);

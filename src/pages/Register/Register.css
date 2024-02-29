@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #fff;
   line-height: 1.8;
 }
@@ -107,11 +107,11 @@ footer a:hover {
   background-color: navajowhite;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 
-.sexo {
+.gender {
   display: flex;
   flex-wrap: no-wrap;
   justify-content: space-between;
@@ -119,11 +119,11 @@ input[type="radio"] {
   margin-top: 20px;
 }
 
-.sexo .hombre {
+.gender .hombre {
   border-radius: 3px 0 0 3px;
   color: black !important;
 }
-.sexo .mujer {
+.gender .mujer {
   border-radius: 0 3px 3px 0;
   color: black !important;
 }
@@ -136,7 +136,7 @@ input[type="radio"] {
   width: 49.5%;
 }
 
-input[type="radio"]:checked + .label-radio {
+input[type='radio']:checked + .label-radio {
   background: #2f7a67;
   color: #fff !important;
 }
@@ -150,7 +150,7 @@ a {
 }
 
 .bottom-text {
-    color: black;
-    text-align: center;
-    margin-top: 15px;
+  color: black;
+  text-align: center;
+  margin-top: 15px;
 }

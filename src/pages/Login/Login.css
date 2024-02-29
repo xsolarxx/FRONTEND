@@ -3,10 +3,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border:2px solid black;
-  margin-top :10px;
-  border-radius:20px;
-background-color: whitesmoke;
+  border: 2px solid black;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: whitesmoke;
 }
 
 .form-wrap h1 {
@@ -68,4 +68,3 @@ Link styling .anchorCustom {
   color: #49c1a2;
   text-decoration: none;
 }
-

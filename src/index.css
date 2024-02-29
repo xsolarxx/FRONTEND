@@ -1,8 +1,6 @@
-
 :root {
-
   /* Colors */
-  --primary-color-green: #00d880 ;
+  --primary-color-green: #00d880;
   --primary-color-blue: #056fc7;
   --disabled-color-green: #9ad9b7;
   --disabled-color-blue: #63869f;
@@ -34,19 +32,16 @@
     cursor: pointer;
     transition: border-color 0.25s;
     background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
-  
   }
   button:hover {
     border-color: var(--text-navy-blue);
     color: var(--text-navy-blue);
-    background-color: var(--text-white)
-  
+    background-color: var(--text-white);
   }
   button:focus,
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
-
 
   .button2 {
     border-radius: 50px;
@@ -58,26 +53,19 @@
     background-color: transparent;
     cursor: pointer;
     transition: border-color 0.25s;
-  
   }
   button:hover {
     border-color: var(--text-navy-blue);
     color: var(--text-navy-blue);
-    background-color: var(--text-white)
-  
+    background-color: var(--text-white);
   }
   button:focus,
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
-  
-
 }
 
 /* BUTTON*/
-
-
-
 
 /* TITLES */
 

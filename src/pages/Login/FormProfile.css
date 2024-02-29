@@ -1,0 +1,38 @@
+.containerDataNoChange {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f7a67;
+  max-width: 1000px;
+  margin-top: 2rem;
+  border-radius: 20px;
+}
+
+.formProfile {
+  margin: 2rem;
+}
+
+@media (max-width: 900px) {
+  .containerProfile {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .containerProfile {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .formProfile {
+    margin: 0.5rem;
+  }
+}

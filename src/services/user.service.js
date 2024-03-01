@@ -112,7 +112,10 @@ export const modifyPassword = async (formData) => {
 export const update = async (formData) => {
   const APIGeneral = extraConfig();
   return APIGeneral.patch('users/update/update', formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
+    headers: {
+      'Content-Type': 'multipart/form-data',
+      Authorization: `Bearer ${updateToken()}`,
+    },
   })
     .then((res) => res)
     .catch((error) => error);

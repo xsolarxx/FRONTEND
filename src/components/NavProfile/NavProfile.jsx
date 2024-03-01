@@ -6,7 +6,7 @@ import { useAuth } from '../../context/authContext';
 import { useDeleteUser } from '../../hooks';
 
 export const NavProfile = () => {
-  const { setUser, setDeleteUser } = useAuth();
+  const { setUser, setDeleteUser, user } = useAuth();
   return (
     <div className="containerNavProfile">
       <Link to="/profile/changePassword">
@@ -30,7 +30,7 @@ export const NavProfile = () => {
         alt="user delete button"
         onClick={() => useDeleteUser(setUser, setDeleteUser)}
       /> */}
-      <button onClick={() => useDeleteUser(setUser, setDeleteUser)}>
+      <button onClick={() => useDeleteUser(setUser, setDeleteUser, user)}>
         <span className="material-symbols-outlined">Delete User</span>
       </button>
     </div>

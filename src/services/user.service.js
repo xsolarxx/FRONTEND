@@ -90,11 +90,15 @@ export const sendPassword = async (id) => {
 export const deleteUser = async (id) => {
   console.log('🚀 ~ deleteUser ~ id:', id);
   const APIGeneral = extraConfig();
-  return APIGeneral.delete(`/users/${id}`).then((res) => {
-    console.log('🚀 ~ deleteUser ~ res:', res);
-    return res;
-  });
+  return APIGeneral.delete(`/users/${id}`, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => error);
 };
+
 //*Change password with authentification
 
 export const modifyPassword = async (formData) => {

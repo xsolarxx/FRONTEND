@@ -12,7 +12,7 @@ export const useUpdateError = (res, setRes, setUser, logout) => {
       }
     });
   }
-
+  console.log(contador);
   if (contador == 0) {
     let check = '';
 
@@ -24,7 +24,7 @@ export const useUpdateError = (res, setRes, setUser, logout) => {
       }
     });
     if (res?.status == 200) {
-      logout();
+      //logout();
       setRes(() => ({}));
       return Swal.fire({
         icon: 'success',
@@ -49,7 +49,7 @@ export const useUpdateError = (res, setRes, setUser, logout) => {
   }
 
   if (contador != 0) {
-    if (res?.status == 200) {
+    if (res?.status == 404) {
       setRes(() => ({}));
       return Swal.fire({
         icon: 'error',

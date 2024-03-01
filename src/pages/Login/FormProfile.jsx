@@ -15,7 +15,7 @@ export const FormProfile = () => {
   const [send, setSend] = useState(false);
 
   const defaultData = {
-    name: user?.user,
+    userName: user?.user,
   };
 
   //! ------------ 1) La funcion que gestiona el formulario----
@@ -73,12 +73,12 @@ export const FormProfile = () => {
               <input
                 className="input_user"
                 type="text"
-                id="name"
-                name="name"
+                id="userName"
+                name="userName"
                 autoComplete="false"
                 // LO NUEVOOOOOOOO------>
                 defaultValue={defaultData?.name}
-                {...register('name')}
+                {...register('userName')}
               />
               <label htmlFor="custom-input" className="custom-placeholder">
                 username

@@ -67,7 +67,7 @@ export const Login = () => {
     if (res.data?.user?.check == false) {
       return <Navigate to="/dashboard" />;
     } else {
-      return <Navigate to="/verifyCode" />;
+      return <Navigate to="/dashboard" />;
     }
   }
 

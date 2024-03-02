@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import { Protected } from '../components/ProtectedRoute/Protected';
 import { ProtectedCheckChildren } from '../components/ProtectedRoute/ProtectedCheckChildren';
+import { Dashboard } from '../pages/Dashboard/Dashboard';
 import { Home } from '../pages/Home/Home';
 import { ChangePassword } from '../pages/Login/ChangePassword';
 import { CheckCode } from '../pages/Login/CheckCode';
@@ -11,7 +12,6 @@ import { FormProfile } from '../pages/Login/FormProfile';
 import { Login } from '../pages/Login/Login';
 import { Profile } from '../pages/Login/Profile';
 import { Register } from '../pages/Register/Register';
-/*import {Dashboard} from "../pages/Dashboard/Dashboard"*/
 
 export const router = createBrowserRouter([
   {
@@ -30,10 +30,14 @@ export const router = createBrowserRouter([
         path: '/login',
         element: <Login />,
       },
-      /*{
-        path: "/dashboard",
-        element: (<Protected><Dashboard /></Protected>)
-      },*/
+      {
+        path: '/dashboard',
+        element: (
+          <Protected>
+            <Dashboard />
+          </Protected>
+        ),
+      },
       {
         path: '/forgotPassword',
         element: <ForgotPassword />,

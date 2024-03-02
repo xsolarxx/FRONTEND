@@ -2,7 +2,7 @@ import './CheckCode.css';
 
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import { useAuth } from '../../context/authContext';
 import { useAutoLogin, useCheckCodeError, useResendCodeError } from '../../hooks';
@@ -11,10 +11,9 @@ import { useAutoLogin, useCheckCodeError, useResendCodeError } from '../../hooks
 import { checkNewUser, resendCode } from '../../services/user.service';
 
 export const CheckCode = () => {
-  const navigate = useNavigate();
-  const { allUser, login, setUser } = useAuth();
+  const { allUser, login, logout } = useAuth();
   const { register, handleSubmit } = useForm();
-  // EL RES Va a ser para el check cdenl code
+  // EL RES Va a ser para el check del code
   const [res, setRes] = useState({});
   // resResend va a ser para gestionar el renvio del codigo de confirmacion
   const [resResend, setResResend] = useState({});
@@ -26,7 +25,13 @@ export const CheckCode = () => {
   const [userNotFound, setUserNotFound] = useState(false);
   //! -------FUNCION QUE GESTIONA LA DATA DEL FORMULARIO-------
   const formSubmit = async (formData) => {
-    const userLocal = localStorage.getItem('user');
+    const fetching = async (body) => {
+      setSend(true);
+      setRes(await checkNewUser(body));
+      setSend(false);
+    };
+
+    const userLocal = localStorage.getItem('user'); // usuarios guardados en localStorage
 
     if (userLocal == null) {
       /// entramos por el register
@@ -34,9 +39,7 @@ export const CheckCode = () => {
         confirmationCode: parseInt(formData.confirmationCode),
         email: allUser.data.user.email,
       };
-      setSend(true);
-      setRes(await checkNewUser(custFormData));
-      setSend(false);
+      fetching(custFormData);
     } else {
       // estamos entrando por el login
       const parseUser = JSON.parse(userLocal);
@@ -44,15 +47,15 @@ export const CheckCode = () => {
         email: parseUser.email,
         confirmationCode: parseInt(formData.confirmationCode),
       };
-      setSend(true);
-      setRes(await checkNewUser(customFormData));
-      setSend(false);
+      fetching(customFormData);
     }
   };
-
+  // --------------------------------------------------------------
   const handleReSend = async () => {
     const userLocal = localStorage.getItem('user');
+
     if (userLocal != null) {
+      // viene el USER DEL LOGIN
       const parseUser = JSON.parse(userLocal);
       const customFormData = {
         email: parseUser.email,
@@ -96,6 +99,7 @@ export const CheckCode = () => {
 
   if (okDeleteUser) {
     // si borramos al useer por meter el codigo mal lo mandamos de nuevo a registrase
+    logout();
     return <Navigate to="/register" />;
   }
 

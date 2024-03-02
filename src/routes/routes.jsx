@@ -1,7 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import App from '../App';
-import { Protected, ProtectedCheckChildren } from '../components/ProtectedRoute';
+import { Protected } from '../components/ProtectedRoute/Protected';
+import { ProtectedCheckChildren } from '../components/ProtectedRoute/ProtectedCheckChildren';
 import { Home } from '../pages/Home/Home';
 import { ChangePassword } from '../pages/Login/ChangePassword';
 import { CheckCode } from '../pages/Login/CheckCode';

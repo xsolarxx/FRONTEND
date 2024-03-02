@@ -1,3 +1,69 @@
+
+.hero-section { 
+  background-image: url('images/wind2.jpg');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply; 
+  background-position: center;
+  text-align: center;
+  color: var(--color-text-white);
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.button--large {
+  display: inline-block; 
+  width: 200px;
+  margin: 0 auto;
+  padding-top: var(--u1);
+}
+
+/* big title  */
+
+.big-titel-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #022461;
+  flex-wrap: wrap;    
+}
+
+/* consumer image  */
+
+.section-consumer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 400px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-consumer {
+      grid-template-columns: 1fr; 
+  }
+}
+
+.section-consumer__image {
+  background: url("images/consumer.jpg");
+  background-size: cover; 
+  background-position: center; 
+}
+
+.section-consumer__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #022461;
+}
+.section-consumer__text h4 {
+  color: #00d880;
+  margin-bottom: 2%;
+
+}
+/* revisar */
+
 .video {
   z-index: -1;
   width: 100vw;

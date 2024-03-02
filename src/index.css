@@ -1,123 +1,349 @@
 :root {
-  /* Colors */
-  --primary-color-green: #00d880;
-  --primary-color-blue: #056fc7;
-  --disabled-color-green: #9ad9b7;
-  --disabled-color-blue: #63869f;
+ 
+/** Personalizar COLORES */ 
 
-  --text-navy-blue: #001842;
-  --text-white: #ffff;
-  --text-gray: #828282;
+/* Colors */
+--primary-color-green: #00d880;
+--primary-color-blue: #056fc7;
+--disabled-color-green: #9ad9b7;
+--disabled-color-blue: #63869f;
+--text-navy-blue: #022461;
+--text-white: #ffff;
+--text-gray: #828282;
 
-  /* Typography */
-  --font-family: Arial, sans-serif;
+/* Colors */
+--color-primary-green: #00d880;
+--color-primary-blue: #056fc7;
+--color-disabled-green: #9ad9b7;
+--color-disabled-blue: #63869f;
+--color-text-navy-blue: #001842;
+--color-text-white: #ffff;
+--color-text-gray: #828282;
 
-  /* Titles */
-  --base-font-size: 18px;
-  --font-size-h1: 80px; /* Biggest title size */
-  --font-size-h2: calc(var(--base-font-size) * 2.5);
-  --font-size-h3: calc(var(--base-font-size) * 2);
-  --font-size-h4: calc(var(--base-font-size) * 1.75);
-  --font-size-h5: calc(var(--base-font-size) * 1.5);
-  --font-size-h6: calc(var(--base-font-size) * 1.375);
+/* Additional Colors */
+--color-bg-light-gray: #f2f2f2;
+--color-accent-orange: #ff7f50;
+--color-error-red: #ff6347;
+--color-success-green: #32cd32;
 
-  button {
-    border-radius: 50px;
-    color: var(--text-white);
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: var(--base-font-size);
-    font-family: inherit;
-    background-color: var(--primary-color-green);
-    cursor: pointer;
-    transition: border-color 0.25s;
-    background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
-  }
-  button:hover {
-    border-color: var(--text-navy-blue);
-    color: var(--text-navy-blue);
-    background-color: var(--text-white);
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
 
-  .button2 {
-    border-radius: 50px;
-    color: var(--text-white);
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: var(--base-font-size);
-    font-family: inherit;
-    background-color: transparent;
-    cursor: pointer;
-    transition: border-color 0.25s;
-  }
-  button:hover {
-    border-color: var(--text-navy-blue);
-    color: var(--text-navy-blue);
-    background-color: var(--text-white);
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
+/* Additional elements */
+--img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+/** Personalizar TEXTOS*/ 
+--primary-font-family: "Railway", sans-serif;
+
+/*Los tamaños de textos se indican en REMs en base a 10px. Por ejemplo, 2.5 equivale a 25px.*/
+
+/*Encabezados*/  
+
+--hScale: 1.5;
+
+/* .h1 */
+--h1-max: 6;
+--h1-min: calc(var(--h1-max) / var(--hScale));
+
+/* .h2 */
+--h2-max: 5;
+--h2-min: calc(var(--h2-max) / var(--hScale));
+
+/* .h3 */
+--h3-max: 4;
+--h3-min: calc(var(--h3-max) / var(--hScale)); 
+
+/* .h4 */
+--h4-max: 3;
+--h4-min: calc(var(--h4-max) / var(--hScale)); 
+
+/* .h5 */
+--h5-max: 2.5;
+--h5-min: calc(var(--h5-max) / var(--hScale));
+
+/* .h6 */
+--h6-max: 2;
+--h6-min: calc(var(--h6-max) / var(--hScale)); 
+
+/*Texto de cuerpo*/
+
+--bodyScale: 1.25;
+
+/* .p-xl */
+--body-max: 1.8;
+--body-min: calc(var(--body-max) / var(--bodyScale));
+
+/* .p-l */
+--p-xl-max: 2.4;
+--p-xl-min: calc(var(--p-xl-max) / var(--bodyScale));
+
+/* .p */
+--p-l-max: 2.2;
+--p-l-min: calc(var(--p-l-max) / var(--bodyScale));
+
+/* .p-s */
+--p-s-max: 1.6;
+--p-s-min: calc(var(--p-s-max) / var(--bodyScale));
+
+/* .p-xs */
+--p-xs-max: 1.4;
+--p-xs-min: calc(var(--p-xs-max) / var(--bodyScale));
+
+
+/** padding */
+
+/* .p-1 */
+--p1-max: calc(var(--unit) * 1);
+--p1-min: calc(var(--p1-max) * var(--reduction));
+
+/* .p-15 */
+--p15-max: calc(var(--unit) * 1.5);
+--p15-min: calc(var(--p15-max) * var(--reduction));
+
+/* .p-2 */
+--p2-max: calc(var(--unit) * 2);
+--p2-min: calc(var(--p2-max) * var(--reduction));
+
+/* .p-25 */
+--p25-max: calc(var(--unit) * 2.5);
+--p25-min: calc(var(--p25-max) * var(--reduction));
+
+/* .p-3 */
+--p3-max: calc(var(--unit) * 3);
+--p3-min: calc(var(--p3-max) * var(--reduction));
+
+/* .p-35 */
+--p35-max: calc(var(--unit) * 3.5);
+--p35-min: calc(var(--p35-max) * var(--reduction));
+
+/* .p-4 */
+--p4-max: calc(var(--unit) * 4);
+--p4-min: calc(var(--p4-max) * var(--reduction));
+
+
+/*Gaps*/
+
+/*.gap-1*/
+--gap1-max: calc(var(--unit) * 1);
+--gap1-min: calc(var(--gap1-max) * var(--reduction));
+
+/*.gap-15*/
+--gap15-max: calc(var(--unit) * 1.5);
+--gap15-min: calc(var(--gap15-max) * var(--reduction));
+
+/*.gap-2*/
+--gap2-max: calc(var(--unit) * 2);
+--gap2-min: calc(var(--gap2-max) * var(--reduction));
+
+/*.gap-25*/
+--gap25-max: calc(var(--unit) * 2.5);
+--gap25-min: calc(var(--gap25-max) * var(--reduction));
+
+/*.gap-3*/
+--gap3-max: calc(var(--unit) * 3);
+--gap3-min: calc(var(--gap3-max) * var(--reduction));
+
+/*.gap-35*/
+--gap35-max: calc(var(--unit) * 3.5);
+--gap35-min: calc(var(--gap35-max) * var(--reduction));
+
+/*.gap-4*/
+--gap4-max: calc(var(--unit) * 4);
+--gap4-min: calc(var(--gap4-max) * var(--reduction));
+
+ /*Free variables*/
+--unit-max: calc(var(--unit) * 1);
+--unit-min: calc(var(--unit-max) * var(--reduction));
+
+--unitFrom: calc(var(--unit-max) * 1rem);
+--unitTo: calc(var(--unit-min) * 1rem);
+--fluidUnit: calc(var(--unitTo) + (var(--unit-max) - var(--unit-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+
+/*Ejemplos de espacios si el --unit está definido en 1.6*/
+
+
+--u1: clamp(var(--unitTo), var(--fluidUnit), var(--unitFrom));/*16px*/
+--u05: calc( var(--u1) * 0.5); /*80px*/
+--u15: calc( var(--u1) * 1.5);  /*24px*/
+--u2: calc( var(--u1) * 2);
+--u25: calc( var(--u1) * 2.5); /*40px*/
+--u3: calc( var(--u1) * 3); /*48px*/
+--u35: calc( var(--u1) * 3.5); /*56px*/
+--u4: calc( var(--u1) * 4); /*64px*/
+--u45: calc( var(--u1) * 4.5);/*72px*/
+--u5: calc( var(--u1) * 5); /*8px*/
+
+
+/** ⛔️📱 RESPONSIVE CONFIG 📱⛔️ */ 
+
+/*Anchos de pantalla mínimo y máximo cuando los textos y paddings empiezan a reducirse. Indicar en píxeles pero sin unidad*/
+--screenMin: 480;
+--screenMax: 1600;
+--screenSpacingMin: 480;
+--screenSpacingMax: 1600;
+
+/*Text*/
+--fluidFromCalc: calc(var(--screenMax) / 10 * 1rem);
+--fluidToCalc: calc(var(--screenMin) / 10 * 1rem);
+
+/*padding*/
+--unit: 1.6;
+--reduction: 0.5;    
+--fluidSpacingFromCalc: calc(var(--screenSpacingMax) / 10 * 1rem);
+--fluidSpacingToCalc: calc(var(--screenSpacingMin) / 10 * 1rem);
+
 }
 
-/* BUTTON*/
+/** ⛔️ AQUI EMPIEZAN LAS REGLAS DE CSS - NO TOCAR ⛔️ **/
 
-/* TITLES */
+/*--Paddings*/
 
-html {
-  font-family: Arial, sans-serif;
+.p-1 {
+	--p1From: calc(var(--p1-max) * 1rem);
+	--p1To: calc(var(--p1-min) * 1rem);
+	--fluidp1: calc(var(--p1To) + (var(--p1-max) - var(--p1-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	padding: clamp(var(--p1To), var(--fluidp1), var(--p1From));
 }
 
-h1 {
-  font-size: var(--font-size-h1);
-  line-height: 1.1;
+.p-15 {
+	--p15From: calc(var(--p15-max) * 1rem);
+	--p15To: calc(var(--p15-min) * 1rem);
+	--fluidp15: calc(var(--p15To) + (var(--p15-max) - var(--p15-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	padding: clamp(var(--p15To), var(--fluidp15), var(--p15From));
+
 }
 
-h2 {
-  font-size: var(--font-size-h2);
-  line-height: 1.2;
+.p-2 {
+	--p2From: calc(var(--p2-max) * 1rem);
+	--p2To: calc(var(--p2-min) * 1rem);
+	--fluidp2: calc(var(--p2To) + (var(--p2-max) - var(--p2-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	padding: clamp(var(--p2To), var(--fluidp2), var(--p2From));
 }
 
-h3 {
-  font-size: var(--font-size-h3);
-  line-height: 1.3;
+.p-25 {
+	--p25From: calc(var(--p25-max) * 1rem);
+	--p25To: calc(var(--p25-min) * 1rem);
+	--fluidp25: calc(var(--p25To) + (var(--p25-max) - var(--p25-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	padding: clamp(var(--p25To), var(--fluidp25), var(--p25From));
 }
 
-h4 {
-  font-size: var(--font-size-h4);
-  line-height: 1.4;
+.p-3 {
+	--p3From: calc(var(--p3-max) * 1rem);
+	--p3To: calc(var(--p3-min) * 1rem);
+	--fluidp3: calc(var(--p3To) + (var(--p3-max) - var(--p3-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	padding: clamp(var(--p3To), var(--fluidp3), var(--p3From));
 }
 
-h5 {
-  font-size: var(--font-size-h5);
-  line-height: 1.5;
+.p-35 {
+	--p35From: calc(var(--p35-max) * 1rem);
+	--p35To: calc(var(--p35-min) * 1rem);
+	--fluidp35: calc(var(--p35To) + (var(--p35-max) - var(--p35-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	padding: clamp(var(--p35To), var(--fluidp35), var(--p35From));
 }
 
-h6 {
-  font-size: var(--font-size-h6);
-  line-height: 1.6;
+.p-4 {
+	--p4From: calc(var(--p4-max) * 1rem);
+	--p4To: calc(var(--p4-min) * 1rem);
+	--fluidp4: calc(var(--p4To) + (var(--p4-max) - var(--p4-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	padding: clamp(var(--p4To), var(--fluidp4), var(--p4From));
 }
 
-/* ANCHOR HYPERLINKED TEXT */
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Headings */
+h1, .h1 { --max: var(--h1-max); --min: var(--h1-min); }
+h2, .h2 { --max: var(--h2-max); --min: var(--h2-min); }
+h3, .h3 { --max: var(--h3-max); --min: var(--h3-min); }
+h4, .h4 { --max: var(--h4-max); --min: var(--h4-min); }
+h5, .h5 { --max: var(--h5-max); --min: var(--h5-min); }
+h6, .h6 { --max: var(--h6-max); --min: var(--h6-min); }
+
+/* Body */
+body, .p { --max: var(--body-max); --min: var(--body-min); }
+.p-xl { --max: var(--p-xl-max); --min: var(--p-xl-min); }
+.p-l { --max: var(--p-l-max); --min: var(--p-l-min); }
+.p-s { --max: var(--p-s-max); --min: var(--p-s-min); }
+.p-xs { --max: var(--p-xs-max); --min: var(--p-xs-min); }
+
+/*Altura de linea*/
+h1, .h1 { line-height: 1.1; }
+h2, .h2 { line-height: 1.15;}
+h3, .h3 { line-height: 1.2; }
+h4, .h4 { line-height: 1.25; }
+h5, .h5 { line-height: 1.3; }
+h6, .h6 { line-height: 1.35; }
+
+:is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, body, .p, .p-xl, .p-l, .p-s, .p-xs) {
+--from: calc(var(--max) * 1rem);
+--to: calc(var(--min) * 1rem);
+--fluid: calc(var(--to) + (var(--max) - var(--min)) * ((100vw - var(--fluidToCalc)) / ((var(--screenMax) / 10) - (var(--screenMin) / 10))));
+font-size: clamp(var(--to), var(--fluid), var(--from));
 }
-a:hover {
-  color: #535bf2;
+
+/*--Gaps*/
+
+.gap-1 {
+	--gap1From: calc(var(--gap1-max) * 1rem);
+	--gap1To: calc(var(--gap1-min) * 1rem);
+	--fluidgap1: calc(var(--gap1To) + (var(--gap1-max) - var(--gap1-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	gap: clamp(var(--gap1To), var(--fluidgap1), var(--gap1From));
 }
+
+.gap-15 {
+	--unitFrom: calc(var(--gap15-max) * 1rem);
+	--unitTo: calc(var(--gap15-min) * 1rem);
+	--fluidgap15: calc(var(--unitTo) + (var(--gap15-max) - var(--gap15-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	gap: clamp(var(--unitTo), var(--fluidgap15), var(--unitFrom));
+}
+
+.gap-2 {
+	--gap2From: calc(var(--gap2-max) * 1rem);
+	--gap2To: calc(var(--gap2-min) * 1rem);
+	--fluidgap2: calc(var(--gap2To) + (var(--gap2-max) - var(--gap2-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	gap: clamp(var(--gap2To), var(--fluidgap2), var(--gap2From));
+}
+
+.gap-25 {
+	--unitFrom: calc(var(--gap25-max) * 1rem);
+	--unitTo: calc(var(--gap25-min) * 1rem);
+	--fluidgap25: calc(var(--unitTo) + (var(--gap25-max) - var(--gap25-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	gap: clamp(var(--unitTo), var(--fluidgap25), var(--unitFrom));
+}
+
+.gap-3 {
+	--gap3From: calc(var(--gap3-max) * 1rem);
+	--gap3To: calc(var(--gap3-min) * 1rem);
+	--fluidgap3: calc(var(--gap3To) + (var(--gap3-max) - var(--gap3-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	gap: clamp(var(--gap3To), var(--fluidgap3), var(--gap3From));
+}
+
+.gap-35 {
+	--unitFrom: calc(var(--gap35-max) * 1rem);
+	--unitTo: calc(var(--gap35-min) * 1rem);
+	--fluidgap35: calc(var(--unitTo) + (var(--gap35-max) - var(--gap35-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	gap: clamp(var(--unitTo), var(--fluidgap35), var(--unitFrom));
+}
+
+.gap-4 {
+	--gap4From: calc(var(--gap4-max) * 1rem);
+	--gap4To: calc(var(--gap4-min) * 1rem);
+	--fluidgap4: calc(var(--gap4To) + (var(--gap4-max) - var(--gap4-min)) * ((100vw - var(--fluidSpacingToCalc)) / ((var(--screenSpacingMax) / 10) - (var(--screenSpacingMin) / 10))));
+	gap: clamp(var(--gap4To), var(--fluidgap4), var(--gap4From));
+}
+
+
 
 /* Reset of styles */
 
-* {
+html {
+  font-size: 62.5%;
+  }
+  
+  body {
+  font-family: var(--primary-font-family);
+  }
+  
+  * {
   padding: 0;
   margin: 0;
   box-sizing: content-box;
-}
+  overflow-x: hidden;
+  }

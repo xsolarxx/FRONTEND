@@ -1,5 +1,5 @@
 import './Home.css';
-
+import '../../main';
 import AnimatedHeading from '../../components/AnimationScroll/AnimationScroll';
 import { ImageHome } from '../../components/ImageHome/ImageHome';
 

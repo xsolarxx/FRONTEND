@@ -34,18 +34,16 @@ export const Register = () => {
       setRes(await registerWithRedirect(custonFormData));
       setSend(false);
     } else {
-      // Si no hay imagen --> Nos quedamos con lo que hay por default en nuestra form
-      const custonFormData = {
-        ...formData,
-      };
-
       setSend(true);
-      setRes(await registerWithRedirect(custonFormData));
+      setRes(await registerWithRedirect(formData));
       setSend(false);
     }
   };
 
   //------------------------------* Parte 2: Función para el formulario *-------------------------------------------------------------
+  // AllUser: Los usuarios que vienen del register
+  // User: Los usuarios que vienen del login
+
   useEffect(() => {
     console.log(res);
     useRegisterError(res, setOkRegister, setRes);

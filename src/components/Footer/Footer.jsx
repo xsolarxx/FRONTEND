@@ -9,10 +9,18 @@ export const Footer = () => {
         <div className="follow-content">
           <h4>Follow us</h4>
           <ul>
-            <li><a href="/">Linkedin</a></li>
-            <li><a href="/">Twitter</a></li>
-            <li><a href="/">Instagram</a></li>
-            <li><a href="/">Podcast</a></li>
+            <li>
+              <a href="/">Linkedin</a>
+            </li>
+            <li>
+              <a href="/">Twitter</a>
+            </li>
+            <li>
+              <a href="/">Instagram</a>
+            </li>
+            <li>
+              <a href="/">Podcast</a>
+            </li>
           </ul>
         </div>
         <div className="column-center">
@@ -28,14 +36,30 @@ export const Footer = () => {
           <h4>Navigation</h4>
           <ul>
             {/* Arreglar los estilos de estos navlink, el color no se puede modificar del mismo modo que con la lista de follow us */}
-            <li><NavLink className="links" to="/">Home</NavLink></li>
-            <li><NavLink className="links" to="/news">News</NavLink></li>
-            <li><NavLink className="links" to="/companies">Companies</NavLink></li>
-            <li><NavLink className="links" to="/forum">Forum</NavLink></li>
+            <li>
+              <NavLink className="links" to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="links" to="/news">
+                News
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="links" to="/companies">
+                Companies
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="links" to="/forum">
+                Forum
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
-      <p className="rights">2024 © All rights reserved</p>
+      <p className="rights">solar.co.uk 2024 © All rights reserved</p>
     </footer>
   );
 };

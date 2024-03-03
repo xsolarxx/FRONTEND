@@ -8,11 +8,8 @@ import { useAuth } from '../../context/authContext';
 import { useLoginError } from '../../hooks/useLoginError';
 import { loginUserService } from '../../services/user.service';
 
+//-------------------* CREACIÓN DE ESTADOS E INSTACIAS A HOOK *--------------------------------
 export const Login = () => {
-
-  //?-------------------1) CREACION DE ESTADOS E INSTACIAS A HOOK--------------------------------
-
-
   const { register, handleSubmit } = useForm();
   const [send, setSend] = useState(false); // estado que gestiona cuando se esta enviando una peticion para deshabilitar los botones
   const [res, setRes] = useState({}); // estado donde se setea la respuesta de la API
@@ -66,11 +63,11 @@ export const Login = () => {
   return (
     <>
       <div className="form-wrap">
-        <h1>Log In</h1>
+        <h4>LOG IN</h4>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="email_container form-group">
             <label htmlFor="input_email">
-              email
+              Email
               <input
                 className="input_email"
                 type="email"
@@ -83,7 +80,7 @@ export const Login = () => {
 
             <div className="password_container form-group">
               <label htmlFor="input_password">
-                password
+                Password
                 <input
                   className="input_password"
                   type="password"
@@ -103,14 +100,17 @@ export const Login = () => {
               disabled={send}
               style={{ background: send ? '#49c1a388' : '#49c1a2' }}
             >
-              LOGIN
+              LOG IN
             </button>
           </div>
           <p className="bottom-text">
-            Have you forgotten the password? <Link to="/forgotpassword" className="anchorCustom">Click here to change password</Link>
+            Have you forgotten your password?{' '}
+            <Link to="/forgotpassword" className="anchorCustom">
+              Click here to change the password
+            </Link>
           </p>
           <p className="register">
-            Are you not registered? <Link to="/register">Register Here</Link>
+            Are you not registered? <Link to="/register">Register Here!</Link>
           </p>
         </form>
       </div>

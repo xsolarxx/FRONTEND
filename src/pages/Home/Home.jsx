@@ -1,5 +1,6 @@
 import './Home.css';
 import '../../components/Buttons/button.css';
+
 import AnimatedHeading from '../../components/AnimationScroll/AnimationScroll';
 import { ImageHome } from '../../components/ImageHome/ImageHome';
 
@@ -11,7 +12,7 @@ export const Home = () => {
         <p className="p-1 p-l">
           Explore renewable companies and connect with industry professionals
         </p>
-        <button className="button--white button--large p-l">Get Started</button>
+        <button className="button--white button--large p-l button-hover">Get Started</button>
       </section>
 
       <section className="big-titel-section p-35">

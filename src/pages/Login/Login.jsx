@@ -96,13 +96,15 @@ export const Login = () => {
           LOG IN
         </button>
 
-        <div className="btn_conptainer">
-          <p>Have you forgotten your password?</p>
-          <Link to="/forgotpassword">Click here to change the password</Link>
-          <p>Are you not registered?</p>
-          <Link to="/register">
-            <a>Register Here!</a>
-          </Link>
+        <div className="btn_container">
+          <ul>
+            <li><p>Have you forgotten your password?</p>
+              <Link to="/forgotpassword">Click here to reset your password</Link></li>
+            <li><p>Are you not registered?</p>
+              <Link to="/register">
+                <a>Register here!</a>
+              </Link></li>
+          </ul>
         </div>
       </form>
     </>

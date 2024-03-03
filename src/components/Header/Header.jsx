@@ -19,7 +19,7 @@ export const Header = () => {
 
           {user == null && (
             <NavLink to="/login">
-              <span className="material-symbols-outlined">logout</span>
+              <span className="material-symbols-outlined p-1">logout</span>
             </NavLink>
           )}
 

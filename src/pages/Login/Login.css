@@ -41,6 +41,10 @@ input {
   text-align: center;
 }
 
+ul {
+  margin-top: 32px;
+}
+
 /* .input_user:focus + .custom-placeholder,
 .input_user:valid + .custom-placeholder,
 .input_user:hover {

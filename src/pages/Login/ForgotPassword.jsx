@@ -30,38 +30,34 @@ export const ForgotPassword = () => {
   }
   return (
     <>
-      <div className="form-wrap">
-        <h1>Change your password 💱</h1>
+      <div className="p-35">
+        <h3>Reset your password</h3>
 
         <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="user_container form-group">
-            <input
-              className="input_user"
-              type="text"
-              id="email"
-              name="email"
-              autoComplete="false"
-              {...register('email', { required: true })}
-            />
-            <label htmlFor="custom-input" className="custom-placeholder">
+          <div className="form-group">
+            <label htmlFor="input-email">
               Email
+              <input
+                className="input-email"
+                type="text"
+                id="email"
+                name="email"
+                autoComplete="false"
+                {...register('email', { required: true })}
+              />
             </label>
           </div>
 
           <div className="btn_container">
             <button
-              className="btn"
+              className="button--gradient button--medium"
               type="submit"
               disabled={send}
-              style={{ background: send ? '#49c1a388' : '#49c1a2' }}
+              style={{ background: send ? '' : 'color-disabled-green' }}
             >
               Change password
             </button>
           </div>
-
-          <p className="bottom-text">
-            <small>Enter your email to send you the new password 💌</small>
-          </p>
         </form>
       </div>
     </>

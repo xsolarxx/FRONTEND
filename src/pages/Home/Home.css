@@ -11,12 +11,15 @@
   flex-direction: column;
   justify-content: center;
 }
+.hero-section h1 {
+  max-width: 1600px;
+  margin: 0 auto;
+}
 
 .button--large {
   display: inline-block;
   width: 200px;
   margin: 0 auto;
-  padding-top: var(--u1);
 }
 
 /* big title  */
@@ -50,6 +53,9 @@
   background: url('/consumer.jpg');
   background-size: cover;
   background-position: center;
+  border-radius: var(--img-border-radius);
+  box-shadow: var(--img-box-shadow);
+
 }
 
 .section-consumer__text {
@@ -65,73 +71,63 @@
 
 .grid {
   display: grid;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  height: 60vh;
+  grid-row: 1fr;
+  height: 80vh;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.grid-item1,
+.grid-item2,
+.grid-item3,
+.grid-item4,
+.grid-item5 {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--img-border-radius);
+  transition: transform 0.3s ease;
 }
 
 .grid-item1 {
-  background-image: url('https://images.unsplash.com/photo-1534719156993-f3c9448673bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f089cfa06eb1cd7c0f654b39d8fdfd07&auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
-  background-position: center;
-  grid-column: 2/3;
-  grid-row: 1/2;
+  background-image: url('/wind3.jpg');
+  grid-column: 1 / 2; 
+  grid-row: 1 / 2; 
 }
 
 .grid-item2 {
-  background-image: url('https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19c8355cd5aff72debf2f4720f4c7e09&auto=format&fit=crop&w=688&q=80');
-  background-size: cover;
-  background-position: center;
-  grid-column: 2/2;
-  grid-row: 1/2;
+  background-image: url('/installing2.png');
+  grid-column: 2 / 3; 
+  grid-row: 1 / 2; 
 }
 
 .grid-item3 {
-  background-image: url('https://images.unsplash.com/photo-1508097549463-97f74cb9a6aa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=52c257bf60c788a1332419c74c6a8a01&auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
-  background-position: center;
-  grid-column: 3/4;
-  grid-row: 1/2;
+  background-image: url('/earth.jpg');
+  grid-column: 3 / 4;
+  grid-row: 1 / 3; 
 }
 
 .grid-item4 {
-  background-image: url('https://images.unsplash.com/photo-1507562534834-42ebd36b00ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f712012a42c9e9d9163fd9a0c80fd66a&auto=format&fit=crop&w=1202&q=80');
-  background-size: cover;
-  background-position: center;
-  grid-column: 1/2;
-  grid-row: 2/3;
+  background-image: url('/nature.jpg');
+  grid-column: 2 / 3; 
+  grid-row: 2 / 3; 
 }
 
 .grid-item5 {
-  background-image: url('https://images.unsplash.com/photo-1534714259038-764cb4cf1d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d07ea713fcf12221034dafd8f4ffe82b&auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
-  background-position: center;
-  grid-column: 2/4;
-  grid-row: 2/3;
+  background-image: url('/smile.png');
+  grid-column: 1 / 2; 
+  grid-row: 2 / 3; 
 }
 
-/* revisar */
-
-/* .section-color{
-  background-color: #022461;
-  height: 40vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
-
-.video {
-  z-index: -1;
-  width: 100vw;
-  height: 60vh;
-  object-fit: cover;
-  max-width: none;
+.grid-item1:hover,
+.grid-item2:hover,
+.grid-item3:hover,
+.grid-item4:hover,
+.grid-item5:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  transform: scale(1.1);
 }
 
-.videoSection {
-  overflow: hidden;
-  max-width: none;
-}
 .section-banner {
   background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
   display: flex;

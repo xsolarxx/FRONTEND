@@ -28,6 +28,7 @@
 
   /* Additional elements */
   --img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --img-border-radius: 3%;
 
   /** Personalizar TEXTOS*/
   --primary-font-family: 'Railway', sans-serif;
@@ -520,4 +521,9 @@ body {
   margin: 0;
   box-sizing: content-box;
   overflow-x: hidden;
+}
+
+img {
+  border-radius: 3%;
+  
 }

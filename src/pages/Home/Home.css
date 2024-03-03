@@ -1,6 +1,6 @@
 
 .hero-section { 
-  background-image: url('images/wind2.jpg');
+  background-image: url('/public/wind2.jpg');
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply; 
@@ -39,6 +39,8 @@
   margin: 0 auto;
 }
 
+/* responsive incompleto  */
+
 @media (max-width: 768px) {
   .section-consumer {
       grid-template-columns: 1fr; 
@@ -46,7 +48,7 @@
 }
 
 .section-consumer__image {
-  background: url("images/consumer.jpg");
+  background: url("/public/consumer.jpg");
   background-size: cover; 
   background-position: center; 
 }

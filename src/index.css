@@ -329,21 +329,19 @@ font-size: clamp(var(--to), var(--fluid), var(--from));
 	gap: clamp(var(--gap4To), var(--fluidgap4), var(--gap4From));
 }
 
-
-
 /* Reset of styles */
 
 html {
-  font-size: 62.5%;
-  }
-  
-  body {
-  font-family: var(--primary-font-family);
-  }
-  
-  * {
-  padding: 0;
-  margin: 0;
-  box-sizing: content-box;
-  overflow-x: hidden;
-  }
+font-size: 62.5%;
+}
+
+body {
+font-family: var(--primary-font-family);
+}
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: content-box;
+overflow-x: hidden;
+}

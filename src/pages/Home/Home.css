@@ -1,6 +1,6 @@
 
 .hero-section { 
-  background-image: url('/public/wind2.jpg');
+  background-image: url('/wind2.jpg');
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply; 
@@ -48,7 +48,7 @@
 }
 
 .section-consumer__image {
-  background: url("/public/consumer.jpg");
+  background: url("/consumer.jpg");
   background-size: cover; 
   background-position: center; 
 }
@@ -64,7 +64,65 @@
   margin-bottom: 2%;
 
 }
+
+
+.grid {
+  display: grid;
+  grid-column: 1/2;;
+  grid-row: 1/2;
+  height: 60vh;
+}
+
+.grid-item1 {
+  background-image: url("https://images.unsplash.com/photo-1534719156993-f3c9448673bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f089cfa06eb1cd7c0f654b39d8fdfd07&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.grid-item2 {
+  background-image: url("https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19c8355cd5aff72debf2f4720f4c7e09&auto=format&fit=crop&w=688&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/2;
+  grid-row: 1/2;
+}
+
+.grid-item3 {
+  background-image: url("https://images.unsplash.com/photo-1508097549463-97f74cb9a6aa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=52c257bf60c788a1332419c74c6a8a01&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.grid-item4 {
+  background-image: url("https://images.unsplash.com/photo-1507562534834-42ebd36b00ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f712012a42c9e9d9163fd9a0c80fd66a&auto=format&fit=crop&w=1202&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.grid-item5 {
+  background-image: url("https://images.unsplash.com/photo-1534714259038-764cb4cf1d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d07ea713fcf12221034dafd8f4ffe82b&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+
 /* revisar */
+
+/* .section-color{
+  background-color: #022461;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
 
 .video {
   z-index: -1;
@@ -77,50 +135,4 @@
 .videoSection {
   overflow: hidden;
   max-width: none;
-}
-
-.section1 {
-  margin: 3rem;
-  padding: 3rem;
-  text-align: center;
-  color: var(--text-navy-blue);
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.section2 {
-  background-image: url('../../../public/photovoltaic.jpg');
-  margin: 5rem 0 5rem 0;
-  padding: 7rem;
-  color: var(--text-white);
-  object-fit: contain;
-}
-
-.section3 h2,
-h4 {
-  margin: 5rem 0 5rem 0;
-  padding: 0;
-  color: rgb(0, 7, 7);
-  font-size: 30px;
-}
-
-.section4 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Three equal-width columns */
-  grid-gap: 10px;
-  height: 40vh;
-  margin: 5rem 0 5rem 0;
-  background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
-}
-
-.column1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 0 0 20%;
-}
-.column2 {
-  flex-direction: column;
 }

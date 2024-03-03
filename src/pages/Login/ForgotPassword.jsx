@@ -1,4 +1,4 @@
-//*import './ForgotPassword.css';
+import './ForgotPassword.css';
 
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -30,8 +30,8 @@ export const ForgotPassword = () => {
   }
   return (
     <>
-      <div className="p-35">
-        <h3>Reset your password</h3>
+      <div className="resend p-35">
+        <h5>Reset your password</h5>
 
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="form-group">

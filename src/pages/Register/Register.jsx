@@ -78,6 +78,7 @@ export const Register = () => {
                 name="userName"
                 autoComplete="false"
                 {...register('userName', { required: true })}
+                placeholder="User"
               />
             </label>
           </div>
@@ -92,6 +93,7 @@ export const Register = () => {
                 name="password"
                 autoComplete="false"
                 {...register('password', { required: true })}
+                placeholder="Xsolarx123."
               />
             </label>
           </div>
@@ -106,6 +108,7 @@ export const Register = () => {
                 name="email"
                 autoComplete="false"
                 {...register('email', { required: true })}
+                placeholder="xsolarxcompany@gmail.com"
               />
             </label>
 

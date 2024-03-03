@@ -44,6 +44,7 @@ export const ForgotPassword = () => {
                 name="email"
                 autoComplete="false"
                 {...register('email', { required: true })}
+                placeholder="xsolarxcompany@gmail.com"
               />
             </label>
           </div>

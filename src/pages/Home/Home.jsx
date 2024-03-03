@@ -28,10 +28,10 @@ export const Home = () => {
           <h2>Discover, connect and transform your relationship with renewable energy</h2>
           <h4>Your gateway to a greener future. </h4>
           <p className="p-l">
-            At xSolar.com, we're dedicated to empowering individuals on their sustainable
-            journey. Through our platform, you can discover, connect, and transform your
-            relationship with renewable energy. Whether you're exploring solar, wind, or
-            other forms of renewable energy.
+            `At xSolar.com, we are dedicated to empowering individuals on their
+            sustainable journey. Through our platform, you can discover, connect, and
+            transform your relationship with renewable energy. Whether you are exploring
+            solar, wind, or other forms of renewable energy.`
           </p>
         </span>
       </section>
@@ -44,20 +44,16 @@ export const Home = () => {
         <div className="grid-item5"></div>
       </section>
 
-      {/* <section className="section-color">
-        <div className="p-35">
-          <span>
-            <h1>Global by Nature</h1>
-          </span>
-          <span>
-            <p>
-              Greenvolt is increasingly recognised in the European market as a major
-              player in the promotion and development of renewable energy projects
-            </p>
-            <button className="button--gradient button--large p-l">Our Companies</button>
-          </span>
+      <section className="section-banner p-50">
+        <h1 className="p-35">Solar by Nature</h1>
+        <div className="div-banner gap-15">
+          <p>
+            xSolarx is increasingly recognized in the European market as a major player in
+            the promotion and development of renewable energy projects
+          </p>
+          <button className="button--white button--large">Discover more</button>
         </div>
-      </section> */}
+      </section>
 
       <ImageHome />
 

@@ -10,8 +10,15 @@ export const Dashboard = () => {
   return (
     <>
       <section className="welcomeUser">
-        <h1>Welcome to our App {user.email}</h1>
+        <h4>Welcome to our App </h4>
+        <h4>{user.email}</h4>
         {/* Utiliza la interpolación de cadena dentro de las comillas invertidas */}
+        <img className="pictureProfile" src={user.image} alt="foto User" />
+      </section>
+      <section className="favoriteCompany">
+        <p>
+          <strong>Mis Empresas Favoritas:</strong>
+        </p>
       </section>
     </>
   );

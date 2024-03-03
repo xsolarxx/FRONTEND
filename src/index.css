@@ -510,10 +510,21 @@ h6,
 
 html {
   font-size: 62.5%;
+  box-sizing: content-box;
+
 }
 
 body {
   font-family: var(--primary-font-family);
+}
+
+img {
+  border-radius: 3%;
+}
+
+a {
+  color: var(--color-primary-blue);
+  text-decoration: none;
 }
 
 * {
@@ -523,6 +534,5 @@ body {
   overflow-x: hidden;
 }
 
-img {
-  border-radius: 3%;
-}
+
+

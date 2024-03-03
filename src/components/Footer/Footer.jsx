@@ -23,19 +23,18 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="column-center">
+        <div>
           <h4>Contact</h4>
           <strong>
             <p>Email:</p>
           </strong>
           <p>xsolarxcompany@gmail.com</p>
           <strong className="spacing">Address:</strong>
-          <p>Plaza José Rinaldo,5 ,18882, Madrid</p>
+          <p>Plaza José Rinaldo 5,18882, Madrid</p>
         </div>
         <div className="column-center">
           <h4>Navigation</h4>
           <ul>
-            {/* Arreglar los estilos de estos navlink, el color no se puede modificar del mismo modo que con la lista de follow us */}
             <li>
               <NavLink className="links" to="/">
                 Home

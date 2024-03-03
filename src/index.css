@@ -1,7 +1,7 @@
 :root {
   /** Personalizar COLORES */
 
-  /* Colors */
+  /* Colores */
   --primary-color-green: #00d880;
   --primary-color-blue: #056fc7;
   --disabled-color-green: #9ad9b7;
@@ -9,24 +9,24 @@
   --text-navy-blue: #022461;
   --text-white: #ffff;
   --text-gray: #828282;
+  --color-bg-light-gray: #f2f2f2;
 
-  /* Colors */
+  /* Colores para los links y la acción de hover (se pueden cambiar) */
+  --link-text:#1b1c1b;
+  --link-hover: #bad5e5;
+
+  /* Colores  extra*/
   --color-primary-green: #00d880;
-  --color-primary-blue: #056fc7;
+  --color-primary-blue: #4d9bdb;
   --color-disabled-green: #9ad9b7;
   --color-disabled-blue: #63869f;
   --color-text-navy-blue: #001842;
   --color-text-gray: #828282;
 
-  /* Additional Colors */
-  --color-bg-light-gray: #f2f2f2;
-  --color-accent-orange: #ff7f50;
-  --color-error-red: #ff6347;
-  --color-success-green: #32cd32;
   /*Degradados*/
   --linear-gradient: (95.27deg, #056fc7 0%, #00d880 100%);
 
-  /* Additional elements */
+  /* Elementos adicionales */
   --img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --img-border-radius: 3%;
 

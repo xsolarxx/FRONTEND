@@ -62,13 +62,12 @@ export const Login = () => {
 
   return (
     <>
-      <form className="email_container" onSubmit={handleSubmit(formSubmit)}>
-        <h4>LOG IN</h4>
+      <form className="email_container p-35" onSubmit={handleSubmit(formSubmit)}>
+        <h3>LOG IN</h3>
 
         <label htmlFor="input_email">
-          <p>Email</p>
+          <h6>Email</h6>
           <input
-            className="input_email"
             type="email"
             id="email"
             name="email"
@@ -78,9 +77,8 @@ export const Login = () => {
         </label>
 
         <label htmlFor="input_password">
-          <p>Password</p>
+          <h6>Password</h6>
           <input
-            className="input_password"
             type="password"
             id="password"
             name="password"
@@ -90,8 +88,7 @@ export const Login = () => {
         </label>
 
         <button
-          className="button--blue button--medium
-          "
+          className="button--gradient button--medium"
           type="submit"
           disabled={send}
           style={{ background: send ? '' : 'color-disabled-green' }}
@@ -99,10 +96,10 @@ export const Login = () => {
           LOG IN
         </button>
 
-        <div className="btn_container">
-          Have you forgotten your password?
+        <div className="btn_conptainer">
+          <p>Have you forgotten your password?</p>
           <Link to="/forgotpassword">Click here to change the password</Link>
-          Are you not registered?{' '}
+          <p>Are you not registered?</p>
           <Link to="/register">
             <a>Register Here!</a>
           </Link>

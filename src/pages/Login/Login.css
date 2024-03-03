@@ -1,5 +1,6 @@
 form {
-  width: 500px;
+  max-width: 600px;
+  min-width: 200px;
   height: 400px;
   margin: 0 auto;
   display: flex;
@@ -7,11 +8,26 @@ form {
   justify-content: space-evenly;
 }
 
+h3 {
+  text-align: center;
+}
+
+h6 {
+font-weight: 100;
+}
+
 input {
   padding: 10px;
   border-radius: 5px;
-  border: solid 2px var(--color-disabled-green);
-  width: 400px;
+  border: solid 2px var(--primary-color-blue);
+  width: 96%; /* Initial width */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  input {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
 }
 
 .email_container {
@@ -19,15 +35,26 @@ input {
 }
 
 .btn_container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  text-align: center;
+
 }
 
-a {
+/* .input_user:focus + .custom-placeholder,
+.input_user:valid + .custom-placeholder,
+.input_user:hover {
+  font-size: 10px;
+  top: 5px;
+  left: 5px;
+  background-color: green;
+} */
+
+/* a {
   color: #49c1a2;
   text-decoration: none;
-}
+} */
 
 
 /* .form-wrap {

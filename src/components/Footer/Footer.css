@@ -8,6 +8,9 @@
     var(--primary-color-green) 100%
   );
 }
+.footer h4 {
+  color: var(--text-white);
+}
 /*Hay que hacerlo responsive ya que en pantallas externas se ven márgenes blancos verticales. En portátiles se ve correctamente */
 
 .footer-content {

@@ -12,7 +12,7 @@
   --color-bg-light-gray: #f2f2f2;
 
   /* Colores para los links y la acción de hover (se pueden cambiar) */
-  --link-text:#1b1c1b;
+  --link-text: #1b1c1b;
   --link-hover: #bad5e5;
 
   /* Colores  extra*/
@@ -511,7 +511,6 @@ h6,
 html {
   font-size: 62.5%;
   box-sizing: content-box;
-
 }
 
 body {
@@ -533,6 +532,3 @@ a {
   box-sizing: content-box;
   overflow-x: hidden;
 }
-
-
-

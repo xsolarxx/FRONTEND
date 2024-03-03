@@ -62,8 +62,8 @@ export const Login = () => {
 
   return (
     <>
-      <form className="email_container p-35" onSubmit={handleSubmit(formSubmit)}>
-        <h3>LOG IN</h3>
+      <form className="email_container1 p-35" onSubmit={handleSubmit(formSubmit)}>
+        <h4>LOG IN</h4>
 
         <label htmlFor="input_email">
           <h6>Email</h6>
@@ -93,17 +93,21 @@ export const Login = () => {
           disabled={send}
           style={{ background: send ? '' : 'color-disabled-green' }}
         >
-          LOG IN
+          Log in
         </button>
 
         <div className="btn_container">
           <ul>
-            <li><p>Have you forgotten your password?</p>
-              <Link to="/forgotpassword">Click here to reset your password</Link></li>
-            <li><p>Are you not registered?</p>
+            <li>
+              <p className="p-xs">Have you forgotten your password?</p>
+              <Link className="p-xs" to="/forgotpassword">Click here to reset your password</Link>
+            </li>
+            <li>
+              <p className="p-xs">Are you not registered?</p>
               <Link to="/register">
-                <a>Register here!</a>
-              </Link></li>
+                <a className="p-xs">Register here!</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </form>

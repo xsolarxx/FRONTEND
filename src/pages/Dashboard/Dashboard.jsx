@@ -20,6 +20,9 @@ export const Dashboard = () => {
           <strong>Mis Empresas Favoritas:</strong>
         </p>
       </section>
+      <section className="feedUser">
+        <p>test feed</p>
+      </section>
     </>
   );
 };

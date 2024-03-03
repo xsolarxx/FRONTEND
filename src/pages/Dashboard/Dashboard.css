@@ -1,5 +1,5 @@
 .welcomeUser {
-  background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
+  background: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
   margin-bottom: 20px;
   color: var(--text-white);
 }
@@ -19,5 +19,27 @@
 }
 
 .favoriteCompany {
-  background-image: white;
+  background: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
+  font-family: var(--primary-font-family);
+  color: var(--text-white);
+  background-size: cover;
+  width: 30%; /* Ajusta el ancho del contenedor */
+  height: 150px; /* Ajusta la altura del contenedor */
+  margin-bottom: 20px;
+  border-radius: 10px; /* Ajusta el radio de las esquinas */
+}
+
+.favoriteCompany p {
+  text-align: center;
+}
+
+.feedUser {
+  background: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
+  font-family: var(--primary-font-family);
+  color: var(--text-white);
+  background-size: cover;
+  width: 30%; /* Ajusta el ancho del contenedor */
+  height: 150px; /* Ajusta la altura del contenedor */
+  margin-bottom: 20px;
+  border-radius: 10px; /* Ajusta el radio de las esquinas */
 }

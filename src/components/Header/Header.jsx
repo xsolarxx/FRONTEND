@@ -10,8 +10,12 @@ export const Header = () => {
     <>
       <header>
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/news">News</NavLink>
+          <NavLink className="link-home" to="/">
+            Home
+          </NavLink>
+          <NavLink className="link-news" to="/news">
+            News
+          </NavLink>
 
           {user == null && (
             <NavLink to="/login">
@@ -27,7 +31,7 @@ export const Header = () => {
             </button>
           )}
           {user !== null ? (
-            <NavLink to="/profile">
+            <NavLink className="link-log" to="/profile">
               <img className="icon" src={user.image} alt={user.user} />
             </NavLink>
           ) : null}

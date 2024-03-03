@@ -1,6 +1,6 @@
 header {
-  min-height: 10vh;
-  background-color: var(--text-navy-blue);
+  min-height: 8vh;
+  background-color: var(--primary-color-blue);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -15,4 +15,16 @@ nav {
 
 .icon {
   width: 50px;
+}
+
+.link-home {
+  color: rgb(206, 241, 202);
+}
+
+.link-news {
+  color: rgb(206, 241, 202);
+}
+
+.material-symbols-outlined {
+  color: rgb(206, 241, 202);
 }

@@ -62,58 +62,49 @@ export const Login = () => {
 
   return (
     <>
-      <div className="form-wrap">
-        <h4>LOG IN</h4>
-        <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="email_container form-group">
-            <label htmlFor="input_email">
-              Email
-              <input
-                className="input_email"
-                type="email"
-                id="email"
-                name="email"
-                autoComplete="false"
-                {...register('email', { required: true })}
-              />
-            </label>
+      <form className="email_container p-35" onSubmit={handleSubmit(formSubmit)}>
+        <h3>LOG IN</h3>
 
-            <div className="password_container form-group">
-              <label htmlFor="input_password">
-                Password
-                <input
-                  className="input_password"
-                  type="password"
-                  id="password"
-                  name="password"
-                  autoComplete="false"
-                  {...register('password', { required: true })}
-                />
-              </label>
-            </div>
-          </div>
+        <label htmlFor="input_email">
+          <h6>Email</h6>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autoComplete="false"
+            {...register('email', { required: true })}
+          />
+        </label>
 
-          <div className="btn_container">
-            <button
-              className="btn"
-              type="submit"
-              disabled={send}
-              style={{ background: send ? '#49c1a388' : '#49c1a2' }}
-            >
-              LOG IN
-            </button>
-          </div>
-          <p className="bottom-text">
-            Have you forgotten your password?{' '}
-            <Link to="/forgotpassword" className="anchorCustom">
-              Click here to change the password
-            </Link>
-          </p>
-          <p className="register">
-            Are you not registered? <Link to="/register">Register Here!</Link>
-          </p>
-        </form>
-      </div>
+        <label htmlFor="input_password">
+          <h6>Password</h6>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autoComplete="false"
+            {...register('password', { required: true })}
+          />
+        </label>
+
+        <button
+          className="button--gradient button--medium"
+          type="submit"
+          disabled={send}
+          style={{ background: send ? '' : 'color-disabled-green' }}
+        >
+          LOG IN
+        </button>
+
+        <div className="btn_conptainer">
+          <p>Have you forgotten your password?</p>
+          <Link to="/forgotpassword">Click here to change the password</Link>
+          <p>Are you not registered?</p>
+          <Link to="/register">
+            <a>Register Here!</a>
+          </Link>
+        </div>
+      </form>
     </>
   );
 };

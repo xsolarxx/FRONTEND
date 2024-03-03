@@ -15,10 +15,10 @@ export const Home = () => {
       </section>
 
       <section className="big-titel-section p-35">
-        <h1>
+        <h2>
           Solarx operates in the renewable energies market. We were born green, not made
           green.
-        </h1>
+        </h2>
       </section>
 
       <section className="section-consumer p-35 gap-35">
@@ -35,6 +35,29 @@ export const Home = () => {
           </p>
         </span>
       </section>
+
+      <section className="grid gap-35">
+        <div className="grid-item1"></div>
+        <div className="grid-item2"></div>
+        <div className="grid-item3"></div>
+        <div className="grid-item4"></div>
+        <div className="grid-item5"></div>
+      </section>
+
+      {/* <section className="section-color">
+        <div className="p-35">
+          <span>
+            <h1>Global by Nature</h1>
+          </span>
+          <span>
+            <p>
+              Greenvolt is increasingly recognised in the European market as a major
+              player in the promotion and development of renewable energy projects
+            </p>
+            <button className="button--gradient button--large p-l">Our Companies</button>
+          </span>
+        </div>
+      </section> */}
 
       <ImageHome />
 

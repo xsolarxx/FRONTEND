@@ -19,20 +19,24 @@
 
 .rights {
   padding-top: 20px;
+  font-size: smaller;
 }
 
 h4 {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 ul li {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .spacing {
   margin-top: 10px;
 }
 
-.links {
-  color: rgb(177, 243, 249);
-} /* Este color hay que mirarlo para que sea igual que los de "follow us"*/
+footer a {
+  color: var(--link-text);
+}
+footer a:hover {
+  color: var(--link-hover);
+}

@@ -66,11 +66,11 @@ export const Register = () => {
   return (
     <>
       <div className="form-wrap">
-        <h2>Sign Up</h2>
+        <h3>SIGN UP</h3>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="user_container form-group">
             <label htmlFor="input_user">
-              Username
+              <h6>Username</h6>
               <input
                 className="input_user"
                 type="text"
@@ -84,7 +84,7 @@ export const Register = () => {
 
           <div className="password_container form-group">
             <label htmlFor="input_password">
-              Password
+              <h6>Password</h6>
               <input
                 className="input_password"
                 type="password"
@@ -98,7 +98,7 @@ export const Register = () => {
 
           <div className="email_container form-group">
             <label htmlFor="input_email">
-              Email
+              <h6>Email</h6>
               <input
                 className="input_email"
                 type="email"
@@ -118,7 +118,7 @@ export const Register = () => {
                 {...register('gender')}
               />
               <label htmlFor="Hombre" className="label-radio hombre">
-                Hombre
+                <h6>Hombre</h6>
               </label>
               <input
                 type="radio"
@@ -128,7 +128,7 @@ export const Register = () => {
                 {...register('gender')}
               />
               <label htmlFor="Mujer" className="label-radio mujer">
-                Mujer
+                <h6>Mujer</h6>
               </label>
             </div>
             <Uploadfile />
@@ -136,10 +136,9 @@ export const Register = () => {
 
           <div className="btn_container">
             <button
-              className="btn"
+              className="button--gradient button--medium"
               type="submit"
               disabled={send}
-              style={{ background: send ? '#49c1a388' : '#2f7a67' }}
             >
               Register
             </button>

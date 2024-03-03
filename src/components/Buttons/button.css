@@ -21,7 +21,10 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
-
+.button--gradient:hover {
+  background-image: var(--primary-color-green);
+  color: var(--primary-color-green);
+}
 /* Boton 2 */
 
 .button--white {
@@ -33,6 +36,10 @@
   cursor: pointer;
   border-radius: 50px;
   background-color: transparent;
+}
+.button--white:hover {
+  background-color: var(--text-white);
+  color: var(--primary-color-green);
 }
 .button--white:disabled {
   opacity: 0.5;

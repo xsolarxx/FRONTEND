@@ -73,6 +73,7 @@ export const Login = () => {
             name="email"
             autoComplete="false"
             {...register('email', { required: true })}
+            placeholder="xsolarxcompany@gmail.com"
           />
         </label>
 
@@ -84,6 +85,7 @@ export const Login = () => {
             name="password"
             autoComplete="false"
             {...register('password', { required: true })}
+            placeholder="Xsolarx123."
           />
         </label>
 
@@ -100,7 +102,9 @@ export const Login = () => {
           <ul>
             <li>
               <p className="p-xs">Have you forgotten your password?</p>
-              <Link className="p-xs" to="/forgotpassword">Click here to reset your password</Link>
+              <Link className="p-xs" to="/forgotpassword">
+                Click here to reset your password
+              </Link>
             </li>
             <li>
               <p className="p-xs">Are you not registered?</p>

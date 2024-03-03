@@ -36,7 +36,7 @@ export const Home = () => {
         </span>
       </section>
 
-      <section className="grid gap-35">
+      <section className="grid p-35 gap-3">
         <div className="grid-item1"></div>
         <div className="grid-item2"></div>
         <div className="grid-item3"></div>
@@ -58,10 +58,6 @@ export const Home = () => {
       </section>
 
       <ImageHome />
-
-      <div className="section3">
-        <AnimatedHeading />
-      </div>
     </>
   );
 };

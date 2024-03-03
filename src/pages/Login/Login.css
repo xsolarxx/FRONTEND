@@ -8,7 +8,8 @@ form {
   justify-content: space-evenly;
 }
 
-h3 {
+h3,
+h4 {
   text-align: center;
 }
 
@@ -30,8 +31,14 @@ input {
   }
 }
 
-.email_container {
+.email_container1 {
   flex-direction: column;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #ecf7eb;
 }
 
 .btn_container {

@@ -66,7 +66,7 @@ export const Register = () => {
   return (
     <>
       <div className="form-wrap">
-        <h3>SIGN UP</h3>
+        <h4>SIGN UP</h4>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="user_container form-group">
             <label htmlFor="input_user">
@@ -144,17 +144,16 @@ export const Register = () => {
             </button>
           </div>
         </form>
-      </div>
-
-      <div className="footerForm">
-        <p className="bottom-text">
-          By clicking the Sign Up button, you agree to our{' '}
-          <Link className="anchorCustom">Terms & Conditions</Link> and{' '}
-          <Link className="anchorCustom">Privacy Policy</Link>.
-        </p>
-        <p className="login-text">
-          Already have an account? <Link to="/login">Login Here</Link>
-        </p>
+        <div className="footerForm">
+          <p className="bottom-text p-xs">
+            By clicking the Sign Up button, you agree to our{' '}
+            <Link className="anchorCustom">Terms & Conditions</Link> and{' '}
+            <Link className="anchorCustom">Privacy Policy</Link>.
+          </p>
+          <p className="login-text p-xs">
+            Already have an account? <Link to="/login">Login Here</Link>
+          </p>
+        </div>
       </div>
     </>
   );

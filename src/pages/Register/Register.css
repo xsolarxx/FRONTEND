@@ -1,10 +1,15 @@
 /* Estilos para el contenedor principal del formulario */
 .form-wrap {
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 50px;
+  max-width: 300px;
+
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #ecf7eb;
 }
 
 /* Estilos para el formulario */
@@ -57,7 +62,7 @@ input:hover {
   }
 }
 #file-drag {
-  width: 94%;
+  width: 87%;
   margin-bottom: 2%;
 }
 @media (max-width: 600px) {

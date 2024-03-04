@@ -29,39 +29,39 @@ export const ForgotPassword = () => {
     return <Navigate to="/login" />;
   }
   return (
-  <>
-    <div className="pswcontainer">
-      <div className="resend p-35">
-        <h5>Reset your password</h5>
+    <>
+      <div className="pswcontainer">
+        <div className="resend p-35">
+          <h5>Reset your password</h5>
 
-        <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="form-group">
-            <label htmlFor="input-email">
-              <input
-                className="email_fgpsw"
-                type="text"
-                id="email"
-                name="email"
-                autoComplete="false"
-                {...register('email', { required: true })}
-                placeholder="Email"
-              />
-            </label>
-          </div>
+          <form className="formregister" onSubmit={handleSubmit(formSubmit)}>
+            <div className="form-group">
+              <label htmlFor="input-email">
+                <input
+                  className="email_fgpsw"
+                  type="text"
+                  id="email"
+                  name="email"
+                  autoComplete="false"
+                  {...register('email', { required: true })}
+                  placeholder="Email"
+                />
+              </label>
+            </div>
 
-          <div className="btn_container">
-            <button
-              className="button--blue"
-              type="submit"
-              disabled={send}
-              style={{ background: send ? '' : 'color-disabled-green' }}
-            >
-              Change password
-            </button>
-          </div>
-        </form>
+            <div className="btn_container11">
+              <button
+                className="button-fgpw"
+                type="submit"
+                disabled={send}
+                style={{ background: send ? '' : 'color-disabled-green' }}
+              >
+                Change password
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-   </>
+    </>
   );
 };

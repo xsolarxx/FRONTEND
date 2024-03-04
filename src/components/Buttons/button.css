@@ -38,7 +38,6 @@
   border: transparent;
   border-radius: 50px;
   background-color: var(--color-navy-blue);
-
 }
 .button--green:disabled {
   opacity: 0.5;
@@ -70,7 +69,6 @@
   background-color: var(--text-white);
   color: var(--primary-color-green);
 }
-
 
 /* Button 2 */
 

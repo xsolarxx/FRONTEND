@@ -7,19 +7,21 @@ export const Home = () => {
   return (
     <>
       <section className="hero-section p-35">
-        <h1> Connecting conscious consumers with renewable companies </h1>
-        <p className="p-1 p-l">
-          Explore renewable companies and connect with industry professionals
-        </p>
-        <a
-          href="http://localhost:5173/register"
-          className="button--white button--large button-hover"
-        >
-          Sign up
-        </a>
+        <div className="herobox p-35">
+          <h1> Connecting conscious consumers with renewable companies </h1>
+          <p className="p-1 p-l">
+            Explore renewable companies and connect with industry professionals
+          </p>
+          <a
+            href="http://localhost:5173/register"
+            className="button--white button--large button-hover"
+          >
+            Sign up
+          </a>
+        </div>
       </section>
 
-      <section className="big-titel-section p-25">
+      <section className="big-titel-section ">
         <p>XSOLAREX</p>
         <h2>
           Solarx operates in the renewable energies market. We were born green, not made
@@ -27,7 +29,7 @@ export const Home = () => {
         </h2>
       </section>
 
-      <section className="section-consumer p-25 gap-25">
+      <section className="section-consumer gap-25">
         <span className="section-consumer__image"></span>
         <span className="section-consumer__text">
           <h3>Discover, connect and transform your relationship with renewable energy</h3>

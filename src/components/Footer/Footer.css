@@ -2,10 +2,10 @@
   padding: 1em;
   text-align: center;
   background-size: cover;
-  background-color: var(--color-text-navy-blue);
+  background-color: var(--color-navy-blue);
 }
 .footer h4 {
-  color: var(--text-white);
+  color: var(--color-white);
 }
 /*Hay que hacerlo responsive ya que en pantallas externas se ven márgenes blancos verticales. En portátiles se ve correctamente */
 
@@ -16,7 +16,7 @@
   flex-wrap: wrap;
 }
 .footer p {
-  color: var(--text-white);
+  color: var(--color-white);
 }
 
 .rights {
@@ -37,7 +37,7 @@ ul li {
 }
 
 footer a {
-  color: var(--text-white);
+  color: var(--color-white);
 }
 footer a:hover {
   color: var(--link-hover);

@@ -2,44 +2,16 @@
   /** Personalizar COLORES */
 
   /* Colores */
-  --primary-color-green: #6de475;
-  --disabled-color-green: #9ad9b7;
-  --disabled-color-blue: #63869f;
-  --text-navy-blue: #022461;
-  --text-white: #ffff;
-  --text-gray: #828282;
-  --color-bg-light-gray: #f2f2f2;
+  --primary-color-green: #97F85B;
+  --color-green: #25dc80;
+  --color-navy-blue: #112e3d;
+  --color-white: #ffff;
+  --background-color-gray: #f0f0f0;
   --background-color-opacidad: #0318123b;
-
-  /* new colors  */
-  --color-primary: #112e3c;
-  --color-secondary: #112e3c;
-  --color-text: #939393;
-  --color-accent: #97f85b;
-  --color-36efc7a: #ffffff;
-  --color-fc3730b: #112e3c;
-  --color-c59e3c1: #939393;
-  --color-3ab16c0: #f0f0f0;
-  --color-c5cdb07: #20aedb;
-  --color-4502497: #97f85b;
-  --color-e6fe98c: #25dc80;
-  --color-657d478: #34515f;
-  --color-ad43f65: #1a1a1a;
-  --color-53993d3: #000000;
-  --color-bcc37f0: #02010100;
-  --color-025ea08: #000a0f;
 
   /* Colores para los links y la acción de hover (se pueden cambiar) */
   --link-text: #1b1c1b;
   --link-hover: #bad5e5;
-
-  /* Colores  extra*/
-  --color-primary-green: #00d880;
-  --color-primary-blue: #4d9bdb;
-  --color-disabled-green: #9ad9b7;
-  --color-disabled-blue: #63869f;
-  --color-text-navy-blue: #112e3c;
-  --color-text-gray: #828282;
 
   /* Elementos adicionales */
   --img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

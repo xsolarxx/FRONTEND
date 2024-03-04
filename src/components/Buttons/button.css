@@ -3,23 +3,25 @@
 /* Button 1 */
 
 .button--green {
-  padding: 15px 50px 15px 50px;
-  min-width: 20px;
-  max-height: 20px;
+  width: 100px;
+  height: 35px;
   color: var(--text-navy-blue);
   text-align: center;
+  font-weight: bold;
   cursor: pointer;
   border: transparent;
   border-radius: 50px;
   background-color: var(--primary-color-green);
+  background-image: linear-gradient(215deg, #97F85B 0%, #25dc80 100%);
 }
-.button--gradient:disabled {
+.button--green:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.button--gradient:hover {
-  background-image: var(--primary-color-green);
-  color: var(--primary-color-green);
+.button--green:hover {
+  background-color: var(--text-navy-blue);
+  color: var(--text-white);
+  background-image: none;
 }
 /* Button 2 */
 

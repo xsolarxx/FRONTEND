@@ -3,6 +3,7 @@
   text-align: center;
   background-size: cover;
   background-color: var(--color-navy-blue);
+  min-height: 20vh;
 }
 .footer h4 {
   color: var(--color-white);

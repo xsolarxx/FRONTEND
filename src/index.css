@@ -12,22 +12,22 @@
   --background-color-opacidad: #0318123b;
 
   /* new colors  */
---color-primary: #112E3C;
---color-secondary: #112E3C;
---color-text: #939393;
---color-accent: #97F85B;
---color-36efc7a: #FFFFFF;
---color-fc3730b: #112E3C;
---color-c59e3c1: #939393;
---color-3ab16c0: #F0F0F0;
---color-c5cdb07: #20AEDB;
---color-4502497: #97F85B;
---color-e6fe98c: #25DC80;
---color-657d478: #34515F;
---color-ad43f65: #1A1A1A;
---color-53993d3: #000000;
---color-bcc37f0: #02010100;
---color-025ea08: #000A0F;
+  --color-primary: #112e3c;
+  --color-secondary: #112e3c;
+  --color-text: #939393;
+  --color-accent: #97f85b;
+  --color-36efc7a: #ffffff;
+  --color-fc3730b: #112e3c;
+  --color-c59e3c1: #939393;
+  --color-3ab16c0: #f0f0f0;
+  --color-c5cdb07: #20aedb;
+  --color-4502497: #97f85b;
+  --color-e6fe98c: #25dc80;
+  --color-657d478: #34515f;
+  --color-ad43f65: #1a1a1a;
+  --color-53993d3: #000000;
+  --color-bcc37f0: #02010100;
+  --color-025ea08: #000a0f;
 
   /* Colores para los links y la acción de hover (se pueden cambiar) */
   --link-text: #1b1c1b;
@@ -543,4 +543,3 @@ a {
   box-sizing: content-box;
   overflow-x: hidden;
 }
-

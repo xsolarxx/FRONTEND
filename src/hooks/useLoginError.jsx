@@ -7,7 +7,7 @@ export const useLoginError = (res, setRes, userLogin, setLoginOk) => {
     /** me creo un objeto que es lo que quiero meter luego en el localStorage */
     const dataCustom = {
       token: res.data.token,
-      user: res.data.user.name,
+      name: res.data.user.userName,
       email: res.data.user.email,
       image: res.data.user.image,
       check: res.data.user.check,

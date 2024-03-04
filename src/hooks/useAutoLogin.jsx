@@ -13,10 +13,11 @@ export const useAutoLogin = async (allUser, userLogin) => {
     const sendData = await autoLogin(customFormData);
 
     if (sendData?.status == 200) {
-      const { name, email, image, check } = sendData.data.user;
+      console.log('entro', sendData.data.user);
+      const { userName, email, image, check } = sendData.data.user;
       const userCustom = {
         token: sendData.data.token,
-        user: name,
+        user: userName,
         email,
         image,
         check,

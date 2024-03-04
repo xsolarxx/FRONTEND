@@ -64,13 +64,13 @@ export const Register = () => {
   }
 
   return (
-    <>
-      <div className="form-wrap">
-        <h4>SIGN UP</h4>
+  <>
+    <div className="main_container">
+      <div className="form-wrap1 p-35">
+        <h4 className="logintext">xSolarx</h4>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="user_container form-group">
-            <label htmlFor="input_user">
-              <h6>Username</h6>
+            <label htmlFor="input_user" className="userregister">
               <input
                 className="input_user"
                 type="text"
@@ -78,29 +78,27 @@ export const Register = () => {
                 name="userName"
                 autoComplete="false"
                 {...register('userName', { required: true })}
-                placeholder="User"
+                placeholder="Username"
               />
             </label>
           </div>
 
           <div className="password_container form-group">
             <label htmlFor="input_password">
-              <h6>Password</h6>
               <input
-                className="input_password"
+                className="input_Password"
                 type="password"
                 id="password"
                 name="password"
                 autoComplete="false"
                 {...register('password', { required: true })}
-                placeholder="Xsolarx123."
+                placeholder="Password"
               />
             </label>
           </div>
 
           <div className="email_container form-group">
             <label htmlFor="input_email">
-              <h6>Email</h6>
               <input
                 className="input_email"
                 type="email"
@@ -108,7 +106,7 @@ export const Register = () => {
                 name="email"
                 autoComplete="false"
                 {...register('email', { required: true })}
-                placeholder="xsolarxcompany@gmail.com"
+                placeholder="Email"
               />
             </label>
 
@@ -139,7 +137,7 @@ export const Register = () => {
 
           <div className="btn_container">
             <button
-              className="button--gradient button--medium"
+              className="button--blue"
               type="submit"
               disabled={send}
             >
@@ -150,14 +148,15 @@ export const Register = () => {
         <div className="footerForm">
           <p className="bottom-text p-xs">
             By clicking the Sign Up button, you agree to our{' '}
-            <Link className="anchorCustom">Terms & Conditions</Link> and{' '}
-            <Link className="anchorCustom">Privacy Policy</Link>.
+            <Link className="linkr1">Terms & Conditions</Link> and{' '}
+            <Link className="linkr1">Privacy Policy</Link>.
           </p>
-          <p className="login-text p-xs">
-            Already have an account? <Link to="/login">Login Here</Link>
+          <p className=" p-xs">
+            Already have an account? <Link className="linkr1" to="/login">Login Here</Link>
           </p>
         </div>
       </div>
-    </>
+    </div>
+  </>
   );
 };

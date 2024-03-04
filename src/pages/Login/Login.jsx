@@ -88,7 +88,7 @@ export const Login = () => {
           </label>
 
           <button
-            className="buttonLogin"
+            className="button--blue"
             type="submit"
             disabled={send}
             style={{ background: send ? '' : 'color-disabled-green' }}
@@ -100,14 +100,14 @@ export const Login = () => {
             <ul className="ulogin">
               <li>
                 <p className="p-xs">Have you forgotten your password?</p>
-                <Link className="p-xs" to="/forgotpassword">
+                <Link className="linkr1 p-xs" to="/forgotpassword">
                   Click here to reset your password
                 </Link>
               </li>
               <li>
                 <p className="p-xs">Are you not registered?</p>
                 <Link to="/register">
-                  <a className="p-xs">Register here!</a>
+                  <a className="linkr2 p-xs">Register here!</a>
                 </Link>
               </li>
             </ul>

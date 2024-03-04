@@ -44,7 +44,7 @@ export const Home = () => {
         <h3>What you will find inside our platform</h3>
         <p className="p-xl p-1">
           A community of like-minded people and a platform to learn and grow your interest
-          in renewables
+          in renewables.
         </p>
       </div>
 

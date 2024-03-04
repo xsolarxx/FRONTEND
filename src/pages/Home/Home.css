@@ -10,7 +10,7 @@
   justify-content: center;
   color: white;
   border-radius: var(--img-border-radius);
-  width: 1440px;
+  width: 80%;
   margin: 0 auto;
 
   
@@ -75,14 +75,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #022461;
+  color: var(--color-navy-blue);
   text-align: start;
 }
 .section-consumer__text h4 {
   color: #00d880;
   margin-bottom: 2%;
   text-align: start;
-  font-weight: 100;
 }
 
 .grid-titel-with-subtitle {
@@ -164,10 +163,10 @@
 /* section banner  */
 
 .section-banner {
-  background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
+  background-color: var(--color-navy-blue);
   display: flex;
   flex-direction: row;
-  color: var(--text-white);
+  color: white;
 }
 .div-banner {
   display: flex;
@@ -178,6 +177,14 @@
   flex-basis: 50%;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.section-banner button {
+  .button--green:hover {
+    background-color: var(--color-navy-blue);
+    color: var(--color-white);
+    background-image: none;
+  }
 }
 
 /* section image  */
@@ -197,7 +204,7 @@
 }
 
 .section-image h3 {
-  color: var(--text-white);
+  color: white;
   text-align: start;
   width: 700px;
 }

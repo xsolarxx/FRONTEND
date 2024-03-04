@@ -11,23 +11,36 @@ export const Header = () => {
       <header>
         <nav>
           <NavLink className="link-home" to="/">
-            Home
+            <p>Home</p>
           </NavLink>
           <NavLink className="link-news" to="/news">
-            News
+            <p>News</p>
           </NavLink>
 
           {user == null && (
             <NavLink to="/login">
-              <span className="material-symbols-outlined p-1">logout</span>
+              <button className="button--green button--medium">Login</button>
             </NavLink>
           )}
 
-          {user !== null ? <NavLink to="/dashboard">Dashboard</NavLink> : null}
-          {user !== null ? <NavLink to="/company">Company</NavLink> : null}
+          {user !== null ? (
+            <NavLink to="/dashboard">
+              <p>Dashboard</p>
+            </NavLink>
+          ) : null}
+          {user !== null ? (
+            <NavLink to="/forum">
+              <p>Forum</p>
+            </NavLink>
+          ) : null}
+          {user !== null ? (
+            <NavLink to="/company">
+              <p>Company</p>
+            </NavLink>
+          ) : null}
           {user !== null && (
             <button className="icon" onClick={() => logout()}>
-              <span className="material-symbols-outlined">logout</span>
+              Logout
             </button>
           )}
           {user !== null ? (

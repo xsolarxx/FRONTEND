@@ -2,20 +2,16 @@
 
 /* Button 1 */
 
-.button--gradient {
-  padding: 5px 30px;
+.button--green {
+  padding: 15px 50px 15px 50px;
+  min-width: 20px;
   max-height: 20px;
-  color: white;
-  border: solid var(--primary-color-blue) 1.5px;
+  color: var(--text-navy-blue);
   text-align: center;
   cursor: pointer;
+  border: transparent;
   border-radius: 50px;
-  font-size: var(--primary-color-blue);
-  background-image: linear-gradient(
-    95.27deg,
-    var(--primary-color-blue) 0%,
-    var(--primary-color-green) 100%
-  );
+  background-color: var(--primary-color-green);
 }
 .button--gradient:disabled {
   opacity: 0.5;
@@ -41,7 +37,6 @@
   background-color: var(--text-white);
   color: var(--primary-color-green);
   border: solid var(--primary-color-green);
-
 }
 .button--white:disabled {
   opacity: 0.5;

@@ -1,8 +1,6 @@
 .hero-section {
   background-image: url('/wind2.jpg');
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: multiply;
   background-position: center;
   text-align: center;
   color: var(--text-white);
@@ -84,7 +82,7 @@
   margin: 0 auto;
   color: #022461;
   flex-wrap: wrap;
-  padding-top: 12rem;
+  padding-top: 30rem;
   padding: 6rem;
 }
 

@@ -37,22 +37,21 @@ export const ForgotPassword = () => {
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="form-group">
             <label htmlFor="input-email">
-              Email
               <input
-                className="input-email"
+                className="email_fgpsw"
                 type="text"
                 id="email"
                 name="email"
                 autoComplete="false"
                 {...register('email', { required: true })}
-                placeholder="xsolarxcompany@gmail.com"
+                placeholder="Email"
               />
             </label>
           </div>
 
           <div className="btn_container">
             <button
-              className="button--gradient button--medium"
+              className="button--blue"
               type="submit"
               disabled={send}
               style={{ background: send ? '' : 'color-disabled-green' }}

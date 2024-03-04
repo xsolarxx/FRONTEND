@@ -39,6 +39,7 @@
   height: 400px;
   max-width: 1600px;
   margin: 0 auto;
+  text-align: start;
 }
 
 /* responsive incompleto  */
@@ -55,6 +56,7 @@
   background-position: center;
   border-radius: var(--img-border-radius);
   box-shadow: var(--img-box-shadow);
+
 }
 
 .section-consumer__text {
@@ -62,18 +64,33 @@
   flex-direction: column;
   justify-content: center;
   color: #022461;
+  text-align: start;
+
 }
 .section-consumer__text h4 {
   color: #00d880;
   margin-bottom: 2%;
+  text-align: start;
+  font-weight: 100;
+
+}
+
+.grid-titel-with-subtitle {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #022461;
+  flex-wrap: wrap;
+  text-align: center;
+
 }
 
 .grid {
   display: grid;
   grid-row: 1fr;
-  height: 80vh;
+  height: 90vh;
   max-width: 1600px;
   margin: 0 auto;
+  text-align: b;
 }
 
 .grid-item1,
@@ -85,6 +102,10 @@
   background-position: center;
   border-radius: var(--img-border-radius);
   transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  
+  
 }
 
 .grid-item1 {
@@ -122,9 +143,16 @@
 .grid-item3:hover,
 .grid-item4:hover,
 .grid-item5:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   transform: scale(1.1);
+
+}
+
+.grid h3 {
+  color: white;
+  text-align: center;
+  text-shadow: 0.5px 0.9px gray;
 }
 
 .section-banner {
@@ -139,6 +167,7 @@
   justify-content: center;
   align-items: flex-start;
   color: var(--text-white);
+  flex-basis: 50%;
 }
 .div-banner button {
   margin: 0;

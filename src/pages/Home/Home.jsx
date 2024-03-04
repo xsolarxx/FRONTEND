@@ -44,23 +44,23 @@ export const Home = () => {
       <div className="grid-titel-with-subtitle">
         <h3>What you will find inside our platform</h3>
         <p className="p-xl p-1">
-          A community of like minded people and a platfom to learn and grow your interest
-          of renewables
+          A community of like-minded people and a platform to learn and grow your interest
+          in renewables
         </p>
       </div>
 
       <section className="grid p-35 gap-15">
         <div className="grid-item1">
-          <h3>NEWS</h3>
+          <h3>News</h3>
           {/* <p>Empresas que encajen con tu idea de sostenibilidad</p> */}
         </div>
         <div className="grid-item2"></div>
         <div className="grid-item3">
-          <h3>FORUM</h3>
+          <h3>Forum</h3>
           {/* <p>Empresas que encajen con tu idea de sostenibilidad</p> */}
         </div>
         <div className="grid-item4">
-          <h3>COMPANIES</h3>
+          <h3>Companies</h3>
           {/* <p>Empresas que encajen con tu idea de sostenibilidad</p> */}
         </div>
         <div className="grid-item5"></div>

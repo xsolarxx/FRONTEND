@@ -2,11 +2,7 @@
   padding: 1em;
   text-align: center;
   background-size: cover;
-  background-image: linear-gradient(
-    95.27deg,
-    var(--primary-color-blue) 0%,
-    var(--primary-color-green) 100%
-  );
+  background-color: var(--color-text-navy-blue);
 }
 .footer h4 {
   color: var(--text-white);
@@ -18,6 +14,9 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+.footer p {
+  color: var(--text-white);
 }
 
 .rights {
@@ -38,7 +37,7 @@ ul li {
 }
 
 footer a {
-  color: var(--link-text);
+  color: var(--text-white);
 }
 footer a:hover {
   color: var(--link-hover);

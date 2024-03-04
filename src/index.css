@@ -2,15 +2,14 @@
   /** Personalizar COLORES */
 
   /* Colores */
-  --primary-color-green: #00d880;
-  --primary-color-blue: #056fc7;
+  --primary-color-green: #6de475;
   --disabled-color-green: #9ad9b7;
   --disabled-color-blue: #63869f;
   --text-navy-blue: #022461;
   --text-white: #ffff;
   --text-gray: #828282;
   --color-bg-light-gray: #f2f2f2;
-  --background-color: #2f7a67;
+
   --background-color-opacidad: #0318123b;
 
   /* Colores para los links y la acción de hover (se pueden cambiar) */
@@ -22,15 +21,12 @@
   --color-primary-blue: #4d9bdb;
   --color-disabled-green: #9ad9b7;
   --color-disabled-blue: #63869f;
-  --color-text-navy-blue: #001842;
+  --color-text-navy-blue: #112e3c;
   --color-text-gray: #828282;
-
-  /*Degradados*/
-  --linear-gradient: (95.27deg, #056fc7 0%, #00d880 100%);
 
   /* Elementos adicionales */
   --img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --img-border-radius: 3%;
+  --img-border-radius: 30px;
 
   /** Personalizar TEXTOS*/
   --primary-font-family: 'Railway', sans-serif;
@@ -517,10 +513,6 @@ html {
 
 body {
   font-family: var(--primary-font-family);
-}
-
-img {
-  border-radius: 3%;
 }
 
 a {

@@ -29,7 +29,9 @@ export const Footer = () => {
             <p>Email:</p>
           </strong>
           <p>xsolarxcompany@gmail.com</p>
-          <strong className="spacing">Address:</strong>
+          <p>
+            <strong>Address:</strong>
+          </p>
           <p>Plaza José Rinaldo 5,18882, Madrid</p>
         </div>
         <div className="column-center">

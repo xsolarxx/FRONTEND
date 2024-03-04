@@ -10,7 +10,7 @@ export const Header = () => {
     <>
       <header>
         <nav>
-          <div></div>
+          <div className="logo"></div>
 
           <NavLink className="link-home" to="/">
             <p>Home</p>

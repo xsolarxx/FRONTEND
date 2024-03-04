@@ -36,7 +36,7 @@
   padding-top: 12rem;
   max-width: 1600px;
   margin: 0 auto;
-  color: #022461;
+  color: var(--color-navy-blue);
   flex-wrap: wrap;
 }
 
@@ -84,7 +84,7 @@
 .grid-titel-with-subtitle {
   max-width: 1600px;
   margin: 0 auto;
-  color: #022461;
+  color: var(--color-navy-blue);
   flex-wrap: wrap;
   padding-top: 30rem;
   padding: 6rem;

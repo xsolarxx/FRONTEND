@@ -19,9 +19,9 @@ export const Home = () => {
       </section>
 
       <section className="big-titel-section ">
-        <p>XSOLAREX</p>
+        <p>XSOLARX</p>
         <h2>
-          Solarx operates in the renewable energies market. We were born green, not made
+          xSolarx operates in the renewable energies market. We were born green, not made
           green.
         </h2>
       </section>

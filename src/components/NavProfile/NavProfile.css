@@ -1,6 +1,9 @@
 .iconDeleteUser {
   border-radius: 50%;
 }
+nav {
+  background-color: transparent;
+}
 
 .containerNavProfile {
   background-color: #2f7a67;

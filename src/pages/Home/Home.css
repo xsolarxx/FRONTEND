@@ -223,3 +223,7 @@
   animation-duration: 1ms;
   animation-fill-mode: both;
 }
+.section-banner button:hover {
+  background-color: white;
+  color: var(--color-navy-blue);
+}

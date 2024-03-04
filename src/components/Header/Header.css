@@ -13,18 +13,9 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   width: 1140px;
-  color: var(--text-navy-blue);
 }
 
-.icon {
-  width: 50px;
-}
-
-.material-symbols-outlined {
-  color: rgb(206, 241, 202);
-}
-
-nav div {
+.logo {
   width: 230px;
   height: 40px;
   background-size: contain;
@@ -35,5 +26,5 @@ nav div {
 
 nav p {
   font-weight: bold;
-  color: var(--text-navy-blue);
+  color: var(--color-navy-blue);
 }

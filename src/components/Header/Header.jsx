@@ -10,11 +10,22 @@ export const Header = () => {
     <>
       <header>
         <nav>
+          <div></div>
+
           <NavLink className="link-home" to="/">
             <p>Home</p>
           </NavLink>
+
           <NavLink className="link-news" to="/news">
             <p>News</p>
+          </NavLink>
+
+          <NavLink to="/forum">
+            <p>Forum</p>
+          </NavLink>
+
+          <NavLink to="/forum">
+            <p>About</p>
           </NavLink>
 
           {user == null && (
@@ -28,11 +39,7 @@ export const Header = () => {
               <p>Dashboard</p>
             </NavLink>
           ) : null}
-          {user !== null ? (
-            <NavLink to="/forum">
-              <p>Forum</p>
-            </NavLink>
-          ) : null}
+
           {user !== null ? (
             <NavLink to="/company">
               <p>Company</p>

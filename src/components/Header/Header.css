@@ -1,9 +1,11 @@
 header {
-  min-height: 8vh;
+  min-height: 95px;
   background-color: var(--text-white);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  /* margin: 0 auto;
+  max-width: 1600px; */
 }
 
 nav {
@@ -20,4 +22,18 @@ nav {
 
 .material-symbols-outlined {
   color: rgb(206, 241, 202);
+}
+
+nav div {
+  width: 230px; 
+  height: 40px; 
+  background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("/Logo.png");
+}
+
+nav p {
+  font-weight: bold;
+  color: var(--text-navy-blue);
 }

@@ -12,8 +12,6 @@
   border-radius: var(--img-border-radius);
   width: 80%;
   margin: 0 auto;
-
-  
 }
 .hero-section h1 {
   max-width: 1600px;
@@ -23,7 +21,6 @@
 .herobox {
   background-color: var(--background-color-opacidad);
   border-radius: var(--img-border-radius);
-
 }
 
 .button--large {
@@ -208,19 +205,21 @@
   text-align: start;
   width: 700px;
 }
-@keyframes mostrar {
+@keyframes show {
   from {
     opacity: 0;
-    scale: 25%;
+    transform: scale(0.25);
   }
   to {
     opacity: 1;
-    scale: 100%;
+    transform: scale(1);
   }
 }
 
 .big-titel-section {
-  animation-name: mostrar;
-  animation-range: entry 25% cover 50%;
+  view-timeline-name: --consumer;
+  animation-timeline: --consumer;
+  animation-name: show;
+  animation-duration: 1ms;
   animation-fill-mode: both;
 }

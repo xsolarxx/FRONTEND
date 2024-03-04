@@ -30,7 +30,7 @@ export const Header = () => {
 
           {user == null && (
             <NavLink to="/login">
-              <button className="button--green button--medium">Login</button>
+              <button className="button--green">Login</button>
             </NavLink>
           )}
 

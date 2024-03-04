@@ -1,10 +1,10 @@
 /* like */
 
-/* Button 1 */
+/* Button green MAIN */
 
 .button--green {
-  width: 100px;
-  height: 35px;
+  width: 150px;
+  height: 54px;
   color: var(--text-navy-blue);
   text-align: center;
   font-weight: bold;
@@ -23,45 +23,29 @@
   color: var(--color-white);
   background-image: none;
 }
-/* Button 2 */
 
-.button--white {
-  width: 100px;
-  height: 35px;
+/* Blue secondary */
+
+.button--blue {
+  width: 150px;
+  height: 54px;
   color: white;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  border: solid white 1.5px;
+  border: transparent;
   border-radius: 50px;
-  background-color: transparent;
+  background-color: var(--color-navy-blue);
+
 }
-.button--white:hover {
-  background-color: var(--text-white);
-  color: var(--primary-color-green);
-  border: solid var(--primary-color-green);
-}
-.button--white:disabled {
+.button--green:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-/* Button 3 */
-
-.button--blue {
-  padding: 5px 30px;
-  max-height: 20px;
-
-  color: var(--primary-color-blue);
-  border: solid var(--primary-color-blue) 1.5px;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 50px;
-  background-color: transparent;
-}
-.button--blue:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.button--blue:hover {
+  background-image: linear-gradient(215deg, #97f85b 0%, #25dc80 100%);
+  color: var(--color-navy-blue);
+  /* background-color: none; */
 }
 
 .button--small {
@@ -83,4 +67,28 @@
 .button-hover:hover {
   background-color: var(--text-white);
   color: var(--primary-color-green);
+}
+
+
+/* Button 2 */
+
+.button--white {
+  width: 100px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid white 1.5px;
+  border-radius: 50px;
+  background-color: transparent;
+}
+.button--white:hover {
+  background-color: var(--text-white);
+  color: var(--primary-color-green);
+  border: solid var(--primary-color-green);
+}
+.button--white:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

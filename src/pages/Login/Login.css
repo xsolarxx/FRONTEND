@@ -14,9 +14,6 @@
   margin-bottom: 40px;
   justify-content: center;
 }
-main {
-  height: 100vh;
-}
 
 .email_container1 button {
   min-width: 300px;
@@ -47,7 +44,7 @@ main {
 }
 .login_container {
   background-color: var(--color-navy-blue);
-  height: 100vh;
+  min-height: 70vh;
 }
 .linkr1  {
   color: var(--primary-color-green);

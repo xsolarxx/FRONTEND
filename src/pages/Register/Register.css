@@ -15,6 +15,7 @@
   margin-bottom: 40px;
   justify-content: center;
   overflow-y: hidden;
+  padding: 2rem;
 }
 /* Estilos para los labels */
 .label-radio {
@@ -33,6 +34,9 @@
   align-items: center;
   justify-content: space-around; /* Alinea los elementos con espacio uniforme */
   margin-bottom: 20px; /* Añade espacio entre el grupo de radios y los siguientes elementos */
+}
+.register_container {
+  background-color: var(--color-navy-blue);
 }
 
 /* Estilos para los inputs */

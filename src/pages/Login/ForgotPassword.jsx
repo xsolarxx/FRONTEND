@@ -29,7 +29,8 @@ export const ForgotPassword = () => {
     return <Navigate to="/login" />;
   }
   return (
-    <>
+  <>
+    <div className="pswcontainer">
       <div className="resend p-35">
         <h5>Reset your password</h5>
 
@@ -61,6 +62,7 @@ export const ForgotPassword = () => {
           </div>
         </form>
       </div>
-    </>
+    </div>
+   </>
   );
 };

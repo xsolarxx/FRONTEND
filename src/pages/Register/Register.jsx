@@ -65,8 +65,8 @@ export const Register = () => {
 
   return (
   <>
-    <div className="main_container">
-      <div className="form-wrap1 p-35">
+    <div className="register_container">
+      <div className="form-wrap1">
         <h4 className="logintext">xSolarx</h4>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="user_container form-group">

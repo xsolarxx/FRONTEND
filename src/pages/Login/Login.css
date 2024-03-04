@@ -45,7 +45,7 @@ main {
   font-style: italic;
   margin-bottom: 50px;
 }
-.main_container {
+.login_container {
   background-color: var(--color-navy-blue);
   height: 100vh;
 }

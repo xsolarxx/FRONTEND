@@ -62,7 +62,7 @@ export const Login = () => {
 
   return (
     <>
-      <div className="main_container">
+      <div className="login_container">
         <form className="email_container1 p-35" onSubmit={handleSubmit(formSubmit)}>
           <h4 className="logintext">xSolarx</h4>
           <label htmlFor="input_email" className="input_email">

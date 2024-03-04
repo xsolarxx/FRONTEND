@@ -16,6 +16,10 @@
   margin: 0 auto;
 }
 
+.herobox {
+  background-color: var(--background-color-opacidad);
+}
+
 .button--large {
   display: inline-block;
   width: 200px;
@@ -25,6 +29,8 @@
 /* big title  */
 
 .big-titel-section {
+  padding: 6rem;
+  padding-top: 12rem;
   max-width: 1600px;
   margin: 0 auto;
   color: #022461;
@@ -40,6 +46,7 @@
   max-width: 1600px;
   margin: 0 auto;
   text-align: start;
+  padding: 0 6rem;
 }
 
 /* responsive incompleto  */
@@ -77,6 +84,8 @@
   margin: 0 auto;
   color: #022461;
   flex-wrap: wrap;
+  padding-top: 12rem;
+  padding: 6rem;
 }
 
 .grid {
@@ -185,4 +194,20 @@
   color: var(--text-white);
   text-align: start;
   width: 700px;
+}
+@keyframes mostrar {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.big-titel-section {
+  animation-name: mostrar;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }

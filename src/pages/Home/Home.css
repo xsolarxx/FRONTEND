@@ -86,8 +86,7 @@
   margin: 0 auto;
   color: var(--color-navy-blue);
   flex-wrap: wrap;
-  padding-top: 30rem;
-  padding: 6rem;
+  padding-top: 12rem; /* Ajuste o valor do padding-top para aumentar o espaço entre o conteúdo e o topo */
 }
 
 .grid {

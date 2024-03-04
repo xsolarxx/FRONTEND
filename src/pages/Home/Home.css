@@ -8,6 +8,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
+  border-radius: var(--img-border-radius);
+  width: 1440px;
+  margin: 0 auto;
+
+  
 }
 .hero-section h1 {
   max-width: 1600px;
@@ -16,6 +22,8 @@
 
 .herobox {
   background-color: var(--background-color-opacidad);
+  border-radius: var(--img-border-radius);
+
 }
 
 .button--large {

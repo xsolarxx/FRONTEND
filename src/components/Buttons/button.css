@@ -8,6 +8,8 @@
   color: var(--text-navy-blue);
   text-align: center;
   font-weight: bold;
+  font-size: medium;
+  color: var(--color-navy-blue);
   cursor: pointer;
   border: transparent;
   border-radius: 50px;

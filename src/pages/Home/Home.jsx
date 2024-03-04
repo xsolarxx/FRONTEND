@@ -12,12 +12,9 @@ export const Home = () => {
           <p className="p-1 p-l">
             Explore renewable companies and connect with industry professionals
           </p>
-          <a
-            href="http://localhost:5173/register"
-            className="button--white button--large button-hover"
-          >
-            Sign up
-          </a>
+          <button href="http://localhost:5173/register" className="button--green">
+            Join us
+          </button>
         </div>
       </section>
 

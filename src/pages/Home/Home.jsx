@@ -9,7 +9,7 @@ export const Home = () => {
       <section className="hero-section p-35">
         <div className="herobox p-35">
           <h1> Connecting conscious consumers with renewable companies </h1>
-          <p className="p-1 p-l">
+          <p className="p-1 p-xl">
             Explore renewable companies and connect with industry professionals
           </p>
           <button href="http://localhost:5173/register" className="button--green">
@@ -72,9 +72,7 @@ export const Home = () => {
             xSolarx is increasingly recognized in the European market as a major player in
             the promotion and development of renewable energy projects
           </p>
-          <button className="button--white button--medium button-hover">
-            Discover more
-          </button>
+          <button className="button--green">Discover more</button>
         </div>
       </section>
 

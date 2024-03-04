@@ -11,7 +11,12 @@ export const Home = () => {
         <p className="p-1 p-l">
           Explore renewable companies and connect with industry professionals
         </p>
-        <button className="button--white button--large button-hover">Sign up</button>
+        <a
+          href="http://localhost:5173/register"
+          className="button--white button--large button-hover"
+        >
+          Sign up
+        </a>
       </section>
 
       <section className="big-titel-section p-25">
@@ -73,6 +78,16 @@ export const Home = () => {
           </button>
         </div>
       </section>
+
+      <div className="p-50">
+        <section className="section-image">
+          <h3 className="p-35">
+            By valuing forestry and agroforestry resources and taking advantage of the
+            sun’s rays, we believe in green and renewable energy.
+          </h3>
+          <button></button>
+        </section>
+      </div>
 
       <ImageHome />
     </>

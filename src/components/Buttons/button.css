@@ -1,6 +1,6 @@
 /* like */
 
-/* Boton 1 */
+/* Button 1 */
 
 .button--gradient {
   padding: 5px 30px;
@@ -25,7 +25,7 @@
   background-image: var(--primary-color-green);
   color: var(--primary-color-green);
 }
-/* Boton 2 */
+/* Button 2 */
 
 .button--white {
   padding: 5px 30px;
@@ -40,13 +40,15 @@
 .button--white:hover {
   background-color: var(--text-white);
   color: var(--primary-color-green);
+  border: solid var(--primary-color-green);
+
 }
 .button--white:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* Boton 3 */
+/* Button 3 */
 
 .button--blue {
   padding: 5px 30px;
@@ -72,11 +74,13 @@
 .button--medium {
   padding: 10px 20px;
   max-height: 30px;
+  font-size: medium;
 }
 
 .button--large {
   padding: 15px 30px;
   max-height: 40px;
+  font-size: large;
 }
 .button-hover:hover {
   background-color: var(--text-white);

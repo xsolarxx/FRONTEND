@@ -90,8 +90,8 @@
   height: 90vh;
   max-width: 1600px;
   margin: 0 auto;
-  text-align: b;
 }
+
 
 .grid-item1,
 .grid-item2,
@@ -105,8 +105,8 @@
   justify-content: center;
   align-items: center;
   
-  
 }
+
 
 .grid-item1 {
   background-image: url('/wind3.jpg');
@@ -143,7 +143,7 @@
 .grid-item3:hover,
 .grid-item4:hover,
 .grid-item5:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
   transform: scale(1.1);
 
@@ -154,6 +154,8 @@
   text-align: center;
   text-shadow: 0.5px 0.9px gray;
 }
+
+/* section banner  */
 
 .section-banner {
   background-image: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
@@ -171,4 +173,27 @@
 }
 .div-banner button {
   margin: 0;
+}
+
+/* section image  */
+
+.section-image {
+  background-image: url('/solar.jpg');
+  max-width: 1600px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--img-border-radius);
+  height: 80vh;
+  margin: 5% 5% 5% 5%;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-blend-mode: multiply;
+  margin: 0 auto;
+}
+
+.section-image h3 {
+  color: var(--text-white);
+  text-align: start;
+  width: 700px;
+  
 }

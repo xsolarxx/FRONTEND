@@ -62,56 +62,58 @@ export const Login = () => {
 
   return (
     <>
-      <form className="email_container1 p-35" onSubmit={handleSubmit(formSubmit)}>
-        <h4 className="logintext">xSolarx</h4>
-        <label htmlFor="input_email" className="input_email">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            autoComplete="false"
-            {...register('email', { required: true })}
-            placeholder="Email"
-          />
-        </label>
+      <div className="main_container">
+        <form className="email_container1 p-35" onSubmit={handleSubmit(formSubmit)}>
+          <h4 className="logintext">xSolarx</h4>
+          <label htmlFor="input_email" className="input_email">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autoComplete="false"
+              {...register('email', { required: true })}
+              placeholder="Email"
+            />
+          </label>
 
-        <label htmlFor="input_password" className="input_Password">
-          <input
-            type="password"
-            id="password"
-            name="password"
-            autoComplete="false"
-            {...register('password', { required: true })}
-            placeholder="Password"
-          />
-        </label>
+          <label htmlFor="input_password" className="input_Password">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autoComplete="false"
+              {...register('password', { required: true })}
+              placeholder="Password"
+            />
+          </label>
 
-        <button
-          className="buttonLogin"
-          type="submit"
-          disabled={send}
-          style={{ background: send ? '' : 'color-disabled-green' }}
-        >
-          Log in
-        </button>
+          <button
+            className="buttonLogin"
+            type="submit"
+            disabled={send}
+            style={{ background: send ? '' : 'color-disabled-green' }}
+          >
+            Log in
+          </button>
 
-        <div className="btn_container">
-          <ul className="ulogin">
-            <li>
-              <p className="p-xs">Have you forgotten your password?</p>
-              <Link className="p-xs" to="/forgotpassword">
-                Click here to reset your password
-              </Link>
-            </li>
-            <li>
-              <p className="p-xs">Are you not registered?</p>
-              <Link to="/register">
-                <a className="p-xs">Register here!</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </form>
+          <div className="btn_container">
+            <ul className="ulogin">
+              <li>
+                <p className="p-xs">Have you forgotten your password?</p>
+                <Link className="p-xs" to="/forgotpassword">
+                  Click here to reset your password
+                </Link>
+              </li>
+              <li>
+                <p className="p-xs">Are you not registered?</p>
+                <Link to="/register">
+                  <a className="p-xs">Register here!</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

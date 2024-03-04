@@ -6,6 +6,8 @@ form {
   display: flex;
   flex-direction: column;
   margin-top: 50rem;
+  background-color: var(--text-white);
+  opacity: 0.9;
 }
 main {
   height: 100vh;
@@ -39,6 +41,10 @@ main {
   text-align: center;
   font-style: italic;
   margin-bottom: 50px;
+}
+.main_container {
+  background-color: var(--text-navy-blue);
+  height: 100vh;
 }
 /* h3,
 h4 {

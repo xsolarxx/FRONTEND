@@ -25,12 +25,12 @@ nav {
 }
 
 nav div {
-  width: 230px; 
-  height: 40px; 
+  width: 230px;
+  height: 40px;
   background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url("/Logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/Logo.png');
 }
 
 nav p {

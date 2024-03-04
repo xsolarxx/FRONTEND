@@ -66,7 +66,7 @@ export const FormProfile = () => {
           <FigureUser user={user} />
         </div>
         <div className="form-wrap formProfile">
-          <h1>Change your data profile ♻</h1>
+          <h4>UPDATE PROFILE</h4>
           <p>Please, enter your new data profile</p>
           <form onSubmit={handleSubmit(formSubmit)}>
             <div className="user_container form-group">
@@ -87,12 +87,11 @@ export const FormProfile = () => {
             <Uploadfile />
             <div className="btn_container">
               <button
-                className="btn"
+                className="button--gradient button--medium"
                 type="submit"
                 disabled={send}
-                style={{ background: send ? '#49c1a388' : '#49c1a2' }}
               >
-                CHANGE DATA PROFILE
+                Change data profile{' '}
               </button>
             </div>
           </form>

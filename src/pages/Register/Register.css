@@ -61,14 +61,19 @@ input:hover {
     align-items: flex-start; /* Alinea los elementos a la izquierda */
   }
 }
+@media (max-width: 600px) {
+  .form-wrap {
+    max-width: 260px;
+  }
+}
 #file-drag {
   width: 87%;
   margin-bottom: 2%;
 }
 @media (max-width: 600px) {
   .filedrag {
-    flex-direction: column; /* Cambia la dirección a columna */
     align-items: center;
+    text-align: center;
   }
 }
 .bottom-text {

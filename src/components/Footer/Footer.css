@@ -12,7 +12,7 @@
   color: white;
   
 }
-@media (max-width: var(--smartphone-portrait)) {
+@media (max-width: var(--smartphone-portrair)) {
   .footer-container {
     flex-direction: column;
     padding: 20px;

@@ -40,26 +40,33 @@
   /* .h1 */
   --h1-max: 6;
   --h1-min: calc(var(--h1-max) / var(--hScale));
+  --h1-weight: 600;
 
   /* .h2 */
   --h2-max: 5;
   --h2-min: calc(var(--h2-max) / var(--hScale));
+  --h2-weight: 500;
 
   /* .h3 */
   --h3-max: 4;
   --h3-min: calc(var(--h3-max) / var(--hScale));
+  --h3-weight: 500;
 
   /* .h4 */
   --h4-max: 3;
   --h4-min: calc(var(--h4-max) / var(--hScale));
+  --h4-weight: 500;
 
   /* .h5 */
   --h5-max: 2.5;
   --h5-min: calc(var(--h5-max) / var(--hScale));
+  --h5-weight: 500;
 
   /* .h6 */
   --h6-max: 2;
   --h6-min: calc(var(--h6-max) / var(--hScale));
+  --h6-weight: 500;
+
 
   /*Texto de cuerpo*/
 
@@ -514,6 +521,32 @@ html {
 body {
   font-family: var(--primary-font-family);
 }
+
+h1 {
+  font-weight: var(--h1-weight);
+}
+
+h2 {
+  font-weight: var(--h2-weight);
+}
+
+h3 {
+  font-weight: var(--h3-weight);
+}
+
+h4 {
+  font-weight: var(--h4-weight);
+}
+
+h5 {
+  font-weight: var(--h5-weight);
+}
+
+h6 {
+  font-weight: var(--h6-weight);
+}
+
+
 
 a {
   color: var(--color-primary-blue);

@@ -3,7 +3,6 @@
   justify-content: center;
   background-color: var(--color-navy-blue);
   min-height: 80vh;
-
 }
 
 .div-user-profile-setting-card {
@@ -25,8 +24,6 @@
   margin-top: 4%;
   margin-bottom: 4%;
 }
-
-
 
 /* .containerDataNoChange {
   display: flex;

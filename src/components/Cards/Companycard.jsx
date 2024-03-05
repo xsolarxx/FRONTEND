@@ -1,23 +1,11 @@
-export const CompanyCard = ({ company }) =>
-  //     {
-  //   userCompanyRatings,
-  //   userCompanyReviews,
-  //   userLikedCompany,
-  //   likesCount,}
-  {
-    const { id, companyName, description, companyType, companyServices, image } = company;
-
-    return (
-      <div className="company-card">
-        <img src={image} alt={companyName} className="company-card-img" />
-        <div className="companyCardInfo">
-          <h2>
-            {companyName}, {id}
-          </h2>
-          <h3>{companyServices}</h3>
-          <p>{description}</p>
-          <p>{companyType}</p>
-        </div>
-      </div>
-    );
-  };
+export const CompanyCard = ({ company }) => {
+  return (
+    <div className="containerCompany">
+      <h1 className="companyName">{company.companyName} </h1>
+      <p className="companyDescription"> {company.description}</p>
+      <img className="imgCompany" src={company.image} alt={company.name} />
+      <h2 className="companyType"> {company.type}</h2>
+      <p className="companyServices">{company.companyServices}</p>
+    </div>
+  );
+};

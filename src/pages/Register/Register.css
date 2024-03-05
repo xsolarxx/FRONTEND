@@ -36,6 +36,7 @@
 }
 .register_container {
   background-color: var(--color-navy-blue);
+  color: var(--color-navy-blue);
 }
 
 /* Estilos para los inputs */

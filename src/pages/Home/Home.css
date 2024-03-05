@@ -19,7 +19,7 @@
 }
 
 .herobox {
-  background-color: var(--background-color-opacidad);
+  background-color: var(--background-color-opacity);
   border-radius: var(--img-border-radius);
 }
 
@@ -31,7 +31,7 @@
 
 /* big title  */
 
-.big-titel-section {
+.big-title-section {
   padding: 6rem;
   padding-top: 12rem;
   max-width: 1600px;
@@ -81,7 +81,7 @@
   text-align: start;
 }
 
-.grid-titel-with-subtitle {
+.grid-title-with-subtitle {
   max-width: 1600px;
   margin: 0 auto;
   color: var(--color-navy-blue);
@@ -215,7 +215,7 @@
   }
 }
 
-.big-titel-section {
+.big-title-section {
   view-timeline-name: --consumer;
   animation-timeline: --consumer;
   animation-name: show;

@@ -1,40 +1,51 @@
-.footer {
-  padding: 1em;
-  text-align: center;
-  background-size: cover;
+.footer-outer-conatiner {
   background-color: var(--color-navy-blue);
-  min-height: 20vh;
+  padding: 50px 0 50px 0 ;
 }
-.footer h4 {
-  color: var(--color-white);
-}
-/*Hay que hacerlo responsive ya que en pantallas externas se ven márgenes blancos verticales. En portátiles se ve correctamente */
 
-.footer-content {
+.footer-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.footer p {
-  color: var(--color-white);
-}
-
-.rights {
-  padding-top: 20px;
-  font-size: smaller;
+  justify-content: space-evenly;
+  min-height: 20vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  color: white;
 }
 
-h4 {
-  margin-bottom: 6px;
+.column2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+
 }
 
-ul li {
-  margin-bottom: 6px;
+.logo-white {
+  width: 200px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/logo2.png');
 }
 
-.spacing {
+.column1, .column3  {
+  display: flex;
+  flex-direction: column;
+}
+
+.column2 p {
   margin-top: 10px;
+  font-weight: 100;
+}
+
+.column1 a, .column3 a {
+ margin-top: 10px;
+}
+
+.footer-container h5 {
+  margin-bottom: 20px;
 }
 
 footer a {
@@ -42,4 +53,12 @@ footer a {
 }
 footer a:hover {
   color: var(--link-hover);
+} 
+
+.rights {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  font-size: smaller;
 }

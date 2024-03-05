@@ -10,6 +10,8 @@
 .inner {
   display: flex;
   transition: transform 0.3s ease; /* Añade una transición suave al movimiento del carrusel */
+  width: calc(100% * 9);
+  transform-origin: '0 0';
 }
 
 .item {
@@ -17,6 +19,8 @@
   min-width: 400px;
   padding: 14px;
   flex: auto; /* Ajusta la flexibilidad según tus necesidades */
+  box-sizing: border-box;
+  display: flex;
 }
 
 img {
@@ -24,11 +28,15 @@ img {
   height: 90%;
   pointer-events: none;
   border-radius: var(--img-border-radius);
+  object-fit: cover;
+  display: flex;
 }
-
+.swiper-wrapper {
+  display: inline-flex;
+}
 .carrosel {
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
   cursor: grab;
   position: relative;
 }

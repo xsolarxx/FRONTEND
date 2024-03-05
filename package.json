@@ -22,7 +22,8 @@
     "react-spring": "^9.7.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.8",
-    "sweetalert2": "^11.10.5"
+    "sweetalert2": "^11.10.5",
+    "swiper": "^11.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.60",

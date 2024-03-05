@@ -16,6 +16,12 @@ export const Header = () => {
             <p>Home</p>
           </NavLink>
 
+          {user !== null ? (
+            <NavLink to="/dashboard">
+              <p>Dashboard</p>
+            </NavLink>
+          ) : null}
+
           <NavLink className="link-news" to="/news">
             <p>News</p>
           </NavLink>
@@ -35,21 +41,18 @@ export const Header = () => {
           )}
 
           {user !== null ? (
-            <NavLink to="/dashboard">
-              <p>Dashboard</p>
-            </NavLink>
-          ) : null}
-
-          {user !== null ? (
             <NavLink to="/company">
               <p>Company</p>
             </NavLink>
           ) : null}
           {user !== null && (
-            <button className="icon" onClick={() => logout()}>
-              Logout
-            </button>
+            <NavLink to="/">
+              <button className="button--blue button-medium" onClick={() => logout()}>
+                Logout
+              </button>
+            </NavLink>
           )}
+
           {user !== null ? (
             <NavLink className="link-log" to="/profile">
               <img className="icon" src={user.image} alt={user.user} />

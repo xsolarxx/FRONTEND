@@ -28,3 +28,8 @@ nav p {
   font-weight: bold;
   color: var(--color-navy-blue);
 }
+
+.icon {
+  width: 80px;
+  border-radius: 800px
+}

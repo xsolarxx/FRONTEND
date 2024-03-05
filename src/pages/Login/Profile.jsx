@@ -7,7 +7,6 @@ import { NavProfile } from '../../components/NavProfile/NavProfile';
 export const Profile = () => {
   return (
     <>
-      <NavProfile />
       <Outlet />
     </>
   );

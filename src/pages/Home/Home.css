@@ -33,9 +33,9 @@
 /* Big title (Escrito de xSollarx operates) */
 
 .big-title-section {
-  padding-left:6rem; 
+  padding-left: 6rem;
   padding-right: 6rem;
-  padding-bottom:12rem ;
+  padding-bottom: 12rem;
   padding-top: 12rem;
   max-width: 1600px;
   margin: 0 auto;
@@ -90,8 +90,8 @@
   margin: 0 auto;
   color: var(--color-navy-blue);
   flex-wrap: wrap;
-  padding-top: 12rem;  /* Ajuste del padding superior para aumentar el espacio entre contenidos */
-  padding-left:6rem; 
+  padding-top: 12rem; /* Ajuste del padding superior para aumentar el espacio entre contenidos */
+  padding-left: 6rem;
   padding-right: 6rem; /* Mantener este padding para los textos izq-der*/
   max-width: 1600px;
 }
@@ -154,8 +154,9 @@
 .grid-item5:hover {
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
-  transform: scale(1.05); /* Aumentación cuando se pasa el cursor encima de uno de los grids*/
-  
+  transform: scale(
+    1.05
+  ); /* Aumentación cuando se pasa el cursor encima de uno de los grids*/
 }
 
 .grid h3 {

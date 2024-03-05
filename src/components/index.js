@@ -8,3 +8,4 @@ export * from './Listings/CompanyListings';
 export * from './ProtectedRoute/Protected';
 export * from './ProtectedRoute/ProtectedCheckChildren';
 export * from './UploadFile/Uploadfile';
+export * from './Cards/Companycard';

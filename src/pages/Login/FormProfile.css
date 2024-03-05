@@ -11,7 +11,6 @@
   align-items: center;
 }
 
-
 .div-user-profile-setting-card {
   background-color: white;
   display: flex;
@@ -21,7 +20,7 @@
   border: 1px solid gray;
   border-radius: var(--img-border-radius);
   padding: 2rem;
-  margin: 30px
+  margin: 30px;
 }
 
 /* .containerDataNoChange {

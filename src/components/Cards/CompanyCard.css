@@ -1,16 +1,24 @@
+.page-container-card {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cartões das empresas sejam organizados em várias linhas */
+  justify-content: center; /* Centraliza os cartões horizontalmente */
+  gap: 20px; /* Adiciona espaçamento entre os cartões */
+  color: var(--color-navy-blue);
+}
+
 .containerCompany {
-  width: 200px; /* Defina a largura desejada para cada carta */
+  width: 300px; /* Largura desejada para cada carta */
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 10px; /* Reduza o preenchimento para tornar as cartas mais compactas */
-  margin-right: 0; /* Remova a margem à direita */
-  margin-bottom: 20px; /* Adicione uma margem inferior para criar espaço entre as linhas */
+  padding: 10px; /* Reduz o preenchimento para tornar as cartas mais compactas */
+  margin-bottom: 20px; /* Adiciona uma margem inferior para criar espaço entre as linhas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 0 0 auto; /* Impede que as cartas se estiquem para preencher todo o espaço disponível */
 }
 
 .companyName {
-  font-size: 18px; /* Reduza o tamanho da fonte */
   font-weight: bold;
   margin-bottom: 5px; /* Reduza a margem inferior */
 }
@@ -36,4 +44,5 @@
 .companyServices {
   font-style: italic;
   font-size: 14px; /* Reduza o tamanho da fonte */
+  text-align: center;
 }

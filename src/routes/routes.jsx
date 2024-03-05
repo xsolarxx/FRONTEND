@@ -12,6 +12,7 @@ import { FormProfile } from '../pages/Login/FormProfile';
 import { Login } from '../pages/Login/Login';
 import { Profile } from '../pages/Login/Profile';
 import { Register } from '../pages/Register/Register';
+import { CompanyPage } from '../pages/Company/CompanyPage';
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
+      },
+      {
+        path: '/company',
+        element: <CompanyPage />,
       },
       {
         path: '/dashboard',

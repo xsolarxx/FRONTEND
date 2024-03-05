@@ -14,12 +14,13 @@ export const CompanyPage = () => {
   //* si no se va a rompero elmapeo , si es mayor que 0 pintamos las compañias
   //* Si es menor que 0 --> sin compañias que mostrar
 
-  //* Verificar se a lista de empresas tem itens antes de mapeá-la
+  //* Verifica sí la lista tienes los itens para mapear
   if (companyList.data && companyList.data.length > 0) {
     return (
       <>
-        {companyList.data.map((company) => (
-          <div className="companyName" key={company.companyName}>
+        {companyList.data.map((company, index) => (
+          <div key={index}>
+            <h1 className="companyName">{company.companyName} </h1>
             <p className="companyDescription"> {company.description}</p>
             <img className="imgCompany" src={company.image} alt={company.name} />
             <h2 className="companyType"> {company.type}</h2>

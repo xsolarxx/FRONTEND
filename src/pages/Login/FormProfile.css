@@ -5,59 +5,36 @@
   min-height: 80vh;
 }
 
-.dataProfile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .div-user-profile-setting-card {
   background-color: white;
   display: flex;
   flex-direction: column;
   max-width: 400px;
   min-width: 150px;
-  border: 1px solid gray;
   border-radius: var(--img-border-radius);
-  padding: 2rem;
+  padding: 4rem;
   margin: 30px;
 }
 
-/* .containerDataNoChange {
+.dataProfile {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.containerProfile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #2f7a67;
-  max-width: 1000px;
-  margin-top: 2rem;
-  border-radius: 20px;
-} */
-
-/* .formProfile {
-  margin: 2rem;
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
-@media (max-width: 900px) {
-  .containerProfile {
-    flex-direction: column;
-  }
+.profile-setting__line {
+  margin: 10px 0 10px 0;
+  border-color: var(--primary-color-green);
+  border-width: 2px;
 }
 
-@media (max-width: 700px) {
-  .containerProfile {
-    width: 90vw;
-  }
+.user-profile-text {
+  margin-bottom: 4%;
 }
-
-@media (max-width: 400px) {
-  .formProfile {
-    margin: 0.5rem;
-  }
-} */

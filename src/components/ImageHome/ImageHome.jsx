@@ -14,47 +14,81 @@
  * DragConstraints empieza en right 0 left -width (o que estamos haciendo: passando la largura que el puede hacer el scroll hasta que llegue al final)
  * -width (la cuantidad que falta de el scroll)
  */
+// ImageHome.js
 
 import './ImageHome.css';
 
-import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import image1 from '/1.webp';
-import image2 from '/2.jpg';
-import image3 from '/3.jpg';
-import image4 from '/4.jpg';
-import image5 from '/5.jpg';
-import image6 from '/6.jpg';
-
-const images = [image1, image2, image3, image4, image5, image6];
-
-// ...
+const imagesMap = [
+  {
+    imgPath: '/wind.jpg',
+    altText: 'windmills in a field',
+  },
+  {
+    imgPath: '/hidraulica.webp',
+    altText: 'Water flowing through a dam',
+  },
+  {
+    imgPath: '/1.webp',
+    altText: 'windmills and solar panels',
+  },
+  {
+    imgPath: '/naturaleza.jpg',
+    altText: 'windmills for the sunset',
+  },
+  {
+    imgPath: '/naturaleza2.jpg',
+    altText: 'mountains and pine trees',
+  },
+  {
+    imgPath: '/perro.jpg',
+    altText: 'A dog chilling',
+  },
+  {
+    imgPath: '/2.jpg',
+    altText: 'windmills and solar panels',
+  },
+  {
+    imgPath: '/installing.png',
+    altText: 'An engineer with solar panels',
+  },
+  {
+    imgPath: '/6.jpg',
+    altText: 'windmills and solar panels',
+  },
+];
 
 export const ImageHome = () => {
-  const carrosel = useRef();
-  const [width, setWidth] = useState(0);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
-    console.log(carrosel.current?.scrollWidth, carrosel.current?.offsetWidth);
-    setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth);
+    if (swiperRef.current) {
+      swiperRef.current.swiper.update(); // Actualiza el swiper después de cargar las imágenes
+    }
   }, []);
 
   return (
     <div className="imageHome">
-      <motion.div ref={carrosel} className="carrosel" whileTap={{ cursor: 'grabbing' }}>
-        <motion.div
-          className="inner"
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-        >
-          {images.map((image, index) => (
-            <motion.div className="item" key={index}>
-              <img src={image} alt={`Placas ${index + 1}`} />
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
+  <Swiper
+  ref={swiperRef}
+  spaceBetween={20}  // Espacio entre las imágenes
+  slidesPerView={3}   // Mostrar tres imágenes a la vez
+  navigation
+  scrollbar={{ draggable: true }}
+  className="swiper-container"  // Agrega la clase 'swiper-container'
+>
+  <div className="swiper-wrapper">  {/* Agrega el contenedor 'swiper-wrapper' */}
+    {imagesMap.map((image, index) => (
+      <SwiperSlide key={index} className="swiper-slide">  {/* Agrega la clase 'swiper-slide' */}
+        <div className="item">
+          <img src={image.imgPath} alt={image.altText} />
+        </div>
+      </SwiperSlide>
+    ))}
+  </div>
+</Swiper>
     </div>
   );
 };

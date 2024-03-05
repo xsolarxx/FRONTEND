@@ -10,7 +10,15 @@
   max-width: 1600px;
   margin: 0 auto;
   color: white;
+  
 }
+@media (max-width: var(--smartphone-portrait)) {
+  .footer-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
 
 .column2 {
   align-items: flex-start;
@@ -22,7 +30,8 @@
 }
 
 .logo-white {
-  width: 200px;
+  margin-top: 20px;
+  width: 150px;
   height: 40px;
   background-size: contain;
   background-repeat: no-repeat;

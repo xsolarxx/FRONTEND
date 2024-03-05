@@ -1,0 +1,10 @@
+.containerCommpany {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.imgCompany {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: grid;
+}

@@ -67,7 +67,6 @@
   --h6-min: calc(var(--h6-max) / var(--hScale));
   --h6-weight: 500;
 
-
   /*Texto de cuerpo*/
 
   --bodyScale: 1.25;
@@ -545,8 +544,6 @@ h5 {
 h6 {
   font-weight: var(--h6-weight);
 }
-
-
 
 a {
   color: var(--color-primary-blue);

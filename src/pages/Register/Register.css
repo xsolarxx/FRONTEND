@@ -7,7 +7,7 @@
   display: flex;
   background-color: var(--color-white);
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: var(--img-border-radius);
   padding: 2rem;
   flex-direction: column;
   align-content: center;

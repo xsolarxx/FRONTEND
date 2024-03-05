@@ -1,3 +1,4 @@
+/* Main section (Con la foto y texto principal) */
 .hero-section {
   background-image: url('/wind2.jpg');
   background-size: cover;
@@ -29,10 +30,12 @@
   margin: 0 auto;
 }
 
-/* big title  */
+/* Big title (Escrito de xSollarx operates) */
 
 .big-title-section {
-  padding: 6rem;
+  padding-left:6rem; 
+  padding-right: 6rem;
+  padding-bottom:12rem ;
   padding-top: 12rem;
   max-width: 1600px;
   margin: 0 auto;
@@ -40,7 +43,7 @@
   flex-wrap: wrap;
 }
 
-/* consumer image  */
+/* Consumer image */
 
 .section-consumer {
   display: grid;
@@ -52,7 +55,7 @@
   padding: 0 6rem;
 }
 
-/* responsive incompleto  */
+/* Responsive incompleto  */
 
 @media (max-width: 768px) {
   .section-consumer {
@@ -60,6 +63,7 @@
   }
 }
 
+/* Consumer image(chica con ordenador) */
 .section-consumer__image {
   background: url('/consumer.jpg');
   background-size: cover;
@@ -71,7 +75,6 @@
 .section-consumer__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   color: var(--color-navy-blue);
   text-align: start;
 }
@@ -81,12 +84,16 @@
   text-align: start;
 }
 
+/* Sección de grids */
 .grid-title-with-subtitle {
   max-width: 1600px;
   margin: 0 auto;
   color: var(--color-navy-blue);
   flex-wrap: wrap;
-  padding-top: 12rem; /* Ajuste o valor do padding-top para aumentar o espaço entre o conteúdo e o topo */
+  padding-top: 12rem;  /* Ajuste del padding superior para aumentar el espacio entre contenidos */
+  padding-left:6rem; 
+  padding-right: 6rem; /* Mantener este padding para los textos izq-der*/
+  max-width: 1600px;
 }
 
 .grid {
@@ -147,7 +154,8 @@
 .grid-item5:hover {
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
-  transform: scale(1.1);
+  transform: scale(1.05); /* Aumentación cuando se pasa el cursor encima de uno de los grids*/
+  
 }
 
 .grid h3 {
@@ -156,7 +164,7 @@
   text-shadow: 0.5px 0.9px gray;
 }
 
-/* section banner  */
+/* Section banner (Solar by Nature)  */
 
 .section-banner {
   background-color: var(--color-navy-blue);
@@ -183,7 +191,7 @@
   }
 }
 
-/* section image  */
+/* Section image (Con texto By valuing forestry...) */
 
 .section-image {
   background-image: url('/solar.jpg');

@@ -8,7 +8,7 @@
   margin-top: 50rem;
   background-color: var(--color-white);
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: var(--img-border-radius);
   margin-top: 100px;
   margin-bottom: 40px;
   justify-content: center;

@@ -25,8 +25,11 @@ import image2 from '/2.jpg';
 import image3 from '/3.jpg';
 import image4 from '/4.jpg';
 import image5 from '/5.jpg';
+import image6 from '/6.jpg';
 
-const images = [image1, image2, image3, image4, image5];
+const images = [image1, image2, image3, image4, image5, image6];
+
+// ...
 
 export const ImageHome = () => {
   const carrosel = useRef();
@@ -45,9 +48,9 @@ export const ImageHome = () => {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
-          {images.map((image) => (
-            <motion.div className="item" key={image}>
-              <img src={image} alt="Placas" />
+          {images.map((image, index) => (
+            <motion.div className="item" key={index}>
+              <img src={image} alt={`Placas ${index + 1}`} />
             </motion.div>
           ))}
         </motion.div>

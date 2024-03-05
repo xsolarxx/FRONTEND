@@ -3,8 +3,9 @@
 /* Button green MAIN */
 
 .button--green {
-  width: 150px;
+  min-width: 150px;
   height: 54px;
+  padding: 0 15px 0 15px ;
   color: var(--text-navy-blue);
   text-align: center;
   font-weight: bold;

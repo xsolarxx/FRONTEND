@@ -1,4 +1,34 @@
-.containerDataNoChange {
+.div-user-profile-setting {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-navy-blue);
+  min-height: 80vh;
+
+}
+
+.div-user-profile-setting-card {
+  width: 700px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  min-width: 150px;
+  max-height: 650px;
+  border: 1px solid gray;
+  border-radius: var(--img-border-radius);
+  padding: 2rem;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+
+
+/* .containerDataNoChange {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +43,7 @@
   max-width: 1000px;
   margin-top: 2rem;
   border-radius: 20px;
-}
+} */
 
 /* .formProfile {
   margin: 2rem;

@@ -61,42 +61,51 @@ export const FormProfile = () => {
 
   return (
     <>
-      <div className="containerProfile">
+      <div className="div-user-profile-setting">
+        <div className="div-user-profile-setting-card">
+          <figure className="dataProfile">
+            <h4>UPDATE PROFILE</h4>
+            <h4>{user.name}</h4>
+            <img className="pictureProfile" src={user.image} alt="foto User" />
+          </figure>
+          <input
+            className="input_user"
+            type="text"
+            id="userName"
+            name="userName"
+            autoComplete="false"
+            defaultValue={defaultData?.name}
+            {...register('userName')}
+          />
+          <label htmlFor="custom-input" className="custom-placeholder">
+            username
+          </label>
+          <Uploadfile />
+          <button className="button--green" type="submit" disabled={send}>
+            Change data profile
+          </button>
+          {/* nav profile */}
+          {/* update profile with update file  */}
+        </div>
+      </div>
+      {/* <div className="containerProfile">
         <div className="containerDataNoChange">
           <FigureUser user={user} />
         </div>
         <div className="form-wrap formProfile">
-          <h4>UPDATE PROFILE</h4>
+          
           <p>Please, enter your new data profile</p>
           <form onSubmit={handleSubmit(formSubmit)}>
             <div className="user_container form-group">
-              <input
-                className="input_user"
-                type="text"
-                id="userName"
-                name="userName"
-                autoComplete="false"
-                // LO NUEVOOOOOOOO------>
-                defaultValue={defaultData?.name}
-                {...register('userName')}
-              />
-              <label htmlFor="custom-input" className="custom-placeholder">
-                username
-              </label>
+      
             </div>
-            <Uploadfile />
+          
             <div className="btn_container">
-              <button
-                className="button--gradient button--medium"
-                type="submit"
-                disabled={send}
-              >
-                Change data profile{' '}
-              </button>
+              
             </div>
           </form>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

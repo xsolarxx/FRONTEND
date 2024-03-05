@@ -65,7 +65,7 @@ export const Register = () => {
 
   return (
     <>
-      <div className="register_container">
+      <div className="register_container p-35">
         <div className="form-wrap1">
           <h4 className="logintext">xSolarx</h4>
           <form onSubmit={handleSubmit(formSubmit)}>
@@ -132,9 +132,8 @@ export const Register = () => {
                   <h6>Mujer</h6>
                 </label>
               </div>
-              <Uploadfile />
             </div>
-
+            <Uploadfile />
             <div className="btn_container">
               <button className="button--blue" type="submit" disabled={send}>
                 Register

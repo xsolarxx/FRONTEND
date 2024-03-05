@@ -18,7 +18,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="big-title-section ">
+      <section className="big-title-section">
         <p>XSOLARX</p>
         <h2>
           xSolarx operates in the renewable energies market. We were born green, not made
@@ -42,7 +42,7 @@ export const Home = () => {
 
       <div className="grid-title-with-subtitle">
         <h3>What you will find inside our platform</h3>
-        <p className="p-xl p-1">
+        <p className="p-xl">
           A community of like-minded people and a platform to learn and grow your interest
           in renewables.
         </p>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { getAllCompany } from '../../services/company.service';
 import { CompanyCard } from '../../components';
+import { getAllCompany } from '../../services/company.service';
 
 export const CompanyPage = () => {
   const [companyList, setCompanyList] = useState();

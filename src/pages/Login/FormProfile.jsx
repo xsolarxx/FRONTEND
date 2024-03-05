@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
-import { FigureUser, Uploadfile } from '../../components';
+import { Uploadfile } from '../../components';
 import { NavProfile } from '../../components/NavProfile/NavProfile';
 import { useAuth } from '../../context/authContext';
 import { useUpdateError } from '../../hooks';
@@ -66,15 +66,26 @@ export const FormProfile = () => {
         <div className="div-user-profile-setting-card">
           <figure className="dataProfile">
             <h4>UPDATE PROFILE</h4>
-            <h4>{user.name}</h4>
-            <div className="profile-photo-outer">
-              <img className="profile-photo" src={user.image} alt="foto User" />
-            </div>
+            <img className="profile-photo p-15" src={user.image} alt="foto User" />
           </figure>
+          <h5 className="user-profile-text">
+            Hi {}
+            <span
+              style={{
+                textDecoration: 'underline',
+                textDecorationColor: '#25dc80',
+              }}
+            >
+              {user.name}
+            </span>
+            , you can make changes to your user profile
+          </h5>
+
           <NavProfile />
+          <hr className="profile-setting__line" />
           <form onSubmit={handleSubmit(formSubmit)}>
             <label htmlFor="custom-input" className="custom-placeholder">
-              change username
+              Change username
             </label>
             <input
               className="input_user"
@@ -85,7 +96,7 @@ export const FormProfile = () => {
               defaultValue={defaultData?.name}
               {...register('userName')}
             />
-            change profile photo
+            Change profile photo
           </form>
           <Uploadfile />
           <button className="button--green" type="submit" disabled={send}>

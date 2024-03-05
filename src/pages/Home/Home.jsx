@@ -2,6 +2,7 @@ import './Home.css';
 import '../../components/Buttons/button.css';
 
 import { ImageHome } from '../../components/ImageHome/ImageHome';
+import { NavLink } from 'react-router-dom';
 
 export const Home = () => {
   return (
@@ -12,9 +13,9 @@ export const Home = () => {
           <p className="p-1 p-xl">
             Explore renewable companies and connect with industry professionals
           </p>
-          <button href="http://localhost:5173/register" className="button--green">
-            Join us
-          </button>
+          <NavLink to="/register">
+            <button className="button--green">Join us</button>
+          </NavLink>
         </div>
       </section>
 

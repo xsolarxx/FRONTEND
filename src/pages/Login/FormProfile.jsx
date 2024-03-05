@@ -5,10 +5,10 @@ import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 import { FigureUser, Uploadfile } from '../../components';
+import { NavProfile } from '../../components/NavProfile/NavProfile';
 import { useAuth } from '../../context/authContext';
 import { useUpdateError } from '../../hooks';
 import { update } from '../../services/user.service';
-import { NavProfile } from '../../components/NavProfile/NavProfile';
 export const FormProfile = () => {
   const { user, setUser, logout } = useAuth();
   const { register, handleSubmit } = useForm();

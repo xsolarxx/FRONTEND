@@ -1,6 +1,6 @@
 export * from './AnimationScroll/AnimationScroll';
 export * from './Buttons/button.css';
-export * from './Cards/CompanyCard.jsx';
+export * from './Cards/CompanyCard';
 export * from './FigureUser/FigureUser';
 export * from './Footer/Footer';
 export * from './Header/Header';

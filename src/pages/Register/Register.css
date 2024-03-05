@@ -44,7 +44,7 @@ input {
   padding: 10px;
   border-radius: 5px;
   border: solid 2px var(--primary-color-blue);
-  width: 100%; /* Ocupa todo el ancho disponible */
+  width: 100%; 
   margin-bottom: 10px; /* Añade espacio entre los inputs */
   box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
   text-align: start;
@@ -53,33 +53,10 @@ input:hover {
   background-color: rgb(231, 255, 231);
 }
 
-/* Media query para dispositivos más pequeños */
-@media (max-width: 600px) {
-  /* Redefine los estilos para los labels y radios en dispositivos móviles */
-  .label-radio,
-  .gender {
-    flex-direction: column; /* Cambia la dirección a columna */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-  }
-}
-@media (max-width: 600px) {
-  .form-wrap {
-    max-width: 260px;
-  }
-}
-#file-drag {
-  width: 87%;
-  margin-bottom: 2%;
-}
-@media (max-width: 600px) {
-  .filedrag {
-    align-items: center;
-    text-align: center;
-  }
-}
 
-.btn_container button {
+
+/* .btn_container button {
   min-width: 400px;
   max-height: 35px;
   margin-top: 2px;
-}
+} */

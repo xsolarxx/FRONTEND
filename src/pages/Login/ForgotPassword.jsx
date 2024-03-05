@@ -54,7 +54,6 @@ export const ForgotPassword = () => {
                 className="button-fgpw"
                 type="submit"
                 disabled={send}
-                style={{ background: send ? '' : 'color-disabled-green' }}
               >
                 Change password
               </button>

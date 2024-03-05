@@ -6,6 +6,7 @@
   justify-content: center; /* Centraliza os cartões horizontalmente */
   gap: 20px; /* Adiciona espaçamento entre os cartões */
   color: var(--color-navy-blue);
+  display: grid;
 }
 
 .containerNews {
@@ -16,7 +17,7 @@
   margin-right: 0; /* Remova a margem à direita */
   margin-bottom: 20px; /* Adicione uma margem inferior para criar espaço entre as linhas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto; /* Impede que as cartas se estiquem para preencher todo o espaço disponível */
+  display: grid; /* Impede que as cartas se estiquem para preencher todo o espaço disponível */
 }
 
 .newsTitle {

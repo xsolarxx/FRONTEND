@@ -50,11 +50,7 @@ export const ForgotPassword = () => {
             </div>
 
             <div className="btn_container11">
-              <button
-                className="button-fgpw"
-                type="submit"
-                disabled={send}
-              >
+              <button className="button-fgpw" type="submit" disabled={send}>
                 Change password
               </button>
             </div>

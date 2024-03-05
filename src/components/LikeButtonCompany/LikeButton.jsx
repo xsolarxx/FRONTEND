@@ -12,11 +12,8 @@ export const LikeButton = () => {
 
   return (
     <div>
-      {/* Botão de curtida */}
       <button onClick={handleLike}>
-        {/* Ícone dependendo do estado de curtido */}
         <FontAwesomeIcon icon={liked ? solidHeart : regularHeart} />
-        {/* Texto dependendo do estado de curtido */}
         {liked}
       </button>
     </div>

@@ -71,24 +71,28 @@ export const ImageHome = () => {
 
   return (
     <div className="imageHome">
-  <Swiper
-  ref={swiperRef}
-  spaceBetween={20}  // Espacio entre las imágenes
-  slidesPerView={3}   // Mostrar tres imágenes a la vez
-  navigation
-  scrollbar={{ draggable: true }}
-  className="swiper-container"  // Agrega la clase 'swiper-container'
->
-  <div className="swiper-wrapper">  {/* Agrega el contenedor 'swiper-wrapper' */}
-    {imagesMap.map((image, index) => (
-      <SwiperSlide key={index} className="swiper-slide">  {/* Agrega la clase 'swiper-slide' */}
-        <div className="item">
-          <img src={image.imgPath} alt={image.altText} />
+      <Swiper
+        ref={swiperRef}
+        spaceBetween={20} // Espacio entre las imágenes
+        slidesPerView={3} // Mostrar tres imágenes a la vez
+        navigation
+        scrollbar={{ draggable: true }}
+        className="swiper-container" // Agrega la clase 'swiper-container'
+      >
+        <div className="swiper-wrapper">
+          {' '}
+          {/* Agrega el contenedor 'swiper-wrapper' */}
+          {imagesMap.map((image, index) => (
+            <SwiperSlide key={index} className="swiper-slide">
+              {' '}
+              {/* Agrega la clase 'swiper-slide' */}
+              <div className="item">
+                <img src={image.imgPath} alt={image.altText} />
+              </div>
+            </SwiperSlide>
+          ))}
         </div>
-      </SwiperSlide>
-    ))}
-  </div>
-</Swiper>
+      </Swiper>
     </div>
   );
 };

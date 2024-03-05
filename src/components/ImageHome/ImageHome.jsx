@@ -1,25 +1,7 @@
-/**
- * Importamos la libraria de motion
- * Asignados clases a las div
- * Percorremos con el array de image con el map
- * WhileTap ativando de la mano si moviendo con el grabbing
- * drag hace que la foto se movimenta el eixo x grabbing tipo slide
- * importamos el useState , useEffect, useRef
- * useEffect es usado para calcular la largura total del carrossel cuando el componente es montado
- * useEffect calcula la diferencia entre la largura total e a largura visible do carrossel y actualiza el estado width con esse valor.
- * carrosel.current?.scrollWidth es el total de largura  (2140)
- * carrosel.current?.offsetWidth es el total de largura que vemos (1280)
- * Creamos un useState para armacenar la largura
- * en setWidth haciemos la largura total - o que tenemos en la pag
- * DragConstraints empieza en right 0 left -width (o que estamos haciendo: passando la largura que el puede hacer el scroll hasta que llegue al final)
- * -width (la cuantidad que falta de el scroll)
- */
-// ImageHome.js
-
 import './ImageHome.css';
+import 'react-multi-carousel/lib/styles.css';
 
-import { useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Carousel from 'react-multi-carousel';
 
 const imagesMap = [
   {
@@ -54,41 +36,47 @@ const imagesMap = [
     imgPath: '/installing.png',
     altText: 'An engineer with solar panels',
   },
-  {
-    imgPath: '/6.jpg',
-    altText: 'windmills and solar panels',
-  },
 ];
 
-export const ImageHome = () => {
-  const swiperRef = useRef(null);
-
-  useEffect(() => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.update(); // Actualiza el swiper después de cargar las imágenes
-    }
-  }, []);
-
+export const ImageHome = (props) => {
   return (
-    <div className="imageHome">
-  <Swiper
-  ref={swiperRef}
-  spaceBetween={20}  // Espacio entre las imágenes
-  slidesPerView={3}   // Mostrar tres imágenes a la vez
-  navigation
-  scrollbar={{ draggable: true }}
-  className="swiper-container"  // Agrega la clase 'swiper-container'
->
-  <div className="swiper-wrapper">  {/* Agrega el contenedor 'swiper-wrapper' */}
-    {imagesMap.map((image, index) => (
-      <SwiperSlide key={index} className="swiper-slide">  {/* Agrega la clase 'swiper-slide' */}
-        <div className="item">
-          <img src={image.imgPath} alt={image.altText} />
-        </div>
-      </SwiperSlide>
-    ))}
-  </div>
-</Swiper>
-    </div>
+    <section className="p-50">
+      <Carousel
+        swipeable={true}
+        draggable={true}
+        showDots={true}
+        responsive={responsive}
+        partialVisible={false}
+        ssr={true} // means to render carousel on server-side.
+        infinite={false}
+        arrows={true}
+        autoPlay={false}
+        removeArrowOnDeviceType={['tablet', 'mobile']}
+        deviceType={props.deviceType}
+        itemClass="item"
+      >
+        {imagesMap.map((image) => (
+          <img key={image.imgPath} src={image.imgPath} alt={image.altText} />
+        ))}
+      </Carousel>
+    </section>
   );
+};
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 3, // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 2, // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
+  },
 };

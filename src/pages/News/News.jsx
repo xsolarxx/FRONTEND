@@ -20,9 +20,7 @@ export const NewsPage = () => {
   return (
     <>
       {newsList &&
-        newsList.data.map((news, index) => (
-          <NewsCard news={news} key={index} />
-        ))}
+        newsList.data.map((news, index) => <NewsCard news={news} key={index} />)}
     </>
   );
 };

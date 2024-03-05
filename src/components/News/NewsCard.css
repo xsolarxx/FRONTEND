@@ -1,3 +1,13 @@
+.page-container-news {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cartões das empresas sejam organizados em várias linhas */
+  justify-content: center; /* Centraliza os cartões horizontalmente */
+  gap: 20px; /* Adiciona espaçamento entre os cartões */
+  color: var(--color-navy-blue);
+}
+
 .containerNews {
   width: 200px; /* Defina a largura desejada para cada carta */
   border: 1px solid #ccc;

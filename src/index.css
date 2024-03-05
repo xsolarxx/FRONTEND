@@ -20,6 +20,17 @@
   /** Personalizar TEXTOS*/
   --primary-font-family: 'Outfit', sans-serif;
 
+  /*media query variables*/
+  --smartphone-portrait: 480px;
+  --smartphone-landscape: 767px;
+  
+  --tablet-portrait-min: 768px;
+  --tablet-portrait-max: 1024px;
+  --tablet-landscape: 1024px;
+  --small-laptop-desktop-min: 1025px;
+  --small-laptop-desktop-max: 1366px;
+  --medium-large-desktop-min: 1367px;
+
   /*Los tamaños de textos se indican en REMs en base a 10px. Por ejemplo, 2.5 equivale a 25px.*/
 
   /*Encabezados*/

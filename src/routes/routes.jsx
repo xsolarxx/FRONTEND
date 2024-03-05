@@ -12,6 +12,7 @@ import { ForgotPassword } from '../pages/Login/ForgotPassword';
 import { FormProfile } from '../pages/Login/FormProfile';
 import { Login } from '../pages/Login/Login';
 import { Profile } from '../pages/Login/Profile';
+import { NewsPage } from '../pages/News/News';
 import { Register } from '../pages/Register/Register';
 
 export const router = createBrowserRouter([
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: '/company',
         element: <CompanyPage />,
+      },
+      {
+        path: '/news',
+        element: <NewsPage />,
       },
       {
         path: '/dashboard',

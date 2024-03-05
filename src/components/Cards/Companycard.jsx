@@ -1,3 +1,5 @@
+import './CompanyCard.css';
+
 export const CompanyCard = ({ company }) => {
   return (
     <div className="containerCompany">

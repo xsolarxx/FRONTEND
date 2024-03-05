@@ -14,6 +14,7 @@ import { Login } from '../pages/Login/Login';
 import { Profile } from '../pages/Login/Profile';
 import { NewsPage } from '../pages/News/News';
 import { Register } from '../pages/Register/Register';
+import { Forum } from '../pages';
 
 export const router = createBrowserRouter([
   {
@@ -85,6 +86,14 @@ export const router = createBrowserRouter([
             ),
           },
         ],
+      },
+      {
+        path: '/forum',
+        element: (
+          <Protected>
+            <Forum />
+          </Protected>
+        ),
       },
     ],
   },

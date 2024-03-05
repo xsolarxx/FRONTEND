@@ -20,13 +20,40 @@ import './ImageHome.css';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
-import image1 from '/1.webp';
-import image2 from '/2.jpg';
-import image3 from '/3.jpg';
-import image4 from '/4.jpg';
-import image5 from '/5.jpg';
-
-const images = [image1, image2, image3, image4, image5];
+const imagesMap = [
+  {
+    imgPath: '/wind.jpg',
+    altText: 'windmills in a field',
+  },
+  {
+    imgPath: '/hidraulica.webp',
+    altText: 'Water flowing through a dam',
+  },
+  {
+    imgPath: '/1.webp',
+    altText: 'windmills and solar panels',
+  },
+  {
+    imgPath: '/naturaleza.jpg',
+    altText: 'windmills for the sunset',
+  },
+  {
+    imgPath: '/naturaleza2.jpg',
+    altText: 'mountains and pine trees',
+  },
+  {
+    imgPath: '/perro.jpg',
+    altText: 'A dog chilling',
+  },
+  {
+    imgPath: '/2.jpg',
+    altText: 'windmills and solar panels',
+  },
+  {
+    imgPath: '/installing.png',
+    altText: 'An engineer with solar panels',
+  },
+];
 
 export const ImageHome = () => {
   const carrosel = useRef();
@@ -45,9 +72,9 @@ export const ImageHome = () => {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
-          {images.map((image) => (
-            <motion.div className="item" key={image}>
-              <img src={image} alt="Placas" />
+          {imagesMap.map((image) => (
+            <motion.div className="item" key={image.imgPath}>
+              <img src={image.imgPath} alt={image.altText} />
             </motion.div>
           ))}
         </motion.div>

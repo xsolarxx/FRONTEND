@@ -12,12 +12,14 @@ export const NewsCard = ({ news }) => {
           <img className="imgNews" src={news.image} alt={news.name} />
           <p className="newsAuthor">{news.author}</p>
           <p className="newsTags">{news.tags}</p>
+          <button
+            onClick={() => {
+              navigate(`/newsDetail/${news._id}`);
+            }}
+          >
+            Read more
+          </button>
         </div>
-        <button
-          onClick={() => {
-            navigate(`/newsDetail/${news._id}`);
-          }}
-        >Read more</button>
       </div>
     </>
   );

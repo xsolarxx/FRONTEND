@@ -14,8 +14,8 @@ import { FormProfile } from '../pages/Login/FormProfile';
 import { Login } from '../pages/Login/Login';
 import { Profile } from '../pages/Login/Profile';
 import { NewsPage } from '../pages/News/News';
-import { Register } from '../pages/Register/Register';
 import { NewsDetail } from '../pages/News/NewsDetail';
+import { Register } from '../pages/Register/Register';
 
 export const router = createBrowserRouter([
   {

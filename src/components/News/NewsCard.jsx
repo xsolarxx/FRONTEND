@@ -1,4 +1,5 @@
 import './NewsCard.css';
+
 import { useNavigate } from 'react-router-dom';
 
 export const NewsCard = ({ news }) => {

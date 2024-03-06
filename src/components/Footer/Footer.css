@@ -1,9 +1,10 @@
 .footer-outer-conatiner {
   background-color: var(--color-navy-blue);
-padding-bottom: 5%;}
+  padding-bottom: 5%;
+}
 .with-top-line {
-  border-top: 2px solid var(--primary-color-green); 
-  padding-top: 4%; 
+  border-top: 2px solid var(--primary-color-green);
+  padding-top: 4%;
   /* margin: 10px 0 10px 0; */
 }
 
@@ -74,5 +75,3 @@ footer a:hover {
   margin-top: 20px;
   font-size: smaller;
 }
-
-

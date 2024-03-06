@@ -26,11 +26,11 @@ export const Header = () => {
             <p>News</p>
           </NavLink>
 
-          <NavLink to="/forum">
+          <NavLink to="/forumPage">
             <p>Forum</p>
           </NavLink>
 
-          <NavLink to="/forum">
+          <NavLink to="/forumPage">
             <p>About</p>
           </NavLink>
 

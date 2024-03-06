@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { Navigate } from 'react-router';
 
 import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
@@ -45,6 +46,12 @@ export const Forum = () => {
   useEffect(() => {
     useForumError(res, setRes, setOkForum);
   }, [res]);
+
+  // estados de navegación
+
+  if (okForum) {
+    return <Navigate to="/forumPage" />;
+  }
 
   return (
     <>

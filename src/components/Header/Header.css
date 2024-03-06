@@ -1,23 +1,24 @@
 header {
-  min-height: 10vh;
+  height: 10vh;
   background-color: var(--text-white);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  /* margin: 0 auto;
-  max-width: 1600px; */
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  width: 1140px;
+  max-width: 1600px;
+
 }
 
 .logo {
   width: 230px;
-  height: 40px;
+  height: 45px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,6 +31,7 @@ nav p {
 }
 
 .icon {
-  width: 80px;
-  border-radius: 800px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
 }

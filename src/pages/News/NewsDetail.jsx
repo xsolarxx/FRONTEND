@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react';
+import { NewsDetailCard } from '../../components/News/NewsDetailCard';
+import { getById } from '../../services/news.service';
+import { useParams } from 'react-router-dom';
 
-import { NewsDetailCard } from '../../components';
-import { getbyid } from '../../services/news.service';
-
-export const NewsPage = () => {
-  const [newsList, setNewsList] = useState();
-  const fetchNews = async () => {
-    setNewsList(await getbyid());
+export const NewsDetail = () => {
+  const { id } = useParams();
+  const [fullNews, setFullNews] = useState();
+  const fetchFullNews = async () => {
+    setFullNews(await getById(id));
   };
   useEffect(() => {
-    fetchNews();
+    fetchFullNews();
   }, []);
+  console.log(fullNews);
   return (
-    <>
-      {newsList &&
-        newsList.data.map((news, index) => <NewsDetailCard news={news} key={index} />)}
-    </>
+    <div>
+      {fullNews?.data && <NewsDetailCard news={fullNews.data} />}
+    </div>
   );
 };

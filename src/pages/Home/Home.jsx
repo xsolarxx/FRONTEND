@@ -41,11 +41,11 @@ export const Home = () => {
       </section>
 
       <div className="grid-title-with-subtitle">
-        <h3>What you will find inside our platform</h3>
-        <p>
+        <h1>What you will find inside our platform</h1>
+        <h5>
           A community of like-minded people and a platform to learn and grow your interest
           in renewables.
-        </p>
+        </h5>
       </div>
 
       <section className="grid">
@@ -66,12 +66,12 @@ export const Home = () => {
       </section>
 
       <section className="section-banner">
-        <h1 className="p-35">Solar by Nature</h1>
+        <h1>Solar by Nature</h1>
         <div className="div-banner">
-          <p>
+          <h4>
             xSolarx is increasingly recognized in the European market as a major player in
             the promotion and development of renewable energy projects
-          </p>
+          </h4>
           <button className="button--green">Discover more</button>
         </div>
       </section>

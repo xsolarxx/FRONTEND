@@ -27,28 +27,28 @@ export const Home = () => {
       </section>
 
       <section className="section-consumer">
-        <span className="section-consumer__image"></span>
-        <span className="section-consumer__text">
+        <div className="section-consumer__image"></div>
+        <div className="section-consumer__text">
           <h3>Discover, connect and transform your relationship with renewable energy</h3>
           <h4>Your gateway to a greener future. </h4>
-          <p className="p-l">
+          <p>
             At xSolar.com, we are dedicated to empowering individuals on their sustainable
             journey. Through our platform, you can discover, connect, and transform your
             relationship with renewable energy. Whether you are exploring solar, wind, or
             other forms of renewable energy.
           </p>
-        </span>
+        </div>
       </section>
 
       <div className="grid-title-with-subtitle">
         <h3>What you will find inside our platform</h3>
-        <p className="p-xl">
+        <p>
           A community of like-minded people and a platform to learn and grow your interest
           in renewables.
         </p>
       </div>
 
-      <section className="grid p-35 gap-15">
+      <section className="grid">
         <div className="grid-item1">
           <h3>News</h3>
           {/* <p>Empresas que encajen con tu idea de sostenibilidad</p> */}
@@ -65,10 +65,10 @@ export const Home = () => {
         <div className="grid-item5"></div>
       </section>
 
-      <section className="section-banner p-50">
+      <section className="section-banner">
         <h1 className="p-35">Solar by Nature</h1>
-        <div className="div-banner gap-15">
-          <p className="p-l">
+        <div className="div-banner">
+          <p>
             xSolarx is increasingly recognized in the European market as a major player in
             the promotion and development of renewable energy projects
           </p>
@@ -76,9 +76,9 @@ export const Home = () => {
         </div>
       </section>
 
-      <div className="p-50">
+      <div>
         <section className="section-image">
-          <h3 className="p-35">
+          <h3>
             By valuing forestry and agroforestry resources and taking advantage of the
             sun’s rays, we believe in green and renewable energy.
           </h3>

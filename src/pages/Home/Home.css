@@ -32,7 +32,7 @@
   padding: 0 15px 0 15px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .hero-section {
     padding: 20px;
     margin: 15px;
@@ -51,15 +51,18 @@
 /* Big title (Escrito de xSollarx operates) */
 
 .big-title-section {
-  padding-left: 6rem;
-  padding-right: 6rem;
-  padding-bottom: 12rem;
-  padding-top: 12rem;
-  max-width: 1600px;
-  margin: 0 auto;
+  padding: 3rem 6rem;
   color: var(--color-navy-blue);
   flex-wrap: wrap;
 }
+
+@media (max-width: 480px) { 
+  .big-title-section{
+  padding: 2rem 3rem;
+  text-align: center;
+}
+}
+
 
 /* Consumer image */
 
@@ -75,7 +78,7 @@
 
 /* Responsive incompleto  */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .section-consumer {
     grid-template-columns: 1fr;
   }
@@ -231,7 +234,7 @@
   text-align: start;
   width: 700px;
 }
-@keyframes show {
+/* @keyframes show {
   from {
     opacity: 0;
     transform: scale(0.25);
@@ -240,7 +243,7 @@
     opacity: 1;
     transform: scale(1);
   }
-}
+} */
 
 .big-title-section {
   view-timeline-name: --consumer;

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getAll } from '../../services/forum.service';
 import { useNavigate } from 'react-router';
+
 import { ForumFigure } from '../../components';
+import { getAll } from '../../services/forum.service';
 
 export const ForumPage = () => {
   const navigate = useNavigate();

@@ -26,7 +26,7 @@ export const Home = () => {
         </h2>
       </section>
 
-      <section className="section-consumer gap-25">
+      <section className="section-consumer">
         <span className="section-consumer__image"></span>
         <span className="section-consumer__text">
           <h3>Discover, connect and transform your relationship with renewable energy</h3>

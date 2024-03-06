@@ -28,8 +28,8 @@
   margin-bottom: 10px;
   box-sizing: border-box;
   text-align: start;
-  height: 54px;
-  padding: 0 15px; /* Corrección del padding */
+  height: 40px;
+
   background: var(--background-color-gray);
 }
 
@@ -45,7 +45,8 @@
 }
 
 .formLogin button {
-  width: 200px;
+  width: 92%;
+  height: 40px;
 }
 
 @media (max-width: 400px), (max-width: 650px) {

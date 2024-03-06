@@ -20,7 +20,7 @@
   /** Personalizar TEXTOS*/
   --primary-font-family: 'Outfit', sans-serif;
 
-  /*media query variables*/
+  /*media query variables
   --smartphone-portrait: 480px;
   --smartphone-landscape: 767px;
 
@@ -35,127 +35,127 @@
 
   /*Encabezados*/
 
-  --hScale: 1.5;
+  /*--hScale: 1.5;
 
-  /* .h1 */
+  /* .h1 
   --h1-max: 6;
   --h1-min: calc(var(--h1-max) / var(--hScale));
   --h1-weight: 600;
 
-  /* .h2 */
+  /* .h2 
   --h2-max: 5;
   --h2-min: calc(var(--h2-max) / var(--hScale));
   --h2-weight: 500;
 
-  /* .h3 */
+  /* .h3 
   --h3-max: 4;
   --h3-min: calc(var(--h3-max) / var(--hScale));
   --h3-weight: 500;
 
-  /* .h4 */
+  /* .h4 
   --h4-max: 3;
   --h4-min: calc(var(--h4-max) / var(--hScale));
   --h4-weight: 500;
 
-  /* .h5 */
+  /* .h5 
   --h5-max: 2.5;
   --h5-min: calc(var(--h5-max) / var(--hScale));
   --h5-weight: 500;
 
-  /* .h6 */
+  /* .h6 
   --h6-max: 2;
   --h6-min: calc(var(--h6-max) / var(--hScale));
   --h6-weight: 500;
 
-  /*Texto de cuerpo*/
+  /*Texto de cuerpo
 
   --bodyScale: 1.25;
 
-  /* .p-xl */
+  /* .p-xl 
   --body-max: 1.8;
   --body-min: calc(var(--body-max) / var(--bodyScale));
 
-  /* .p-l */
+  /* .p-l 
   --p-xl-max: 2.4;
   --p-xl-min: calc(var(--p-xl-max) / var(--bodyScale));
 
-  /* .p */
+  /* .p 
   --p-l-max: 2.2;
   --p-l-min: calc(var(--p-l-max) / var(--bodyScale));
 
-  /* .p-s */
+  /* .p-s 
   --p-s-max: 1.6;
   --p-s-min: calc(var(--p-s-max) / var(--bodyScale));
 
-  /* .p-xs */
+  /* .p-xs 
   --p-xs-max: 1.4;
   --p-xs-min: calc(var(--p-xs-max) / var(--bodyScale));
 
-  /** padding */
+  /** padding 
 
-  /* .p-1 */
+  /* .p-1 
   --p1-max: calc(var(--unit) * 1);
   --p1-min: calc(var(--p1-max) * var(--reduction));
 
-  /* .p-15 */
+  /* .p-15 
   --p15-max: calc(var(--unit) * 1.5);
   --p15-min: calc(var(--p15-max) * var(--reduction));
 
-  /* .p-2 */
+  /* .p-2 
   --p2-max: calc(var(--unit) * 2);
   --p2-min: calc(var(--p2-max) * var(--reduction));
 
-  /* .p-25 */
+  /* .p-25 
   --p25-max: calc(var(--unit) * 2.5);
   --p25-min: calc(var(--p25-max) * var(--reduction));
 
-  /* .p-3 */
+  /* .p-3 
   --p3-max: calc(var(--unit) * 3);
   --p3-min: calc(var(--p3-max) * var(--reduction));
 
-  /* .p-35 */
+  /* .p-35 
   --p35-max: calc(var(--unit) * 3.5);
   --p35-min: calc(var(--p35-max) * var(--reduction));
 
-  /* .p-4 */
+  /* .p-4 
   --p4-max: calc(var(--unit) * 4);
   --p4-min: calc(var(--p4-max) * var(--reduction));
 
-  /* .p-50 */
+  /* .p-50 
   --p50-max: calc(var(--unit) * 5);
   --p50-min: calc(var(--p50-max) * var(--reduction));
 
   /*Gaps*/
 
-  /*.gap-1*/
+  /*.gap-1
   --gap1-max: calc(var(--unit) * 1);
   --gap1-min: calc(var(--gap1-max) * var(--reduction));
 
-  /*.gap-15*/
+  /*.gap-15
   --gap15-max: calc(var(--unit) * 1.5);
   --gap15-min: calc(var(--gap15-max) * var(--reduction));
 
-  /*.gap-2*/
+  /*.gap-2
   --gap2-max: calc(var(--unit) * 2);
   --gap2-min: calc(var(--gap2-max) * var(--reduction));
 
-  /*.gap-25*/
+  /*.gap-25
   --gap25-max: calc(var(--unit) * 2.5);
   --gap25-min: calc(var(--gap25-max) * var(--reduction));
 
-  /*.gap-3*/
+  /*.gap-3
   --gap3-max: calc(var(--unit) * 3);
   --gap3-min: calc(var(--gap3-max) * var(--reduction));
 
-  /*.gap-35*/
+  /*.gap-35
   --gap35-max: calc(var(--unit) * 3.5);
   --gap35-min: calc(var(--gap35-max) * var(--reduction));
 
-  /*.gap-4*/
+  /*.gap-4
   --gap4-max: calc(var(--unit) * 4);
   --gap4-min: calc(var(--gap4-max) * var(--reduction));
 
-  /*Free variables*/
+  /*Free variables
   --unit-max: calc(var(--unit) * 1);
   --unit-min: calc(var(--unit-max) * var(--reduction));
 
@@ -169,18 +169,19 @@
       )
   );
 
-  /*Ejemplos de espacios si el --unit está definido en 1.6*/
+  /*Ejemplos de espacios si el --unit está definido en 1.6  
 
-  --u1: clamp(var(--unitTo), var(--fluidUnit), var(--unitFrom)); /*16px*/
-  --u05: calc(var(--u1) * 0.5); /*80px*/
-  --u15: calc(var(--u1) * 1.5); /*24px*/
+  --u1: clamp(var(--unitTo), var(--fluidUnit), var(--unitFrom)); 16px
+  --u05: calc(var(--u1) * 0.5); 80px
+  --u15: calc(var(--u1) * 1.5); 24px
   --u2: calc(var(--u1) * 2);
-  --u25: calc(var(--u1) * 2.5); /*40px*/
-  --u3: calc(var(--u1) * 3); /*48px*/
-  --u35: calc(var(--u1) * 3.5); /*56px*/
-  --u4: calc(var(--u1) * 4); /*64px*/
-  --u45: calc(var(--u1) * 4.5); /*72px*/
-  --u5: calc(var(--u1) * 5); /*8px*/
+  --u25: calc(var(--u1) * 2.5); 40px
+  --u3: calc(var(--u1) * 3); 48px
+  --u35: calc(var(--u1) * 3.5); 56px
+  --u4: calc(var(--u1) * 4); 64px
+  --u45: calc(var(--u1) * 4.5); 72px
+  --u5: calc(var(--u1) * 5); 8px */  
+
 
   /** ⛔️📱 RESPONSIVE CONFIG 📱⛔️ */
 
@@ -190,11 +191,11 @@
   --screenSpacingMin: 480;
   --screenSpacingMax: 1600;
 
-  /*Text*/
+  /*Text
   --fluidFromCalc: calc(var(--screenMax) / 10 * 1rem);
   --fluidToCalc: calc(var(--screenMin) / 10 * 1rem);
 
-  /*padding*/
+  /*padding
   --unit: 1.6;
   --reduction: 0.5;
   --fluidSpacingFromCalc: calc(var(--screenSpacingMax) / 10 * 1rem);
@@ -203,7 +204,7 @@
 
 /** ⛔️ AQUI EMPIEZAN LAS REGLAS DE CSS - NO TOCAR ⛔️ **/
 
-/*--Paddings*/
+/*--Paddings
 
 .p-1 {
   --p1From: calc(var(--p1-max) * 1rem);
@@ -307,7 +308,7 @@
   padding: clamp(var(--p50To), var(--fluidp35), var(--p50From));
 }
 
-/* Headings */
+/* Headings 
 h1,
 .h1 {
   --max: var(--h1-max);
@@ -339,7 +340,7 @@ h6,
   --min: var(--h6-min);
 }
 
-/* Body */
+/* Body 
 body,
 .p {
   --max: var(--body-max);
@@ -387,7 +388,7 @@ h6,
 .h6 {
   line-height: 1.35;
 }*/
-
+/*
 :is(
     h1,
     .h1,
@@ -417,7 +418,7 @@ h6,
   font-size: clamp(var(--to), var(--fluid), var(--from));
 }
 
-/*--Gaps*/
+--Gaps
 
 .gap-1 {
   --gap1From: calc(var(--gap1-max) * 1rem);
@@ -510,7 +511,7 @@ h6,
   gap: clamp(var(--gap4To), var(--fluidgap4), var(--gap4From));
 }
 
-/* Reset of styles */
+Reset of styles 
 
 html {
   font-size: 62.5%;
@@ -555,4 +556,4 @@ a {
   margin: 0;
   box-sizing: content-box;
   overflow-x: hidden;
-}
+} */

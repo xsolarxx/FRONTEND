@@ -1,69 +1,51 @@
-.email_container1 {
-  max-width: 300px;
-  min-width: 150px;
-  max-height: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  margin-top: 50rem;
-  background-color: var(--color-white);
-  border: 1px solid gray;
-  border-radius: var(--img-border-radius);
-  margin-top: 100px;
-  margin-bottom: 40px;
-  justify-content: center;
-  color: var(--color-navy-blue);
-}
-
-.email_container1 button {
-  min-width: 300px;
-  max-height: 35px;
-  margin-top: 10px;
-}
-.input_email,
-.input_Password,
-.input_user {
-  border: 1px solid black;
-  margin-top: 10px;
-  flex-direction: column;
-  align-content: center;
-  max-height: 35px;
-  border-radius: 50px;
-  overflow-y: hidden;
-  text-align: start
-}
-.ulogin {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-end;
-}
-.logintext {
-  text-align: center;
-  font-style: italic;
-  margin-bottom: 50px;
-}
 .login_container {
-  background-color: var(--color-navy-blue);
-  min-height: 70vh;
-}
-.linkr1  {
-  color: var(--primary-color-green);
-}
-.linkr2 {
-  color: var(--primary-color-green);
+  height: 53vh;
+  display: flex;
+  justify-content: center;
 }
 
-/* h6 {
-  font-weight: 100;
-} */
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px ;
+  align-items: center;
+  gap: 2rem;
+}
 
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-  input {
-    width: 90%; /
+.formLogin h4 {
+  padding: 0.5rem;
+}
+
+.formLogin section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 400px;
+}
+
+.formLogin section button {
+  width: 80%;
+}
+
+@media (max-width: 400px) {
+  .formLogin {
+    width: 80%;
   }
+
+  .formLogin section {
+    width: 90%;
+  }
+
 }
 
-.btn_container {
-  text-align: center;
+@media (max-width: 650px) {
+  .formLogin {
+    width: 80%;
+  }
+
+  .formLogin section {
+    width: 90%;
+  }
+
 }

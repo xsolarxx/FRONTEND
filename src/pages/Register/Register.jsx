@@ -65,14 +65,14 @@ export const Register = () => {
 
   return (
     <>
-      <div className="register_container p-35">
-        <div className="form-wrap1">
-          <h4 className="logintext">xSolarx</h4>
+      <div className="register_container">
+        <div className="form-register">
+          <h4>Register</h4>
           <form onSubmit={handleSubmit(formSubmit)}>
             <div className="user_container form-group">
-              <label htmlFor="input_user" className="userregister">
+              <label htmlFor="input_user">
                 <input
-                  className="input_user"
+                  className="input_user1"
                   type="text"
                   id="userName"
                   name="userName"
@@ -86,7 +86,7 @@ export const Register = () => {
             <div className="password_container form-group">
               <label htmlFor="input_password">
                 <input
-                  className="input_Password"
+                  className="input_Password1"
                   type="password"
                   id="password"
                   name="password"
@@ -100,7 +100,7 @@ export const Register = () => {
             <div className="email_container form-group">
               <label htmlFor="input_email">
                 <input
-                  className="input_email"
+                  className="input_email1"
                   type="email"
                   id="email"
                   name="email"
@@ -109,8 +109,10 @@ export const Register = () => {
                   placeholder="Email"
                 />
               </label>
-
               <div className="gender">
+                <label htmlFor="hombre" className="label-radio hombre">
+                Hombre
+              </label>
                 <input
                   type="radio"
                   name="gender"
@@ -118,9 +120,9 @@ export const Register = () => {
                   value="Male"
                   {...register('gender')}
                 />
-                <label htmlFor="Hombre" className="label-radio hombre">
-                  <h6>Hombre</h6>
-                </label>
+              <label htmlFor="mujer" className="label-radio mujer">
+                Mujer
+              </label>
                 <input
                   type="radio"
                   name="gender"
@@ -128,9 +130,6 @@ export const Register = () => {
                   value="Female"
                   {...register('gender')}
                 />
-                <label htmlFor="Mujer" className="label-radio mujer">
-                  <h6>Mujer</h6>
-                </label>
               </div>
             </div>
             <Uploadfile />
@@ -149,7 +148,7 @@ export const Register = () => {
             <p className=" p-xs">
               Already have an account?{' '}
               <Link className="linkr1" to="/login">
-                Login Here
+                <br /> Login here
               </Link>
             </p>
           </div>

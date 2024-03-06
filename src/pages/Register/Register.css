@@ -1,60 +1,68 @@
 /* Estilos para el contenedor principal del formulario */
-.form-wrap1 {
-  max-width: 400px;
-  min-width: 150px;
-  max-height: 650px;
-  margin: 0 auto;
+.register_container {
   display: flex;
-  background-color: var(--color-white);
-  border: 1px solid gray;
-  border-radius: var(--img-border-radius);
-  padding: 2rem;
-  flex-direction: column;
-  align-content: center;
   justify-content: center;
   align-items: center;
-  margin-top: 4%;
-  margin-bottom: 4%;
-}
-/* Estilos para los labels */
-.label-radio {
-  background: #37a08e57;
-  color: #fff;
-  padding: 7px;
-  text-align: center;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  margin-bottom: 10px; /* Añade un poco de espacio entre los labels */
-  border-radius: 5px;
-}
-
-/* Estilos para los radios de género */
-.gender {
-  display: flex;
-  align-items: center;
-  justify-content: space-around; /* Alinea los elementos con espacio uniforme */
-  margin-bottom: 20px; /* Añade espacio entre el grupo de radios y los siguientes elementos */
-}
-.register_container {
-  background-color: var(--color-navy-blue);
+  gap: 2rem;
+  padding: 2.5rem;
   color: var(--color-navy-blue);
+  background: var(--background-color-gray);
 }
-
-/* Estilos para los inputs */
-input {
-  padding: 10px;
-  border-radius: 5px;
+.form-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  align-items: center;
+  border-radius: var(--img-border-radius);
+  background-color: white;
+  padding: 2rem;
+  padding-bottom: 3rem;
+}
+.form-register h4 {
+  font-weight: 700;
+  padding: 0.5rem;
+  padding-bottom: 3rem;
+}
+.input_email1,
+.input_Password1,
+.input_user1 {
+  border-radius: 30px;
   border: solid 2px var(--primary-color-blue);
   width: 100%;
-  margin-bottom: 10px; /* Añade espacio entre los inputs */
-  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
+  margin-bottom: 22px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: start;
+  height: 40px;
+  background: var(--background-color-gray);
 }
-input:hover {
-  background-color: rgb(231, 255, 231);
+.gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.gender input {
+  width: 80px;
+  text-align: center;
+  border-radius: 30px;
+  background: var(--background-color-gray);
+  height: 25px;
+}
+.footerForm {
+  text-align: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.form-register button {
+  width: 92%;
+  height: 40px;
 }
 
-/* .btn_container button {
-  min-width: 400px;
-  max-height: 35px;
-  margin-top: 2px;
-} */
+@media (max-width: 400px), (max-width: 650px) {
+  .form-register {
+    width: 80%;
+  }
+}

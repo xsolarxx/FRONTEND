@@ -1,16 +1,36 @@
 .login_container {
-  height: 53vh;
+  /* height: 53vh; */
   display: flex;
   justify-content: center;
+  padding: 2.5rem;
+  color: var(--color);
+  background: var(--background-color-gray);
 }
 
 .formLogin {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 600px;
+  width: 350px;
   align-items: center;
-  gap: 2rem;
+  border-radius: var(--img-border-radius);
+  background-color: white;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  gap: 1rem;
+}
+
+.input_email,
+.input_Password {
+  border-radius: 30px;
+  border: solid 2px var(--primary-color-blue);
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  text-align: start;
+  height: 54px;
+  padding: 0 15px; /* Corrección del padding */
+  background: var(--background-color-gray);
 }
 
 .formLogin h4 {
@@ -24,21 +44,11 @@
   width: 400px;
 }
 
-.formLogin section button {
-  width: 80%;
+.formLogin button {
+  width: 200px;
 }
 
-@media (max-width: 400px) {
-  .formLogin {
-    width: 80%;
-  }
-
-  .formLogin section {
-    width: 90%;
-  }
-}
-
-@media (max-width: 650px) {
+@media (max-width: 400px), (max-width: 650px) {
   .formLogin {
     width: 80%;
   }

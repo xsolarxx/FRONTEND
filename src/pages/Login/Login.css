@@ -40,6 +40,11 @@
   padding: 0.5rem;
   padding-bottom: 1.5rem;
 }
+.input_email::placeholder,
+.input_Password::placeholder {
+  text-align: start; /* Centra el texto del marcador de posición */
+  font-size: 14px; /* Tamaño del texto del marcador de posición */
+}
 
 .formLogin section {
   display: flex;
@@ -56,14 +61,4 @@
 .formLogin button {
   width: 92%;
   height: 40px;
-}
-
-@media (max-width: 400px), (max-width: 650px) {
-  .formLogin {
-    width: 80%;
-  }
-
-  .formLogin section {
-    width: 90%;
-  }
 }

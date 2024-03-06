@@ -1,3 +1,5 @@
+import './CompanyPage.css';
+
 import { useEffect, useState } from 'react';
 
 import { CompanyCard } from '../../components';
@@ -18,11 +20,11 @@ export const CompanyPage = () => {
   //* Verifica sí la lista tienes los itens para mapear
 
   return (
-    <>
+    <section className="Company-Page-grid">
       {companyList &&
         companyList.data.map((company, index) => (
           <CompanyCard company={company} key={index} />
         ))}
-    </>
+    </section>
   );
 };

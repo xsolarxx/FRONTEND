@@ -1,8 +1,9 @@
 import './Home.css';
 import '../../components/Buttons/button.css';
 
-import { ImageHome } from '../../components/ImageHome/ImageHome';
 import { NavLink } from 'react-router-dom';
+
+import { ImageHome } from '../../components/ImageHome/ImageHome';
 
 export const Home = () => {
   return (

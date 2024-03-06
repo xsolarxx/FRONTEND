@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import { Protected } from '../components/ProtectedRoute/Protected';
 import { ProtectedCheckChildren } from '../components/ProtectedRoute/ProtectedCheckChildren';
+import { Forum } from '../pages';
 import { CompanyPage } from '../pages/Company/CompanyPage';
 import { Dashboard } from '../pages/Dashboard/Dashboard';
 import { Home } from '../pages/Home/Home';
@@ -14,7 +15,6 @@ import { Login } from '../pages/Login/Login';
 import { Profile } from '../pages/Login/Profile';
 import { NewsPage } from '../pages/News/News';
 import { Register } from '../pages/Register/Register';
-import { Forum } from '../pages';
 
 export const router = createBrowserRouter([
   {

@@ -95,7 +95,7 @@ export const Login = () => {
             disabled={send}
             style={{ background: send ? '' : 'color-disabled-green' }}
           >
-            Log in
+            Login
           </button>
 
           <div className="btn_container">

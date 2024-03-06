@@ -1,7 +1,7 @@
 .Company-Page-grid {
-display: flex;
-flex-direction: row;
-max-width: 1500px;
-margin: 0 auto;
-flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  max-width: 1500px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }

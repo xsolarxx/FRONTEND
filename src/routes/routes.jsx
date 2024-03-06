@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import { Protected } from '../components/ProtectedRoute/Protected';
 import { ProtectedCheckChildren } from '../components/ProtectedRoute/ProtectedCheckChildren';
-import { Forum } from '../pages';
+import { Forum, ForumPage } from '../pages';
 import { CompanyPage } from '../pages/Company/CompanyPage';
 import { Dashboard } from '../pages/Dashboard/Dashboard';
 import { Home } from '../pages/Home/Home';
@@ -14,6 +14,7 @@ import { FormProfile } from '../pages/Login/FormProfile';
 import { Login } from '../pages/Login/Login';
 import { Profile } from '../pages/Login/Profile';
 import { NewsPage } from '../pages/News/News';
+import { NewsDetail } from '../pages/News/NewsDetail';
 import { Register } from '../pages/Register/Register';
 
 export const router = createBrowserRouter([
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: '/news',
         element: <NewsPage />,
+      },
+      {
+        path: '/newsDetail/:id',
+        element: <NewsDetail />,
       },
       {
         path: '/dashboard',
@@ -92,6 +97,14 @@ export const router = createBrowserRouter([
         element: (
           <Protected>
             <Forum />
+          </Protected>
+        ),
+      },
+      {
+        path: '/forumPage',
+        element: (
+          <Protected>
+            <ForumPage />
           </Protected>
         ),
       },

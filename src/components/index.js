@@ -3,6 +3,7 @@ export * from './Buttons/button.css';
 export * from './Cards/CompanyCard';
 export * from './FigureUser/FigureUser';
 export * from './Footer/Footer';
+export * from './Forums/ForumFigure';
 export * from './Header/Header';
 export * from './ImageHome/ImageHome';
 export * from './LikeButtonCompany/LikeButton';

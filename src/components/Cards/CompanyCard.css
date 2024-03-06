@@ -3,20 +3,14 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column; /* Alterado para row para exibir as empresas lado a lado */
-  /* align-items: center;
-  justify-content: center; */
   color: var(--color-navy-blue);
-}
-.containerCompany {
-  padding: 0 10px;
-  width: 300px; /* Defina a largura desejada para cada carta */
+  width: 30%; /* Defina a largura desejada para cada carta */
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px; /* Reduza o preenchimento para tornar as cartas mais compactas */
-  margin-right: 0; /* Remova a margem à direita */
+  border-radius: var(--img-border-radius);
   margin-bottom: 20px; /* Adicione uma margem inferior para criar espaço entre as linhas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto; /* Impede que as cartas se estiquem para preencher todo o espaço disponível */
+  padding: 1.5em;
+  text-align: center;
 }
 
 .companyName {

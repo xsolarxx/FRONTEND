@@ -1,6 +1,5 @@
+import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 import './CompanyCard.css';
-
-import { LikeButton } from '../LikeButtonCompany/LikeButton';
 
 export const CompanyCard = ({ company }) => {
   return (
@@ -10,7 +9,7 @@ export const CompanyCard = ({ company }) => {
       <img className="imgCompany" src={company.image} alt={company.name} />
       <h2 className="companyType"> {company.type}</h2>
       <p className="companyServices">{company.companyServices}</p>
-      <LikeButton />
+      <LikeCompany id={company._id} />
     </div>
   );
 };

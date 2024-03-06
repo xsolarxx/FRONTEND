@@ -33,8 +33,10 @@
   width: 150px;
   height: 54px;
   color: white;
+  padding: 0 15px 0 15px;
   text-align: center;
   font-weight: bold;
+  font-size: medium;
   cursor: pointer;
   border: transparent;
   border-radius: 50px;

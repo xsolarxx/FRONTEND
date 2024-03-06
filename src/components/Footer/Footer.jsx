@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 export const Footer = () => {
   return (
     <>
-      <div className="footer-outer-conatiner">
-        <footer className="footer-container with-top-line">
+      <div className="footer-outer-conatiner with-top-line">
+        <footer className="footer-container">
           <div className="column2">
             <h5>Contact</h5>
             <p>

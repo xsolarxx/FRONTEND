@@ -3,6 +3,7 @@ export * from './Company/CompanyDetail';
 export * from './Company/CompanyPage';
 export * from './Dashboard/Dashboard';
 export * from './Forum/Forum';
+export * from './Forum/ForumPage';
 export * from './News/News';
 export * from './Login/ChangePassword';
 export * from './Register/Register';

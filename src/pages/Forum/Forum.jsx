@@ -5,6 +5,7 @@ import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useForumError } from '../../hooks';
 import { createForum } from '../../services';
+import { Navigate } from 'react-router';
 
 export const Forum = () => {
   const { user } = useAuth();
@@ -45,6 +46,12 @@ export const Forum = () => {
   useEffect(() => {
     useForumError(res, setRes, setOkForum);
   }, [res]);
+
+  // estados de navegación
+
+  if (okForum) {
+    return <Navigate to="/forumPage" />;
+  }
 
   return (
     <>

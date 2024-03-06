@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <>
       <div className="footer-outer-conatiner">
-        <footer className="footer-container">
+        <footer className="footer-container with-top-line">
           <div className="column2">
             <h5>Contact</h5>
             <p>

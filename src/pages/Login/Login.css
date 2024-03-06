@@ -53,9 +53,9 @@
   color: var(--primary-color-green);
 }
 
-h6 {
+/* h6 {
   font-weight: 100;
-}
+} */
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {

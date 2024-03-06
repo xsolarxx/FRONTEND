@@ -1,3 +1,5 @@
+import './ChangePassword.css';
+
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
@@ -52,12 +54,13 @@ export const ChangePassword = () => {
   //! no tenemos condicionales de navegacion porque cuando me desloguee el componente protected me llevara al login
 
   return (
-    <>
+    <div className="form-wrap-background">
       <div className="form-wrap">
-        <h1>Change your password ♻</h1>
-        <p>Please, enter your old and new passwords</p>
+        <h3>Change your password</h3>
+        <span className="material-symbols-outlined">lock</span>
+        <h6>Please, enter your old and new passwords</h6>
         <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="password_container form-group">
+          <div className="password_container">
             <input
               className="input_user"
               type="password"
@@ -70,7 +73,7 @@ export const ChangePassword = () => {
               Old password
             </label>
           </div>
-          <div className="newPassword_container form-group">
+          <div className="newPassword_container">
             <input
               className="input_user"
               type="password"
@@ -83,7 +86,7 @@ export const ChangePassword = () => {
               New password
             </label>
           </div>
-          <div className="confirmPassword_container form-group">
+          <div className="confirmPassword_container">
             <input
               className="input_user"
               type="password"
@@ -92,22 +95,13 @@ export const ChangePassword = () => {
               autoComplete="false"
               {...register('confirmPassword', { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              Confirm new password
-            </label>
+            <label htmlFor="custom-input" className="custom-placeholder"></label>
           </div>
-          <div className="btn_container">
-            <button
-              className="btn"
-              type="submit"
-              disabled={send}
-              style={{ background: send ? '#49c1a388' : '#49c1a2' }}
-            >
-              CHANGE PASSWORD
-            </button>
-          </div>
+          <button className="button--green" type="submit" disabled={send}>
+            Change password
+          </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };

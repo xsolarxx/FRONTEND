@@ -45,16 +45,18 @@ i.fa {
   flex-direction: column;
   gap: 2rem;
   clear: both;
-  width: 100%;
+  /* width: 100%; */
   padding: 2rem 1.5rem;
   text-align: center;
   background: #fff;
   border-radius: 7px;
-  border: 3px solid #37a08e53;
+  border: 1px solid var(--color-navy-blue);
   transition: all 0.2s ease;
   user-select: none;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5%;
+  border-radius: var(--img-border-radius);
 }
 
 #file-drag:hover {

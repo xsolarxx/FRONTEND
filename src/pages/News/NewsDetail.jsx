@@ -13,9 +13,5 @@ export const NewsDetail = () => {
     fetchFullNews();
   }, []);
   console.log(fullNews);
-  return (
-    <div>
-      {fullNews?.data && <NewsDetailCard news={fullNews.data} />}
-    </div>
-  );
+  return <div>{fullNews?.data && <NewsDetailCard news={fullNews.data} />}</div>;
 };

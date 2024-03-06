@@ -8,12 +8,10 @@ import { ImageHome } from '../../components/ImageHome/ImageHome';
 export const Home = () => {
   return (
     <>
-      <section className="hero-section p-35">
-        <div className="herobox p-35">
+      <section className="hero-section">
+        <div className="herobox">
           <h1> Connecting conscious consumers with renewable companies </h1>
-          <p className="p-1 p-xl">
-            Explore renewable companies and connect with industry professionals
-          </p>
+          <h4>Explore renewable companies and connect with industry professionals</h4>
           <NavLink to="/register">
             <button className="button--green">Join us</button>
           </NavLink>

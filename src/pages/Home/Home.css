@@ -1,33 +1,51 @@
 /* Main section (Con la foto y texto principal) */
 .hero-section {
-  background-image: url('/wind2.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: var(--text-white);
+  margin: 0 auto;
+  padding: 4rem;
+  margin: 4rem;
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   color: white;
+
+  background-image: url('/wind2.jpg');
+  background-size: cover;
+  background-position: center;
   border-radius: var(--img-border-radius);
-  width: 80%;
-  margin: 0 auto;
-}
-.hero-section h1 {
-  max-width: 1600px;
-  margin: 0 auto;
 }
 
 .herobox {
   background-color: var(--background-color-opacity);
   border-radius: var(--img-border-radius);
+  padding: 3rem;
 }
 
-.button--large {
-  display: inline-block;
-  width: 200px;
-  margin: 0 auto;
+.herobox, h1, h4, button {
+  padding-bottom: 2rem;
+}
+
+.herobox button {
+  min-width: 150px;
+  height: 54px;
+  padding: 0 15px 0 15px;
+}
+
+@media (max-width: 400px) {
+  .hero-section {
+    padding: 20px;
+    margin: 15px;
+  }
+  
+  .herobox, h1 {
+    font-size: medium ;
+  }
+  .hero-section {
+    padding: none;
+    margin: none;
+  }
+  
 }
 
 /* Big title (Escrito de xSollarx operates) */

@@ -1,9 +1,5 @@
-/* like */
-
-/* Button green MAIN */
-
 .button--green {
-  min-width: 150px;
+  /* min-width: 150px; */
   height: 54px;
   padding: 0 15px 0 15px;
   color: var(--text-navy-blue);
@@ -30,7 +26,7 @@
 /* Blue secondary */
 
 .button--blue {
-  width: 150px;
+  /* width: 150px; */
   height: 54px;
   color: white;
   padding: 0 15px 0 15px;
@@ -73,25 +69,3 @@
   color: var(--primary-color-green);
 }
 
-/* Button 2 */
-
-.button--white {
-  width: 100px;
-  height: 35px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-  border: solid white 1.5px;
-  border-radius: 50px;
-  background-color: transparent;
-}
-.button--white:hover {
-  background-color: var(--text-white);
-  color: var(--primary-color-green);
-  border: solid var(--primary-color-green);
-}
-.button--white:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}

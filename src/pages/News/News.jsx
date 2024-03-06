@@ -16,7 +16,7 @@ export const NewsPage = () => {
   //* Si es menor que 0 --> sin compañias que mostrar
 
   //* Verifica sí la lista tienes los itens para mapear
-
+  console.log(newsList);
   return (
     <>
       {newsList &&

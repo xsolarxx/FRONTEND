@@ -64,9 +64,10 @@ export const Login = () => {
     <>
       <div className="login_container">
         <form className="formLogin email_container1" onSubmit={handleSubmit(formSubmit)}>
-          <h4 className="logintext">xSolarx</h4>
+          <h4>Login</h4>
           <label htmlFor="input_email" className="input_email">
             <input
+              className="input_email"
               type="email"
               id="email"
               name="email"
@@ -78,6 +79,7 @@ export const Login = () => {
 
           <label htmlFor="input_password" className="input_Password">
             <input
+              className="input_Password"
               type="password"
               id="password"
               name="password"

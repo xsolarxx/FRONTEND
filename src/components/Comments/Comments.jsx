@@ -1,5 +1,3 @@
-
-
 export const Comments = ({ comments }) => {
   return (
     <div>

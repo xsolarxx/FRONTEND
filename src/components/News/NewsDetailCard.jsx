@@ -1,5 +1,6 @@
-import { Comments } from '../Comments/Comments';
 import './NewsCard.css';
+
+import { Comments } from '../Comments/Comments';
 
 export const NewsDetailCard = ({ news }) => {
   return (
@@ -12,7 +13,7 @@ export const NewsDetailCard = ({ news }) => {
           <img className="imgNews" src={news.image} alt={news.name} />
           <p className="newsAuthor">{news.author}</p>
           <p className="newsTags">{news.tags}</p>
-          <Comments comments = {news.comments} />
+          <Comments comments={news.comments} />
         </div>
       </div>
     </>

@@ -44,7 +44,7 @@ input {
   padding: 10px;
   border-radius: 5px;
   border: solid 2px var(--primary-color-blue);
-  width: 100%; 
+  width: 100%;
   margin-bottom: 10px; /* Añade espacio entre los inputs */
   box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
   text-align: start;
@@ -52,8 +52,6 @@ input {
 input:hover {
   background-color: rgb(231, 255, 231);
 }
-
-
 
 /* .btn_container button {
   min-width: 400px;

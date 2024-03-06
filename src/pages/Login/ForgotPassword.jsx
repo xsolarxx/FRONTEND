@@ -31,8 +31,8 @@ export const ForgotPassword = () => {
   return (
     <>
       <div className="pswcontainer">
-        <div className="resend p-35 gap-15">
-          <h5>Reset your password</h5>
+        <div className="resend">
+          <h4>Reset your password</h4>
 
           <form className="formpsw" onSubmit={handleSubmit(formSubmit)}>
             <div className="form-group">

@@ -1,0 +1,6 @@
+.News-Page-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem;
+}
+

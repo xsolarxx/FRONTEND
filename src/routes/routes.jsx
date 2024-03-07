@@ -108,6 +108,14 @@ export const router = createBrowserRouter([
           </Protected>
         ),
       },
+      {
+        path: '/forumDetail/:id',
+        element: (
+          <Protected>
+            <ForumPage />
+          </Protected>
+        ),
+      },
     ],
   },
 ]);

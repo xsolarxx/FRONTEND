@@ -39,6 +39,11 @@
   height: 40px;
   background: var(--background-color-gray);
 }
+.input_email1::placeholder,
+.input_Password1::placeholder,
+.input_user1::placeholder {
+  padding-left: 10px;
+}
 .gender {
   display: flex;
   flex-direction: row;

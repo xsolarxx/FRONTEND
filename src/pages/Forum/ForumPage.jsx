@@ -49,8 +49,8 @@ export const ForumPage = () => {
       <section>
         {forumList &&
           forumList.data.map((forum, index) => (
-            <>
-              <ForumFigure forum={forum} key={index} />
+            <div key={index}>
+              <ForumFigure forum={forum} />
               <div className="addComment">
                 <input
                   className="input_user"
@@ -78,7 +78,7 @@ export const ForumPage = () => {
                   Add comment
                 </button>
               </div>
-            </>
+            </div>
           ))}
       </section>
     </div>

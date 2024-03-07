@@ -82,6 +82,7 @@ export const FormProfile = () => {
             </span>
             , you can make changes to your user profile
           </h5>
+
           <Link
             className="delete-user"
             onClick={() => useDeleteUser(setUser, setDeleteUser)}
@@ -91,7 +92,7 @@ export const FormProfile = () => {
           </Link>
 
           <Link to="/profile/changePassword">Change password</Link>
-          {/* <hr className="profile-setting__line" /> */}
+          <hr className="profile-setting__line" />
           <form onSubmit={handleSubmit(formSubmit)}>
             <label htmlFor="custom-input" className="custom-placeholder">
               Change username
@@ -105,7 +106,10 @@ export const FormProfile = () => {
               defaultValue={defaultData?.name}
               {...register('userName')}
             />
-            Change profile photo
+            <label htmlFor="file-upload-form" className="uploader">
+              Change profile photo
+            </label>
+
             <Uploadfile />
             <button className="button--blue" type="submit" disabled={send}>
               Update

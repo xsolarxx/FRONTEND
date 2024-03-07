@@ -1,9 +1,10 @@
-import { useParams } from 'react-router';
-import { getById } from '../../services/forum.service';
 import { useEffect, useState } from 'react';
-import { useAuth } from '../../context/authContext';
+import { useParams } from 'react-router';
+
 import { ForumFigureDetail } from '../../components';
+import { useAuth } from '../../context/authContext';
 import { createComment } from '../../services/comment.service';
+import { getById } from '../../services/forum.service';
 
 export const ForumDetail = () => {
   const { id } = useParams();

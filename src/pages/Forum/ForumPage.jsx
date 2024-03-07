@@ -1,10 +1,12 @@
+import './ForumPage.css';
+
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import './ForumPage.css';
+
 import { ForumFigure } from '../../components';
-import { getAll } from '../../services/forum.service';
 import { useAuth } from '../../context/authContext';
 import { createComment } from '../../services';
+import { getAll } from '../../services/forum.service';
 
 export const ForumPage = () => {
   const navigate = useNavigate();

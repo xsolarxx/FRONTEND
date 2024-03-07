@@ -1,3 +1,4 @@
+import { updateToken } from '../utils/updateToken';
 import { extraConfig } from './serviceApiGeneral.config';
 
 export const getAll = async () => {
@@ -18,8 +19,13 @@ export const getById = async (id) => {
 
 export const createComment = async (idRecipient, formData) => {
   const APIGeneral = extraConfig();
+  console.log('id', idRecipient);
 
-  return APIGeneral.post(`/comment/create/${idRecipient}`, formData)
+  return APIGeneral.post(`/comment/create/${idRecipient}`, formData, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
     .then((res) => res)
     .catch((error) => error);
 };

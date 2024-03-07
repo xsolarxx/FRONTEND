@@ -2,7 +2,7 @@
 .hero-section {
   margin: 0 auto;
   padding: 4rem;
-  margin: 3rem;
+  margin: 0rem 3rem 3rem 3rem;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -22,15 +22,20 @@
   padding: 3rem;
 }
 
-.herobox h1 h4 button {
-  padding-bottom: 1rem;
-}
-
 .herobox button {
   min-width: 150px;
   height: 54px;
   padding: 0 15px 0 15px;
 }
+
+/* normal phone screen  */
+@media only screen and (min-width: 320px) and (max-width: 1600px) {
+  .herobox h1,
+  .herobox h4 {
+    /* font-size: s; */
+  }
+}
+
 
 @media (max-width: 480px) {
   .hero-section {
@@ -38,15 +43,11 @@
     margin: 15px;
   }
 
-  .herobox h1 {
-    /* font-size: large ; */
-    font-size: 20px;
-  }
-  .hero-section {
-    padding: none;
-    margin: none;
+  .herobox h1 h4{
+    font-size: small;
   }
 }
+
 
 /* Big title (Escrito de xSollarx operates) */
 

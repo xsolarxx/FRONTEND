@@ -1,7 +1,9 @@
 import './Header.css';
-import { NavLink } from 'react-router-dom';
-import { useAuth } from '../../context/authContext';
+
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import { useAuth } from '../../context/authContext';
 
 export const Header = () => {
   const { user, logout } = useAuth();
@@ -46,8 +48,8 @@ export const Header = () => {
           ) : null}
           {user !== null && (
             <NavLink to="/">
-              <button className="button--blue button-medium">
-                onClick={() => logout()}
+              <button className="button--blue button-medium" onClick={() => logout()}>
+                Logout
               </button>
             </NavLink>
           )}

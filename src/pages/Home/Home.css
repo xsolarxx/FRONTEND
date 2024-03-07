@@ -22,8 +22,8 @@
   padding: 3rem;
 }
 
-.herobox h1,
-h4,
+.herobox h1
+h4
 button {
   padding-bottom: 1rem;
 }
@@ -40,7 +40,7 @@ button {
     margin: 15px;
   }
 
-  .herobox,
+  .herobox
   h1 {
     /* font-size: large ; */
     font-size: 20px;
@@ -104,14 +104,14 @@ button {
   color: var(--color-green);
 }
 
-/*.section-consumer__text,
-h4,
-h3,
+.section-consumer__text,
+h4
+h3
 p {
   padding-bottom: 1rem;
-}*/
+}
 
-.section-consumer__text,
+.section-consumer__text
 p {
   font-size: large;
 }
@@ -209,7 +209,7 @@ p {
 .div-banner {
   color: var(--text-white);
 }
-.div-banner,
+.div-banner
 h1 {
   margin: 2rem 2rem 2rem 2rem;
 }
@@ -269,12 +269,12 @@ h1 {
     width: 300px;
   }
 }
-/*@media (max-width: 480px) {
+@media (max-width: 480px) {
   .carrusel {
     width: 80%;
   }
-}*/
-/* @keyframes show {
+}
+@keyframes show {
   from {
     opacity: 0;
     transform: scale(0.25);
@@ -283,7 +283,7 @@ h1 {
     opacity: 1;
     transform: scale(1);
   }
-} */
+}
 
 .big-title-section {
   view-timeline-name: --consumer;

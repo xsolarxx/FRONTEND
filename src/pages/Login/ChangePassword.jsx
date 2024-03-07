@@ -56,46 +56,42 @@ export const ChangePassword = () => {
   return (
     <div className="form-wrap-background">
       <div className="form-wrap">
-        <h3>Change your password</h3>
+        <h4>Change your password</h4>
         <span className="material-symbols-outlined">lock</span>
         <h6>Please, enter your old and new passwords</h6>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="password_container">
             <input
-              className="input_user"
+              className="input_user_password"
               type="password"
               id="password"
               name="password"
               autoComplete="false"
+              placeholder="Old password"
               {...register('password', { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              Old password
-            </label>
           </div>
           <div className="newPassword_container">
             <input
-              className="input_user"
+              className="input_user_password"
               type="password"
               id="newPassword"
               name="newPassword"
               autoComplete="false"
+              placeholder="New password"
               {...register('newPassword', { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              New password
-            </label>
           </div>
           <div className="confirmPassword_container">
             <input
-              className="input_user"
+              className="input_user_password"
               type="password"
               id="confirmPassword"
               name="confirmPassword"
               autoComplete="false"
+              placeholder="Confirm Password"
               {...register('confirmPassword', { required: true })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder"></label>
           </div>
           <button className="button--green" type="submit" disabled={send}>
             Change password

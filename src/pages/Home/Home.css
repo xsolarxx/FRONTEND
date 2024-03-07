@@ -38,7 +38,7 @@
     padding: 0;
     margin: 0;
   }
-  
+
   .herobox h1 {
     font-size: 1.4rem;
     margin-bottom: 15px;
@@ -55,13 +55,12 @@
   }
 }
 
-
 @media (max-width: 390px) {
   .hero-section {
     padding: 0;
     margin: 0;
   }
-  
+
   .herobox h1 {
     font-size: 2rem;
     margin-bottom: 15px;
@@ -83,7 +82,7 @@
     padding: 0;
     margin: 0;
   }
-  
+
   .herobox h1 {
     font-size: 3rem;
     margin-bottom: 15px;
@@ -262,20 +261,15 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
     margin-bottom: 4rem;
   }
   .section-banner h1 {
     font-size: 40px;
-    padding-bottom: 2rem;
-
   }
   .section-banner h4 {
     font-size: 20px;
-    padding-bottom: 2rem;
-  }
-  .section-banner button {
-    min-width: 250px;
+    padding-bottom: 4rem;
   }
 }
 
@@ -291,14 +285,7 @@
   background-blend-mode: multiply;
 }
 
-.section-image h3 {
-  color: white;
-  text-align: start;
-  width: 700px;
-  padding: 5rem;
-}
-
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .section-image {
     display: flex;
     flex-direction: column;
@@ -314,6 +301,7 @@
     font-size: 20px;
     text-align: center;
     width: 300px;
+    color: white;
   }
 }
 @media (max-width: 480px) {

@@ -10,17 +10,16 @@ export const NavProfile = () => {
   return (
     <>
       <div className="container">
-        <div
+        <Link
           className="delete-user"
           onClick={() => useDeleteUser(setUser, setDeleteUser)}
           style={{ cursor: 'pointer' }}
         >
-          <span className="material-symbols-outlined">delete</span> Delete user
-        </div>
-
-        <Link to="/profile/changePassword">
-          <span className="material-symbols-outlined">lock</span> Change password
+          Delete user
         </Link>
+        <br></br>
+
+        <Link to="/profile/changePassword">Change password</Link>
       </div>
     </>
   );

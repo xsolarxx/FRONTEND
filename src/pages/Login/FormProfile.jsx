@@ -7,10 +7,12 @@ import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 import { Uploadfile } from '../../components';
 import { NavProfile } from '../../components/NavProfile/NavProfile';
 import { useAuth } from '../../context/authContext';
-import { useUpdateError } from '../../hooks';
+import { useUpdateError, useDeleteUser } from '../../hooks';
 import { update } from '../../services/user.service';
+import { Link } from 'react-router-dom';
+
 export const FormProfile = () => {
-  const { user, setUser, logout } = useAuth();
+  const { user, setUser, setDeleteUser, logout } = useAuth();
   const { register, handleSubmit } = useForm();
   const [res, setRes] = useState({});
   const [send, setSend] = useState(false);
@@ -65,8 +67,8 @@ export const FormProfile = () => {
       <div className="div-user-profile-setting">
         <div className="div-user-profile-setting-card">
           <figure className="dataProfile">
-            <h4>UPDATE PROFILE</h4>
-            <img className="profile-photo p-15" src={user.image} alt="foto User" />
+            <h4>Update Profile</h4>
+            <img className="profile-photo" src={user.image} alt="foto User" />
           </figure>
           <h5 className="user-profile-text">
             Hi {}
@@ -80,9 +82,16 @@ export const FormProfile = () => {
             </span>
             , you can make changes to your user profile
           </h5>
+          <Link
+            className="delete-user"
+            onClick={() => useDeleteUser(setUser, setDeleteUser)}
+            style={{ cursor: 'pointer' }}
+          >
+            Delete user
+          </Link>
 
-          <NavProfile />
-          <hr className="profile-setting__line" />
+          <Link to="/profile/changePassword">Change password</Link>
+          {/* <hr className="profile-setting__line" /> */}
           <form onSubmit={handleSubmit(formSubmit)}>
             <label htmlFor="custom-input" className="custom-placeholder">
               Change username
@@ -97,11 +106,11 @@ export const FormProfile = () => {
               {...register('userName')}
             />
             Change profile photo
+            <Uploadfile />
+            <button className="button--blue" type="submit" disabled={send}>
+              Update
+            </button>
           </form>
-          <Uploadfile />
-          <button className="button--green" type="submit" disabled={send}>
-            Update
-          </button>
         </div>
       </div>
     </>

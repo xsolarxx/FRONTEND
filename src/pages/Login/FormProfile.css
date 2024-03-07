@@ -65,11 +65,11 @@ color: var(--color-navy-blue);;
   color: white;
 }
 
-.div-user-profile-setting-card, h5, a, input, label{
+.div-user-profile-setting-card h5 a input label{
   margin-bottom:  10px;
 }
 
-.div-user-profile-setting-card, input, h5 {
+.div-user-profile-setting-card input h5 {
   margin-top:  10px;
 
 }

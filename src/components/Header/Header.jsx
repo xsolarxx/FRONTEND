@@ -1,45 +1,45 @@
 import './Header.css';
-
 import { NavLink } from 'react-router-dom';
-
 import { useAuth } from '../../context/authContext';
+import { useState } from 'react';
 
 export const Header = () => {
   const { user, logout } = useAuth();
+  const [showMenuMob, setShowMenuMob] = useState(false);
+
+  const handleClickMenu = () => {
+    console.log('entro', showMenuMob);
+    setShowMenuMob(!showMenuMob);
+  };
+
   return (
     <>
       <header>
-        <nav>
+        <i className="fa fa-bars" onClick={handleClickMenu}></i>
+        <nav className={`nav ${showMenuMob ? 'nav-mobile' : 'nav-large'}`}>
           <div className="logo"></div>
-
           <NavLink className="link-home" to="/">
             <p>Home</p>
           </NavLink>
-
           {user !== null ? (
             <NavLink to="/dashboard">
               <p>Dashboard</p>
             </NavLink>
           ) : null}
-
           <NavLink className="link-news" to="/news">
             <p>News</p>
           </NavLink>
-
           <NavLink to="/forumPage">
             <p>Forum</p>
           </NavLink>
-
-          <NavLink to="/forumPage">
+          <NavLink to="/about">
             <p>About</p>
           </NavLink>
-
           {user == null && (
             <NavLink to="/login">
               <button className="button--green">Login</button>
             </NavLink>
           )}
-
           {user !== null ? (
             <NavLink to="/company">
               <p>Company</p>
@@ -52,7 +52,6 @@ export const Header = () => {
               </button>
             </NavLink>
           )}
-
           {user !== null ? (
             <NavLink className="link-log" to="/profile">
               <img className="icon" src={user.image} alt={user.user} />

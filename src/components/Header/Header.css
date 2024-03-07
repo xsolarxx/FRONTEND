@@ -1,13 +1,13 @@
-header {
+#header {
   height: 10vh;
   background-color: var(--text-white);
   display: flex;
-  justify-content:space-around ;
-  
+  justify-content: space-around;
 }
 
 nav {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
 }
@@ -16,8 +16,8 @@ nav {
   .nav {
     display: flex;
     flex-direction: column;
-
-  }}
+  }
+}
 
 /* @media (width: 600px) {
     . {
@@ -26,6 +26,7 @@ nav {
 
 nav button {
   width: 120px;
+  height: 30px;
 }
 
 .logo {
@@ -49,4 +50,12 @@ nav p {
   border-radius: 100%;
 }
 
+@media (min-width: 700px) {
+  .nav-mobile {
+    display: none;
+  }
 
+  i.fa {
+    display: none;
+  }
+}

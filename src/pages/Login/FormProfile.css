@@ -2,20 +2,12 @@
   display: flex;
   justify-content: center;
   background-color: var(--background-color-gray);
-  gap: 3rem;
 }
 
 .dataProfile {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.profile-photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 100%;
 }
 
 .div-user-profile-setting-card {
@@ -25,21 +17,30 @@
   max-width: 400px;
   min-width: 150px;
   border-radius: var(--img-border-radius);
-  padding: 4rem;
+  padding: 3rem;
   margin: 30px;
-  /* gap: 2rem; */
-
+  gap: 0.7rem;
 }
+
+@media (max-width: 480px) {
+  .div-user-profile-setting-card {
+    padding: 1.5rem;
+    margin: 30px;
+  }}
 
 .dataProfile h4 {
   font-weight: 700;
-  padding: 0.5rem;
   color: var(--color-navy-blue);  
 }
 
 .user-profile-text {
 color: var(--color-navy-blue);;
 } 
+
+.profile-setting__line {
+
+  border: 3px solid var(--primary-color-green);
+}
 
 .input_user{
   border-radius: 30px;
@@ -56,6 +57,21 @@ color: var(--color-navy-blue);;
   padding-left: 10px;
 }
 
+.form-update-profile label {
+display: block;
+margin-bottom: 0.7rem; 
+margin-top: 0.7rem;
+}
+
+/* .input_user,
+.profile-setting__line,
+.form-update-profile label,
+.div-user-profile-setting-card a, 
+.dataProfile,
+.div-user-profile-setting-card h5 {
+  margin-bottom: 10px; 
+} */
+
 .div-user-profile-setting-card button {
   width: 92.5%;
   height: 45px;
@@ -65,18 +81,13 @@ color: var(--color-navy-blue);;
   color: white;
 }
 
-.div-user-profile-setting-card h5 a input label{
-  margin-bottom:  10px;
-}
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 3px solid var(--primary-color-green);
+  margin-top: 0.7rem; 
 
-.div-user-profile-setting-card input h5 {
-  margin-top:  10px;
-
-}
-
-.profile-setting__line {
-  margin: 10px 0 10px 0;
-  border-color: var(--primary-color-green);
-  border-width: 1px;
 }
 

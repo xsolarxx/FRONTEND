@@ -40,7 +40,7 @@ const imagesMap = [
 
 export const ImageHome = (props) => {
   return (
-    <section className="p-50">
+    <section className="carrusel">
       <Carousel
         swipeable={true}
         draggable={true}

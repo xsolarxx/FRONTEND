@@ -34,14 +34,12 @@
   box-sizing: border-box;
   text-align: start;
   height: 40px;
-
   background: var(--background-color-gray);
 }
 
 .input_email::placeholder,
 .input_Password::placeholder {
-  padding-left: 10px; /* Centra el texto del marcador de posición */
-  font-size: 14px; /* Tamaño del texto del marcador de posición */
+  padding-left: 10px;
 }
 
 .formLogin section {

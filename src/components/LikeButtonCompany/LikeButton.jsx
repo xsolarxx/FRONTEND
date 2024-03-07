@@ -1,21 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../context/authContext';
-import { toggleLikedCompany } from '../../services/user.service';
 import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+
+import { useAuth } from '../../context/authContext';
+import { toggleLikedCompany } from '../../services/user.service';
 
 export const LikeCompany = ({ id }) => {
   const { user, setUser } = useAuth();
-
-  const [like, setLike] = useState(!!user.likedCompany.find((item) => item._id == id));
+  console.log('entro', user);
+  const [like, setLike] = useState(!!user.likedCompany?.find((item) => item === id));
 
   const handleLikeClick = async () => {
-    console.log('entro like', like);
+    console.log('entro', like);
     if (user) {
-      const likedCompanyRes = await toggleLikedCompany(id);
-      setUser(() => likedCompanyRes.data.user);
-      setLike(!!likedCompanyRes.data.user.likedCompany.find((item) => item._id == id));
+      const { token } = user;
+      const likedCompany = await toggleLikedCompany(id);
+      const userUpdate = { ...likedCompany.data.user, token };
+      setUser(() => userUpdate);
+      localStorage.removeItem('user');
+      localStorage.setItem('user', JSON.stringify(userUpdate));
+      setLike(!!likedCompany.data.user.likedCompany.find((item) => item === id));
     }
   };
 
@@ -29,29 +34,3 @@ export const LikeCompany = ({ id }) => {
     </div>
   );
 };
-
-// export const LikeCompany = ({ id }) => {
-//   const { user, setUser } = useAuth();
-//   console.log('user', user);
-
-//   // Determina se o usuário curtiu a empresa
-//   const [like, setLike] = useState(user.likedCompany.some((item) => item._id === id));
-
-//   const handleLikeClick = async () => {
-//     if (user) {
-//       const likedCompany = await toggleLikedCompany(id);
-//       setUser(likedCompany.data.user);
-//       setLike(likedCompany.data.like);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       {user && (
-//         <button onClick={handleLikeClick}>
-//           <FontAwesomeIcon icon={like ? solidHeart : regularHeart} />
-//         </button>
-//       )}
-//     </div>
-//   );
-// };

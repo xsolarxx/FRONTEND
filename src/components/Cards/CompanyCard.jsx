@@ -1,5 +1,6 @@
-import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 import './CompanyCard.css';
+
+import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 
 export const CompanyCard = ({ company }) => {
   return (

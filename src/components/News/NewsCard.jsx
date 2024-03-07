@@ -6,14 +6,17 @@ export const NewsCard = ({ news }) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="page-container-news">
-        <div className="containerNews">
-          <h1 className="newsTitle">{news.title} </h1>
-          <p className="newsShortContent"> {news.shortContent}</p>
+      <div className="containerNews">
+        <div className="section-news__image">
           <img className="imgNews" src={news.image} alt={news.name} />
+        </div>
+        <div className="section-news__text">
+          <h4 className="newsTitle">{news.title} </h4>
+          <p className="newsShortContent"> {news.shortContent}</p>
           <p className="newsAuthor">{news.author}</p>
           <p className="newsTags">{news.tags}</p>
           <button
+            className="button--blue"
             onClick={() => {
               navigate(`/newsDetail/${news._id}`);
             }}

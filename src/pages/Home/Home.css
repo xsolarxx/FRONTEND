@@ -122,8 +122,6 @@
   padding: 3rem 6rem;
 }
 
-/* Responsive incompleto  */
-
 @media (max-width: 480px) {
   .section-consumer {
     grid-template-columns: 1fr;

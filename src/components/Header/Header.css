@@ -1,29 +1,31 @@
 header {
   height: 10vh;
   background-color: var(--text-white);
-  /* margin-top: 25px; */
-  /* justify-content: space-around; */
-  /* position: fixed; */
-  /* padding-left: 3rem;
-  padding-right: 3rem; */
-  align-content: center;
-  justify-content:center ;
+  display: flex;
+  justify-content:space-around ;
+  
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: 2rem;
 }
 
+@media (max-width: 650px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+
+  }}
+
+/* @media (width: 600px) {
+    . {
+     
+    } */
+
 nav button {
-  min-width: 150px;
-  /* height: 45px; */
-  /* padding: 0 10px 0 10px; */
-  color: var(--text-navy-blue);
-  text-align: center;
-  font-weight: bold;
-  font-size: medium;
+  width: 120px;
 }
 
 .logo {
@@ -48,9 +50,3 @@ nav p {
 }
 
 
-/* .profile-photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 100%;
-} */

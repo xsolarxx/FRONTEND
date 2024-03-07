@@ -1,4 +1,9 @@
 export const ForumFigure = ({ forum }) => {
+  const creationDate = new Date(forum.createdAt);
+  const formattedDate = creationDate.toLocaleString('es-ES', {
+    timeZone: 'Europe/Madrid',
+  });
+
   return (
     <div className="containerForum">
       <div className="containerForumOwner">
@@ -11,7 +16,8 @@ export const ForumFigure = ({ forum }) => {
       </div>
       <div className="containerForumInfo">
         <img className="imgForum" src={forum.image} alt={forum.title} />
-        <h6 className="forumTitle">{forum.title}</h6>
+        <h3 className="forumTitle">{forum.title}</h3>
+        <p className="forumCreation">{formattedDate}</p>
         <p className="forumContent">{forum.content}</p>
       </div>
     </div>

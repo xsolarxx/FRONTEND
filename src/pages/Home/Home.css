@@ -1,6 +1,5 @@
 /* Main section (Con la foto y texto principal) */
 .hero-section {
-  margin: 0 auto;
   padding: 4rem;
   margin: 0rem 3rem 3rem 3rem;
   height: 80vh;
@@ -22,32 +21,84 @@
   padding: 3rem;
 }
 
+.herobox h1,
+.herobox h4,
+.herobox button {
+  margin: 1%;
+}
+
 .herobox button {
   min-width: 150px;
-  height: 54px;
-  padding: 0 15px 0 15px;
 }
 
-/* normal phone screen  */
-@media only screen and (min-width: 320px) and (max-width: 1600px) {
-  .herobox h1,
-  .herobox h4 {
-    /* font-size: s; */
-  }
-}
+/* mobile 3 tamaños  */
 
-
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   .hero-section {
-    padding: 20px;
-    margin: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .herobox h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
   }
 
-  .herobox h1 h4{
-    font-size: small;
+  .herobox h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 200;
+  }
+
+  .herobox {
+    padding: 2rem;
   }
 }
 
+
+@media (max-width: 390px) {
+  .hero-section {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .herobox h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .herobox h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 200;
+  }
+
+  .herobox {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 428px) {
+  .hero-section {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .herobox h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .herobox h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 200;
+  }
+
+  .herobox {
+    padding: 2rem;
+  }
+}
 
 /* Big title (Escrito de xSollarx operates) */
 

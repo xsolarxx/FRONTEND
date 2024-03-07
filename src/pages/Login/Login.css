@@ -34,12 +34,13 @@
   box-sizing: border-box;
   text-align: start;
   height: 40px;
+  padding-left: 10px;
   background: var(--background-color-gray);
 }
 
 .input_email::placeholder,
 .input_Password::placeholder {
-  padding-left: 10px;
+  font-size: 14px;
 }
 
 .formLogin section {

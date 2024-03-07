@@ -139,11 +139,11 @@ export const CheckCode = () => {
                 Resend Code
               </button>
             </div>
-            <div className="bottom_text">
-              <h6>
+            <div>
+              <p className="bottom_text">
                 If the code is not correct, your user will be deleted from the database
                 and you will have to register again.
-              </h6>
+              </p>
             </div>
           </form>
         </div>

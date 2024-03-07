@@ -49,7 +49,9 @@
 }
 
 .bottom_text {
-    margin-top: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+    line-height: 1.5rem;
 }
 @media (max-width: 650px) {
   .form-wrap {

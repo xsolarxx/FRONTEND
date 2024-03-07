@@ -26,23 +26,23 @@
   .div-user-profile-setting-card {
     padding: 1.5rem;
     margin: 30px;
-  }}
+  }
+}
 
 .dataProfile h4 {
   font-weight: 700;
-  color: var(--color-navy-blue);  
+  color: var(--color-navy-blue);
 }
 
 .user-profile-text {
-color: var(--color-navy-blue);;
-} 
+  color: var(--color-navy-blue);
+}
 
 .profile-setting__line {
-
   border: 3px solid var(--primary-color-green);
 }
 
-.input_user{
+.input_user {
   border-radius: 30px;
   border: solid 2px var(--primary-color-blue);
   width: 100%;
@@ -58,9 +58,9 @@ color: var(--color-navy-blue);;
 }
 
 .form-update-profile label {
-display: block;
-margin-bottom: 0.7rem; 
-margin-top: 0.7rem;
+  display: block;
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
 }
 
 .div-user-profile-setting-card button {
@@ -78,7 +78,5 @@ margin-top: 0.7rem;
   object-fit: cover;
   border-radius: 100%;
   border: 4px solid var(--primary-color-green);
-  margin-top: 0.7rem; 
-
+  margin-top: 0.7rem;
 }
-

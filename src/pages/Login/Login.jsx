@@ -65,31 +65,24 @@ export const Login = () => {
       <div className="login_container">
         <form className="formLogin email_container1" onSubmit={handleSubmit(formSubmit)}>
           <h4>Login</h4>
-
-          <label htmlFor="input_email" className="input_email">
-            <input
-              className="input_email"
-              type="email"
-              id="email"
-              name="email"
-              autoComplete="false"
-              {...register('email', { required: true })}
-              placeholder="Email"
-            />
-          </label>
-
-          <label htmlFor="input_password" className="input_Password">
-            <input
-              className="input_Password"
-              type="password"
-              id="password"
-              name="password"
-              autoComplete="false"
-              {...register('password', { required: true })}
-              placeholder="Password"
-            />
-          </label>
-
+          <input
+            className="input_email"
+            type="email"
+            id="email"
+            name="email"
+            autoComplete="false"
+            {...register('email', { required: true })}
+            placeholder="Email"
+          />
+          <input
+            className="input_Password"
+            type="password"
+            id="password"
+            name="password"
+            autoComplete="false"
+            {...register('password', { required: true })}
+            placeholder="Password"
+          />
           <button
             className="button--blue"
             type="submit"
@@ -102,15 +95,15 @@ export const Login = () => {
           <div className="btn_container">
             <ul className="ulogin">
               <li>
-                <p className="p-xs">Have you forgotten your password?</p>
-                <Link className="linkr1 p-xs" to="/forgotpassword">
+                <p>Have you forgotten your password?</p>
+                <Link className="linkr1" to="/forgotpassword">
                   Click here to reset your password
                 </Link>
               </li>
               <li>
-                <p className="p-xs">Are you not registered?</p>
+                <p>Are you not registered?</p>
                 <Link to="/register">
-                  <a className="linkr2 p-xs">Register here!</a>
+                  <a className="linkr2">Register here!</a>
                 </Link>
               </li>
             </ul>

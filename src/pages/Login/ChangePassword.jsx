@@ -56,41 +56,44 @@ export const ChangePassword = () => {
   return (
     <div className="form-wrap-background">
       <div className="form-wrap">
-        <h4>Change your password</h4>
+        <h4>Change password</h4>
         <span className="material-symbols-outlined">lock</span>
-        <h6>Please, enter your old and new passwords</h6>
+        <p>Please, enter your old and new passwords</p>
         <form onSubmit={handleSubmit(formSubmit)}>
-          <input
-            className="input_user_password"
-            type="password"
-            id="password"
-            name="password"
-            autoComplete="false"
-            placeholder="Old password"
-            {...register('password', { required: true })}
-          />
-
-          <input
-            className="input_user_password"
-            type="password"
-            id="newPassword"
-            name="newPassword"
-            autoComplete="false"
-            placeholder="New password"
-            {...register('newPassword', { required: true })}
-          />
-
-          <input
-            className="input_user_password"
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            autoComplete="false"
-            placeholder="Confirm Password"
-            {...register('confirmPassword', { required: true })}
-          />
-
-          <button className="button--green" type="submit" disabled={send}>
+          <label htmlFor="input_user_password24" className="input_user_password24">
+            <input
+              className="input_user_password24"
+              type="password"
+              id="password"
+              name="password"
+              autoComplete="false"
+              placeholder="Old password"
+              {...register('password', { required: true })}
+            />
+          </label>
+          <label htmlFor="input_user_password25" className="input_user_password25">
+            <input
+              className="input_user_password25"
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              autoComplete="false"
+              placeholder="New password"
+              {...register('newPassword', { required: true })}
+            />
+          </label>
+          <label htmlFor="input_user_password26" className="input_user_password26">
+            <input
+              className="input_user_password26"
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              autoComplete="false"
+              placeholder="Confirm Password"
+              {...register('confirmPassword', { required: true })}
+            />
+          </label>
+          <button className="button--blue" type="submit" disabled={send}>
             Change password
           </button>
         </form>

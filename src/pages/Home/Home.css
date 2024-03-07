@@ -264,7 +264,8 @@ h4 h3 p {
 }
 @media (max-width: 480px) {
   .carrusel {
-    width: 80%;
+    width: 100%;
+    margin: 10px;
   }
 }
 @keyframes show {

@@ -18,8 +18,9 @@ img {
 @media (max-width: 400px) {
   .item {
     max-height: 250px;
-    max-width: 300px;
-    padding: 0;
+    max-width: 355px;
+padding: 0%;
+margin-right: 20px;
   }
 }
 

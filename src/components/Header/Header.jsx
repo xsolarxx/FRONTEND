@@ -8,7 +8,6 @@ export const Header = () => {
   const [showMenuMob, setShowMenuMob] = useState(false);
 
   const handleClickMenu = () => {
-    console.log('entro', showMenuMob);
     setShowMenuMob(!showMenuMob);
   };
 
@@ -47,13 +46,13 @@ export const Header = () => {
           ) : null}
           {user !== null && (
             <NavLink to="/">
-              <button className="button--blue button-medium" onClick={() => logout()}>
-                Logout
+              <button className="button--blue button-medium">
+                onClick={() => logout()}
               </button>
             </NavLink>
           )}
           {user !== null ? (
-            <NavLink className="link-log" to="/profile">
+            <NavLink>
               <img className="icon" src={user.image} alt={user.user} />
             </NavLink>
           ) : null}

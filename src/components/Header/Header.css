@@ -18,6 +18,9 @@ nav {
     flex-direction: column;
   }
 }
+.nav-mobile {
+  display: none;
+}
 
 /* @media (width: 600px) {
     . {
@@ -51,10 +54,6 @@ nav p {
 }
 
 @media (min-width: 700px) {
-  .nav-mobile {
-    display: none;
-  }
-
   i.fa {
     display: none;
   }

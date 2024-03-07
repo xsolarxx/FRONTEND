@@ -15,9 +15,11 @@ img {
   border-radius: var(--img-border-radius);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .item {
-    padding: 0 5px; /* Reducir el espaciado entre imágenes en dispositivos más pequeños */
+    padding: 0px;
+    min-height: 20px;
+    min-width: 40px; /* Reducir el espaciado entre imágenes en dispositivos más pequeños */
   }
 }
 

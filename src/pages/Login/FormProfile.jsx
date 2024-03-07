@@ -75,7 +75,8 @@ export const FormProfile = () => {
             <span
               style={{
                 textDecoration: 'underline',
-                textDecorationColor: '#25dc80',
+                textDecorationColor: '#97f85b',
+                textDecorationThickness: '3px',
               }}
             >
               {user.name}

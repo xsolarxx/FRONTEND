@@ -112,54 +112,41 @@ export const CheckCode = () => {
 
   return (
     <>
-      <div className="form-wrap">
-        <h1>Verify your code 👌</h1>
-        <p>Write the code sent to your email</p>
-        <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="user_container form-group">
+      <div className="form-wrap-background">
+        <div className="form-wrap">
+          <h4>Verify your code 👌</h4>
+          <h5>Write the code sent to your email</h5>
+          <form onSubmit={handleSubmit(formSubmit)}>
             <input
-              className="input_user"
-              type="text"
-              id="name"
-              name="name"
+              className="input_user_code"
+              type="code"
+              id="code"
+              name="code"
               autoComplete="false"
+              placeholder="Registration code"
               {...register('confirmationCode', { required: false })}
             />
-            <label htmlFor="custom-input" className="custom-placeholder">
-              Registration code
-            </label>
-          </div>
-
-          <div className="btn_container">
-            <button
-              id="btnCheck"
-              className="btn"
-              type="submit"
-              disabled={send}
-              style={{ background: send ? '#49c1a388' : '#49c1a2' }}
-            >
-              Verify Code
-            </button>
-          </div>
-          <div className="btn_container">
-            <button
-              id="btnResend"
-              className="btn"
-              disabled={send}
-              style={{ background: send ? '#49c1a388' : '#49c1a2' }}
-              onClick={() => handleReSend()}
-            >
-              Resend Code
-            </button>
-          </div>
-
-          <p className="bottom-text">
-            <small>
-              If the code is not correct ❌, your user will be deleted from the database
-              and you will need to register again.{' '}
-            </small>
-          </p>
-        </form>
+            <div className="btn-container">
+              <button className="button--blue" type="submit" disabled={send}>
+                Verify Code
+              </button>
+              <button
+                className="button--blue"
+                type="submit"
+                disabled={send}
+                onClick={() => handleReSend()}
+              >
+                Resend Code
+              </button>
+            </div>
+            <div className="bottom_text">
+              <h6>
+                If the code is not correct, your user will be deleted from the database
+                and you will have to register again.
+              </h6>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );

@@ -75,7 +75,8 @@ export const FormProfile = () => {
             <span
               style={{
                 textDecoration: 'underline',
-                textDecorationColor: '#25dc80',
+                textDecorationColor: '#97f85b',
+                textDecorationThickness: '3px',
               }}
             >
               {user.name}
@@ -93,10 +94,8 @@ export const FormProfile = () => {
 
           <Link to="/profile/changePassword">Change password</Link>
           <hr className="profile-setting__line" />
-          <form onSubmit={handleSubmit(formSubmit)}>
-            <label htmlFor="custom-input" className="custom-placeholder">
-              Change username
-            </label>
+          <form className="form-update-profile" onSubmit={handleSubmit(formSubmit)}>
+            <label htmlFor="custom-input">Change username</label>
             <input
               className="input_user"
               type="text"
@@ -106,9 +105,7 @@ export const FormProfile = () => {
               defaultValue={defaultData?.name}
               {...register('userName')}
             />
-            <label htmlFor="file-upload-form" className="uploader">
-              Change profile photo
-            </label>
+            <label htmlFor="file-upload-form">Change profile photo</label>
 
             <Uploadfile />
             <button className="button--blue" type="submit" disabled={send}>

@@ -60,39 +60,36 @@ export const ChangePassword = () => {
         <span className="material-symbols-outlined">lock</span>
         <h6>Please, enter your old and new passwords</h6>
         <form onSubmit={handleSubmit(formSubmit)}>
-          <div className="password_container">
-            <input
-              className="input_user_password"
-              type="password"
-              id="password"
-              name="password"
-              autoComplete="false"
-              placeholder="Old password"
-              {...register('password', { required: true })}
-            />
-          </div>
-          <div className="newPassword_container">
-            <input
-              className="input_user_password"
-              type="password"
-              id="newPassword"
-              name="newPassword"
-              autoComplete="false"
-              placeholder="New password"
-              {...register('newPassword', { required: true })}
-            />
-          </div>
-          <div className="confirmPassword_container">
-            <input
-              className="input_user_password"
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              autoComplete="false"
-              placeholder="Confirm Password"
-              {...register('confirmPassword', { required: true })}
-            />
-          </div>
+          <input
+            className="input_user_password"
+            type="password"
+            id="password"
+            name="password"
+            autoComplete="false"
+            placeholder="Old password"
+            {...register('password', { required: true })}
+          />
+
+          <input
+            className="input_user_password"
+            type="password"
+            id="newPassword"
+            name="newPassword"
+            autoComplete="false"
+            placeholder="New password"
+            {...register('newPassword', { required: true })}
+          />
+
+          <input
+            className="input_user_password"
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            autoComplete="false"
+            placeholder="Confirm Password"
+            {...register('confirmPassword', { required: true })}
+          />
+
           <button className="button--green" type="submit" disabled={send}>
             Change password
           </button>

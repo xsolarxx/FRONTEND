@@ -22,6 +22,8 @@
 
 .formLogin h4 {
   font-weight: 700;
+  padding: 0.5rem;
+  padding-bottom: 1.5rem;
 }
 .input_email,
 .input_Password {
@@ -36,10 +38,6 @@
   background: var(--background-color-gray);
 }
 
-.formLogin h4 {
-  padding: 0.5rem;
-  padding-bottom: 1.5rem;
-}
 .input_email::placeholder,
 .input_Password::placeholder {
   padding-left: 10px; /* Centra el texto del marcador de posición */

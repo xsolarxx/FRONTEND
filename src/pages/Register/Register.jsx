@@ -69,69 +69,64 @@ export const Register = () => {
         <div className="form-register">
           <h4>Register</h4>
           <form onSubmit={handleSubmit(formSubmit)}>
-            <div className="user_container form-group">
-              <label htmlFor="input_user">
-                <input
-                  className="input_user1"
-                  type="text"
-                  id="userName"
-                  name="userName"
-                  autoComplete="false"
-                  {...register('userName', { required: true })}
-                  placeholder="Username"
-                />
-              </label>
-            </div>
+            <label htmlFor="input_user">
+              <input
+                className="input_user1"
+                type="text"
+                id="userName"
+                name="userName"
+                autoComplete="false"
+                {...register('userName', { required: true })}
+                placeholder="Username"
+              />
+            </label>
 
-            <div className="password_container form-group">
-              <label htmlFor="input_password">
-                <input
-                  className="input_Password1"
-                  type="password"
-                  id="password"
-                  name="password"
-                  autoComplete="false"
-                  {...register('password', { required: true })}
-                  placeholder="Password"
-                />
-              </label>
-            </div>
+            <label htmlFor="input_password">
+              <input
+                className="input_Password1"
+                type="password"
+                id="password"
+                name="password"
+                autoComplete="false"
+                {...register('password', { required: true })}
+                placeholder="Password"
+              />
+            </label>
 
-            <div className="email_container form-group">
-              <label htmlFor="input_email">
-                <input
-                  className="input_email1"
-                  type="email"
-                  id="email"
-                  name="email"
-                  autoComplete="false"
-                  {...register('email', { required: true })}
-                  placeholder="Email"
-                />
-              </label>
-              <div className="gender">
-                <label htmlFor="hombre" className="label-radio hombre">
+            <label htmlFor="input_email">
+              <input
+                className="input_email1"
+                type="email"
+                id="email"
+                name="email"
+                autoComplete="false"
+                {...register('email', { required: true })}
+                placeholder="Email"
+              />
+            </label>
+            <div className="gender">
+              <label htmlFor="hombre" className="label-radio hombre">
                 Hombre
               </label>
-                <input
-                  type="radio"
-                  name="gender"
-                  id="Male"
-                  value="Male"
-                  {...register('gender')}
-                />
+              <input
+                type="radio"
+                name="gender"
+                id="Male"
+                value="Male"
+                {...register('gender')}
+              />
               <label htmlFor="mujer" className="label-radio mujer">
                 Mujer
               </label>
-                <input
-                  type="radio"
-                  name="gender"
-                  id="Female"
-                  value="Female"
-                  {...register('gender')}
-                />
-              </div>
+              <input
+                type="radio"
+                name="gender"
+                id="Female"
+                value="Female"
+                {...register('gender')}
+              />
             </div>
+
             <Uploadfile />
             <div className="btn_container">
               <button className="button--blue" type="submit" disabled={send}>

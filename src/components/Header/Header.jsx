@@ -48,8 +48,8 @@ export const Header = () => {
           ) : null}
           {user !== null && (
             <NavLink to="/">
-              <button className="button--blue button-medium">
-                onClick={() => logout()}
+              <button className="button--blue button-medium" onClick={() => logout()}>
+                Logout
               </button>
             </NavLink>
           )}

@@ -66,7 +66,7 @@ export const Home = () => {
       </section>
 
       <section className="section-banner">
-        <h1>Solar by Nature</h1>
+        <h1 className="solarbynature">Solar by Nature</h1>
         <div className="div-banner">
           <h4>
             xSolarx is increasingly recognized in the European market as a major player in

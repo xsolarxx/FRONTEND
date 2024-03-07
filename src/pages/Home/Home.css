@@ -77,25 +77,23 @@
   }
 }
 
-@media (max-width: 428px) {
-  .hero-section {
-    padding: 0;
-    margin: 0;
+@media (max-width: 400px) {
+  /* Estilos para la sección de la imagen */
+  .section-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin: 1rem;
+    margin-bottom: 4rem;
+    height: 90%;
+    padding-top: 10rem;
   }
-
-  .herobox h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-  }
-
-  .herobox h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 200;
-  }
-
-  .herobox {
-    padding: 2rem;
+  nav {
+    margin-bottom: 10rem;
   }
 }
 
@@ -291,7 +289,7 @@
   align-items: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .section-image {
     display: flex;
     flex-direction: column;

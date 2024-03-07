@@ -39,7 +39,7 @@
 }
 
 .profile-setting__line {
-  border: 3px solid var(--primary-color-green);
+  border: 2px solid var(--primary-color-green);
 }
 
 .input_user {

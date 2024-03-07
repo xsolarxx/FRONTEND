@@ -52,6 +52,7 @@
   text-align: center;
   gap: 1rem;
   padding-top: 1rem;
+  line-height: 1.5;
 }
 
 .formLogin button {

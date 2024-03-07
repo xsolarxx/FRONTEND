@@ -38,6 +38,7 @@
   text-align: start;
   height: 40px;
   background: var(--background-color-gray);
+  padding-left: 10px;
 }
 .input_email1::placeholder,
 .input_Password1::placeholder,
@@ -66,8 +67,13 @@
   height: 40px;
 }
 
-@media (max-width: 400px), (max-width: 650px) {
+@media (max-width: 650px) {
   .form-register {
     width: 80%;
+  }
+}
+@media (max-width: 375px) {
+  .form-register {
+    width: 90%;
   }
 }

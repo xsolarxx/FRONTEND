@@ -30,30 +30,23 @@ export const ForgotPassword = () => {
   }
   return (
     <>
-      <div className="pswcontainer">
-        <div className="resend">
+      <div className="reset_password">
+        <div className="reset">
           <h4>Reset your password</h4>
-
-          <form className="formpsw" onSubmit={handleSubmit(formSubmit)}>
-            <div className="form-group">
-              <label htmlFor="input-email">
-                <input
-                  className="email_fgpsw"
-                  type="text"
-                  id="email"
-                  name="email"
-                  autoComplete="false"
-                  {...register('email', { required: true })}
-                  placeholder="Email"
-                />
-              </label>
-            </div>
-
-            <div className="btn_container11">
-              <button className="button-fgpw" type="submit" disabled={send}>
-                Change password
-              </button>
-            </div>
+          <h5>Please provide your email in order to receive your password</h5>
+          <form onSubmit={handleSubmit(formSubmit)}>
+            <input
+              className="email_forgot_password"
+              type="email"
+              id="email"
+              name="email"
+              autoComplete="false"
+              placeholder="Email"
+              {...register('email', { required: true })}
+            />
+            <button className="button--blue" type="submit" disabled={send}>
+              Change password
+            </button>
           </form>
         </div>
       </div>

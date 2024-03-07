@@ -7,27 +7,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const LikeCompany = ({ id }) => {
   const { user, setUser } = useAuth();
-  console.log('user', user);
-  const [company, setCompany] = useState();
-  const [like, setLike] = useState(user.likedCompany.find((item) => item._id == id));
+
+  const [like, setLike] = useState(!!user.likedCompany.find((item) => item._id == id));
 
   const handleLikeClick = async () => {
+    console.log('entro like', like);
     if (user) {
-      const likedCompany = await toggleLikedCompany(id);
-      setCompany(likedCompany.data.company);
-      setUser(() => likedCompany.data.user);
-
-      const likedCompanyData = likedCompany.data.company;
-      localStorage.setItem(`company_${id}`, JSON.stringify(likedCompanyData));
+      const likedCompanyRes = await toggleLikedCompany(id);
+      setUser(() => likedCompanyRes.data.user);
+      setLike(!!likedCompanyRes.data.user.likedCompany.find((item) => item._id == id));
     }
   };
-
-  useEffect(() => {
-    const savedCompanyState = localStorage.getItem(`company_${id}`);
-    if (savedCompanyState) {
-      setLike(JSON.parse(savedCompanyState));
-    }
-  }, [id]);
 
   return (
     <div>
@@ -39,3 +29,29 @@ export const LikeCompany = ({ id }) => {
     </div>
   );
 };
+
+// export const LikeCompany = ({ id }) => {
+//   const { user, setUser } = useAuth();
+//   console.log('user', user);
+
+//   // Determina se o usuário curtiu a empresa
+//   const [like, setLike] = useState(user.likedCompany.some((item) => item._id === id));
+
+//   const handleLikeClick = async () => {
+//     if (user) {
+//       const likedCompany = await toggleLikedCompany(id);
+//       setUser(likedCompany.data.user);
+//       setLike(likedCompany.data.like);
+//     }
+//   };
+
+//   return (
+//     <div>
+//       {user && (
+//         <button onClick={handleLikeClick}>
+//           <FontAwesomeIcon icon={like ? solidHeart : regularHeart} />
+//         </button>
+//       )}
+//     </div>
+//   );
+// };

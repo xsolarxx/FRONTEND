@@ -59,12 +59,15 @@ a {
   /* Elementos adicionales */
   --img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --img-border-radius: 30px;
-
+  
+  /* Screen sizes */
+  --iphoneSE2016-portrait: 320px;
   --smartphone-portrait: 480px;
-  /* --smartphone-landscape: 767px; */
 
   --tablet-portrait-min: 768px;
   --tablet-portrait-max: 1024px;
+
+  --big-Screen-desctop: 2480px;
 }
 ul {
   list-style-type: none;

@@ -18,14 +18,13 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-}
+  }
 
-@media (max-width: 450px) {
-  .logo-white {
-    margin: 0 auto;
-  } 
-}
-
+  @media (max-width: 450px) {
+    .logo-white {
+      margin: 0 auto;
+    }
+  }
 }
 
 .column2 {
@@ -55,10 +54,10 @@
   font-weight: 200;
 }
 
-.column2 p, 
+.column2 p,
 .column1 a,
 .column3 a {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .footer-container h5 {

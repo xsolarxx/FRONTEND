@@ -22,9 +22,7 @@
   padding: 3rem;
 }
 
-.herobox h1
-h4
-button {
+.herobox h1 h4 button {
   padding-bottom: 1rem;
 }
 
@@ -40,8 +38,7 @@ button {
     margin: 15px;
   }
 
-  .herobox
-  h1 {
+  .herobox h1 {
     /* font-size: large ; */
     font-size: 20px;
   }
@@ -105,14 +102,11 @@ button {
 }
 
 .section-consumer__text,
-h4
-h3
-p {
+h4 h3 p {
   padding-bottom: 1rem;
 }
 
-.section-consumer__text
-p {
+.section-consumer__text p {
   font-size: large;
 }
 
@@ -209,8 +203,7 @@ p {
 .div-banner {
   color: var(--text-white);
 }
-.div-banner
-h1 {
+.div-banner h1 {
   margin: 2rem 2rem 2rem 2rem;
 }
 
@@ -271,7 +264,8 @@ h1 {
 }
 @media (max-width: 480px) {
   .carrusel {
-    width: 80%;
+    width: 100%;
+    margin: 10px;
   }
 }
 @keyframes show {

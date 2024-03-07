@@ -49,36 +49,9 @@ export const ForumPage = () => {
       <section>
         {forumList &&
           forumList.data.map((forum, index) => (
-            <>
-              <ForumFigure forum={forum} key={index} />
-              <div className="addComment">
-                <input
-                  className="input_user"
-                  type="text"
-                  id="title"
-                  name="title"
-                  placeholder="Comment title"
-                  onChange={(e) => setTitleValue(e.target.value)}
-                />
-                <input
-                  className="input_user"
-                  type="text"
-                  id="content"
-                  name="content"
-                  placeholder="comment content"
-                  onChange={(e) => setContentValue(e.target.value)}
-                />
-                <button
-                  className="btn"
-                  type="submit"
-                  disabled={send}
-                  style={{ background: send ? '#5500c4' : '#631ebe' }}
-                  onClick={() => handleComment()}
-                >
-                  Add comment
-                </button>
-              </div>
-            </>
+            <div key={index}>
+              <ForumFigure forum={forum} />
+            </div>
           ))}
       </section>
     </div>

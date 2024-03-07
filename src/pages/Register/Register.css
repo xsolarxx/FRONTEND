@@ -32,7 +32,7 @@
   width: 100%;
   margin-bottom: 22px;
   box-sizing: border-box;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   text-align: start;
@@ -50,17 +50,18 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
-.label-radio {
+/* .label-radio {
   width: 80px;
   text-align: center;
   border-radius: 30px;
   background: var(--background-color-gray);
   height: 25px;
-}
+} */
 .footerForm {
   text-align: center;
   gap: 1rem;
   padding-top: 2rem;
+  line-height: 1.5rem;
 }
 .form-register button {
   width: 92%;

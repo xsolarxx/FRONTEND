@@ -40,7 +40,7 @@
   }
   
   .herobox h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 15px;
   }
 
@@ -148,14 +148,10 @@
   display: flex;
   flex-direction: column;
   color: var(--color-navy-blue);
+  gap: 10px;
 }
 .section-consumer__text h4 {
   color: var(--color-green);
-}
-
-.section-consumer__text,
-h4 h3 p {
-  padding-bottom: 1rem;
 }
 
 .section-consumer__text p {
@@ -179,7 +175,7 @@ h4 h3 p {
 .grid {
   display: grid;
   grid-row: 1fr;
-  height: 80vh;
+  height: 70vh;
   gap: 3rem;
   padding: 0 5rem 5rem 5rem;
 }
@@ -250,13 +246,13 @@ h4 h3 p {
   display: flex;
   flex-direction: row;
   color: white;
-  padding: 3rem;
+  padding: 5rem;
 }
 .div-banner {
   color: var(--text-white);
 }
 .div-banner h1 {
-  margin: 2rem 2rem 2rem 2rem;
+  margin: 2rem;
 }
 
 @media (max-width: 480px) {
@@ -266,15 +262,20 @@ h4 h3 p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
     margin-bottom: 4rem;
   }
   .section-banner h1 {
     font-size: 40px;
+    padding-bottom: 2rem;
+
   }
   .section-banner h4 {
     font-size: 20px;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
+  }
+  .section-banner button {
+    min-width: 250px;
   }
 }
 
@@ -286,7 +287,7 @@ h4 h3 p {
   background-position: center;
   border-radius: var(--img-border-radius);
   margin: 5rem;
-  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
 }
 
@@ -296,7 +297,8 @@ h4 h3 p {
   width: 700px;
   padding: 5rem;
 }
-@media (max-width: 480px) {
+
+@media (max-width: 320px) {
   .section-image {
     display: flex;
     flex-direction: column;
@@ -332,8 +334,8 @@ h4 h3 p {
 }
 
 .big-title-section {
-  view-timeline-name: --consumer;
-  animation-timeline: --consumer;
+  /* view-timeline-name: --consumer;
+  animation-timeline: --consumer; */
   animation-name: show;
   animation-duration: 1ms;
   animation-fill-mode: both;

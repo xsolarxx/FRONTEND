@@ -1,3 +1,5 @@
+import './News.css';
+
 import { useEffect, useState } from 'react';
 
 import { NewsCard } from '../../components';
@@ -18,9 +20,9 @@ export const NewsPage = () => {
   //* Verifica sí la lista tienes los itens para mapear
   console.log(newsList);
   return (
-    <>
+    <section className="News-Page-grid">
       {newsList &&
         newsList.data.map((news, index) => <NewsCard news={news} key={index} />)}
-    </>
+    </section>
   );
 };

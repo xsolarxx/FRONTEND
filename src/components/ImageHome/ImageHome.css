@@ -17,14 +17,17 @@ img {
 
 @media (max-width: 400px) {
   .item {
-    padding: 0px;
-    min-height: 20px;
-    min-width: 40px; /* Reducir el espaciado entre imágenes en dispositivos más pequeños */
+    max-height: 250px;
+    max-width: 300px;
+    padding: 0;
+    
   }
 }
 
 @media (max-width: 576px) {
   .item {
-    padding: 0 3px; /* Ajuste adicional para dispositivos más pequeños */
+    min-height: 150px;
+    min-width: 300px;
+    justify-content: center;
   }
 }

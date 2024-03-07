@@ -43,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 :root {
   /* Colores */
   --primary-color-green: #97f85b;
@@ -62,13 +66,6 @@ a {
   
   /* Screen sizes */
   --iphoneSE2016-portrait: 320px;
-  --smartphone-portrait: 480px;
-
-  --tablet-portrait-min: 768px;
-  --tablet-portrait-max: 1024px;
-
-  --big-Screen-desctop: 2480px;
+	--screenMax: 1600;
 }
-ul {
-  list-style-type: none;
-}
+

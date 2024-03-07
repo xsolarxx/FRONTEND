@@ -48,22 +48,19 @@ export const Home = () => {
         </h5>
       </div>
 
-      <section className="grid">
+      {/* <section className="grid">
         <div className="grid-item1">
           <h3>News</h3>
-          {/* <p>Empresas que encajen con tu idea de sostenibilidad</p> */}
         </div>
         <div className="grid-item2"></div>
         <div className="grid-item3">
           <h3>Forum</h3>
-          {/* <p>Empresas que encajen con tu idea de sostenibilidad</p> */}
         </div>
         <div className="grid-item4">
           <h3>Companies</h3>
-          {/* <p>Empresas que encajen con tu idea de sostenibilidad</p> */}
         </div>
         <div className="grid-item5"></div>
-      </section>
+      </section> */}
 
       <section className="section-banner">
         <h1 className="solarbynature">Solar by Nature</h1>

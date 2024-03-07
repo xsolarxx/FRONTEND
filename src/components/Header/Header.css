@@ -1,5 +1,4 @@
 #header {
-  height: 10vh;
   background-color: var(--text-white);
   display: flex;
   justify-content: space-around;
@@ -10,6 +9,7 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
+  height: 10vh;
 }
 
 @media (max-width: 650px) {
@@ -21,11 +21,6 @@ nav {
 .nav-mobile {
   display: none;
 }
-
-/* @media (width: 600px) {
-    . {
-     
-    } */
 
 nav button {
   width: 120px;

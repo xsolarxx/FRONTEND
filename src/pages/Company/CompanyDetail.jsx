@@ -1,27 +1,27 @@
-// import { useEffect, useState } from "react";
-import { CompanyListings } from '../../components/Listings/CompanyListings';
-import { companies } from '../../data/mockCompanyData';
+import './CompanyPage.css';
 
-export const Company = () => {
-  //   const [companies, setCompanies] = useState([]);
-  //   useEffect(() => {
-  //     fetchCompanies();
-  //   }, []);
-  // };
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
+import { getByIdCompany } from '../../services/company.service';
 
-  // const fetchCompanies = async () => {
-  //   try {
-  //     const response = await fetch("/api/companies");
-  //     const data = await response.json();
-  //     setCompanies(data);
-  //   } catch (error) {
-  //     console.error("Error fetching companies:", error);
-  //   }
+export const CompanyDetail = () => {
+  const { id } = useParams();
+  const [fullCompany, setfullCompany] = useState(); // estado de la cia
+  console.log(fullCompany);
+  const fetchFullCompanies = async () => {
+    setfullCompany(await getByIdCompany(id));
+  };
+  useEffect(() => {
+    fetchFullCompanies();
+  }, []);
+  //*antes de hacer el mapeo tenemos que ver si la longitd de la mapa es mayor que 0
+  //* si no se va a rompero elmapeo , si es mayor que 0 pintamos las compañias
+  //* Si es menor que 0 --> sin compañias que mostrar
+
+  //* Verifica sí la lista tienes los itens para mapear
 
   return (
-    <div>
-      <h1> Company Page </h1>
-      <CompanyListings>{companies}</CompanyListings>{' '}
-    </div>
+    <div>{fullCompany?.data && <CompanyDetailCard company={fullCompany.data} />}</div>
   );
 };

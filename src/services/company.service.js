@@ -32,6 +32,16 @@ export const getAllCompany = async () => {
     .catch((error) => error);
 };
 
+//---------------------- * GET BY ID COMPANY * --------------------------------------------------
+
+export const getByIdCompany = async (id) => {
+  const APIGeneral = extraConfig();
+
+  return APIGeneral.get(`/company/${id}`)
+    .then((res) => res)
+    .catch((error) => error);
+};
+
 //---------------------- * GET BY SERVICES COMPANY * --------------------------------------------------
 
 export const getByServicesCompany = async (formData) => {

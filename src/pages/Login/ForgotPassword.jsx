@@ -33,20 +33,22 @@ export const ForgotPassword = () => {
       <div className="reset_password">
         <div className="reset">
           <h4>Reset your password</h4>
-          <h5>Please provide your email in order to receive your password</h5>
+          <p>Please provide your email in order to receive your password</p>
           <form onSubmit={handleSubmit(formSubmit)}>
-            <input
-              className="email_forgot_password"
-              type="email"
-              id="email"
-              name="email"
-              autoComplete="false"
-              placeholder="Email"
-              {...register('email', { required: true })}
-            />
-            <button className="button--blue" type="submit" disabled={send}>
-              Change password
-            </button>
+            <div className="input_form">
+              <input
+                className="email_forgot_password"
+                type="email"
+                id="email"
+                name="email"
+                autoComplete="false"
+                placeholder="Email"
+                {...register('email', { required: true })}
+              />
+              <button className="button--blue" type="submit" disabled={send}>
+                Change password
+              </button>
+            </div>
           </form>
         </div>
       </div>

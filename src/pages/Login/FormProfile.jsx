@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 import { Uploadfile } from '../../components';
-import { NavProfile } from '../../components/NavProfile/NavProfile';
+// import { NavProfile } from '../../components/NavProfile/NavProfile';
 import { useAuth } from '../../context/authContext';
 import { useUpdateError, useDeleteUser } from '../../hooks';
 import { update } from '../../services/user.service';

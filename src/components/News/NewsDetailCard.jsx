@@ -1,4 +1,4 @@
-/* Noticia con todo el contenido, inclusive el texto entero. Se llega aquí 
+/* Noticia en grande con todo el contenido, inclusive el texto entero. Se llega aquí 
 a través de hacer click en "Read More" */
 import './NewsDetailCard.css';
 

@@ -75,11 +75,12 @@ export const Home = () => {
 
       <div>
         <section className="section-image">
-          <h3>
-            By valuing forestry and agroforestry resources and taking advantage of the
-            sun’s rays, we believe in green and renewable energy.
-          </h3>
-          <button></button>
+          <div className="section-image-box">
+            <h2>
+              By valuing forestry and agroforestry resources and taking advantage of the
+              sun’s rays, we believe in green and renewable energy
+            </h2>
+          </div>
         </section>
       </div>
 

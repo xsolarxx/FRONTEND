@@ -1,3 +1,6 @@
+/* Noticia en la sección principal(columna). Aparece información breve y la 
+opción de "Read More" para abrir el contenido entero de dicha noticia */
+
 import './NewsCard.css';
 
 import { useNavigate } from 'react-router-dom';

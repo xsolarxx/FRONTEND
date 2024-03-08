@@ -7,6 +7,8 @@ import { useAuth } from '../../context/authContext';
 import { useForumError } from '../../hooks';
 import { createForum } from '../../services';
 
+//Para crear la publicación(foro)
+
 export const Forum = () => {
   const { user } = useAuth();
   const { register, handleSubmit } = useForm();
@@ -59,16 +61,19 @@ export const Forum = () => {
         <form className="formForum email_container1" onSubmit={handleSubmit(formSubmit)}>
           <h4>Let´s get rolling!</h4>
           <h5>What subject would you like to approach?</h5>
-          <h5>You can{' '}
+          <h5>
+            You can{' '}
             <span
               style={{
-              textDecoration: 'underline',
-              textDecorationColor: '#97f85b',
-              textDecorationThickness: '3px',
+                textDecoration: 'underline',
+                textDecorationColor: '#97f85b',
+                textDecorationThickness: '3px',
               }}
             >
               create your own forum
-              </span> below:</h5>
+            </span>{' '}
+            below:
+          </h5>
           <div className="forum-container">
             <input
               className="input_title"
@@ -93,12 +98,7 @@ export const Forum = () => {
           <Uploadfile />
 
           <div className="btn_container">
-            <button
-              className="button--blue"
-              type="submit"
-              disabled={send}
-              style={{ background: send ? '' : 'color-disabled-green' }}
-            >
+            <button className="button--blue" type="submit" disabled={send}>
               Create forum
             </button>
           </div>

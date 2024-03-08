@@ -13,14 +13,9 @@ export const NewsPage = () => {
   useEffect(() => {
     fetchNews();
   }, []);
-  //*antes de hacer el mapeo tenemos que ver si la longitd de la mapa es mayor que 0
-  //* si no se va a rompero elmapeo , si es mayor que 0 pintamos las compañias
-  //* Si es menor que 0 --> sin compañias que mostrar
 
-  //* Verifica sí la lista tienes los itens para mapear
-  console.log(newsList);
   return (
-    <section className="News-Page-grid">
+    <section className="NewsPageGrid">
       {newsList &&
         newsList.data.map((news, index) => <NewsCard news={news} key={index} />)}
     </section>

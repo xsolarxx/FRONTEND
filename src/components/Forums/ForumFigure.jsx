@@ -20,13 +20,16 @@ export const ForumFigure = ({ forum }) => {
       <div className="containerForumInfo">
         <h3 className="forumTitle">{forum.title}</h3>
         <p className="forumCreation">{formattedDate}</p>
-        <button
-          onClick={() => {
-            navigate(`/forumDetail/${forum._id}`);
-          }}
-        >
-          Get into this forum
-        </button>
+        <div className="btn_container">
+          <button
+            className="button--blue"
+            onClick={() => {
+              navigate(`/forumDetail/${forum._id}`);
+            }}
+          >
+            Enter forum
+          </button>
+        </div>
       </div>
     </div>
   );

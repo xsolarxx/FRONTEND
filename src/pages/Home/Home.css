@@ -32,9 +32,8 @@
   min-width: 150px;
 }
 
-/* mobile 3 tamaños  */
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
   .hero-section {
     padding: 0;
     margin: 0;
@@ -55,7 +54,7 @@
     padding: 2rem;
   }
 }
-
+/* 
 @media (max-width: 390px) {
   .hero-section {
     padding: 0;
@@ -76,10 +75,9 @@
   .herobox {
     padding: 2rem;
   }
-}
+} */
 
-@media (max-width: 400px) {
-  /* Estilos para la sección de la imagen */
+/* @media (max-width: 400px) {
   .section-image {
     display: flex;
     flex-direction: column;
@@ -96,7 +94,7 @@
   nav {
     margin-bottom: 15rem;
   }
-}
+} */
 
 /* Big title (Escrito de xSollarx operates) */
 
@@ -247,14 +245,28 @@
   display: flex;
   flex-direction: row;
   color: white;
+  padding: 0 5rem 0rem 5rem ;
+}
+
+.div-banner, .solarbynature {
+  flex: 1;
   padding: 5rem;
+  align-items: center;
+align-content: center;
 }
+
+/* .solarbynature {
+  flex: 1;
+  padding: 5rem;
+
+}
+
 .div-banner {
-  color: var(--text-white);
-}
-.div-banner h1 {
-  margin: 2rem;
-}
+  flex: 1;
+  padding: 5rem;
+
+} */
+
 
 @media (max-width: 480px) {
   .section-banner {

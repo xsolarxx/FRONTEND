@@ -67,6 +67,6 @@ ul {
   /* Screen sizes */
   --iphoneSE2016-portrait: 320px;
   --iphone12-portrait: 390px;
-  --iphone13-portrait: 428px;
+  --screenMax-phone: 460px;
   --screenMax: 1600;
 }

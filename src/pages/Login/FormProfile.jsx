@@ -10,6 +10,8 @@ import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useDeleteUser, useUpdateError } from '../../hooks';
 import { update } from '../../services/user.service';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export const FormProfile = () => {
   const { user, setUser, setDeleteUser, logout } = useAuth();
@@ -83,7 +85,13 @@ export const FormProfile = () => {
             </span>
             , you can make changes to your user profile
           </h5>
-
+          {/* <FontAwesomeIcon
+            className="delete-user"
+            icon="fa-solid fa-trash"
+            style={{ color: '#022461', cursor: 'pointer' }}
+            onClick={() => useDeleteUser(setUser, setDeleteUser)}
+          />
+          Delete user */}
           <Link
             className="delete-user"
             onClick={() => useDeleteUser(setUser, setDeleteUser)}
@@ -91,7 +99,6 @@ export const FormProfile = () => {
           >
             Delete user
           </Link>
-
           <Link to="/profile/changePassword">Change password</Link>
           <hr className="profile-setting__line" />
           <form className="form-update-profile" onSubmit={handleSubmit(formSubmit)}>

@@ -1,22 +1,37 @@
 .pageContainerNewsDetailed {
-    margin: 3rem 8rem
-
+    margin: 3rem 9rem;
 }
 
 .pageContainerNewsDetailed h2 {
     color: var(--color-green);
-    padding: 2rem 7rem;
+    padding: 1rem 7rem;
     text-align: center;
-
 }
 .newsShortContentDetailed {
-     display: flex;
-     margin-top: 2rem;
-     font-size: 150%;
-     color: var(--color-navy-blue);
+    display: flex;
+    margin-top: 2rem;
+    font-size: 150%;
+    text-align: center;
+    color: var(--color-navy-blue);
 }
 .newsImage {
     display: flex;
     padding: 4rem;
     height: 600px;
+    margin-bottom: -5rem;
+}
+.newsFullContentDetailed {
+    display: flex;
+    margin-top: 2rem;
+    font-size: 150%;
+    color: var(--color-navy-blue);
+}
+.authorAndTags {
+    margin-top: 4rem;
+    font-size: 130%;
+    color: var(--color-navy-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+
 }

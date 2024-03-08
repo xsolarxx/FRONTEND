@@ -14,8 +14,10 @@ export const NewsDetailCard = ({ newsData }) => {
           <img className="imgNewsDetailed" src={newsData.image} alt={newsData.name} />
         </section>
         <p className="newsFullContentDetailed"> {newsData.fullContent}</p>
-        <p className="newsAuthorDetailed">{newsData.author}</p>
-        <p className="newsTagsDetailed">{newsData.tags}</p>
+        <div className="authorAndTags">
+          <label className="newsAuthorDetailed">{newsData.author}</label>
+          <label className="newsTagsDetailed">{newsData.tags}</label>
+        </div>
       </div>
     </div>
   );

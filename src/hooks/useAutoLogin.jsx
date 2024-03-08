@@ -14,12 +14,14 @@ export const useAutoLogin = async (allUser, userLogin) => {
 
     if (sendData?.status == 200) {
       console.log('entro', sendData.data.user);
-      const { userName, email, image, check, likedCompany } = sendData.data.user;
+      const { userName, email, image, check, likedCompany, likedForum, likedNews } = sendData.data.user;
       const userCustom = {
         token: sendData.data.token,
         user: userName,
         email,
         likedCompany,
+        likedNews,
+        likedForum,
         image,
         check,
         _id: sendData.data.user._id,

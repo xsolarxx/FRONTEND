@@ -1,28 +1,29 @@
-.welcomeUser {
-  margin-bottom: 20px;
+.dashboard-conatiner{
+  display: flex;
+  margin: 0 5rem 2rem 5rem;
+  gap: 5rem;
+}
+
+.user-side-pannel {
   color: var(--color-navy-blue);
   display: flex;
   background-color: var(--background-color-gray);
   flex-direction: column;
   align-items: center;
-  margin: 2rem;
   padding: 4rem;
   border-radius: var(--img-border-radius);
 }
 
-
-
-.favoriteCompany p {
-  text-align: center;
+.user-main-pannel {
+  color: var(--color-navy-blue);
+  display: flex;
+  border: 2px solid var(--background-color-gray);
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 4rem;
+  border-radius: var(--img-border-radius);
 }
 
-.feedUser {
-  background: linear-gradient(95.27deg, #056fc7 0%, #00d880 100%);
-  font-family: var(--primary-font-family);
-  color: var(--text-white);
-  background-size: cover;
-  width: 30%; /* Ajusta el ancho del contenedor */
-  height: 150px; /* Ajusta la altura del contenedor */
-  margin-bottom: 20px;
-  border-radius: 10px; /* Ajusta el radio de las esquinas */
+.user-pannel-section {
+
 }

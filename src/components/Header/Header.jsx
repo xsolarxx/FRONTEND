@@ -18,10 +18,10 @@ export const Header = () => {
       <header>
         <i className="fa fa-bars" onClick={handleClickMenu}></i>
         <nav className={`nav ${showMenuMob ? 'nav-mobile' : 'nav-large'}`}>
-          <div className="logo"></div>
           <NavLink className="link-home" to="/">
-            <p>Home</p>
+            <div className="logo"></div>
           </NavLink>
+
           {user !== null ? (
             <NavLink to="/dashboard">
               <p>Dashboard</p>
@@ -33,9 +33,9 @@ export const Header = () => {
           <NavLink to="/forumPage">
             <p>Forum</p>
           </NavLink>
-          <NavLink to="/about">
+          {/* <NavLink to="/about">
             <p>About</p>
-          </NavLink>
+          </NavLink> */}
           {user == null && (
             <NavLink to="/login">
               <button className="button--green">Login</button>
@@ -43,7 +43,7 @@ export const Header = () => {
           )}
           {user !== null ? (
             <NavLink to="/company">
-              <p>Company</p>
+              <p>Companies</p>
             </NavLink>
           ) : null}
           {user !== null && (

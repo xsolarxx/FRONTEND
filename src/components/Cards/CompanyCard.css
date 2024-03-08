@@ -28,6 +28,23 @@
   gap: 10px;
   text-align: justify;
 }
+.companyDescription {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  max-height: 3rem;
+  position: relative;
+}
+
+.companyDescription::after {
+  content: '...';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+}
 .section-company__text h3 {
   color: var(--color-navy-blue);
   font-weight: 700;

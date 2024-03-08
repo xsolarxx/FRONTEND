@@ -8,7 +8,6 @@
   justify-content: center;
   text-align: center;
   color: white;
-  height: 105vh;
 
   background-image: url('/wind2.jpg');
   background-size: cover;
@@ -37,28 +36,7 @@
   .hero-section {
     padding: 0;
     margin: 0;
-  }
-
-  .herobox h1 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-  }
-
-  .herobox h4 {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    font-weight: 200;
-  }
-
-  .herobox {
-    padding: 2rem;
-  }
-}
-/* 
-@media (max-width: 390px) {
-  .hero-section {
-    padding: 0;
-    margin: 0;
+    height: 105vh;
   }
 
   .herobox h1 {
@@ -67,34 +45,15 @@
   }
 
   .herobox h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 15px;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   .herobox {
     padding: 2rem;
   }
-} */
-
-/* @media (max-width: 400px) {
-  .section-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    padding: 5rem 2rem;
-    margin: 1rem;
-    margin-bottom: 4rem;
-    height: 90%;
-    padding-top: 10rem;
-  }
-  nav {
-    margin-bottom: 15rem;
-  }
-} */
+}
 
 /* Big title (Escrito de xSollarx operates) */
 

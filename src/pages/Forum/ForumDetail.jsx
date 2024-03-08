@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-
-import { ForumFigureDetail } from '../../components';
-import { useAuth } from '../../context/authContext';
-import { createComment } from '../../services/comment.service';
 import { getById } from '../../services/forum.service';
+import { useEffect, useState } from 'react';
+import { useAuth } from '../../context/authContext';
+import { Comments, ForumFigureDetail } from '../../components';
+import { createComment, getByRecipient } from '../../services/comment.service';
+import { useCommentError } from '../../hooks';
 
 export const ForumDetail = () => {
   const { id } = useParams();
   const { user } = useAuth();
   const [fullForum, setFullForum] = useState();
+  const [res, setRes] = useState();
   const [send, setSend] = useState(false);
   const [resComment, setResComment] = useState({});
   const [titleValue, setTitleValue] = useState(null);
   const [contentValue, setContentValue] = useState(null);
+  const [comments, setComments] = useState([]);
 
   const fetchFullForum = async () => {
     setFullForum(await getById(id));
@@ -24,17 +26,32 @@ export const ForumDetail = () => {
       owner: user,
       title: titleValue,
       content: contentValue,
-      idRecipient: id,
     };
     setSend(true);
     setResComment(await createComment(id, customFormData));
     setSend(false);
   };
 
+  const getComments = async () => {
+    setComments(await getByRecipient('Forum', id));
+  };
+
   useEffect(() => {
     fetchFullForum();
   }, []);
-  console.log(fullForum);
+
+  useEffect(() => {
+    useCommentError(res, setRes, setResComment);
+  }, [res, resComment]);
+
+  useEffect(() => {
+    if (fullForum != null) {
+      getComments();
+    }
+  }, [fullForum]);
+
+  console.log('si que tengo comments', comments);
+
   return (
     <>
       <div>{fullForum?.data && <ForumFigureDetail forumData={fullForum.data} />}</div>
@@ -66,6 +83,14 @@ export const ForumDetail = () => {
           >
             Add comment
           </button>
+        </div>
+        <div className="allComments">
+          {comments &&
+            comments?.data?.map((singleComment) => (
+              <div key={singleComment?._id}>
+                <Comments comment={singleComment} setCommentsByChild={setComments} />
+              </div>
+            ))}
         </div>
       </section>
     </>

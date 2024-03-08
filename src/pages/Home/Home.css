@@ -287,6 +287,12 @@
 
 }
 
+.section-banner button:hover {
+  background-color: white;
+  color: var(--color-navy-blue);
+}
+
+
 /* Section image (Con texto By valuing forestry...) */
 
 .section-image {
@@ -296,8 +302,7 @@
   background-position: center;
   border-radius: var(--img-border-radius);
   margin: 5rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: multiply;
+ 
   padding: 6rem;
   height: 300px;
   color: white;
@@ -305,25 +310,24 @@
   align-items: center;
 }
 
+.section-image-box {
+  background-color: var(--background-color-opacity);
+  border-radius: var(--img-border-radius);
+  padding: 3rem;
+}
+
 @media (max-width: 400px) {
   .section-image {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     padding: 5rem 2rem;
     margin: 1rem;
     margin-bottom: 4rem;
     height: 90%;
   }
-  .section-image h3 {
-    font-size: 20px;
-    text-align: center;
-    width: 300px;
-    color: white;
+  .section-image h2 {
+    font-size: xx-large;
   }
+ 
 }
 @media (max-width: 480px) {
   .carrusel {
@@ -348,8 +352,4 @@
   animation-name: show;
   animation-duration: 1ms;
   animation-fill-mode: both;
-}
-.section-banner button:hover {
-  background-color: white;
-  color: var(--color-navy-blue);
 }

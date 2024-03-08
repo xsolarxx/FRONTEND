@@ -2,7 +2,7 @@ import './App.css';
 
 import { Outlet } from 'react-router-dom';
 
-import { Footer } from './components';
+import { Footer, ScrollToTopButton } from './components';
 import { Header } from './components/Header/Header';
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
       <Header />
       <main>
         <Outlet />
+        <ScrollToTopButton />
       </main>
       <Footer />
     </>

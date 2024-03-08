@@ -1,0 +1,22 @@
+.pageContainerNewsDetailed {
+    margin: 3rem 8rem
+
+}
+
+.pageContainerNewsDetailed h2 {
+    color: var(--color-green);
+    padding: 2rem 7rem;
+    text-align: center;
+
+}
+.newsShortContentDetailed {
+     display: flex;
+     margin-top: 2rem;
+     font-size: 150%;
+     color: var(--color-navy-blue);
+}
+.newsImage {
+    display: flex;
+    padding: 4rem;
+    height: 600px;
+}

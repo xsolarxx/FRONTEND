@@ -13,3 +13,4 @@ export * from './News/NewsCard';
 export * from './ProtectedRoute/Protected';
 export * from './ProtectedRoute/ProtectedCheckChildren';
 export * from './UploadFile/Uploadfile';
+export * from './Comments/Comments';

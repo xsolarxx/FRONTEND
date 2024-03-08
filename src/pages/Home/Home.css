@@ -234,7 +234,6 @@
 }
 
 .carrusel{
-   
   margin: 5rem;
 }
 
@@ -246,27 +245,22 @@
   flex-direction: row;
   color: white;
   padding: 0 5rem 0rem 5rem ;
+  /* align-items: center; */
 }
 
 .div-banner, .solarbynature {
   flex: 1;
-  padding: 5rem;
-  align-items: center;
-align-content: center;
+  padding: 5rem 0 5rem 0;
 }
 
-/* .solarbynature {
-  flex: 1;
-  padding: 5rem;
-
+.section-banner h4 {
+  font-weight: 200;
+  margin-bottom: 4%;
 }
 
-.div-banner {
-  flex: 1;
-  padding: 5rem;
-
-} */
-
+.section-banner button {
+  width: 150px;
+}
 
 @media (max-width: 480px) {
   .section-banner {
@@ -276,15 +270,21 @@ align-content: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    margin-bottom: 4rem;
+  }
+
+  .div-banner, .solarbynature {
+    padding: 2rem ;
   }
   .section-banner h1 {
     font-size: 40px;
+    padding: 0;
+
   }
   .section-banner h4 {
     font-size: 20px;
-    padding-bottom: 4rem;
+    margin-bottom: 25px;
   }
+
 }
 
 /* Section image (Con texto By valuing forestry...) */

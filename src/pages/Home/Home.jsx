@@ -30,7 +30,7 @@ export const Home = () => {
         <div className="section-consumer__image"></div>
         <div className="section-consumer__text">
           <h3>Discover, connect and transform your relationship with renewable energy</h3>
-          <h4>Your gateway to a greener future. </h4>
+          <h4>Your gateway to a greener future </h4>
           <p>
             At xSolar.com, we are dedicated to empowering individuals on their sustainable
             journey. Through our platform, you can discover, connect, and transform your
@@ -67,7 +67,7 @@ export const Home = () => {
         <div className="div-banner">
           <h4>
             xSolarx is increasingly recognized in the European market as a major player in
-            the promotion and development of renewable energy projects
+            the promotion and development of renewable energy
           </h4>
           <button className="button--green">Discover more</button>
         </div>

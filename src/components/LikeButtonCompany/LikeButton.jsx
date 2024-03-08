@@ -8,24 +8,29 @@ import { toggleLikedCompany } from '../../services/user.service';
 
 export const LikeCompany = ({ id }) => {
   const { user, setUser } = useAuth();
-
+  console.log('entro', user);
   const [like, setLike] = useState(!!user.likedCompany?.find((item) => item === id));
 
   const handleLikeClick = async () => {
-    console.log('like', like);
+    console.log('entro', like);
     if (user) {
       const { token } = user;
-      let updatedLikedCompany;
-      if (like) {
-        updatedLikedCompany = await toggleLikedCompany(id, false); // Remove company from liked companies
-      } else {
-        updatedLikedCompany = await toggleLikedCompany(id, true); // Add company to liked companies
-      }
-      const userUpdate = { ...updatedLikedCompany.data.user, token };
+      const res = await toggleLikedCompany(id);
+      const userUpdate = {
+        name: res.data.user.userName,
+        email: res.data.user.email,
+        image: res.data.user.image,
+        check: res.data.user.check,
+        _id: res.data.user._id,
+        likedCompany: res.data.user.likedCompany,
+        likedForum: res.data.user.likedForum,
+        likedNews: res.data.user.likedNews,
+        token,
+      };
       setUser(() => userUpdate);
       localStorage.removeItem('user');
       localStorage.setItem('user', JSON.stringify(userUpdate));
-      setLike(!like); // Toggle like state
+      setLike(!!res.data.user.likedCompany.find((item) => item === id));
     }
   };
 

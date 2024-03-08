@@ -8,30 +8,35 @@ export const Dashboard = () => {
   const { user } = useAuth(); // Utiliza el hook useAuth para acceder al contexto de autenticación
   return (
     <>
-      <section className="welcomeUser">
-        <h2>
-          Welcome {}
-          <span
-            style={{
-              textDecoration: 'underline',
-              textDecorationColor: '#97f85b',
-              textDecorationThickness: '3px',
-            }}
-          >
-            {user.name}
-          </span>
-        </h2>
+      <div className="dashboard-conatiner">
+        <section className="user-side-pannel">
+          <h2>
+            Welcome {}
+            <span
+              style={{
+                textDecoration: 'underline',
+                textDecorationColor: '#97f85b',
+                textDecorationThickness: '3px',
+              }}
+            >
+              {user.name}
+            </span>
+          </h2>
+          <img className="profile-photo" src={user.image} alt="foto User" />
+        </section>
 
-        <img className="profile-photo" src={user.image} alt="foto User" />
-      </section>
-
-      <section className="favoriteCompany">
-        <h3>Mis Empresas Favoritas:</h3>
-      </section>
-
-      <section className="feedUser">
-        <p>test feed</p>
-      </section>
+        <section className="user-main-pannel">
+          <section className="user-pannel-section">
+            <h2>Companies</h2>
+          </section>
+          <section className="user-pannel-section">
+            <h2>News</h2>
+          </section>
+          <section className="user-pannel-section">
+            <h2>Forum</h2>
+          </section>
+        </section>
+      </div>
     </>
   );
 };

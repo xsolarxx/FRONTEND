@@ -1,16 +1,11 @@
-export const Comments = ({ comments }) => {
+export const Comments = ({ comment, setCommentsByChild }) => {
   return (
-    <div>
-      {comments &&
-        comments.map((comments) => (
-          <div key={comments._id} className="containerNews">
-            <h1 className="newsTitle">{comments.content}</h1>
-            <p className="newsShortContent">{comments.createdAt}</p>
-            <p className="newsShortContent">{comments.updatedAt}</p>
-            <p className="newsAuthor">{comments.likes}</p>
-            <p className="newsTags">{comments.title}</p>
-          </div>
-        ))}
-    </div>
+    <>
+      <div className="commentOwnerContainer">
+        <h6>{comment.owner.userName}</h6>
+        <p>{comment.title}</p>
+        <p>{comment.content}</p>
+      </div>
+    </>
   );
 };

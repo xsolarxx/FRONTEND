@@ -45,3 +45,15 @@ export const update = async (id, formData) => {
     .then((res) => res)
     .catch((error) => error);
 };
+
+export const getByRecipient = async (recipientType, id) => {
+  const APIGeneral = extraConfig();
+
+  return APIGeneral.get(`/comment/${recipientType}/${id}`, {
+    headers: {
+      Authorization: `Bearer ${updateToken()}`,
+    },
+  })
+    .then((res) => res)
+    .catch((error) => error);
+};

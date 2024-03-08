@@ -10,12 +10,12 @@ export const ForumDetail = () => {
   const { id } = useParams();
   const { user } = useAuth();
   const [fullForum, setFullForum] = useState();
-  const [res, setRes] = useState();
   const [send, setSend] = useState(false);
   const [resComment, setResComment] = useState({});
-  const [titleValue, setTitleValue] = useState(null);
-  const [contentValue, setContentValue] = useState(null);
+  const [titleValue, setTitleValue] = useState('');
+  const [contentValue, setContentValue] = useState('');
   const [comments, setComments] = useState([]);
+  const [updateComments, setUpdateComments] = useState(false);
 
   const fetchFullForum = async () => {
     setFullForum(await getById(id));
@@ -29,6 +29,8 @@ export const ForumDetail = () => {
     };
     setSend(true);
     setResComment(await createComment(id, customFormData));
+    setTitleValue('');
+    setContentValue('');
     setSend(false);
   };
 
@@ -41,16 +43,15 @@ export const ForumDetail = () => {
   }, []);
 
   useEffect(() => {
-    useCommentError(res, setRes, setResComment);
-  }, [res, resComment]);
+    console.log('updateComments', updateComments);
+    useCommentError(resComment, setResComment, setUpdateComments);
+  }, [resComment, updateComments]);
 
   useEffect(() => {
     if (fullForum != null) {
       getComments();
     }
   }, [fullForum]);
-
-  console.log('si que tengo comments', comments);
 
   return (
     <>
@@ -62,6 +63,7 @@ export const ForumDetail = () => {
             className="input_user"
             type="text"
             id="title"
+            value={titleValue}
             name="title"
             placeholder="Comment title"
             onChange={(e) => setTitleValue(e.target.value)}
@@ -70,6 +72,7 @@ export const ForumDetail = () => {
             className="input_user"
             type="text"
             id="content"
+            value={contentValue}
             name="content"
             placeholder="comment content"
             onChange={(e) => setContentValue(e.target.value)}

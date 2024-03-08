@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 480px) {
-  .containerNews {
+  .containerCompany {
     grid-template-columns: 1fr;
     padding: 1rem;
     gap: 2rem;
@@ -17,8 +17,8 @@
 .section-company__image {
   background-size: cover;
   background-position: center;
-
   border-radius: var(--img-border-radius);
+  flex-grow: 1;
 }
 
 .section-company__text {
@@ -26,6 +26,7 @@
   flex-direction: column;
   color: var(--color-navy-blue);
   gap: 10px;
+  text-align: justify;
 }
 .section-company__text h1 {
   color: var(--color-navy-blue);
@@ -33,12 +34,16 @@
 }
 
 .section-company__text p {
+  display: inline-block;
   font-size: large;
 }
-
-.companyType,
-.companyServices {
+.company-tags {
+  margin-top: 10px; /* Agrega espacio entre el texto y las etiquetas */
+}
+.company-tags p {
   background: var(--background-color-gray);
+  margin-right: 10px;
+  margin-bottom: 10px;
   padding: 9px 15px 9px 15px;
   border-radius: 50px;
   font-size: large;

@@ -1,19 +1,18 @@
+/* Noticia con todo el contenido, inclusive el texto entero. Se llega aquí 
+a través de hacer click en "Read More" */
 import './NewsCard.css';
 
-import { Comments } from '../Comments/Comments';
-
-export const NewsDetailCard = ({ news }) => {
+export const NewsDetailCard = ({ newsData }) => {
   return (
     <>
-      <div className="page-container-news">
+      <div className="pageContainerNews">
         <div className="containerNews">
-          <h1 className="newsTitle">{news.title} </h1>
-          <p className="newsShortContent"> {news.shortContent}</p>
-          <p className="newsFullContent"> {news.fullContent}</p>
-          <img className="imgNews" src={news.image} alt={news.name} />
-          <p className="newsAuthor">{news.author}</p>
-          <p className="newsTags">{news.tags}</p>
-          <Comments comments={news.comments} />
+          <h1 className="newsTitle">{newsData.title} </h1>
+          <p className="newsShortContent"> {newsData.shortContent}</p>
+          <p className="newsFullContent"> {newsData.fullContent}</p>
+          <img className="imgNews" src={newsData.image} alt={newsData.name} />
+          <p className="newsAuthor">{newsData.author}</p>
+          <p className="newsTags">{newsData.tags}</p>
         </div>
       </div>
     </>

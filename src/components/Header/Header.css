@@ -39,6 +39,7 @@ nav button {
 nav p {
   font-weight: bold;
   color: var(--color-navy-blue);
+  font-size: large;
 }
 
 nav p:hover  {

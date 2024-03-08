@@ -48,7 +48,7 @@ export const Home = () => {
         </h5>
       </div>
 
-      {/* <section className="grid">
+      <section className="grid">
         <div className="grid-item1">
           <h3>News</h3>
         </div>
@@ -60,7 +60,7 @@ export const Home = () => {
           <h3>Companies</h3>
         </div>
         <div className="grid-item5"></div>
-      </section> */}
+      </section>
 
       <section className="section-banner">
         <h1 className="solarbynature">Solar by Nature</h1>

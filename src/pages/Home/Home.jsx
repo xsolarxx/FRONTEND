@@ -27,7 +27,7 @@ export const Home = () => {
       </section>
 
       <section className="section-consumer">
-        <div className="section-consumer__image"></div>
+        <img className="section-consumer__image" src="/consumer.jpg" alt="" />
         <div className="section-consumer__text">
           <h3>Discover, connect and transform your relationship with renewable energy</h3>
           <h4>Your gateway to a greener future </h4>
@@ -48,19 +48,39 @@ export const Home = () => {
         </h5>
       </div>
 
-      <section className="grid">
-        <div className="grid-item1">
-          <h3>News</h3>
+      <div className="services-parent-container">
+        <div className="services-container">
+          <div className="service1"></div>
+          <div className="Blue-box-title">
+            <h1>Companies</h1>
+            <p>Companies that fit with your idea of sustainability</p>
+            <NavLink to="/company">
+              <button className="button--green">See companies</button>
+            </NavLink>
+          </div>
         </div>
-        <div className="grid-item2"></div>
-        <div className="grid-item3">
-          <h3>Forum</h3>
+        <div className="services-container">
+          <div className="Blue-box-title">
+            <h1>News</h1>
+            <p>Learn and grow your knolwedge</p>
+            <NavLink className="link-news" to="/news">
+              <button className="button--green">See news</button>
+            </NavLink>
+          </div>
+          <div className="service4"></div>
+          <div className="service5"></div>
         </div>
-        <div className="grid-item4">
-          <h3>Companies</h3>
+        <div className="services-container">
+          <div className="service6"></div>
+          <div className="Blue-box-title">
+            <h1>Forum</h1>
+            <p>Energía Renovable en Titulares</p>
+            <NavLink to="/forumPage">
+              <button className="button--green">Explore forum</button>
+            </NavLink>
+          </div>
         </div>
-        <div className="grid-item5"></div>
-      </section>
+      </div>
 
       <section className="section-banner">
         <h1 className="solarbynature">Solar by Nature</h1>

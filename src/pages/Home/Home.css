@@ -121,80 +121,129 @@
 
 @media (max-width: 480px) {
   .grid-title-with-subtitle {
-    padding: 1rem;
+    padding: 2rem;
   }
+  .grid-title-with-subtitle h1 {
+font-size: 45px;  }
 }
 
-.grid {
-  display: grid;
-  grid-row: 1fr;
-  height: 70vh;
-  gap: 3rem;
-  padding: 0 5rem 5rem 5rem;
+/* 3 services */
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 0 5rem 0 5rem;
+  gap: 10px;
+  min-height: 55vh;
 }
 
-.grid-item1,
-.grid-item2,
-.grid-item3,
-.grid-item4,
-.grid-item5 {
+.services-parent-container {
+  padding: 3rem 0 3rem 0;
+}
+
+.services-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
   background-size: cover;
   background-position: center;
   border-radius: var(--img-border-radius);
-  transition: transform 0.3s ease;
-  justify-content: center;
-  align-items: center;
+  margin: 10px; 
+  gap: 1rem
 }
 
-.grid-item1 {
+.Blue-box-title {
+  flex: 1; 
+  background-color: #122e3d;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.services-container button {
+  width: 150px;
+}
+
+.services-container button:hover {
+  background-color: white;
+  color: var(--color-navy-blue);
+}
+
+.services-container p {
+  font-size: large;
+}
+
+.service1 {
+  flex: 1.5; 
   background-image: url('/wind3.jpg');
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
 }
 
-.grid-item2 {
-  background-image: url('/installing2.png');
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.grid-item3 {
-  background-image: url('/earth.jpg');
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
-}
-
-.grid-item4 {
+.service4 {
+  flex: 0.5; 
   background-image: url('/nature.jpg');
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
 }
 
-.grid-item5 {
+.service5 {
+  flex: 1.5; 
   background-image: url('/smile.png');
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
 }
 
-.grid-item1:hover,
-.grid-item2:hover,
-.grid-item3:hover,
-.grid-item4:hover,
-.grid-item5:hover {
+.service6 {
+  flex: 1.5; 
+  background-image: url('/earth.jpg');
+}
+
+.service7 {
+  flex: 0.5; 
+  background-image: url('/nature.jpg');
+}
+
+.service1:hover,
+.service4:hover,
+.service3:hover,
+.service6:hover,
+.service5:hover {
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
   transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
-.grid h3 {
-  color: white;
-  text-align: center;
-  text-shadow: 0.5px 0.9px gray;
+.Blue-box-title:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
-.carrusel{
-  margin: 5rem;
+@media (max-width: 480px) {
+  
+  .service1,
+  .service4,
+  .service5,
+  .service6 {
+    display: none;
+  }
+
+  .services-container {
+    padding: 0;
+  }
+
+  .services-parent-container {
+    padding: 0;
+  }
+
+  .services-container div {
+    margin: 0;
+    gap: 0;
+  }
+
+  .Blue-box-title {
+    margin: 0;
+    padding: 0;
+    flex: 0;
+  }
 }
+
+/* 3 services finish */
 
 /* Section banner (Solar by Nature)  */
 
@@ -311,4 +360,9 @@
   animation-name: show;
   animation-duration: 1ms;
   animation-fill-mode: both;
+}
+
+
+.carrusel{
+  margin: 5rem;
 }

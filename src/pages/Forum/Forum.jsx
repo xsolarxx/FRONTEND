@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router';
-
+import './Forum.css';
 import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useForumError } from '../../hooks';
@@ -55,53 +55,55 @@ export const Forum = () => {
 
   return (
     <>
-      <div className="form-wrap">
-        <h4>Start a change</h4>
-        <p>Start a forum on renewable energies</p>
+      <div className="forum_container">
+        <form className="formForum email_container1" onSubmit={handleSubmit(formSubmit)}>
+          <h4>Let´s get rolling!</h4>
+          <h5>What subject would you like to approach?</h5>
+          <h5>You can{' '}
+            <span
+              style={{
+              textDecoration: 'underline',
+              textDecorationColor: '#97f85b',
+              textDecorationThickness: '3px',
+              }}
+            >
+              create your own forum
+              </span> below:</h5>
+          <div className="forum-container">
+            <input
+              className="input_title"
+              type="text"
+              id="title"
+              name="title"
+              autoComplete="false"
+              {...register('title', { required: true })}
+              placeholder="Name for your new forum"
+            />
+            <textarea
+              className="input_content"
+              type="text"
+              id="content"
+              name="content"
+              autoComplete="false"
+              {...register('content', { required: true })}
+              placeholder="Your new forum´s description goes here"
+            />
+          </div>
+
+          <Uploadfile />
+
+          <div className="btn_container">
+            <button
+              className="button--blue"
+              type="submit"
+              disabled={send}
+              style={{ background: send ? '' : 'color-disabled-green' }}
+            >
+              Create forum
+            </button>
+          </div>
+        </form>
       </div>
-
-      <form onSubmit={handleSubmit(formSubmit)}>
-        <div className="user_container form-group">
-          <input
-            className="input_user"
-            type="text"
-            id="title"
-            name="title"
-            autoComplete="false"
-            {...register('title', { required: true })}
-          />
-          <label htmlFor="custom-input" className="custom-placeholder">
-            Title
-          </label>
-        </div>
-
-        <div className="user_container form-group">
-          <input
-            className="input_user"
-            type="text"
-            id="content"
-            name="content"
-            autoComplete="false"
-            {...register('content', { required: true })}
-          />
-          <label htmlFor="custom-input" className="custom-placeholder">
-            Content
-          </label>
-        </div>
-
-        <Uploadfile />
-
-        <div className="btn_container">
-          <button
-            className="btn"
-            type="submit"
-            disabled={send}
-            style={{ background: send ? '#5500c4' : '#631ebe' }}
-          >
-            Create forum
-          </button>
-        </div>
-      </form>
     </>
   );
 };

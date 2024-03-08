@@ -21,16 +21,18 @@ export const ForumPage = () => {
 
   return (
     <div className="forumContainer">
-      <div className="forumsHeader">
-        <h4>Renewable forums</h4>
-        <p>
-          Time to talk about renewable energies. Create your own forum or search for a
-          topic of interest and contribute.
-        </p>
+      <h1 className="forumHeader">Welcome to our Forum!</h1>
+      <div className="forumIntro">
+        <h4>
+          Feel free to talk about renewable energy and sustainability with a
+          like-minded community. You can create a post or search for a topic of interest.
+        </h4>
       </div>
-      <button className="createForumButton" onClick={() => navigate('/forum')}>
-        Create your own forum
-      </button>
+      <div className="btn_container">
+        <button className="button--blue" onClick={() => navigate('/forum')}>
+          Create post
+        </button>
+      </div>
       <section>
         {forumList &&
           forumList.data.map((forum, index) => (

@@ -28,7 +28,7 @@
   gap: 10px;
   text-align: justify;
 }
-.section-company__text h1 {
+.section-company__text h3 {
   color: var(--color-navy-blue);
   font-weight: 700;
 }

@@ -46,7 +46,7 @@ i.fa {
   gap: 2rem;
   clear: both;
   /* width: 100%; */
-  padding: 2rem 1.5rem;
+  padding: 1rem 0.5rem;
   text-align: center;
   background: var(--background-color-gray);
   border-radius: 7px;

@@ -40,7 +40,7 @@ export const ForumDetail = () => {
 
   useEffect(() => {
     fetchFullForum();
-  }, []);
+  }, [updateComments]);
 
   useEffect(() => {
     console.log('updateComments', updateComments);

@@ -1,6 +1,7 @@
-import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
-import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp as solidThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp as regularThumbsUp } from '@fortawesome/free-regular-svg-icons';
+import './LikeButton.css';
 import React, { useState } from 'react';
 
 import { useAuth } from '../../context/authContext';
@@ -35,11 +36,14 @@ export const LikeCompany = ({ id }) => {
   };
 
   return (
-    <div>
+    <div className="likebuttonCompany">
       {user && (
-        <button onClick={handleLikeClick}>
-          <FontAwesomeIcon icon={like ? solidHeart : regularHeart} />
-        </button>
+        <FontAwesomeIcon
+          onClick={handleLikeClick}
+          icon={like ? solidThumbsUp : regularThumbsUp}
+          style={{ color: '#1b52b1' }}
+          size="lg"
+        />
       )}
     </div>
   );

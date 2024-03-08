@@ -8,7 +8,7 @@ export const CompanyCard = ({ company }) => {
     <div className="containerCompany">
       <img className="section-company__image" src={company.image} alt={company.name} />
       <div className="section-company__text">
-        <h1 className="companyName">{company.companyName} </h1>
+        <h3 className="companyName">{company.companyName} </h3>
         <p className="companyDescription"> {company.description}</p>
         <div className="company-tags">
           <p className="companyType">{company.companyType}</p>
@@ -21,7 +21,7 @@ export const CompanyCard = ({ company }) => {
               navigate(`/companyDetail/${company._id}`);
             }}
           >
-            Read more
+            Read More
           </button>
         </div>
       </div>

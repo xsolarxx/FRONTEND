@@ -10,18 +10,20 @@ export const CompanyCard = ({ company }) => {
       <div className="section-company__text">
         <h1 className="companyName">{company.companyName} </h1>
         <p className="companyDescription"> {company.description}</p>
-        <p className="companyType">Type:{company.companyType}</p>
-        <parseInt className="companyServices">{company.companyServices}</parseInt>
-
-        <LikeCompany id={company._id} />
-        <button
-          className="button--blue"
-          onClick={() => {
-            navigate(`/companyDetail/${company._id}`);
-          }}
-        >
-          Read more
-        </button>
+        <div className="company-tags">
+          <p className="companyType">{company.companyType}</p>
+          <p className="companyServices">{company.companyServices}</p>
+          <LikeCompany id={company._id} />
+          <br />
+          <button
+            className="button--blue"
+            onClick={() => {
+              navigate(`/companyDetail/${company._id}`);
+            }}
+          >
+            Read more
+          </button>
+        </div>
       </div>
     </div>
   );

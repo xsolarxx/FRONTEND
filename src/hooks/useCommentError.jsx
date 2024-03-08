@@ -1,8 +1,9 @@
-import { Swal } from 'sweetalert2/dist/sweetalert2.all';
+import Swal from 'sweetalert2/dist/sweetalert2.all';
 
-export const useCommentError = (res, setRes, setResComment) => {
+export const useCommentError = (resComment, setResComment, setUpdateComments) => {
   //200
-  if (res?.status == 200) {
+  console.log('esta es res', resComment);
+  if (resComment?.status == 200) {
     setResComment(() => true);
 
     Swal.fire({
@@ -11,17 +12,18 @@ export const useCommentError = (res, setRes, setResComment) => {
       showConfirmButton: false,
       timer: 1500,
     });
-    setRes({});
+    setResComment({});
+    setUpdateComments((preValue) => !preValue);
   }
 
   // 404
-  if (res?.response?.status == 404) {
+  if (resComment?.response?.status == 404) {
     Swal.fire({
       icon: 'error',
       title: 'Comment creation fail',
       showConfirmButton: false,
       timer: 1500,
     });
-    setRes({});
+    setResComment({});
   }
 };

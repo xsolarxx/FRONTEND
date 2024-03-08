@@ -1,8 +1,14 @@
 export const Comments = ({ comment, setCommentsByChild }) => {
+  const creationDate = new Date(comment.createdAt);
+  const formattedDate = creationDate.toLocaleString('es-ES', {
+    timeZone: 'Europe/Madrid',
+  });
+
   return (
     <>
       <div className="commentOwnerContainer">
-        <h6>{comment.owner.userName}</h6>
+        <h5>{comment.owner.userName}</h5>
+        <p>{formattedDate}</p>
         <p>{comment.title}</p>
         <p>{comment.content}</p>
       </div>

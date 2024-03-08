@@ -1,35 +1,18 @@
-import './ForumPage.css';
-
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-
+import './ForumPage.css';
 import { ForumFigure } from '../../components';
+import { getAll } from '../../services/forum.service';
 import { useAuth } from '../../context/authContext';
 import { createComment } from '../../services';
-import { getAll } from '../../services/forum.service';
 
 export const ForumPage = () => {
   const navigate = useNavigate();
-  const { user } = useAuth();
+
   const [forumList, setForumList] = useState();
-  const [send, setSend] = useState(false);
-  const [resComment, setResComment] = useState({});
-  const [titleValue, setTitleValue] = useState(null);
-  const [contentValue, setContentValue] = useState(null);
 
   const fetchForums = async () => {
     setForumList(await getAll());
-  };
-
-  const handleComment = async () => {
-    const customFormData = {
-      owner: user,
-      title: titleValue,
-      content: contentValue,
-    };
-    setSend(true);
-    setResComment(await createComment(customFormData));
-    setSend(false);
   };
 
   useEffect(() => {

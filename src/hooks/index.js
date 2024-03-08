@@ -8,3 +8,4 @@ export * from '../hooks/useRegisterError';
 export * from '../hooks/useResendCodeError';
 export * from '../hooks/useUpdateError';
 export * from './useForumError';
+export * from './useCommentError';

@@ -2,6 +2,7 @@ import './CompanyCard.css';
 import { useNavigate } from 'react-router-dom';
 import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 import { ScrollToTopButton } from '../Buttons/ScrollToTopButton';
+import { RatingComponent } from '../Rating/RatingCompany';
 
 export const CompanyCard = ({ company }) => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export const CompanyCard = ({ company }) => {
           <p className="companyType">{company.companyType}</p>
           <p className="companyServices">{company.companyServices}</p>
           <LikeCompany id={company._id} />
-          <br />
+          <RatingComponent companyId={company.companyId} /> <br />
           <button
             className="button--blue"
             onClick={() => {

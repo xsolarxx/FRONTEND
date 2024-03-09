@@ -2,7 +2,7 @@ import './CompanyPage.css';
 
 import { useEffect, useState } from 'react';
 
-import { CompanyCard, RatingComponent } from '../../components';
+import { CompanyCard } from '../../components';
 import { getAllCompany } from '../../services/company.service';
 
 export const CompanyPage = () => {
@@ -25,7 +25,6 @@ export const CompanyPage = () => {
         companyList.data.map((company, index) => (
           <CompanyCard company={company} key={index} />
         ))}
-      <RatingComponent />
     </section>
   );
 };

@@ -16,7 +16,7 @@ export const useCreateCompanyError = (res, setRes, setOkCompany) => {
   }
 
   // 404
-  if (res?.response?.data?.includes('Error tipo catch al crear la empresa')) {
+  if (typeof res?.response?.data === 'string' && res?.response?.data?.includes('Error tipo catch al crear la empresa')) {
     Swal.fire({
       icon: 'error',
       title: 'NOPE!',
@@ -28,7 +28,7 @@ export const useCreateCompanyError = (res, setRes, setOkCompany) => {
     setRes({});
   }
 
-  if (res?.response?.data?.includes('Error tipo catch encontrado al crear la empresa')) {
+  if (typeof res?.response?.data === 'string' && res?.response?.data?.includes('Error tipo catch encontrado al crear la empresa')) {
     Swal.fire({
       icon: 'error',
       title: 'NOPE!',

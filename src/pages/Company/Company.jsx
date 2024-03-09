@@ -50,7 +50,7 @@ export const Company = () => {
   // estados de navegación
 
   if (okCompany) {
-    return <Navigate to="/CompanyPage" />;
+    return <Navigate to="/Company" />;
   }
 
   return (

@@ -15,3 +15,4 @@ export * from './ProtectedRoute/ProtectedCheckChildren';
 export * from './UploadFile/Uploadfile';
 export * from './Comments/Comments';
 export * from './Buttons/ScrollToTopButton';
+export * from './Rating/RatingCompany';

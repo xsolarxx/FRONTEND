@@ -2,6 +2,7 @@ import './CompanyPage.css';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
 import { getByIdCompany } from '../../services/company.service';
 

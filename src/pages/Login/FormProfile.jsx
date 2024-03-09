@@ -1,5 +1,7 @@
 import './FormProfile.css';
 
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
@@ -10,8 +12,6 @@ import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useDeleteUser, useUpdateError } from '../../hooks';
 import { update } from '../../services/user.service';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export const FormProfile = () => {
   const { user, setUser, setDeleteUser, logout } = useAuth();

@@ -1,8 +1,10 @@
 import './CompanyCard.css';
+
 import { useNavigate } from 'react-router-dom';
-import { LikeCompany } from '../LikeButtonCompany/LikeButton';
+
 import { ScrollToTopButton } from '../Buttons/ScrollToTopButton';
 import { RatingComponent } from '../Rating/RatingCompany';
+import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 
 export const CompanyCard = ({ company }) => {
   const navigate = useNavigate();

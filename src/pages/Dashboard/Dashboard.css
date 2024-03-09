@@ -1,13 +1,14 @@
 .dashboard-conatiner{
   display: flex;
-  margin: 0 5rem 2rem 5rem;
+  padding: 2rem 5rem 2rem 5rem;
   gap: 5rem;
+  background-color: var(--background-color-gray);
 }
 
 .user-side-pannel {
   color: var(--color-navy-blue);
   display: flex;
-  background-color: var(--background-color-gray);
+  background-color: white;
   flex-direction: column;
   align-items: center;
   padding: 4rem;
@@ -18,12 +19,45 @@
   color: var(--color-navy-blue);
   display: flex;
   border: 2px solid var(--background-color-gray);
-  flex-direction: column;
+  background-color: white;
+  /* flex-direction: column; */
   /* align-items: center; */
   padding: 4rem;
   border-radius: var(--img-border-radius);
+  width: 100vh;
+}
+
+/* nav part  */
+
+.user-main-pannel-nav {
+  display: flex;
+}
+
+.user-main-pannel-nav a {
+  color: white;
+} 
+
+.user-main-pannel h3 {
+  background-color:var(--color-navy-blue);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 9px 15px 9px 15px;
+  border-radius: 50px;
+  font-size: large;
+  color: var(--color-blue);
+  font-weight: 500;
+  width: 150px;
+  text-align: center;
+}
+
+.user-main-pannel {
+  display: flex;
+  flex-direction: column;
+
 }
 
 .user-pannel-section {
+  background-color:  var(--background-color-gray);
+  border-radius: var(--img-border-radius);
 
 }

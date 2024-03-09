@@ -1,7 +1,9 @@
+import './Company.css';
+
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router';
-import './Company.css';
+
 import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useCreateCompanyError } from '../../hooks';
@@ -18,7 +20,7 @@ export const Company = () => {
 
   const formSubmit = async (formData) => {
     const inputFile = document.getElementById('file-upload').files;
-    console.log('formData',formData)
+    console.log('formData', formData);
     if (inputFile.length != 0) {
       const customFormdata = {
         ...formData,
@@ -56,7 +58,10 @@ export const Company = () => {
   return (
     <>
       <div className="company_container">
-        <form className="formCompany email_container1" onSubmit={handleSubmit(formSubmit)}>
+        <form
+          className="formCompany email_container1"
+          onSubmit={handleSubmit(formSubmit)}
+        >
           <h4>New Company</h4>
           <input
             className="input_title"
@@ -93,19 +98,25 @@ export const Company = () => {
                 name="companyServices"
                 id="companyServices"
                 value="Installation budget"
-                {...register("companyServices")}
+                {...register('companyServices')}
               />
-              <label htmlFor="Installation budget" className="label-checkbox Installation budget">
-              Installation budget
+              <label
+                htmlFor="Installation budget"
+                className="label-checkbox Installation budget"
+              >
+                Installation budget
               </label>
               <input
                 type="checkbox"
                 name="companyServices"
                 id="photovoltaicPanelBudget"
                 value="Photovoltaic panel budget"
-                {...register("companyServices")}
+                {...register('companyServices')}
               />
-              <label htmlFor="photovoltaicPanelBudget" className="label-checkbox photovoltaicPanelBudget">
+              <label
+                htmlFor="photovoltaicPanelBudget"
+                className="label-checkbox photovoltaicPanelBudget"
+              >
                 Photovoltaic panel Budget
               </label>
 
@@ -114,7 +125,7 @@ export const Company = () => {
                 name="companyServices"
                 id="energyStudy"
                 value="Energy study"
-                {...register("companyServices")}
+                {...register('companyServices')}
               />
               <label htmlFor="energyStudy" className="label-checkbox energyStudy">
                 Energy study
@@ -125,7 +136,7 @@ export const Company = () => {
                 name="companyServices"
                 id="maintenance"
                 value="Maintenance"
-                {...register("companyServices")}
+                {...register('companyServices')}
               />
               <label htmlFor="maintenance" className="label-checkbox maintenance">
                 Maintenance
@@ -136,9 +147,12 @@ export const Company = () => {
                 name="companyServices"
                 id="sizingAndModeling"
                 value="Sizing and modeling of the installation"
-                {...register("companyServices")}
+                {...register('companyServices')}
               />
-              <label htmlFor="sizingAndModeling" className="label-checkbox sizingAndModeling">
+              <label
+                htmlFor="sizingAndModeling"
+                className="label-checkbox sizingAndModeling"
+              >
                 Sizing and modeling of the installation
               </label>
 
@@ -147,7 +161,7 @@ export const Company = () => {
                 name="companyServices"
                 id="safetyStudy"
                 value="Safety study"
-                {...register("companyServices")}
+                {...register('companyServices')}
               />
               <label htmlFor="safetyStudy" className="label-checkbox safetyStudy">
                 Safety study
@@ -158,7 +172,7 @@ export const Company = () => {
                 name="companyServices"
                 id="others"
                 value="Others"
-                {...register("companyServices")}
+                {...register('companyServices')}
               />
               <label htmlFor="others" className="label-checkbox others">
                 Others

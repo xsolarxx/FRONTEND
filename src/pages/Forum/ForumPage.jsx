@@ -1,10 +1,12 @@
+import './ForumPage.css';
+
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import './ForumPage.css';
+
 import { ForumFigure } from '../../components';
-import { getAll } from '../../services/forum.service';
 import { useAuth } from '../../context/authContext';
 import { createComment } from '../../services';
+import { getAll } from '../../services/forum.service';
 
 export const ForumPage = () => {
   const navigate = useNavigate();
@@ -24,8 +26,8 @@ export const ForumPage = () => {
       <h1 className="forumHeader">Welcome to our Forum!</h1>
       <div className="forumIntro">
         <h4>
-          Feel free to talk about renewable energy and sustainability with a
-          like-minded community. You can create a post or search for a topic of interest.
+          Feel free to talk about renewable energy and sustainability with a like-minded
+          community. You can create a post or search for a topic of interest.
         </h4>
       </div>
       <div className="btn_container">

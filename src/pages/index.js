@@ -1,3 +1,4 @@
+export * from './Company/Company';
 export * from './Company/CompanyDetail';
 export * from './Company/CompanyPage';
 export * from './Dashboard/Dashboard';
@@ -14,4 +15,3 @@ export * from './Login/Login';
 export * from './Login/Profile';
 export * from './News/News';
 export * from './Register/Register';
-export * from './Company/Company';

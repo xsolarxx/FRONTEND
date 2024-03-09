@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import { Protected } from '../components/ProtectedRoute/Protected';
 import { ProtectedCheckChildren } from '../components/ProtectedRoute/ProtectedCheckChildren';
-import { Company, CompanyDetail, Forum, ForumDetail, ForumPage,  } from '../pages';
+import { Company, CompanyDetail, Forum, ForumDetail, ForumPage } from '../pages';
 import { CompanyPage } from '../pages/Company/CompanyPage';
 import { Dashboard } from '../pages/Dashboard/Dashboard';
 import { Home } from '../pages/Home/Home';

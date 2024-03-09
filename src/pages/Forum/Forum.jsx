@@ -1,7 +1,9 @@
+import './Forum.css';
+
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router';
-import './Forum.css';
+
 import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useForumError } from '../../hooks';
@@ -60,7 +62,8 @@ export const Forum = () => {
       <div className="forum_container">
         <form className="formForum" onSubmit={handleSubmit(formSubmit)}>
           <h4>Let´s get rolling!</h4>
-          <h5>What subject would you like to approach?<br></br>
+          <h5>
+            What subject would you like to approach?<br></br>
             You can{' '}
             <span
               style={{
@@ -73,7 +76,7 @@ export const Forum = () => {
             </span>{' '}
             below:
           </h5>
-          
+
           <input
             className="input_title"
             type="text"

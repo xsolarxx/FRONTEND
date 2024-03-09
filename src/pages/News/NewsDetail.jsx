@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useAuth } from '../../context/authContext';
-import { NewsDetailCard } from '../../components/News/NewsDetailCard';
-import { getById } from '../../services/news.service';
+
 import { Comments } from '../../components/Comments/Comments';
+import { NewsDetailCard } from '../../components/News/NewsDetailCard';
+import { useAuth } from '../../context/authContext';
 import { useCommentError } from '../../hooks';
 import { createComment, getByRecipient } from '../../services/comment.service';
+import { getById } from '../../services/news.service';
 
 export const NewsDetail = () => {
   const { id } = useParams();

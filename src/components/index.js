@@ -1,6 +1,8 @@
 export * from './AnimationScroll/AnimationScroll';
 export * from './Buttons/button.css';
+export * from './Buttons/ScrollToTopButton';
 export * from './Cards/CompanyCard';
+export * from './Comments/Comments';
 export * from './FigureUser/FigureUser';
 export * from './Footer/Footer';
 export * from './Forums/ForumFigure';
@@ -12,7 +14,5 @@ export * from './Listings/CompanyListings';
 export * from './News/NewsCard';
 export * from './ProtectedRoute/Protected';
 export * from './ProtectedRoute/ProtectedCheckChildren';
-export * from './UploadFile/Uploadfile';
-export * from './Comments/Comments';
-export * from './Buttons/ScrollToTopButton';
 export * from './Rating/RatingCompany';
+export * from './UploadFile/Uploadfile';

@@ -5,6 +5,7 @@
     padding: 2.5rem;
     color: var(--color-navy-blue);
     background: var(--background-color-gray);
+    
   }
   
   .formForum {
@@ -12,18 +13,25 @@
     flex-direction: column;
     justify-content: center;
     width: 500px;
-    align-items: center;
+    text-align: center;
     border-radius: var(--img-border-radius);
     background-color: white;
     padding: 2rem;
     padding-bottom: 3rem;
     gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
   .formForum h4 {
     font-weight: 700;
     padding: 0.5rem;
     padding-bottom: 1.5rem;
+  }
+  .formForum h5 {
+    font-size: 21.03px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   .input_title {
     border-radius: 30px;
@@ -74,7 +82,9 @@
   }
   .forum-container {
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
     width:500px;
-    gap: 3rem;
+    gap: 2rem;
   }
   

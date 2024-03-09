@@ -1,9 +1,7 @@
 import './Uploadfile.css';
+import { useEffect } from 'react';
 
-import React, { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-export const Uploadfile = ({ registerForm }) => {
-  const { register, handleSubmit } = useForm();
+export const Uploadfile = () => {
   const ekUpload = () => {
     const Init = () => {
       var fileSelect = document.getElementById('file-upload');
@@ -43,7 +41,7 @@ export const Uploadfile = ({ registerForm }) => {
       output('<strong>' + encodeURI(file.name) + '</strong>');
       let imageName = file.name;
 
-      let isGood = /\.(?=gif|jpg|png|jpeg)/gi.test(imageName);
+      let isGood = /\.(?=gif|jpg|png|jpeg|webp)/gi.test(imageName);
       if (isGood) {
         document.getElementById('start').classList.add('hidden');
         document.getElementById('response').classList.remove('hidden');
@@ -72,13 +70,7 @@ export const Uploadfile = ({ registerForm }) => {
 
   return (
     <div id="file-upload-form" className="uploader">
-      <input
-        id="file-upload"
-        type="file"
-        name="image"
-        accept="image/*"
-        {...registerForm}
-      />
+      <input id="file-upload" type="file" name="image" accept="image/*" />
 
       <label htmlFor="file-upload" id="file-drag">
         <img id="file-image" src="#" alt="Preview" className="hidden" />

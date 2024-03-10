@@ -33,16 +33,14 @@ export const ForumPage = () => {
             Feel free to talk about renewable energy and sustainability with a like-minded
             community. You can create a post or search for a topic of interest.
           </h4>
-        </div>
-        <div className="btn_container">
-          <div>
-            {/* <img className="icon" src={user.image} alt={user.user} />
-          <input className="input_content"></input> */}
-            <button className="button--blue" onClick={() => navigate('/forum')}>
-              Create post
-            </button>
+          <div className="Start-a-post">
+            <img className="icon" src={user.image} alt={user.user} />
+            <input placeholder="Start a post" onClick={() => navigate('/forum')}></input>
+            {/* <button className="button--blue" onClick={() => navigate('/forum')}> */}
+            {/* </button> */}
           </div>
         </div>
+
         <section className="Company-Page-grid">
           {forumList &&
             forumList.data.map((forum, index) => (

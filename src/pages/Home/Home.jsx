@@ -27,7 +27,7 @@ export const Home = () => {
       </section>
 
       <section className="section-consumer">
-        <img className="section-consumer__image" />
+        <div className="section-consumer__image"></div>
         <div className="section-consumer__text">
           <h3>Discover, connect and transform your relationship with renewable energy</h3>
           <h4>Your gateway to a greener future </h4>

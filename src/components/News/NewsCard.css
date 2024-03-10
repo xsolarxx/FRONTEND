@@ -13,12 +13,12 @@
     text-align: center;
   }}
 
-.section-news__image {
+/* .section-news__image {
   background-size: cover;
   background-position: center;
   height: 400px;
   border-radius: var(--img-border-radius);
-}
+} */
 
 .section-news__text {
   display: flex;

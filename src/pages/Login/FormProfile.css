@@ -61,6 +61,7 @@
   display: block;
   margin-bottom: 0.7rem;
   margin-top: 0.7rem;
+  color: var(--color-navy-blue);
 }
 
 .div-user-profile-setting-card button {

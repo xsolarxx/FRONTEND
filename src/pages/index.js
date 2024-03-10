@@ -14,3 +14,4 @@ export * from './Login/Login';
 export * from './Login/Profile';
 export * from './News/News';
 export * from './Register/Register';
+export * from './News/NewsCreator';

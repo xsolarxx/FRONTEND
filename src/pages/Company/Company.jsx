@@ -91,7 +91,7 @@ export const Company = () => {
             placeholder="About the Company"
           />
           <div className="companyServices_container form-group">
-            <div className="companyServices_Conainter">
+            <div className="companyServices_Container">
               <h5>Choose as many services as you want:</h5>
               <input
                 type="checkbox"
@@ -189,7 +189,7 @@ export const Company = () => {
               disabled={send}
               style={{ background: send ? '' : 'color-disabled-green' }}
             >
-              Create Company
+              Create Article
             </button>
           </div>
         </form>

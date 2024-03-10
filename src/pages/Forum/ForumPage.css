@@ -5,14 +5,14 @@
   align-items: center;
   padding: 1rem 6rem;
   font-weight: 600;
-   color: var(--color-navy-blue);
+  color: var(--color-navy-blue);
 }
 .forumIntro h4 {
-   color: var(--color-green);
-    padding: 1rem 7rem;
-    text-align: center;
-    gap: 1rem;
-    padding-bottom: 2rem;
+  color: var(--color-green);
+  padding: 1rem 7rem;
+  text-align: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
 }
 
 .forumContainer button {

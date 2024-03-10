@@ -58,10 +58,7 @@ export const News = () => {
   return (
     <>
       <div className="news_container">
-        <form
-          className="formNews email_container1"
-          onSubmit={handleSubmit(formSubmit)}
-        >
+        <form className="formNews email_container1" onSubmit={handleSubmit(formSubmit)}>
           <h4>News Builder</h4>
           <input
             className="input_title"
@@ -110,10 +107,7 @@ export const News = () => {
                 value="Solar panels"
                 {...register('tags')}
               />
-              <label
-                htmlFor="Solar panels"
-                className="label-checkbox Solar panels"
-              >
+              <label htmlFor="Solar panels" className="label-checkbox Solar panels">
                 Solar panels
               </label>
               <input
@@ -123,10 +117,7 @@ export const News = () => {
                 value="Photovoltaic panel budget"
                 {...register('tags')}
               />
-              <label
-                htmlFor="Wind power"
-                className="label-checkbox Wind power"
-              >
+              <label htmlFor="Wind power" className="label-checkbox Wind power">
                 Wind power
               </label>
 

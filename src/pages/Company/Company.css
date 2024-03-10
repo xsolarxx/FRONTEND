@@ -37,7 +37,7 @@
   padding-left: 10px;
   background: var(--background-color-gray);
   margin-bottom: 1rem;
-  }
+}
 .input_content {
   border-radius: 30px;
   border: solid 2px var(--primary-color-blue);
@@ -76,13 +76,13 @@
 .forum-container {
   display: flex;
   padding-top: 10px;
-  width:500px;
+  width: 500px;
   gap: 3rem;
 }
 .companyServices_container {
   margin-bottom: 20px;
   width: 100%;
-  display:flex;
+  display: flex;
 }
 
 .companyServices_container label {
@@ -90,11 +90,11 @@
   flex-direction: column;
   margin-bottom: 10px;
 }
-.companyServices_container p{
+.companyServices_container p {
   display: flex;
   margin-bottom: 16px;
 }
-.companyServices_container h5{
+.companyServices_container h5 {
   display: flex;
   margin-bottom: 16px;
 }

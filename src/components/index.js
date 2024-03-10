@@ -10,6 +10,7 @@ export * from './Forums/ForumFigureDetail';
 export * from './Header/Header';
 export * from './ImageHome/ImageHome';
 export * from './LikeButtonCompany/LikeButton';
+export * from './LikeButtonCompany/LikeButtonForum';
 export * from './News/NewsCard';
 export * from './ProtectedRoute/Protected';
 export * from './ProtectedRoute/ProtectedCheckChildren';

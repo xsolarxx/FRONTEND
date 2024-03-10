@@ -33,7 +33,7 @@ export const createComment = async (idRecipient, formData) => {
 export const deleteComment = async (idComment) => {
   const APIGeneral = extraConfig();
 
-  return APIGeneral.post(`/comment/comments/${idComment}`)
+  return APIGeneral.delete(`/comment/comments/${idComment}`)
     .then((res) => res)
     .catch((error) => error);
 };

@@ -11,6 +11,7 @@ import { LikeForum } from '../../components/LikeButtonCompany/LikeButtonForum';
 
 export const ForumPage = () => {
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
 
   const [forumList, setForumList] = useState();
 
@@ -32,11 +33,15 @@ export const ForumPage = () => {
         </h4>
       </div>
       <div className="btn_container">
-        <button className="button--blue" onClick={() => navigate('/forum')}>
-          Create post
-        </button>
+        <div>
+          {/* <img className="icon" src={user.image} alt={user.user} />
+          <input className="input_content"></input> */}
+          <button className="button--blue" onClick={() => navigate('/forum')}>
+            Create post
+          </button>
+        </div>
       </div>
-      <section>
+      <section className="Company-Page-grid">
         {forumList &&
           forumList.data.map((forum, index) => (
             <div key={index}>

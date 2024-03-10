@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 import { toggleLikedNews } from '../../services/user.service';
 
-export const LikeForum = ({ id }) => {
+export const LikeNews = ({ id }) => {
   const { user, setUser } = useAuth();
   console.log('entro', user);
   const [like, setLike] = useState(!!user.likedNews?.find((item) => item === id));
@@ -29,7 +29,7 @@ export const LikeForum = ({ id }) => {
       setUser(() => UserUpdate);
       localStorage.removeItem('user');
       localStorage.setItem('user', JSON.stringify(UserUpdate));
-      setLike(!!res.data.user.likedForum.find((item) => item === id));
+      setLike(!!res.data.user.likedNews.find((item) => item === id));
     }
   };
   return (

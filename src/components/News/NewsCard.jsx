@@ -1,6 +1,7 @@
 /* Noticia en la sección principal(columna). Aparece información breve y la 
 opción de "Read More" para abrir el contenido entero de dicha noticia */
 
+import { LikeNews } from '../LikeButtonCompany/LikeButtonNews';
 import './NewsCard.css';
 
 import { useNavigate } from 'react-router-dom';
@@ -18,6 +19,7 @@ export const NewsCard = ({ news }) => {
           <p className="newsShortContent"> {news.shortContent}</p>
           <p className="newsAuthor">{news.author}</p>
           <p className="newsTags">{news.tags}</p>
+          <LikeNews id={news._id} />
           <button
             className="button--blue"
             onClick={() => {

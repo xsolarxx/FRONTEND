@@ -1,0 +1,19 @@
+.dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dark-mode-toggle:hover {
+  text-decoration: underline;
+}
+
+.light-mode {
+  color: #000000;
+}
+
+.dark-mode {
+  color: #ffffff;
+  background-color: #222222;
+}

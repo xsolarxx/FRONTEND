@@ -2,6 +2,7 @@
   background-color: var(--text-white);
   display: flex;
   justify-content: space-around;
+  z-index: 100;
 }
 
 nav {
@@ -11,6 +12,7 @@ nav {
   gap: 2rem;
   height: 15vh;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
 }
 
 @media (max-width: 650px) {

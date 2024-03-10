@@ -1,7 +1,7 @@
 import './Dashboard.css';
 
 import { useEffect, useState } from 'react';
-
+import { getByIdCompany } from '../../services/company.service';
 import { useAuth } from '../../context/authContext';
 
 import { useParams } from 'react-router-dom';
@@ -13,7 +13,12 @@ export const Dashboard = () => {
   console.log('🚀 ~ Dashboard ~ user:', user);
 
   useEffect(() => {
-    setLikedCompanies(user.likedCompany || []);
+    const likedCompaniesData = user.likedCompany.map(async (companyId) => {
+      const companyData = await getByIdCompany(companyId);
+      return companyData;
+    });
+
+    setLikedCompanies(likedCompaniesData);
   }, [user]);
 
   return (

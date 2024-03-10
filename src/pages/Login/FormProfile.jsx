@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 import { Uploadfile } from '../../components';
-// import { NavProfile } from '../../components/NavProfile/NavProfile';
 import { useAuth } from '../../context/authContext';
 import { useDeleteUser, useUpdateError } from '../../hooks';
 import { update } from '../../services/user.service';

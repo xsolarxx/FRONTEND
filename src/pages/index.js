@@ -9,7 +9,6 @@ export * from './Home/Home';
 export * from './Login/ChangePassword';
 export * from './Login/CheckCode';
 export * from './Login/ForgotPassword';
-export * from './Login/FormPassword';
 export * from './Login/FormProfile';
 export * from './Login/Login';
 export * from './Login/Profile';

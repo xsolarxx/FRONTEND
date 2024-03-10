@@ -1,6 +1,5 @@
 .NewsPageGrid {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem;
 }
-

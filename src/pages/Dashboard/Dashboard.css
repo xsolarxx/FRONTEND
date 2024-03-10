@@ -1,4 +1,4 @@
-.dashboard-conatiner{
+.dashboard-conatiner {
   display: flex;
   padding: 2rem 5rem 2rem 5rem;
   gap: 5rem;
@@ -35,10 +35,10 @@
 
 .user-main-pannel-nav a {
   color: white;
-} 
+}
 
 .user-main-pannel h3 {
-  background-color:var(--color-navy-blue);
+  background-color: var(--color-navy-blue);
   margin-right: 10px;
   margin-bottom: 10px;
   padding: 9px 15px 9px 15px;
@@ -53,11 +53,9 @@
 .user-main-pannel {
   display: flex;
   flex-direction: column;
-
 }
 
 .user-pannel-section {
-  background-color:  var(--background-color-gray);
+  background-color: var(--background-color-gray);
   border-radius: var(--img-border-radius);
-
 }

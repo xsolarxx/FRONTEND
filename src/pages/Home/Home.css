@@ -31,7 +31,6 @@
   min-width: 150px;
 }
 
-
 @media (max-width: 450px) {
   .hero-section {
     padding: 0;
@@ -124,14 +123,15 @@
     padding: 2rem;
   }
   .grid-title-with-subtitle h1 {
-font-size: 45px;  }
+    font-size: 45px;
+  }
 }
 
 /* 3 services */
 
 .services-container {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   padding: 0 5rem 0 5rem;
   gap: 10px;
   min-height: 55vh;
@@ -144,16 +144,16 @@ font-size: 45px;  }
 .services-container div {
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   background-size: cover;
   background-position: center;
   border-radius: var(--img-border-radius);
-  margin: 10px; 
-  gap: 1rem
+  margin: 10px;
+  gap: 1rem;
 }
 
 .Blue-box-title {
-  flex: 1; 
+  flex: 1;
   background-color: #122e3d;
   display: flex;
   flex-direction: column;
@@ -174,27 +174,27 @@ font-size: 45px;  }
 }
 
 .service1 {
-  flex: 1.5; 
+  flex: 1.5;
   background-image: url('/wind3.jpg');
 }
 
 .service4 {
-  flex: 0.5; 
+  flex: 0.5;
   background-image: url('/nature.jpg');
 }
 
 .service5 {
-  flex: 1.5; 
+  flex: 1.5;
   background-image: url('/smile.png');
 }
 
 .service6 {
-  flex: 1.5; 
+  flex: 1.5;
   background-image: url('/earth.jpg');
 }
 
 .service7 {
-  flex: 0.5; 
+  flex: 0.5;
   background-image: url('/nature.jpg');
 }
 
@@ -215,7 +215,6 @@ font-size: 45px;  }
 }
 
 @media (max-width: 480px) {
-  
   .service1,
   .service4,
   .service5,
@@ -252,11 +251,12 @@ font-size: 45px;  }
   display: flex;
   flex-direction: row;
   color: white;
-  padding: 0 5rem 0rem 5rem ;
+  padding: 0 5rem 0rem 5rem;
   /* align-items: center; */
 }
 
-.div-banner, .solarbynature {
+.div-banner,
+.solarbynature {
   flex: 1;
   padding: 5rem 0 5rem 0;
 }
@@ -280,26 +280,24 @@ font-size: 45px;  }
     padding: 2rem;
   }
 
-  .div-banner, .solarbynature {
-    padding: 2rem ;
+  .div-banner,
+  .solarbynature {
+    padding: 2rem;
   }
   .section-banner h1 {
     font-size: 40px;
     padding: 0;
-
   }
   .section-banner h4 {
     font-size: 20px;
     margin-bottom: 25px;
   }
-
 }
 
 .section-banner button:hover {
   background-color: white;
   color: var(--color-navy-blue);
 }
-
 
 /* Section image (Con texto By valuing forestry...) */
 
@@ -310,7 +308,7 @@ font-size: 45px;  }
   background-position: center;
   border-radius: var(--img-border-radius);
   margin: 5rem;
- 
+
   padding: 6rem;
   height: 300px;
   color: white;
@@ -335,7 +333,6 @@ font-size: 45px;  }
   .section-image h2 {
     font-size: xx-large;
   }
- 
 }
 @media (max-width: 480px) {
   .carrusel {
@@ -362,7 +359,6 @@ font-size: 45px;  }
   animation-fill-mode: both;
 }
 
-
-.carrusel{
+.carrusel {
   margin: 5rem;
 }

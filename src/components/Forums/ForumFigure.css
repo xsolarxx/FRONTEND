@@ -3,7 +3,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     padding: 3rem 6rem;
-    background-color: aquamarine;
   }
 
   @media (max-width: 480px) {
@@ -62,4 +61,9 @@
     object-fit: cover;
     border-radius: 100%;
     border: 2px solid var(--primary-color-green);
+  }
+
+  .forumContainer button {
+    align-items: center;
+    width: 150px;
   }

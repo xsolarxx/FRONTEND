@@ -17,3 +17,4 @@ export * from './ProtectedRoute/ProtectedCheckChildren';
 export * from './Rating/RatingCompany';
 export * from './UploadFile/Uploadfile';
 export * from './DashboardComps/LikedList';
+export * from './LikeButtonCompany/LikeButtonNews';

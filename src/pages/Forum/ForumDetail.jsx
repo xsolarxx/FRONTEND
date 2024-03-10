@@ -63,15 +63,6 @@ export const ForumDetail = () => {
           <input
             className="input_user"
             type="text"
-            id="title"
-            value={titleValue}
-            name="title"
-            placeholder="Comment title"
-            onChange={(e) => setTitleValue(e.target.value)}
-          />
-          <input
-            className="input_user"
-            type="text"
             id="content"
             value={contentValue}
             name="content"

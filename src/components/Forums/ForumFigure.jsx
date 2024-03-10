@@ -31,13 +31,16 @@ export const ForumFigure = ({ forum }) => {
         </button>
 
         <div className="containerForumOwner">
-          <h4 className="nameOwnerForum">{forum.owner.userName}</h4>
-
           <img
             className="imgOwnerForum"
             src={forum.owner.image}
             alt={forum.owner.userName}
           />
+          <h5 className="nameOwnerForum">
+            {forum.owner.userName} {}
+          </h5>
+          <br />
+          {/* <p className="nameOwnerForum">{forum.owner.email}</p> */}
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import { useCommentError } from '../../hooks';
+
 import { Comments } from '../../components/Comments/Comments';
 import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
 import { getByIdCompany } from '../../services/company.service';
@@ -19,7 +20,6 @@ export const CompanyDetail = () => {
   const [comments, setComments] = useState([]);
   const [updateComments, setUpdateComments] = useState(false);
 
-  // Cargar el usuario desde el almacenamiento local al inicio
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
@@ -27,7 +27,6 @@ export const CompanyDetail = () => {
     }
   }, [setUser]);
 
-  // Guardar el usuario en el almacenamiento local cada vez que cambie
   useEffect(() => {
     localStorage.setItem('user', JSON.stringify(user));
   }, [user]);

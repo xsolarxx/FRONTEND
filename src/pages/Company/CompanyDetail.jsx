@@ -1,28 +1,41 @@
-import './CompanyPage.css';
-
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
-import { useCommentError } from '../../hooks';
 import { useAuth } from '../../context/authContext';
+import { useCommentError } from '../../hooks';
 import { Comments } from '../../components/Comments/Comments';
 import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
 import { getByIdCompany } from '../../services/company.service';
 import { createComment, getByRecipient } from '../../services/comment.service';
+import { toggleFavComments } from '../../services/user.service';
 
 export const CompanyDetail = () => {
   const { id } = useParams();
-  const { user } = useAuth();
-  const [fullCompany, setfullCompany] = useState(); // estado de la cia
+  const { user, setUser } = useAuth();
+  console.log('Entro likesComent', user);
+  const [fullCompany, setFullCompany] = useState();
   const [send, setSend] = useState(false);
   const [resComment, setResComment] = useState({});
   const [contentValue, setContentValue] = useState('');
   const [comments, setComments] = useState([]);
   const [updateComments, setUpdateComments] = useState(false);
 
+  // Cargar el usuario desde el almacenamiento local al inicio
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, [setUser]);
+
+  // Guardar el usuario en el almacenamiento local cada vez que cambie
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(user));
+  }, [user]);
+
   const fetchFullCompanies = async () => {
-    setfullCompany(await getByIdCompany(id));
+    setFullCompany(await getByIdCompany(id));
   };
+
   const handleComment = async () => {
     const customFormData = {
       owner: user,
@@ -38,19 +51,27 @@ export const CompanyDetail = () => {
     setComments(await getByRecipient('Company', id));
   };
 
+  const handleLikeComment = async (commentId) => {
+    try {
+      await toggleFavComments(commentId);
+      const updatedComments = await getByRecipient('Company', id);
+      setComments(updatedComments);
+      // Actualizar el estado del usuario con el nuevo comentario favorito
+      const updatedUser = { ...user, favComments: [...user.favComments, commentId] };
+      setUser(updatedUser);
+    } catch (error) {
+      console.error('Error liking comment:', error);
+    }
+  };
+
   useEffect(() => {
     fetchFullCompanies();
-  }, [updateComments]); //Para que aparezcan los comments directamente sin tener que recargar la pág.
-  //*antes de hacer el mapeo tenemos que ver si la longitd de la mapa es mayor que 0
-  //* si no se va a rompero elmapeo , si es mayor que 0 pintamos las compañias
-  //* Si es menor que 0 --> sin compañias que mostrar
+  }, [updateComments]);
 
-  //* Verifica sí la lista tienes los itens para mapear
   useEffect(() => {
-    console.log('updateComments', updateComments);
-    //Para el manejo de errores
     useCommentError(resComment, setResComment, setUpdateComments);
   }, [resComment, updateComments]);
+
   useEffect(() => {
     if (fullCompany != null) {
       getComments();
@@ -85,7 +106,12 @@ export const CompanyDetail = () => {
           {comments &&
             comments?.data?.map((singleComment) => (
               <div key={singleComment?._id}>
-                <Comments comment={singleComment} setCommentsByChild={setComments} />
+                <Comments
+                  comment={singleComment}
+                  setCommentsByChild={setComments}
+                  handleLikeComment={handleLikeComment}
+                />
+                <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
               </div>
             ))}
         </div>

@@ -7,6 +7,7 @@ import { ForumFigure } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { createComment } from '../../services';
 import { getAll } from '../../services/forum.service';
+import { LikeForum } from '../../components/LikeButtonCompany/LikeButtonForum';
 
 export const ForumPage = () => {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ export const ForumPage = () => {
           forumList.data.map((forum, index) => (
             <div key={index}>
               <ForumFigure forum={forum} />
+              <LikeForum />
             </div>
           ))}
       </section>

@@ -8,6 +8,10 @@ import { Uploadfile } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useForumError } from '../../hooks';
 import { createForum } from '../../services';
+import {
+  LikeCompany,
+  LikeForum,
+} from '../../components/LikeButtonCompany/LikeButtonForum';
 
 //Para crear la publicación(foro)
 

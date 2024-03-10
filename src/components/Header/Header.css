@@ -2,7 +2,6 @@
   background-color: var(--text-white);
   display: flex;
   justify-content: space-around;
-  z-index: 100;
 }
 
 nav {
@@ -12,7 +11,6 @@ nav {
   gap: 2rem;
   height: 15vh;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  z-index: 1;
 }
 
 @media (max-width: 650px) {
@@ -20,9 +18,9 @@ nav {
     display: flex;
     flex-direction: column;
   }
-}
-.nav-mobile {
-  display: none;
+  .nav-large {
+    display: none;
+  }
 }
 
 nav button {
@@ -45,7 +43,7 @@ nav p {
   font-size: large;
 }
 
-nav p:hover  {
+nav p:hover {
   color: var(--primary-color-green);
 }
 
@@ -59,12 +57,13 @@ nav p:hover  {
   object-fit: cover;
   border-radius: 100%;
   border: 2px solid var(--primary-color-green);
-  
 }
 
 @media (min-width: 700px) {
   i.fa {
     display: none;
   }
+  .nav-mobile {
+    display: none;
+  }
 }
-

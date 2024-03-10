@@ -19,7 +19,7 @@ export const NewsCard = ({ news }) => {
           <p className="newsShortContent"> {news.shortContent}</p>
           <p className="newsAuthor">{news.author}</p>
           <p className="newsTags">{news.tags}</p>
-          <LikeNews id={news._id} />
+
           <button
             className="button--blue"
             onClick={() => {

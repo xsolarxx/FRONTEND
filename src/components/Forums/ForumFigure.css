@@ -14,12 +14,6 @@
       text-align: center;
     }
   }
-  .section-forum__image {
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--img-border-radius);
-    flex-grow: 1;
-  }
   
   .section-forum__text {
     display: flex;
@@ -28,9 +22,14 @@
     gap: 10px;
   }
 
-  .forumTitle h3 {
+  .section-forum__text h3 {
     color: var(--color-navy-blue);
     font-weight: 700;
+  }
+
+  .section-forum__text p {
+    display: inline-block;
+    font-size: large;
   }
 
   .forumContent {
@@ -50,26 +49,16 @@
     background: white;
   }
   
+  .containerForumOwner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
   
-  .section-company__text p {
-    display: inline-block;
-    font-size: large;
-  }
- 
-  .company-tags p {
-    background: var(--background-color-gray);
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 9px 15px 9px 15px;
-    border-radius: 50px;
-    font-size: large;
-    color: var(--color-blue);
-    font-weight: 500;
-  }
   
   .imgOwnerForum {
-    height: 120px;
-    width: 120px;
+    height: 70px;
+    width: 70px;
     object-fit: cover;
     border-radius: 100%;
     border: 2px solid var(--primary-color-green);

@@ -1,0 +1,12 @@
+.topBar {
+    /* background-image: linear-gradient(215deg, #97f85b 0%, #25dc80 100%); */
+    border-radius: 100px;
+    height: 100px;
+    margin: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-navy-blue);
+}

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+import { LikeForum } from '../LikeButtonCompany/LikeButtonForum';
 
 export const ForumFigure = ({ forum }) => {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export const ForumFigure = ({ forum }) => {
         <h3 className="forumTitle">{forum.title}</h3>
         <p className="forumCreation">{formattedDate}</p>
         <div className="btn_container">
+          <LikeForum id={forum._id} />
           <button
             className="button--blue"
             onClick={() => {

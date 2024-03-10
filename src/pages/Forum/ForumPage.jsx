@@ -41,7 +41,6 @@ export const ForumPage = () => {
           forumList.data.map((forum, index) => (
             <div key={index}>
               <ForumFigure forum={forum} />
-              <LikeForum />
             </div>
           ))}
       </section>

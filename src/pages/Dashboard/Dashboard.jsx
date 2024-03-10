@@ -10,10 +10,10 @@ import { LikedList } from '../../components';
 export const Dashboard = () => {
   const [likedCompanies, setLikedCompanies] = useState(null);
   const { user, setUser } = useAuth();
-  console.log('🚀 ~ Dashboard ~ user:', user);
 
   useEffect(() => {
     const likedCompaniesData = user.likedCompany.map(async (companyId) => {
+      console.log('🚀 ~ likedCompaniesData ~ companyId:', companyId);
       const companyData = await getByIdCompany(companyId);
       return companyData;
     });
@@ -24,8 +24,8 @@ export const Dashboard = () => {
   return (
     <div>
       {likedCompanies &&
-        likedCompanies.data.map((companyId, index) => (
-          <LikedList companyId={companyId} key={index} />
+        likedCompanies.map((companyData, index) => (
+          <LikedList type={companyData} key={index} />
         ))}
     </div>
   );

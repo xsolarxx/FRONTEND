@@ -53,12 +53,19 @@ export const CompanyDetail = () => {
 
   const handleLikeComment = async (commentId) => {
     try {
+      const isLiked = user.favComments.includes(commentId);
+      const updatedUser = {
+        ...user,
+        favComments: isLiked
+          ? user.favComments.filter((id) => id !== commentId)
+          : [...user.favComments, commentId],
+      };
+      setUser(updatedUser);
+
       await toggleFavComments(commentId);
+
       const updatedComments = await getByRecipient('Company', id);
       setComments(updatedComments);
-      // Actualizar el estado del usuario con el nuevo comentario favorito
-      const updatedUser = { ...user, favComments: [...user.favComments, commentId] };
-      setUser(updatedUser);
     } catch (error) {
       console.error('Error liking comment:', error);
     }

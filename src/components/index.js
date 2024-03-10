@@ -19,3 +19,4 @@ export * from './UploadFile/Uploadfile';
 export * from './DashboardComps/LikedList';
 export * from './LikeButtonCompany/LikeButtonNews';
 export * from './DarkModeToggle/DarkModeToggle';
+export * from './CommentDeletion/CommentDeletion';

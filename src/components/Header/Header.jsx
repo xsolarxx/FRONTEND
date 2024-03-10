@@ -54,7 +54,13 @@ export const Header = () => {
             </NavLink>
           ) : null}
           {user !== null && (
-            <NavLink to="/" onClick={() => { setIsMobileNavOpen(false); logout(); }}>
+            <NavLink
+              to="/"
+              onClick={() => {
+                setIsMobileNavOpen(false);
+                logout();
+              }}
+            >
               <button className="button--blue button-medium">Logout</button>
             </NavLink>
           )}
@@ -68,4 +74,3 @@ export const Header = () => {
     </>
   );
 };
-

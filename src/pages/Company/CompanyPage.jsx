@@ -1,26 +1,51 @@
 import './CompanyPage.css';
-
 import { useEffect, useState } from 'react';
-
-import { CompanyCard } from '../../components';
 import { getAllCompany } from '../../services/company.service';
+import { CompanyCard } from '../../components';
+import { getByLikesCompany, getByDescLikesCompany } from '../../services/company.service';
 
 export const CompanyPage = () => {
-  const [companyList, setCompanyList] = useState();
+  const [companyList, setCompanyList] = useState(null);
+  const [orderBy, setOrderBy] = useState(null);
+
   const fetchCompanies = async () => {
-    setCompanyList(await getAllCompany());
+    let companies;
+    if (orderBy === 'asc') {
+      companies = await getByLikesCompany();
+    } else if (orderBy === 'desc') {
+      companies = await getByDescLikesCompany();
+    } else {
+      companies = await getAllCompany();
+    }
+    setCompanyList(companies);
   };
+
   useEffect(() => {
     fetchCompanies();
-  }, []);
-  //*antes de hacer el mapeo tenemos que ver si la longitd de la mapa es mayor que 0
-  //* si no se va a rompero elmapeo , si es mayor que 0 pintamos las compañias
-  //* Si es menor que 0 --> sin compañias que mostrar
-
-  //* Verifica sí la lista tienes los itens para mapear
+  }, [orderBy]);
 
   return (
     <section className="Company-Page-grid">
+      <div className="filter-controls">
+        <button
+          onClick={() => setOrderBy('asc')}
+          className={`button ${orderBy === 'asc' ? 'active' : ''} button--blue`}
+        >
+          Least Liked Companies
+        </button>
+        <button
+          onClick={() => setOrderBy('desc')}
+          className={`button ${orderBy === 'desc' ? 'active' : ''} button--blue`}
+        >
+          Most Liked Companies
+        </button>
+        <button
+          onClick={() => setOrderBy(null)}
+          className={`button ${!orderBy ? 'active' : ''} button--blue`}
+        >
+          Sin filtro
+        </button>
+      </div>
       {companyList &&
         companyList.data.map((company, index) => (
           <CompanyCard company={company} key={index} />

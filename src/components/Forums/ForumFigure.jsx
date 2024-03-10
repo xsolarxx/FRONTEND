@@ -1,3 +1,4 @@
+import './ForumFigure.css';
 import { useNavigate } from 'react-router';
 import { LikeForum } from '../LikeButtonCompany/LikeButtonForum';
 
@@ -10,27 +11,36 @@ export const ForumFigure = ({ forum }) => {
 
   return (
     <div className="containerForum">
-      <div className="containerForumOwner">
-        <img
-          className="imgOwnerForum"
-          src={forum.owner.image}
-          alt={forum.owner.userName}
-        />
-        <h6 className="nameOwnerForum">{forum.owner.userName}</h6>
-      </div>
-      <div className="containerForumInfo">
-        <h3 className="forumTitle">{forum.title}</h3>
+      <div
+        className="section-consumer__image"
+        style={{ backgroundImage: `url(${forum.image})` }}
+      ></div>
+
+      <div className="section-forum__text">
+        <h2 className="forumTitle">{forum.title}</h2>
         <p className="forumCreation">{formattedDate}</p>
-        <div className="btn_container">
-          <LikeForum id={forum._id} />
-          <button
-            className="button--blue"
-            onClick={() => {
-              navigate(`/forumDetail/${forum._id}`);
-            }}
-          >
-            Enter forum
-          </button>
+        <p className="forumContent">{forum.content}</p>
+        <LikeForum id={forum._id} />
+        <button
+          className="button--blue"
+          onClick={() => {
+            navigate(`/forumDetail/${forum._id}`);
+          }}
+        >
+          Enter forum
+        </button>
+
+        <div className="containerForumOwner">
+          <img
+            className="imgOwnerForum"
+            src={forum.owner.image}
+            alt={forum.owner.userName}
+          />
+          <h5 className="nameOwnerForum">
+            {forum.owner.userName} {}
+          </h5>
+          <br />
+          {/* <p className="nameOwnerForum">{forum.owner.email}</p> */}
         </div>
       </div>
     </div>

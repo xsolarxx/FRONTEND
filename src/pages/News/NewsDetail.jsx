@@ -7,16 +7,28 @@ import { useAuth } from '../../context/authContext';
 import { useCommentError } from '../../hooks';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { getById } from '../../services/news.service';
+import { toggleFavComments } from '../../services/user.service';
 
 export const NewsDetail = () => {
   const { id } = useParams();
-  const { user } = useAuth();
+  const { user, setUser } = useAuth();
+  console.log('entro likes', user);
   const [fullNews, setFullNews] = useState();
   const [send, setSend] = useState(false);
   const [resComment, setResComment] = useState({});
   const [contentValue, setContentValue] = useState('');
   const [comments, setComments] = useState([]);
   const [updateComments, setUpdateComments] = useState(false);
+
+  useEffect(() => {
+    const storedUSer = localStorage.getItem('user');
+    if (storedUSer) {
+      setUser(JSON.parse(storedUSer));
+    }
+  }, [setUser]);
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(user));
+  }, [user]);
 
   const fetchFullNews = async () => {
     setFullNews(await getById(id));
@@ -30,6 +42,25 @@ export const NewsDetail = () => {
     setResComment(await createComment(id, customFormData));
     setContentValue('');
     setSend(false);
+  };
+  const handleLikeComment = async (commentId) => {
+    try {
+      const isLiked = user.favComments.includes(commentId);
+      const updatedUser = {
+        ...user,
+        favComments: isLiked
+          ? user.favComments.filter((id) => id !== commentId)
+          : [...user.favComments, commentId],
+      };
+      setUser(updatedUser);
+
+      await toggleFavComments(commentId);
+
+      const updatedComments = await getByRecipient('News', id);
+      setComments(updatedComments);
+    } catch (error) {
+      console.error('Error liking comment:', error);
+    }
   };
 
   const getComments = async () => {
@@ -76,7 +107,12 @@ export const NewsDetail = () => {
           {comments &&
             comments?.data?.map((singleComment) => (
               <div key={singleComment?._id}>
-                <Comments comment={singleComment} setCommentsByChild={setComments} />
+                <Comments
+                  comment={singleComment}
+                  setCommentsByChild={setComments}
+                  handleLikeComment={handleLikeComment}
+                />
+                <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
               </div>
             ))}
         </div>

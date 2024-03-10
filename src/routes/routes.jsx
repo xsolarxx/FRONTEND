@@ -78,7 +78,7 @@ export const router = createBrowserRouter([
         path: '/profile',
         element: (
           <Protected>
-            <Profile />
+            <FormProfile />
           </Protected>
         ),
         children: [
@@ -90,14 +90,10 @@ export const router = createBrowserRouter([
               </Protected>
             ),
           },
-          {
-            path: '/profile/',
-            element: (
-              <Protected>
-                <FormProfile />
-              </Protected>
-            ),
-          },
+          // {
+          //   path: '/profile/',
+          //   element: <Protected></Protected>,
+          // },
         ],
       },
       {

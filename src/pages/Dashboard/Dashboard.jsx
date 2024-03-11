@@ -19,9 +19,11 @@ export const Dashboard = () => {
   useEffect(() => {
     fetchUserData();
   }, []);
+
   // userDashboard?.item.map((item) => {
   //   console.log('entreooo', item);
   // });
+
   return (
     <>
       <h2>My fav companies</h2>
@@ -83,7 +85,7 @@ export const Dashboard = () => {
         userDashboard.forumOwner?.map((item, index) => (
           <DashboardList name={item.title} key={index} image={item.image} />
         ))}
-      <h2>My fav comments</h2>
+      <h2>My Liked comments</h2>
       {userDashboard &&
         userDashboard.favComments?.map((item, index) => (
           <DashboardList name={item.content} key={index} />
@@ -93,6 +95,23 @@ export const Dashboard = () => {
         userDashboard.comments?.map((item, index) => (
           <DashboardList name={item.content} key={index} />
         ))}
+      {/* <h2>My Ratings to COMPANIES</h2>
+      {userDashboard &&
+        userDashboard.ownerRating?.map((item, index) => (
+          <>
+            <button
+              className="button--blue"
+              onClick={() => {
+                navigate(`/CompanyDetail/${item._id}`);
+              }}
+            ></button>
+            <DashboardList
+              name={item.userPunctuation}
+              companyName={item.companyPunctuated}
+              key={index}
+            />
+          </>
+        ))} */}
     </>
   );
 };

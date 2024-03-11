@@ -32,11 +32,6 @@ export const Header = () => {
             <div className="logo"></div>
           </NavLink>
 
-          {user !== null ? (
-            <NavLink to="/dashboard" onClick={handleNavLinkClick}>
-              <p>Dashboard</p>
-            </NavLink>
-          ) : null}
           <NavLink className="link-news" to="/news" onClick={handleNavLinkClick}>
             <p>News</p>
           </NavLink>
@@ -65,7 +60,7 @@ export const Header = () => {
             </NavLink>
           )}
           {user !== null ? (
-            <NavLink to="/profile" onClick={handleNavLinkClick}>
+            <NavLink to="/dashboard" onClick={handleNavLinkClick}>
               <img className="icon" src={user.image} alt={user.user} />
             </NavLink>
           ) : null}

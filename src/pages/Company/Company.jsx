@@ -90,6 +90,15 @@ export const Company = () => {
             {...register('description', { required: true })}
             placeholder="About the Company"
           />
+          <input
+            className="input_content"
+            type="text"
+            id="email"
+            name="email"
+            autoComplete="false"
+            {...register('email', { required: true })}
+            placeholder="Your email address"
+          />
           <div className="companyServices_container form-group">
             <div className="companyServices_Container">
               <h5>Choose as many services as you want:</h5>

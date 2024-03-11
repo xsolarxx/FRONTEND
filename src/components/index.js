@@ -16,7 +16,7 @@ export * from './ProtectedRoute/Protected';
 export * from './ProtectedRoute/ProtectedCheckChildren';
 export * from './Rating/RatingCompany';
 export * from './UploadFile/Uploadfile';
-export * from './DashboardComps/LikedList';
+export * from './DashboardComps/DashboardList';
 export * from './LikeButtonCompany/LikeButtonNews';
 export * from './DarkModeToggle/DarkModeToggle';
 export * from './CommentDeletion/CommentDeletion';

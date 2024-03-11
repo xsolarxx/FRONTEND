@@ -24,6 +24,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         likedNews,
         companyPunctuated,
         favComments,
+        ownerRating,
       } = sendData.data.user;
       const userCustom = {
         token: sendData.data.token,
@@ -31,6 +32,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         email,
         likedCompany,
         companyPunctuated,
+        ownerRating,
         favComments,
         likedNews,
         likedForum,

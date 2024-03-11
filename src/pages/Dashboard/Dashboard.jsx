@@ -7,6 +7,7 @@ import { LikedList } from '../../components';
 
 export const Dashboard = () => {
   const { user, setUser } = useAuth();
+  const { id } = useParams();
 
   const fetchUserData = async () => {
     const userData = await getByIdPopulate(user._id);

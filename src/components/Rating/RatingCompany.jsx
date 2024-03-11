@@ -52,7 +52,7 @@ export const RatingComponent = ({ companyId }) => {
           &#9733;
         </button>
       ))}
-      {user && <p>Your rating for this company: {rating}</p>}
+      {user && <p>{rating}</p>}
     </div>
   );
 };

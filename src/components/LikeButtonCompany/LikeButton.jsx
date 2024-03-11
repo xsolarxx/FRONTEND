@@ -10,7 +10,7 @@ import { toggleLikedCompany } from '../../services/user.service';
 
 export const LikeCompany = ({ id }) => {
   const { user, setUser } = useAuth();
-  console.log('entro', user);
+
   const [like, setLike] = useState(!!user.likedCompany?.find((item) => item === id));
 
   const handleLikeClick = async () => {

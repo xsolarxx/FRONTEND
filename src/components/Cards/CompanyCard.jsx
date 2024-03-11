@@ -18,7 +18,7 @@ export const CompanyCard = ({ company }) => {
           <p className="companyType">{company.companyType}</p>
           <p className="companyServices">{company.companyServices}</p>
           <LikeCompany id={company._id} />
-          <RatingComponent companyId={company.companyId} /> <br />
+          <RatingComponent companyId={company._id} /> <br />
           <button
             className="button--blue"
             onClick={() => {

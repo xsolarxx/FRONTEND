@@ -1,8 +1,10 @@
-export const DashboardList = ({ name, image }) => {
+import './DashboardList.css';
+export const DashboardList = ({ name, image, content }) => {
   return (
-    <div>
-      <h3> {name} </h3>
-      <img src={image} alt="" />
+    <div className="DashboardList">
+      <img className="icon" src={image} alt="" />
+      <h4> {name} </h4>
+      <p> {content}</p>
     </div>
   );
 };

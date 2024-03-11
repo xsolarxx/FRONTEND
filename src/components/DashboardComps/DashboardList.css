@@ -1,0 +1,15 @@
+.DashboardList {
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* .DashboardList img {
+    background-color: white;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+} */

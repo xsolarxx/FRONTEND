@@ -3,7 +3,6 @@ export * from './Buttons/button.css';
 export * from './Buttons/ScrollToTopButton';
 export * from './Cards/CompanyCard';
 export * from './Comments/Comments';
-export * from './FigureUser/FigureUser';
 export * from './Footer/Footer';
 export * from './Forums/ForumFigure';
 export * from './Forums/ForumFigureDetail';

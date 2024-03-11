@@ -34,14 +34,18 @@ export const Dashboard = () => {
       case 'companies':
         return (
           <>
-            <h2>My fav companies</h2>
+            {/* <h3>My fav companies</h3> <br></br> */}
             {userDashboard &&
               userDashboard.likedCompany?.map((item, index) => (
                 <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                  <DashboardList name={item.companyName} image={item.image} />
+                  <DashboardList
+                    name={item.companyName}
+                    image={item.image}
+                    email={item.email}
+                  />
                 </NavLink>
               ))}
-            <h2>My Ratings to COMPANIES</h2>
+            {/* <h2>My Ratings</h2> */}
             {userDashboard &&
               userDashboard.ownerRating?.map((item, index) => (
                 <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
@@ -79,6 +83,18 @@ export const Dashboard = () => {
                   key={index}
                 />
               ))}
+            <h2>My fav Forums</h2>
+            {userDashboard &&
+              userDashboard.likedForum?.map((item, index) => (
+                <NavLink to={`/ForumDetail/${item._id}`} key={index}>
+                  <DashboardList name={item.title} key={index} image={item.image} />
+                </NavLink>
+              ))}
+            <h2>Forum Following</h2>
+            {userDashboard &&
+              userDashboard.forumFollowing?.map((item, index) => (
+                <DashboardList name={item.title} key={index} image={item.image} />
+              ))}
           </>
         );
       case 'My Network':
@@ -94,18 +110,6 @@ export const Dashboard = () => {
               userDashboard.usersFollowers?.map((item, index) => (
                 <DashboardList name={item.userName} key={index} image={item.image} />
               ))}
-            <h2>My fav Forums</h2>
-            {userDashboard &&
-              userDashboard.likedForum?.map((item, index) => (
-                <NavLink to={`/ForumDetail/${item._id}`} key={index}>
-                  <DashboardList name={item.title} key={index} image={item.image} />
-                </NavLink>
-              ))}
-            <h2>Forum Following</h2>
-            {userDashboard &&
-              userDashboard.forumFollowing?.map((item, index) => (
-                <DashboardList name={item.title} key={index} image={item.image} />
-              ))}
           </>
         );
       default:
@@ -113,14 +117,46 @@ export const Dashboard = () => {
     }
   };
   return (
-    <div>
-      <h1>User Dashboard</h1>
-      <div>
-        <button onClick={() => handleTabChange('companies')}>Companies</button>
-        <button onClick={() => handleTabChange('news')}>News</button>
-        <button onClick={() => handleTabChange('forum')}>Forum</button>
+    <>
+      <div className="dashboard-conatiner">
+        <section className="user-side-pannel">
+          <h2>
+            Hi {}
+            <span
+              style={{
+                textDecoration: 'underline',
+                textDecorationColor: '#97f85b',
+                textDecorationThickness: '3px',
+              }}
+            >
+              {user.name}
+            </span>
+          </h2>
+          <img className="dashboard-profile" src={user.image} alt="foto User" />
+          <p>{user.email}</p>
+          <NavLink to="/profile">
+            <p>Update Profile</p>
+          </NavLink>
+          <hr className="dashboard_line" />
+          <h5>Liked companies: {user.likedCompany.length}</h5>
+          <h5>Liked Forum: {user.likedForum.length}</h5>
+          <h5>Liked News: {user.likedNews.length}</h5>
+          <h5>Following: {user.usersFollowed?.length}</h5>
+          <h5>Followers: {user.usersFollowers?.length}</h5>
+          <h5>Creader Forum: {user.forumOwner?.length}</h5>
+          {/* <h5> Companies Punctuated: {user.companyPunctuated.length}</h5> */}
+        </section>
+
+        <section className="user-main-pannel">
+          <div className="user-main-nav">
+            <h3 onClick={() => handleTabChange('companies')}>My Companies</h3>
+            <h3 onClick={() => handleTabChange('news')}>My News</h3>
+            <h3 onClick={() => handleTabChange('forum')}>My Forum</h3>
+            <h3 onClick={() => handleTabChange('My Network')}>My Network</h3>
+          </div>
+          <section className="user-pannel-section">{renderContent()}</section>
+        </section>
       </div>
-      {renderContent()}
-    </div>
+    </>
   );
 };

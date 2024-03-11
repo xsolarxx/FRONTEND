@@ -18,7 +18,6 @@
   background-size: cover;
   background-position: center;
   border-radius: var(--img-border-radius);
-  flex-grow: 1;
 }
 
 .section-company__text {

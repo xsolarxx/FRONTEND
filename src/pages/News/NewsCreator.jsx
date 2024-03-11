@@ -114,7 +114,7 @@ export const News = () => {
                 type="checkbox"
                 name="tags"
                 id="Wind power"
-                value="Photovoltaic panel budget"
+                value="Wind power"
                 {...register('tags')}
               />
               <label htmlFor="Wind power" className="label-checkbox Wind power">

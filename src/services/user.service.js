@@ -60,6 +60,16 @@ export const getById = async (id) => {
     .then((res) => res)
     .catch((error) => error);
 };
+
+//*Get by id populate
+export const getByIdPopulate = async (id) => {
+  console.log('🚀 ~ getByIdPopulate ~ id:', id);
+  const APIGeneral = extraConfig();
+  return APIGeneral.get(`/users/getByIdPopulate/${id}`)
+    .then((res) => res)
+    .catch((error) => error);
+};
+
 //* Forgot password sin authentificacion
 
 export const changePassword = async (formData) => {

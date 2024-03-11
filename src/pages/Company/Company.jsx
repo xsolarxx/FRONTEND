@@ -81,6 +81,24 @@ export const Company = () => {
             {...register('companyType', { required: true })}
             placeholder="Company Type"
           />
+          <input
+            className="input_title"
+            type="text"
+            id="email"
+            name="email"
+            autoComplete="false"
+            {...register('email', { required: true })}
+            placeholder="Your email address"
+          />
+           <input
+            className="input_title"
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            autoComplete="false"
+            {...register('phoneNumber', { required: true })}
+            placeholder="Phone number eg: 999999999"
+          />
           <textarea
             className="input_content"
             type="text"
@@ -89,15 +107,6 @@ export const Company = () => {
             autoComplete="false"
             {...register('description', { required: true })}
             placeholder="About the Company"
-          />
-          <input
-            className="input_content"
-            type="text"
-            id="email"
-            name="email"
-            autoComplete="false"
-            {...register('email', { required: true })}
-            placeholder="Your email address"
           />
           <div className="companyServices_container form-group">
             <div className="companyServices_Container">
@@ -188,6 +197,7 @@ export const Company = () => {
               </label>
             </div>
           </div>
+          <h5>Upload your company´s logo:</h5>
 
           <Uploadfile />
 
@@ -198,7 +208,7 @@ export const Company = () => {
               disabled={send}
               style={{ background: send ? '' : 'color-disabled-green' }}
             >
-              Create Article
+              Create Company
             </button>
           </div>
         </form>

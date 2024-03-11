@@ -16,6 +16,7 @@ export const useLoginError = (res, setRes, userLogin, setLoginOk) => {
       likedForum: res.data.user.likedForum,
       likedNews: res.data.user.likedNews,
       companyPunctuated: res.data.user.companyPunctuated,
+      ownerRating: res.data.user.ownerRating,
       favComments: res.data.user.favComments,
     };
     /** lo convierto en string porque la funcion de login lo va a meter en el localStorage directamente y luego lo mete en

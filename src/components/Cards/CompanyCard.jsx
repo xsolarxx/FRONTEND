@@ -17,6 +17,8 @@ export const CompanyCard = ({ company }) => {
         <div className="company-tags">
           <p className="companyType">{company.companyType}</p>
           <p className="companyServices">{company.companyServices}</p>
+          <a href={`tel:+34${company.phoneNumber}`} className='companyPhone'>{company.phoneNumber}</a>
+          <a href={`mailto:${company.email}`} className='companyPhone'>{company.email}</a>
           <LikeCompany id={company._id} />
           <RatingComponent companyId={company._id} /> <br />
           <button

@@ -7,7 +7,13 @@
     padding: 1rem;
     margin: 0.5rem;
     border-radius: var(--img-border-radius);
-    border: 1px solid;
+    background-color: var( --background-color-gray);
+    /* box-shadow: var( --img-box-shadow) */
+}
+
+.DashboardList h4, 
+.DashboardList p {
+    color: black;
 }
 
 .DashboardList_icon {
@@ -16,4 +22,5 @@
     object-fit: cover;
     border-radius: 100%;
     border: 2px solid var(--primary-color-green);
+    box-shadow: none;
   }

@@ -6,17 +6,16 @@ export const LikedList = ({ type }) => {
   const handleReadMore = () => {
     navigate(`/companyDetail/${type._id}`);
   };
-  console.log('🚀 ~ handleReadMore ~ type._id:', type._id);
-  console.log('🚀 ~ handleReadMore ~ type._id:', type._id);
+
   return (
     <div>
-      <img src={type.image} alt={type.name} /> image here
+      {/* <img src={type.user.image} /> image here */}
       <div>
-        <h3> company name: {type.companyName} </h3>
-        <p> type: {type.companyType}</p>
+        <h3> company name: {type.user.likedCompany} </h3>
+        {/* <p> type: {type.companyType}</p>
         <button className="button--blue" onClick={handleReadMore}>
           Read More
-        </button>
+        </button> */}
       </div>
     </div>
   );

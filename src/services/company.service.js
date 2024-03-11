@@ -42,6 +42,17 @@ export const getByIdCompany = async (id) => {
     .catch((error) => error);
 };
 
+//---------------------- * GET BY ID COMPANY * --------------------------------------------------
+
+export const getByIdPopulate = async (id) => {
+  console.log('🚀 ~ getByIdPopulate ~ id:', id);
+  const APIGeneral = extraConfig();
+
+  return APIGeneral.get(`/company/getByIdPopulate/${id}`)
+    .then((res) => res)
+    .catch((error) => error);
+};
+
 //---------------------- * GET BY SERVICES COMPANY * --------------------------------------------------
 
 export const getByServicesCompany = async (formData) => {

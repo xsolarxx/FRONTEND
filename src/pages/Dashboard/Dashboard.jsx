@@ -1,31 +1,32 @@
 import './Dashboard.css';
 
 import { useEffect, useState } from 'react';
-import { getByIdCompany } from '../../services/company.service';
+import { getByIdPopulate } from '../../services/user.service';
 import { useAuth } from '../../context/authContext';
 
 import { useParams } from 'react-router-dom';
 import { LikedList } from '../../components';
 
 export const Dashboard = () => {
-  const [likedCompanies, setLikedCompanies] = useState(null);
+  const [userDashboard, setuserDashboard] = useState(null);
   const { user, setUser } = useAuth();
+  const { id } = useParams();
+
+  const fecthlikedCompanies = async () => {
+    setUser(await getByIdPopulate(user._id));
+  };
 
   useEffect(() => {
-    const likedCompaniesData = user.likedCompany.map(async (companyId) => {
-      console.log('🚀 ~ likedCompaniesData ~ companyId:', companyId);
-      const companyData = await getByIdCompany(companyId);
-      return companyData;
-    });
-
-    setLikedCompanies(likedCompaniesData);
-  }, [user]);
+    fecthlikedCompanies();
+  }, []);
 
   return (
     <div>
-      {likedCompanies &&
-        likedCompanies.map((companyData, index) => (
-          <LikedList type={companyData} key={index} />
+      {user &&
+        user.map((type) => (
+          <div key={type._id}>
+            <LikedList />
+          </div>
         ))}
     </div>
   );

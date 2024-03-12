@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(true);
+  const darkModePreference = localStorage.getItem('darkMode');
 
   useEffect(() => {
-    const darkModePreference = localStorage.getItem('darkMode');
     setDarkMode(darkModePreference === 'true');
   }, []);
 

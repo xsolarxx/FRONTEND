@@ -16,6 +16,7 @@ import { Profile } from '../pages/Login/Profile';
 import { NewsPage } from '../pages/News/News';
 import { NewsDetail } from '../pages/News/NewsDetail';
 import { Register } from '../pages/Register/Register';
+import { ProfilePage } from '../pages/Profiles/ProfilePage';
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: '/createcompany',
         element: <Company />,
+      },
+      {
+        path: '/profiles',
+        element: <ProfilePage />,
       },
       {
         path: '/news',

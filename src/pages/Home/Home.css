@@ -69,6 +69,10 @@
   }
 }
 
+.dark-mode .big-title-section {
+  color: white;
+}
+
 /* Consumer image */
 
 .section-consumer {
@@ -86,6 +90,8 @@
     text-align: center;
   }
 }
+
+
 
 /* Consumer image(chica con ordenador) */
 .section-consumer__image {
@@ -109,6 +115,7 @@
 .section-consumer__text p {
   font-size: large;
 }
+
 
 /* Sección de grids */
 

@@ -68,3 +68,16 @@
   background-color: var(--text-white);
   color: var(--primary-color-green);
 }
+
+.dark-mode .button--blue {
+  color: #ffffff;
+  background-image: linear-gradient(215deg, #97f85b 0%, #25dc80 100%);
+  background-color: var(--primary-color-green);
+  color: var(--color-navy-blue);
+}
+
+.dark-mode .button--blue:hover {
+  color: var(--color-navy-blue);
+  background-color: var(--color-white);
+  background-image: none;
+}

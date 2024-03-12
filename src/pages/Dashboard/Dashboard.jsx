@@ -112,13 +112,13 @@ export const Dashboard = () => {
         <h4>My created Forums</h4>
         <section className="user-pannel-section">
           {userDashboard && userDashboard.forumOwner?.length > 0 ? (
-            <p>No forums created by you.</p>
-          ) : (
             userDashboard.forumOwner.map((item, index) => (
               <NavLink to={`/ForumDetail/${item._id}`} key={index}>
                 <DashboardList name={item.title} key={index} image={item.image} />
               </NavLink>
             ))
+             ) : (
+              <p>You havent created any forum yet</p>
           )}
         </section>
         <div>

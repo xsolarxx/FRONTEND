@@ -103,10 +103,9 @@ export const ForumDetail = () => {
             onChange={(e) => setContentValue(e.target.value)}
           />
           <button
-            className="btn"
+            className="button--blue"
             type="submit"
             disabled={send}
-            style={{ background: send ? '#5500c4' : '#631ebe' }}
             onClick={() => handleComment()}
           >
             Add comment

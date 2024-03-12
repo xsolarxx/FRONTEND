@@ -75,7 +75,7 @@ export const Dashboard = () => {
           {userDashboard &&
             userDashboard.companyPunctuated?.map((item, index) => (
               <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                <DashboardList name={item.companyName} key={index} />
+                <DashboardList name={item.companyName} image={item.image} key={index} />
               </NavLink>
             ))}
         </section>

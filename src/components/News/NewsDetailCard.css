@@ -14,12 +14,15 @@
   text-align: center;
   color: var(--color-navy-blue);
 }
-.newsImage {
+.newsImageDetailed {
   display: flex;
+  justify-content: center;
   padding: 4rem;
   height: 800px;
-  margin-bottom: -5rem;
+  margin-bottom: -2rem;
 }
+
+
 .newsFullContentDetailed {
   display: flex;
   margin-top: 2rem;
@@ -28,9 +31,10 @@
 }
 .authorAndTags {
   margin-top: 4rem;
-  font-size: 130%;
+  font-size: 140%;
   color: var(--color-navy-blue);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: var(--color-green);
 }

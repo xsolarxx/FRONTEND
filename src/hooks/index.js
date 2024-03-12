@@ -11,4 +11,3 @@ export * from './useCommentError';
 export * from './useCreateCompanyError';
 export * from './useForumError';
 export * from './useNewsCreatorError';
-export * from './useCommentDeletion';

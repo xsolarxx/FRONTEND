@@ -35,3 +35,7 @@
 .dark-mode nav p:hover {
   color: var(--primary-color-green);
 }
+
+.dark-mode .darkModeToggle {
+color: aqua;
+}

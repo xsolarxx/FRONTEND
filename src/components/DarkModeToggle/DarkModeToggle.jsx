@@ -5,11 +5,10 @@ import { faSun as solidSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const DarkModeToggle = () => {
-  const [darkMode, setDarkMode] = useState(true);
-  const darkModePreference = localStorage.getItem('darkMode');
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    setDarkMode(darkModePreference === 'true');
+    setDarkMode;
   }, []);
 
   const toggleDarkMode = () => {
@@ -19,7 +18,6 @@ export const DarkModeToggle = () => {
     } else {
       document.body.classList.remove('dark-mode');
     }
-    localStorage.setItem('darkMode', darkMode.toString());
   };
 
   return (

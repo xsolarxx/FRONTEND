@@ -2,19 +2,35 @@ import { deleteComment } from '../../services/comment.service';
 import { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 
-export const CommentDeletion = ({ commentId, onDeleteSuccess }) => {
+export const CommentDeletion = ({ idComment, onDeleteSuccess }) => {
   const { user, setUser } = useAuth();
-  const [isCommentDeleted, setIsCommentDeleted] = useState(false);
+  console.log('entro aqui', user);
+  const [isCommentDeleted, setIsCommentDeleted] = useState(
+    !!user.comments?.find((item) => item === idComment),
+  );
 
   const handleDeleteComment = async () => {
+    console.log('soy un comentario', isCommentDeleted);
     try {
       if (user) {
-        await deleteComment(commentId);
-        const updatedComments = user.comments.filter((comment) => comment !== commentId);
-        const updatedUser = { ...user, comments: updatedComments };
-        setUser(updatedUser);
-        localStorage.setItem('user', JSON.stringify(updatedUser));
-        setIsCommentDeleted(true);
+        const { token } = user;
+        const res = await deleteComment(idComment);
+        console.log('soy una respuesta', res);
+        const updatedComments = {
+          name: res.data.user.userName,
+          email: res.data.user.email,
+          image: res.data.user.image,
+          check: res.data.user.check,
+          _id: res.data.user._id,
+          likedCompany: res.data.user.likedCompany,
+          comments: res.data.user.comments,
+          likedForum: res.data.user.likedForum,
+          likedNews: res.data.user.likedNews,
+          token,
+        };
+        setUser(updatedComments);
+        localStorage.setItem('user', JSON.stringify(updatedComments));
+        setIsCommentDeleted(!!res.data.user.comments.find((item) => item === idComment));
         onDeleteSuccess(); // Llamar a la función de éxito de eliminación
       }
     } catch (error) {

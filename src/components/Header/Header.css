@@ -40,12 +40,12 @@ nav {
   .auxfa logo-mobile1 {
     align-self: center;
   }
-  .nav-mobile {
-    padding-bottom: 12rem;
-    box-shadow: none;
+  .user-logged-in .nav-mobile {
+    padding: 19rem; /* Padding aumentado cuando el usuario está logueado */
   }
-  .nav-mobile p:hover {
-    color: var(--primary-color-green);
+
+  .user-logged-out .nav-mobile {
+    padding: 10rem; /* Padding normal cuando el usuario no está logueado */
   }
 }
 

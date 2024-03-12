@@ -1,48 +1,46 @@
+// Header.js
+
 import './Header.css';
-
-import { useState, useEffect } from 'react'; // Importamos useEffect
-import { NavLink, useLocation } from 'react-router-dom'; // Importamos useLocation
-
+import { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import { DarkModeToggle } from '../DarkModeToggle/DarkModeToggle';
 
 export const Header = () => {
   const { user, logout } = useAuth();
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const location = useLocation(); // Obtenemos la ubicación actual
+  const location = useLocation();
 
   useEffect(() => {
-    // Cerrar el menú móvil cuando cambie la ubicación (navegación entre páginas)
     setIsMobileNavOpen(false);
-  }, [location.pathname]); // Volvemos a ejecutar el efecto cuando cambie la ubicación
+  }, [location.pathname]);
 
   const handleClickMenu = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
   const handleNavLinkClick = () => {
-    setIsMobileNavOpen(false); // Cerrar el menú móvil al hacer clic en un enlace de navegación
+    setIsMobileNavOpen(false);
   };
 
   return (
     <>
       <header>
         <div className="auxfa">
-        <i className="fa fa-bars" onClick={handleClickMenu}>
-        </i>
-        <div className="logo-mobile1"></div>
+          <i className="fa fa-bars" onClick={handleClickMenu}></i>
+          <div className="logo-mobile1"></div>
         </div>
-        <nav className={`nav ${isMobileNavOpen ? 'nav-mobile' : 'nav-large'}`}>
-          {!isMobileNavOpen && ( // Renderiza el logo solo en la versión nav-large
+        <nav className={`nav ${isMobileNavOpen ? 'nav-mobile' : 'nav-large'} ${user ? 'user-logged-in' : 'user-logged-out'}`}>
+          {!isMobileNavOpen && (
             <NavLink className="link-home" to="/" onClick={handleNavLinkClick}>
               <div className="logo"></div>
             </NavLink>
           )}
-          {isMobileNavOpen ? ( // Si es versión nav-mobile, muestra "Home" en lugar del logo
+          {isMobileNavOpen ? (
             <NavLink className="link-home-mobile" to="/" onClick={handleNavLinkClick}>
               <p>Home</p>
             </NavLink>
-          ) : ( // En caso contrario, muestra el enlace "Home"
+          ) : (
             <NavLink className="link-home" to="/" onClick={handleNavLinkClick}>
               <p>Home</p>
             </NavLink>

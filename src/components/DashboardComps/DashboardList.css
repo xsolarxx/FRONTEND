@@ -12,7 +12,7 @@
     /* box-shadow: var( --img-box-shadow) */
 }
 
-.DashboardList h4, 
+.DashboardList h5, 
 .DashboardList p {
     color: black;
 }

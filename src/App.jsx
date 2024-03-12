@@ -12,7 +12,6 @@ const App = () => {
       <main>
         <Outlet />
         <ScrollToTopButton />
-        <DarkModeToggle />
       </main>
       <Footer />
     </>

@@ -16,14 +16,18 @@ export const LikeNews = ({ id }) => {
       const { token } = user;
       const res = await toggleLikedNews(id);
       const UserUpdate = {
-        name: res.data.user.userName,
-        email: res.data.user.email,
-        image: res.data.user.image,
-        check: res.data.user.check,
-        _id: res.data.user._id,
-        likedCompany: res.data.user.likedCompany,
-        likedForum: res.data.user.likedForum,
-        likedNews: res.data.user.likedNews,
+        name: res?.data?.user?.userName,
+        email: res?.data?.user?.email,
+        image: res?.data?.user?.image,
+        check: res?.data?.user?.check,
+        _id: res?.data?.user?._id,
+        likedCompany: res?.data?.user?.likedCompany,
+        comments: res?.data?.user?.comments,
+        favComments: res?.data?.user?.favComments,
+        likedForum: res?.data?.user?.likedForum,
+        likedNews: res?.data?.user?.likedNews,
+        forumOwner: res?.data?.user?.forumOwner,
+        forumFollowing: res?.data?.user?.forumFollowing,
         token,
       };
       setUser(() => UserUpdate);

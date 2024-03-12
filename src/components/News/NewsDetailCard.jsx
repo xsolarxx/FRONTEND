@@ -15,8 +15,8 @@ export const NewsDetailCard = ({ newsData }) => {
         </section>
         <p className="newsFullContentDetailed"> {newsData.fullContent}</p>
         <div className="authorAndTags">
-          <label className="newsAuthorDetailed">{newsData.author}</label>
-          <label className="newsTagsDetailed">{newsData.tags}</label>
+          <label className="newsAuthorDetailed">By: {newsData.author}</label>
+          <label className="newsTagsDetailed">Tag: {newsData.tags}</label>
         </div>
       </div>
     </div>

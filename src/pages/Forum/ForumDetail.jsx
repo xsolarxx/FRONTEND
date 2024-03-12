@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
-import { Comments, ForumFigureDetail } from '../../components';
+import { CommentDeletion, Comments, ForumFigureDetail } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useCommentError } from '../../hooks';
 import { createComment, getByRecipient } from '../../services/comment.service';
@@ -122,6 +122,10 @@ export const ForumDetail = () => {
                   handleLikeComment={handleLikeComment}
                 />
                 <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
+                <CommentDeletion
+                  idComment={singleComment._id}
+                  setUpdateComments={setUpdateComments}
+                />
               </div>
             ))}
         </div>

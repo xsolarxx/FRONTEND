@@ -117,7 +117,10 @@ export const CompanyDetail = () => {
                 </>
               )}
               {singleComment.createdAt && <p>Created at: {singleComment.createdAt}</p>}
-              <CommentDeletion />
+              <CommentDeletion
+                idComment={singleComment._id}
+                setUpdateComments={setUpdateComments}
+              />
             </div>
           ))}
       </section>

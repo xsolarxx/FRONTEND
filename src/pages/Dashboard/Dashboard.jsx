@@ -16,9 +16,9 @@ export const Dashboard = () => {
     setActiveTab(tab);
   };
 
-  // console.log('entro', user);
+  console.log('entro', user);
   const fetchUserData = async () => {
-    const res = await getByIdPopulate(user._id);
+    const res = await getByIdPopulate(user?._id);
     setUserDashboard(res.data);
   };
   useEffect(() => {
@@ -138,12 +138,12 @@ export const Dashboard = () => {
             <p>Update Profile</p>
           </NavLink>
           <hr className="dashboard_line" />
-          <h5>Liked companies: {user.likedCompany.length}</h5>
-          <h5>Liked Forum: {user.likedForum.length}</h5>
-          <h5>Liked News: {user.likedNews.length}</h5>
-          <h5>Following: {user.usersFollowed?.length}</h5>
-          <h5>Followers: {user.usersFollowers?.length}</h5>
-          <h5>Creader Forum: {user.forumOwner?.length}</h5>
+          <h5>Liked companies: {user?.likedCompany?.length}</h5>
+          <h5>Liked Forum: {user?.likedForum?.length}</h5>
+          <h5>Liked News: {user?.likedNews?.length}</h5>
+          <h5>Following: {user?.usersFollowed?.length}</h5>
+          <h5>Followers: {user?.usersFollowers?.length}</h5>
+          <h5>Creader Forum: {user?.forumOwner?.length}</h5>
           {/* <h5> Companies Punctuated: {user.companyPunctuated.length}</h5> */}
         </section>
 

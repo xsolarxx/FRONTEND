@@ -10,7 +10,7 @@ export const NewsDetailCard = ({ newsData }) => {
         <section className="newsShortContentDetailed">
           <p> {newsData.shortContent}</p>
         </section>
-        <section className="newsImage">
+        <section className="newsImageDetailed">
           <img className="imgNewsDetailed" src={newsData.image} alt={newsData.name} />
         </section>
         <p className="newsFullContentDetailed"> {newsData.fullContent}</p>

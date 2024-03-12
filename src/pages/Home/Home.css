@@ -344,7 +344,7 @@
 @media (max-width: 480px) {
   .carrusel {
     width: 100%;
-    margin: 10px;
+    margin: 15px;
   }
 }
 @keyframes show {
@@ -366,6 +366,8 @@
   animation-fill-mode: both;
 }
 
-.carrusel {
-  margin: 5rem;
+@media (min-width: 1200px) {
+  .carrusel {
+    margin: 5rem;
+  }
 }

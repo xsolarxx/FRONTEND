@@ -2,29 +2,28 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
-  padding: 6rem 6rem;
+  padding: 8rem 6rem;
 }
 .sectionCompanyImg {
-  display: flex;
-  justify-content: center;
   border-radius: var(--img-border-radius);
   width: 450px;
   height: 400px;
 }
 .sectionCompanyText {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
 }
 .sectionCompanyText h2 {
   color: var(--color-navy-blue);
+  text-align: center;
   font-weight: 600;
 }
 .sectionCompanyText h4 {
-    display: inline-block;
-    font-size: 160%;
-    color: var(--color-navy-blue);
-    padding: 3rem 0 0 0;
+  text-align: center;
+  font-size: 160%;
+  color: var(--color-navy-blue);
+  padding-top: 3rem;
 }
 .companyTagsDetailed {
   margin-top: 50px; 
@@ -34,7 +33,8 @@
 .companyTagsDetailed label {
   background: var(--background-color-gray);
   display: inline-block;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
   padding: 9px 15px 9px 15px;
   border-radius: 50px;
   font-size: 130%;
@@ -43,25 +43,24 @@
 }
 .companyContactDetails {
     margin-top: 15px; 
-    text-align: right;
-    padding: 9px 15px 9px 15px;
+    text-align: center;
+    padding: 6px 15px 20px 15px;
     border-radius: 50px;
     font-size: 130%;
 }
 .companyContactDetails label {
-  
-  display: inline-block;
-    text-align: right;
-    padding: 9px 15px 9px 15px;
+    display: inline-block;
+    text-align: center;
+    padding: 6px 15px 5px 15px;
     border-radius: 50px;
-    font-size: 110%;
+    font-size: 100%;
     color: var(--color-navy-blue);
     font-weight: 500;
 }
 @media (max-width: 480px) {
   .containerCompany {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 2rem;
     gap: 2rem;
     text-align: center;
   }

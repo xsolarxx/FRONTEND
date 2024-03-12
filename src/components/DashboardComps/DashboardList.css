@@ -1,0 +1,19 @@
+.DashboardList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: var(--img-border-radius);
+    border: 1px solid;
+}
+
+.DashboardList_icon {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 2px solid var(--primary-color-green);
+  }

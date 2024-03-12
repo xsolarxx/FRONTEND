@@ -2,6 +2,7 @@
   background-color: var(--text-white);
   display: flex;
   justify-content: space-around;
+  color: aqua;
 }
 
 nav {
@@ -21,6 +22,24 @@ nav {
   .nav-large {
     display: none;
   }
+  i.fa {
+    display: flex;
+    margin-right: 1rem;
+    height: 50%;
+  }
+  .link-home-mobile {
+    margin-top: 8rem;
+  }
+  .auxfa {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.5rem;
+    flex-direction: row-reverse;
+  }
+  .auxfa logo-mobile1 {
+    align-self: center;
+  }
 }
 
 nav button {
@@ -34,6 +53,14 @@ nav button {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url('/Logo.png');
+}
+.logo-mobile1 {
+  width: 230px;
+  height: 50px;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
   background-image: url('/Logo.png');
 }
 
@@ -66,5 +93,7 @@ nav p:hover {
   .nav-mobile {
     display: none;
   }
+  .auxfa {
+    display: none;
+  }
 }
-

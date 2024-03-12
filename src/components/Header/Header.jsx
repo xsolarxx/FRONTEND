@@ -27,12 +27,26 @@ export const Header = () => {
   return (
     <>
       <header>
-        <i className="fa fa-bars" onClick={handleClickMenu}></i>
+        <div className="auxfa">
+        <i className="fa fa-bars" onClick={handleClickMenu}>
+        </i>
+        <div className="logo-mobile1"></div>
+        </div>
         <nav className={`nav ${isMobileNavOpen ? 'nav-mobile' : 'nav-large'}`}>
-          <NavLink className="link-home" to="/" onClick={handleNavLinkClick}>
-            <div className="logo"></div>
-          </NavLink>
-
+          {!isMobileNavOpen && ( // Renderiza el logo solo en la versión nav-large
+            <NavLink className="link-home" to="/" onClick={handleNavLinkClick}>
+              <div className="logo"></div>
+            </NavLink>
+          )}
+          {isMobileNavOpen ? ( // Si es versión nav-mobile, muestra "Home" en lugar del logo
+            <NavLink className="link-home-mobile" to="/" onClick={handleNavLinkClick}>
+              <p>Home</p>
+            </NavLink>
+          ) : ( // En caso contrario, muestra el enlace "Home"
+            <NavLink className="link-home" to="/" onClick={handleNavLinkClick}>
+              <p>Home</p>
+            </NavLink>
+          )}
           <NavLink className="link-news" to="/news" onClick={handleNavLinkClick}>
             <p>News</p>
           </NavLink>

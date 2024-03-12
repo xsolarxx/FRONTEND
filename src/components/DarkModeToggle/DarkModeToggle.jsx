@@ -8,8 +8,7 @@ export const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const darkModePreference = localStorage.getItem('darkMode');
-    setDarkMode(darkModePreference === 'true');
+    setDarkMode;
   }, []);
 
   const toggleDarkMode = () => {
@@ -19,7 +18,6 @@ export const DarkModeToggle = () => {
     } else {
       document.body.classList.remove('dark-mode');
     }
-    localStorage.setItem('darkMode', darkMode.toString());
   };
 
   return (

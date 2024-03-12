@@ -23,6 +23,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         likedForum,
         likedNews,
         companyPunctuated,
+        comments,
         favComments,
         ownerRating,
       } = sendData.data.user;
@@ -32,6 +33,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         email,
         likedCompany,
         companyPunctuated,
+        comments,
         ownerRating,
         favComments,
         likedNews,

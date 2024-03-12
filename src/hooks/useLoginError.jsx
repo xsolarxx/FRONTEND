@@ -16,6 +16,7 @@ export const useLoginError = (res, setRes, userLogin, setLoginOk) => {
       likedForum: res.data.user.likedForum,
       likedNews: res.data.user.likedNews,
       companyPunctuated: res.data.user.companyPunctuated,
+      comments: res.data.user.comments,
       ownerRating: res.data.user.ownerRating,
       favComments: res.data.user.favComments,
     };

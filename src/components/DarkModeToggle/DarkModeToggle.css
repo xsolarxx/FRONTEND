@@ -17,3 +17,21 @@
   color: #ffffff;
   background-color: #222222;
 }
+
+.dark-mode p,
+.dark-mode h6,
+.dark-mode h5,
+.dark-mode h4,
+.dark-mode h3,
+.dark-mode h2,
+.dark-mode h1 {
+  color: white;
+}
+
+.dark-mode .logo {
+  background-image: url('/logo2.png');
+}
+
+.dark-mode nav p:hover {
+  color: var(--primary-color-green);
+}

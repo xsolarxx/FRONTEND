@@ -8,6 +8,7 @@ import { useCommentError } from '../../hooks';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { getById } from '../../services/news.service';
 import { toggleFavComments } from '../../services/user.service';
+import { CommentDeletion } from '../../components/CommentDeletion/CommentDeletion';
 
 export const NewsDetail = () => {
   const { id } = useParams();
@@ -113,6 +114,10 @@ export const NewsDetail = () => {
                   handleLikeComment={handleLikeComment}
                 />
                 <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
+                <CommentDeletion
+                  idComment={singleComment._id}
+                  setUpdateComments={setUpdateComments}
+                />
               </div>
             ))}
         </div>

@@ -1,3 +1,4 @@
+import { useAuth } from '../context/authContext';
 import { deleteComment } from '../services/comment.service';
 import { useState } from 'react';
 
@@ -6,6 +7,8 @@ import { useState } from 'react';
 // deleteComment llamos el servicio
 //
 export const useCommentDeletion = () => {
+  const { user } = useAuth;
+  console.log('sou user', user);
   const [comments, setComments] = useState([]);
   console.log('entrooo', comments);
 

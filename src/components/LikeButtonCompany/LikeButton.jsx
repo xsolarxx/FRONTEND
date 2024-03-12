@@ -25,6 +25,7 @@ export const LikeCompany = ({ id }) => {
         check: res.data.user.check,
         _id: res.data.user._id,
         likedCompany: res.data.user.likedCompany,
+        comments: res.data.user.comments,
         likedForum: res.data.user.likedForum,
         likedNews: res.data.user.likedNews,
         token,

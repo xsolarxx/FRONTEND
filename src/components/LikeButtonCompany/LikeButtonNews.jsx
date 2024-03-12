@@ -38,7 +38,7 @@ export const LikeNews = ({ id }) => {
         <FontAwesomeIcon
           onClick={handleLikeClick}
           icon={like ? solidThumbsUp : regularThumbsUp}
-          style={{ color: '#1b52b1' }}
+          style={{ color: '#122e3d' }}
           size="lg"
         />
       )}

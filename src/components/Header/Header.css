@@ -2,6 +2,7 @@
   background-color: var(--text-white);
   display: flex;
   justify-content: space-around;
+  color: aqua;
 }
 
 nav {

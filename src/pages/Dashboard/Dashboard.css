@@ -47,6 +47,13 @@
   /* width: 100vh; */
 }
 
+.user-main-pannel h2,
+.user-main-pannel h4 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
 /* nav part  */
 
 .user-main-nav {

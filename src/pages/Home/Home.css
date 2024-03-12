@@ -366,6 +366,8 @@
   animation-fill-mode: both;
 }
 
-.carrusel {
-  margin: 5rem;
+@media (min-width: 1200px) {
+  .carrusel {
+    margin: 5rem;
+  }
 }

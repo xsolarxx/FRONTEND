@@ -5,15 +5,15 @@ import { useState } from 'react';
 // handleDeleteComment, que é chamada para excluir um comentário recebe o commentId
 // deleteComment llamos el servicio
 //
-export const useCommentDeletion = (initialComments) => {
-  const [comments, setComments] = useState(initialComments);
+export const useCommentDeletion = () => {
+  const [comments, setComments] = useState([]);
   console.log('entrooo', comments);
 
   const handleDeleteComment = async (commentId) => {
     try {
       await deleteComment(commentId);
       const updatedComments = comments.filter((comment) => comment._id !== commentId);
-      setComments(updatedComments);
+      setComments(updatedComments); // Aquí debes establecer el nuevo conjunto de comentarios
     } catch (error) {
       console.error('Error al eliminar el comentario:', error);
     }

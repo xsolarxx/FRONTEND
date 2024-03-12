@@ -344,7 +344,7 @@
 @media (max-width: 480px) {
   .carrusel {
     width: 100%;
-    margin: 15px;
+    margin: 10px;
   }
 }
 @keyframes show {

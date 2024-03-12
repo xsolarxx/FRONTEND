@@ -8,6 +8,7 @@ import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
 import { getByIdCompany } from '../../services/company.service';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { toggleFavComments } from '../../services/user.service';
+import { CommentDeletion } from '../../components/CommentDeletion/CommentDeletion';
 
 export const CompanyDetail = () => {
   const { id } = useParams();
@@ -116,6 +117,7 @@ export const CompanyDetail = () => {
                 </>
               )}
               {singleComment.createdAt && <p>Created at: {singleComment.createdAt}</p>}
+              <CommentDeletion />
             </div>
           ))}
       </section>

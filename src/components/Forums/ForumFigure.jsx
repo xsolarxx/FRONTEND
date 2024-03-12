@@ -1,8 +1,10 @@
 import './ForumFigure.css';
 import { useNavigate } from 'react-router';
 import { LikeForum } from '../LikeButtonCompany/LikeButtonForum';
+import { FollowForumButton } from '../FollowButton/FollowForumButton';
 
 export const ForumFigure = ({ forum }) => {
+  console.log('esto es forum', forum.owner);
   const navigate = useNavigate();
   const creationDate = new Date(forum.createdAt);
   const formattedDate = creationDate.toLocaleString('es-ES', {
@@ -21,6 +23,7 @@ export const ForumFigure = ({ forum }) => {
         <p className="forumCreation">{formattedDate}</p>
         <p className="forumContent">{forum.content}</p>
         <LikeForum id={forum._id} />
+        <FollowForumButton id={forum._id} />
         <button
           className="button--blue"
           onClick={() => {
@@ -33,14 +36,14 @@ export const ForumFigure = ({ forum }) => {
         <div className="containerForumOwner">
           <img
             className="imgOwnerForum"
-            src={forum.owner.image}
-            alt={forum.owner.userName}
+            src={forum?.owner?.image}
+            alt={forum?.owner?.userName}
           />
           <h5 className="nameOwnerForum">
-            {forum.owner.userName} {}
+            {forum?.owner?.userName} {}
           </h5>
           <br />
-          {/* <p className="nameOwnerForum">{forum.owner.email}</p> */}
+          <p className="nameOwnerForum">{forum?.owner?.email}</p>
         </div>
       </div>
     </div>

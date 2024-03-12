@@ -1,96 +1,44 @@
 import { deleteComment } from '../../services/comment.service';
-import { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 
-export const CommentDeletion = ({ commentId, onDeleteSuccess }) => {
+export const CommentDeletion = ({ idComment, onDeleteSuccess, setUpdateComments }) => {
   const { user, setUser } = useAuth();
-  const [isCommentDeleted, setIsCommentDeleted] = useState(false);
+  console.log('entro aqui user delete', user);
 
   const handleDeleteComment = async () => {
     try {
       if (user) {
-        await deleteComment(commentId);
-        const updatedComments = user.comments.filter((comment) => comment !== commentId);
-        const updatedUser = { ...user, comments: updatedComments };
-        setUser(updatedUser);
-        localStorage.setItem('user', JSON.stringify(updatedUser));
-        setIsCommentDeleted(true);
+        const { token } = user;
+        const res = await deleteComment(idComment);
+        console.log('soy una respuesta', res);
+        const updatedComments = {
+          name: res?.data?.user?.userName,
+          email: res?.data?.user?.email,
+          image: res?.data?.user?.image,
+          check: res?.data?.user?.check,
+          _id: res?.data?.user?._id,
+          likedCompany: res?.data?.user?.likedCompany,
+          comments: res?.data?.user?.comments,
+          favComments: res?.data?.user?.favComments,
+          likedForum: res?.data?.user?.likedForum,
+          likedNews: res?.data?.user?.likedNews,
+          forumOwner: res?.data?.user?.forumOwner,
+          forumFollowing: res?.data?.user?.forumFollowing,
+          token,
+        };
+        setUser(updatedComments);
+        localStorage.setItem('user', JSON.stringify(updatedComments));
+        setUpdateComments((pre) => !pre);
         onDeleteSuccess(); // Llamar a la función de éxito de eliminación
       }
     } catch (error) {
-      console.error('Error al eliminar el comentario:', error);
+      console.error('Error deleting comment:', error);
     }
   };
 
   return (
     <>
-      {isCommentDeleted ? (
-        <p>El comentario ha sido eliminado.</p>
-      ) : (
-        <button onClick={handleDeleteComment}>Eliminar comentario</button>
-      )}
+      <button onClick={handleDeleteComment}>Delete</button>
     </>
   );
 };
-
-//! CODIGO UNO
-// export const useCommentDeletion = (id) => {
-//   const { user, setUser } = useAuth();
-
-//   const [comments, setComments] = useState(!!user.comments?.find((item) => item === id));
-
-//   const handleDeleteComment = async () => {
-//     console.log('entro', comments);
-//     if (user) {
-//       const { token } = user;
-//       const res = deleteComment(id);
-//       const userUpdate = {
-//         name: res.data.user.userName,
-//         email: res.data.user.email,
-//         image: res.data.user.image,
-//         check: res.data.user.check,
-//         _id: res.data.user._id,
-//         comments: res.data.user.comments,
-//         likedCompany: res.data.user.likedCompany,
-//         likedForum: res.data.user.likedForum,
-//         likedNews: res.data.user.likedNews,
-//         token,
-//       };
-//       setUser(() => userUpdate);
-//       localStorage.removeItem('user');
-//       localStorage.setItem('user', JSON.stringify(userUpdate));
-//       setComments(!!res.data.user.comments.find((item) => item === id));
-//     }
-//   };
-//   return (
-//     <div className="likebuttonCompany">
-//       {user && <button onClick={handleDeleteComment}>Delete</button>}
-//     </div>
-//   );
-// };
-
-//! CODIGO DOS
-// initialComments es un array de comentarios inicial
-// handleDeleteComment, que é chamada para excluir um comentário recebe o commentId
-// deleteComment llamos el servicio
-//
-
-// export const useCommentDeletion = () => {
-//   const [comments, setComments] = useState([]);
-
-//   const handleDeleteComment = async (commentId) => {
-//     try {
-//       await deleteComment(commentId);
-//       setComments((prevComments) =>
-//         prevComments.filter((comment) => comment._id !== commentId),
-//       );
-//     } catch (error) {
-//       console.error('Error al eliminar el comentario:', error);
-//     }
-//   };
-
-//   return {
-//     comments,
-//     deleteComment: handleDeleteComment,
-//   };
-// };

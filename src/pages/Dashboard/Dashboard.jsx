@@ -12,7 +12,6 @@ export const Dashboard = () => {
   const navigate = useNavigate();
   const [userDashboard, setUserDashboard] = useState(null);
 
-  console.log('entro', user);
   const fetchUserData = async () => {
     const res = await getByIdPopulate(user?._id);
     setUserDashboard(res.data);
@@ -71,13 +70,9 @@ export const Dashboard = () => {
           ))}
         <h2>My rated companies</h2>
         {userDashboard &&
-          userDashboard.ownerRating?.map((item, index) => (
+          userDashboard.companyPunctuated?.map((item, index) => (
             <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-              <DashboardList
-                name={item.userPunctuation}
-                companyName={item.companyPunctuated}
-                key={index}
-              />
+              <DashboardList name={item.companyName} key={index} />
             </NavLink>
           ))}
         <h2>Liked News</h2>

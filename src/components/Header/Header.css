@@ -28,7 +28,7 @@ nav {
     height: 50%;
   }
   .link-home-mobile {
-    margin-top: 8rem;
+    margin-top: 11rem;
   }
   .auxfa {
     display: flex;
@@ -39,6 +39,13 @@ nav {
   }
   .auxfa logo-mobile1 {
     align-self: center;
+  }
+  .nav-mobile {
+    padding-bottom: 12rem;
+    box-shadow: none;
+  }
+  .nav-mobile p:hover {
+    color: var(--primary-color-green);
   }
 }
 

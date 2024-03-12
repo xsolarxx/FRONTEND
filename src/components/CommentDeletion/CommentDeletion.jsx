@@ -1,6 +1,6 @@
-import { deleteComment } from '../services/comment.service';
+import { deleteComment } from '../../services/comment.service';
 import { useState } from 'react';
-import { useAuth } from '../context/authContext';
+import { useAuth } from '../../context/authContext';
 
 export const CommentDeletion = ({ commentId, onDeleteSuccess }) => {
   const { user, setUser } = useAuth();
@@ -9,23 +9,28 @@ export const CommentDeletion = ({ commentId, onDeleteSuccess }) => {
   const handleDeleteComment = async () => {
     try {
       if (user) {
-        const { token } = user;
-        await deleteComment(id);
-        const updatedComments = user.comments.filter((comment) => comment !== id);
+        await deleteComment(commentId);
+        const updatedComments = user.comments.filter((comment) => comment !== commentId);
         const updatedUser = { ...user, comments: updatedComments };
         setUser(updatedUser);
         localStorage.setItem('user', JSON.stringify(updatedUser));
         setIsCommentDeleted(true);
+        onDeleteSuccess(); // Llamar a la función de éxito de eliminación
       }
     } catch (error) {
-      console.error('Erro ao excluir comentário:', error);
+      console.error('Error al eliminar el comentario:', error);
     }
   };
 
-  return {
-    isCommentDeleted,
-    deleteComment: handleDeleteComment,
-  };
+  return (
+    <>
+      {isCommentDeleted ? (
+        <p>El comentario ha sido eliminado.</p>
+      ) : (
+        <button onClick={handleDeleteComment}>Eliminar comentario</button>
+      )}
+    </>
+  );
 };
 
 //! CODIGO UNO

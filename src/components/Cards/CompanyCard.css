@@ -66,7 +66,7 @@
   padding: 9px 15px 9px 15px;
   border-radius: 50px;
   /* font-size: large; */
-  color: var(--color-blue);
+  color: var(--color-tags);
   font-weight: 500;
 }
 .section-company__text button {

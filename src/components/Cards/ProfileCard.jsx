@@ -6,7 +6,7 @@ import { ScrollToTopButton } from '../Buttons/ScrollToTopButton';
 import { RatingComponent } from '../Rating/RatingCompany';
 import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 
-export const CompanyCard = ({ user }) => {
+export const ProfileCard = ({ user }) => {
   const navigate = useNavigate();
   return (
     <div className="containerCompany">

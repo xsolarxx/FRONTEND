@@ -21,3 +21,4 @@ export * from './DarkModeToggle/DarkModeToggle';
 export * from './Comments/Comments';
 export * from './CommentDeletion/CommentDeletion';
 export * from './FollowButton/FollowForumButton';
+export * from './Cards/ProfileCard';

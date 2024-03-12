@@ -1,31 +1,31 @@
 import './ProfilePage.css';
 import { useEffect, useState } from 'react';
-import { getAllCompany } from '../../services/company.service';
-import { CompanyCard } from '../../components';
+import { ProfileCard } from '../../components';
 import { getByLikesCompany, getByDescLikesCompany } from '../../services/company.service';
 
+
 export const ProfilePage = () => {
-  const [companyList, setCompanyList] = useState(null);
+  const [profileList, setProfileList] = useState(null);
   const [orderBy, setOrderBy] = useState(null);
 
-  const fetchCompanies = async () => {
-    let companies;
+  const fetchProfiles = async () => {
+    let profiles;
     if (orderBy === 'asc') {
-      companies = await getByLikesCompany();
+      profiles = await getByLikesCompany();
     } else if (orderBy === 'desc') {
-      companies = await getByDescLikesCompany();
+      profiles = await getByDescLikesCompany();
     } else {
-      companies = await getAllCompany();
+      profiles = await getAllCompany();
     }
-    setCompanyList(companies);
+    setProfileList(profiles);
   };
 
   useEffect(() => {
-    fetchCompanies();
+    fetchProfiles();
   }, [orderBy]);
 
   return (
-    <section className="Company-Page-grid">
+    <section className="Profile-Page-grid">
       <div className="filter-controls">
         <button
           onClick={() => setOrderBy('asc')}
@@ -46,9 +46,9 @@ export const ProfilePage = () => {
           Sin filtro
         </button>
       </div>
-      {companyList &&
-        companyList.data.map((company, index) => (
-          <CompanyCard company={company} key={index} />
+      {profileList &&
+        profileList.data.map((profile, index) => (
+          <ProfileCard profile={profile} key={index} />
         ))}
     </section>
   );

@@ -60,6 +60,13 @@ export const getById = async (id) => {
     .then((res) => res)
     .catch((error) => error);
 };
+//*Get by name
+export const getByName = async (name) => {
+  const APIGeneral = extraConfig();
+  return APIGeneral.get(`/users/getByName/${name}`)
+    .then((res) => res)
+    .catch((error) => error);
+};
 
 //*Get by id populate
 export const getByIdPopulate = async (id) => {

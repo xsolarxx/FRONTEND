@@ -8,7 +8,7 @@ import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
 import { getByIdCompany } from '../../services/company.service';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { toggleFavComments } from '../../services/user.service';
-import { deleteComment } from '../../services/comment.service';
+import { useCommentDeletion } from '../../hooks/useCommentDeletion';
 
 export const CompanyDetail = () => {
   const { id } = useParams();
@@ -20,6 +20,8 @@ export const CompanyDetail = () => {
   const [contentValue, setContentValue] = useState('');
   const [comments, setComments] = useState([]);
   const [updateComments, setUpdateComments] = useState(false);
+  // Elimina la desestructuración de comments desde useCommentDeletion
+  const { deleteComment } = useCommentDeletion(); // Usa el hook para manejar los comentarios
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
@@ -71,18 +73,6 @@ export const CompanyDetail = () => {
     }
   };
 
-  const handleDeleteComment = async (commentId) => {
-    try {
-      await deleteComment(commentId);
-      if (Array.isArray(comments)) {
-        const updatedComments = comments.filter((comment) => comment._id !== commentId);
-        setComments(updatedComments);
-      }
-    } catch (error) {
-      console.error('Erro ao excluir comentário:', error);
-    }
-  };
-
   useEffect(() => {
     fetchFullCompanies();
   }, [updateComments]);
@@ -121,20 +111,22 @@ export const CompanyDetail = () => {
             Add comment
           </button>
         </div>
-        <div className="allComments">
-          {comments &&
-            comments?.data?.map((singleComment) => (
-              <div key={singleComment?._id}>
-                <p>{singleComment.content}</p>
-                {user && user._id === singleComment.owner._id && (
-                  <button onClick={() => handleDeleteComment(singleComment._id)}>
-                    Delete
+        {/* Aquí utilizamos el componente Comments para mostrar los comentarios */}
+        {comments &&
+          comments?.data?.map((singleComment) => (
+            <div key={singleComment?._id}>
+              <p>{singleComment.content}</p>
+              {user && user._id === singleComment.owner._id && (
+                <>
+                  <button onClick={() => handleLikeComment(singleComment._id)}>
+                    Like
                   </button>
-                )}
-                <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
-              </div>
-            ))}
-        </div>
+                  <button onClick={() => deleteComment(singleComment._id)}>Delete</button>
+                </>
+              )}
+              {singleComment.createdAt && <p>Created at: {singleComment.createdAt}</p>}
+            </div>
+          ))}
       </section>
     </>
   );

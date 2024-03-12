@@ -2,7 +2,7 @@ import './Home.css';
 import '../../components/Buttons/button.css';
 
 import { NavLink } from 'react-router-dom';
-
+import SeeCompanies from '../../components/SeeCompanies/SeeCompanies';
 import { ImageHome } from '../../components/ImageHome/ImageHome';
 
 export const Home = () => {
@@ -54,9 +54,7 @@ export const Home = () => {
           <div className="Blue-box-title">
             <h1>Companies</h1>
             <p>Companies that fit with your idea of sustainability</p>
-            <NavLink to="/company">
-              <button className="button--green">See companies</button>
-            </NavLink>
+            <SeeCompanies />
           </div>
         </div>
         <div className="services-container">

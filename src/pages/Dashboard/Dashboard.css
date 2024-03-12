@@ -1,7 +1,4 @@
-/* .Dahsboard-titels h3 {
-  display: flex;
-  flex-direction: row;
-} */
+
 .dashboard-conatiner {
   display: flex;
   padding: 2rem 5rem 2rem 5rem;
@@ -36,12 +33,29 @@
   border: 4px solid var(--primary-color-green);
 }
 
+.dashboard-profile-summary{
+  color: var(--color-navy-blue);
+}
+
 /* main pannel  */
+
+.user-pannel-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: 1px solid; */
+}
+
+.otraCaja {
+  background-color: white;
+  padding: 3rem;
+  border-radius: var(--img-border-radius);
+  margin-bottom: 2rem;
+}
 
 .user-main-pannel {
   color: var(--color-navy-blue);
   /* background-color: white; */
-  padding: 4rem;
   border-radius: var(--img-border-radius);
 }
 
@@ -54,35 +68,4 @@
   color: var(--color-green);
 }
 
-.user-main-pannel {
-    background-color: white;
 
-}
-
-/* nav part  */
-/* 
-.user-main-nav {
-  display: flex;
-  flex-direction: row;
-} */
-
-/* .user-main-nav h3 {
-  background-color: var(--color-navy-blue);
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 9px 15px 9px 15px;
-  border-radius: 50px;
-  font-size: large;
-  color: white;
-  font-weight: 400;
-  width: 150px;
-  text-align: center;
-  cursor: pointer;
-
-} */
-
-.user-pannel-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
-const SeeCompanies = ({ user }) => {
+export const SeeCompanies = ({ user }) => {
   const navigate = useNavigate();
 
   const handleNavLinkClick = () => {
@@ -18,5 +18,3 @@ const SeeCompanies = ({ user }) => {
     </NavLink>
   );
 };
-
-export default SeeCompanies;

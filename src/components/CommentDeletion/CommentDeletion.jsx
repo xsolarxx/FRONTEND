@@ -32,13 +32,13 @@ export const CommentDeletion = ({ idComment, onDeleteSuccess, setUpdateComments 
         onDeleteSuccess(); // Llamar a la función de éxito de eliminación
       }
     } catch (error) {
-      console.error('Error al eliminar el comentario:', error);
+      console.error('Error deleting comment:', error);
     }
   };
 
   return (
     <>
-      <button onClick={handleDeleteComment}>Eliminar comentario</button>
+      <button onClick={handleDeleteComment}>Delete</button>
     </>
   );
 };

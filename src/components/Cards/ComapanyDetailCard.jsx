@@ -4,12 +4,14 @@ import './ComapanyDetailCard.css';
 // sera importado en la CompanyDetail.jsx
 export const CompanyDetailCard = ({ company }) => {
   return (
-    <div className="containerCompany">
-      <p className="companyName">Name: {company.companyName} </p>
-      <p className="companyDescription">description: {company.description}</p>
-      <img className="imgCompany" src={company.image} alt={company.name} />
-      <h2 className="companyType"> Type:{company.type}</h2>
-      <p className="companyServices">Services offered:{company.companyServices}</p>
+    <div className="containerCompanyDetailed">
+      <img className="sectionCompanyImg" src={company.image} alt={company.name} />
+      <div className="sectionCompanyText">
+        <h3 className="sectionCompanyName"> {company.companyName} </h3>
+        <p className="sectionCompanyDescription">{company.description}</p>
+      </div>
+      <p className="companyTypeDetailed"> Type: {company.type}</p>
+      <p className="companyServicesDetailed">Services offered: {company.companyServices}</p>
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import { deleteComment } from '../../services/comment.service';
 import { useAuth } from '../../context/authContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export const CommentDeletion = ({ idComment, onDeleteSuccess, setUpdateComments }) => {
   const { user, setUser } = useAuth();
@@ -36,9 +38,16 @@ export const CommentDeletion = ({ idComment, onDeleteSuccess, setUpdateComments 
     }
   };
 
+  // Verificar si el comentario pertenece al usuario actual
+  /*const isCurrentUserComment = user && user.comments && user.comments.includes(idComment);*/
+
   return (
     <>
-      <button onClick={handleDeleteComment}>Delete</button>
+      <FontAwesomeIcon
+        onClick={handleDeleteComment}
+        icon={faTrash}
+        style={{ color: '#2A5C45' }}
+      />
     </>
   );
 };

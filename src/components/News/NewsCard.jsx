@@ -9,13 +9,16 @@ export const NewsCard = ({ news }) => {
   const navigate = useNavigate();
   return (
     <div className="containerNews">
-      <img className="section-company__image" src={news.image} alt={news.name} />
-      <div className="section-news__text">
+      <section className="newsImageContainer">
+        <img className="newsImage" src={news.image} alt={news.name} />
+      </section>
+      <div className="newsText">
         <h4 className="newsTitle">{news.title} </h4>
         <p className="newsShortContent"> {news.shortContent}</p>
-        <p className="newsAuthor">{news.author}</p>
-        <p className="newsTags">{news.tags}</p>
-
+        <div className="authorAndTag">
+          <label className="newsAuthor">By: {news.author}</label>
+          <label className="newsTags">Tag: {news.tags}</label>
+        </div>
         <button
           className="button--blue"
           onClick={() => {

@@ -8,20 +8,17 @@ import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
 import { getByIdCompany } from '../../services/company.service';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { toggleFavComments } from '../../services/user.service';
-import { useCommentDeletion } from '../../hooks/useCommentDeletion';
 
 export const CompanyDetail = () => {
   const { id } = useParams();
   const { user, setUser } = useAuth();
-  console.log('Entro likesComent', user);
+
   const [fullCompany, setFullCompany] = useState();
   const [send, setSend] = useState(false);
   const [resComment, setResComment] = useState({});
   const [contentValue, setContentValue] = useState('');
   const [comments, setComments] = useState([]);
   const [updateComments, setUpdateComments] = useState(false);
-  // Elimina la desestructuración de comments desde useCommentDeletion
-  const { deleteComment } = useCommentDeletion(); // Usa el hook para manejar los comentarios
 
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
@@ -34,7 +31,7 @@ export const CompanyDetail = () => {
     localStorage.setItem('user', JSON.stringify(user));
   }, [user]);
 
-  const fetchFullCompanies = async () => {
+  const fetchFullCompany = async () => {
     setFullCompany(await getByIdCompany(id));
   };
 
@@ -49,7 +46,7 @@ export const CompanyDetail = () => {
     setSend(false);
   };
 
-  const getComments = async () => {
+  const fetchComments = async () => {
     setComments(await getByRecipient('Company', id));
   };
 
@@ -69,7 +66,7 @@ export const CompanyDetail = () => {
   };
 
   useEffect(() => {
-    fetchFullCompanies();
+    fetchFullCompany();
   }, [updateComments]);
 
   useEffect(() => {
@@ -78,7 +75,7 @@ export const CompanyDetail = () => {
 
   useEffect(() => {
     if (fullCompany != null) {
-      getComments();
+      fetchComments();
     }
   }, [fullCompany]);
 
@@ -116,7 +113,6 @@ export const CompanyDetail = () => {
                   <button onClick={() => handleLikeComment(singleComment._id)}>
                     Like
                   </button>
-                  <button onClick={() => deleteComment(singleComment._id)}>Delete</button>
                 </>
               )}
               {singleComment.createdAt && <p>Created at: {singleComment.createdAt}</p>}

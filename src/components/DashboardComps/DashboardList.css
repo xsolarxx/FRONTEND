@@ -6,12 +6,13 @@
     gap: 0.5rem;
     padding: 1rem;
     margin: 0.5rem;
+    width: 300px;
     border-radius: var(--img-border-radius);
     background-color: var( --background-color-gray);
     /* box-shadow: var( --img-box-shadow) */
 }
 
-.DashboardList h4, 
+.DashboardList h5, 
 .DashboardList p {
     color: black;
 }

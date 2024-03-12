@@ -17,6 +17,7 @@
 .newsImageDetailed {
   display: flex;
   justify-content: center;
+  padding-left: 5rem;
   padding: 4rem;
   height: 800px;
   margin-bottom: -2rem;
@@ -31,10 +32,18 @@
 }
 .authorAndTags {
   margin-top: 4rem;
-  font-size: 140%;
-  color: var(--color-navy-blue);
+  margin-bottom: 4rem;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  color: var(--color-green);
+}
+.authorAndTags label {
+  background: var(--background-color-gray);
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 9px 15px 9px 15px;
+  border-radius: 50px;
+  font-size: 130%;
+  color: var(--color-tags);
+  font-weight: 500;
 }

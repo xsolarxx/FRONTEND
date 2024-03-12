@@ -24,7 +24,8 @@
 
 .dashboard_line {
   border: 2px solid var(--primary-color-green);
-  width: 150px;
+  min-width: 150px;
+  margin: 1rem 0 1rem 0;
 }
 
 .dashboard-profile{
@@ -39,12 +40,9 @@
 
 .user-main-pannel {
   color: var(--color-navy-blue);
-  /* display: flex; */
-  background-color: white;
-  /* align-items: center; */
+  /* background-color: white; */
   padding: 4rem;
   border-radius: var(--img-border-radius);
-  /* width: 100vh; */
 }
 
 .user-main-pannel h2,
@@ -52,16 +50,23 @@
   margin-bottom: 20px;
   margin-top: 20px;
 }
+.user-main-pannel h4 {
+  color: var(--color-green);
+}
 
+.user-main-pannel {
+    background-color: white;
+
+}
 
 /* nav part  */
-
+/* 
 .user-main-nav {
   display: flex;
   flex-direction: row;
-}
+} */
 
-.user-main-nav h3 {
+/* .user-main-nav h3 {
   background-color: var(--color-navy-blue);
   margin-right: 10px;
   margin-bottom: 10px;
@@ -74,7 +79,7 @@
   text-align: center;
   cursor: pointer;
 
-}
+} */
 
 .user-pannel-section {
   display: flex;

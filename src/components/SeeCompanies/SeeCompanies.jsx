@@ -1,22 +1,20 @@
 import React from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
-const SeeCompanies = ({ isAuthenticated }) => {
-  const history = useHistory();
+export const SeeCompanies = ({ user }) => {
+  const navigate = useNavigate();
 
-  const handleSeeCompaniesClick = () => {
-    if (isAuthenticated) {
-      history.push('/company');
+  const handleNavLinkClick = () => {
+    if (user == null) {
+      navigate('/login');
     } else {
-      history.push('/login');
+      navigate('/company');
     }
   };
 
   return (
-    <button className="button--green" onClick={handleSeeCompaniesClick}>
-      See companies
-    </button>
+    <NavLink to={user !== null ? '/company' : '/login'} onClick={handleNavLinkClick}>
+      <button className="button--green">See companies</button>
+    </NavLink>
   );
 };
-
-export default SeeCompanies;

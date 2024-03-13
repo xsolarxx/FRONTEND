@@ -2,7 +2,7 @@ import './CompanyCard.css';
 
 import { useNavigate } from 'react-router-dom';
 
-import { ScrollToTopButton } from '../Buttons/ScrollToTopButton';
+import { ScrollToTopButton } from '../../styles/Buttons/ScrollToTopButton';
 import { RatingComponent } from '../Rating/RatingCompany';
 import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 

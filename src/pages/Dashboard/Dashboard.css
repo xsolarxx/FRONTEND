@@ -5,6 +5,14 @@
   background-color: var(--background-color-gray);
 }
 
+@media (max-width: 480px) {
+  .dashboard-conatiner {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+}
+
 /* side pannel  */
 
 .user-side-pannel {

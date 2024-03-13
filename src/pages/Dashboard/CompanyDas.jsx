@@ -26,13 +26,15 @@ export const CompanyDas = ({ userDashboard }) => {
 
       <h4>My rated companies</h4>
       <section className="user-pannel-section">
-        {userDashboard && userDashboard.companyPunctuated
-          ? userDashboard.companyPunctuated.map((item, index) => (
-              <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                <DashboardList name={item.companyName} image={item.image} key={index} />
-              </NavLink>
-            ))
-          : null}
+        {userDashboard?.companyPunctuated?.length ? (
+          userDashboard.companyPunctuated.map((item, index) => (
+            <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
+              <DashboardList name={item.companyName} image={item.image} key={index} />
+            </NavLink>
+          ))
+        ) : (
+          <p>No rated companies</p>
+        )}
       </section>
     </div>
   );

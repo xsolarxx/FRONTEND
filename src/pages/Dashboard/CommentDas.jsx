@@ -16,7 +16,7 @@ export const CommentDas = ({ userDashboard }) => {
             ))
           : null}
       </section>
-      <h4>Forum Comments</h4>
+      <h4>Comments</h4>
       <section className="user-pannel-section">
         {userDashboard && userDashboard.comments
           ? userDashboard.comments.map((item, index) => (

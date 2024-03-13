@@ -9,7 +9,6 @@ import { getByIdCompany } from '../../services/company.service';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { toggleFavComments } from '../../services/user.service';
 import { CommentDeletion } from '../../components/CommentDeletion/CommentDeletion';
-import { UpdateComment } from '../../components/UpdateComments/UpdateComments';
 
 export const CompanyDetail = () => {
   const { id } = useParams();
@@ -122,7 +121,6 @@ export const CompanyDetail = () => {
                 idComment={singleComment._id}
                 setUpdateComments={setUpdateComments}
               />
-              <UpdateComment id={singleComment._id} setContentValue={setContentValue} />
             </div>
           ))}
       </section>

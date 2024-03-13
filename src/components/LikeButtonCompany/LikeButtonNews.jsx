@@ -2,6 +2,7 @@ import { faThumbsUp as regularThumbsUp } from '@fortawesome/free-regular-svg-ico
 import { faThumbsUp as solidThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 
 import { useAuth } from '../../context/authContext';
 import { toggleLikedNews } from '../../services/user.service';
@@ -43,12 +44,16 @@ export const LikeNews = ({ id }) => {
     <div className="likebuttonNews">
       {user && (
         <FontAwesomeIcon
+          className="likeButton--blue"
           onClick={handleLikeClick}
           icon={like ? solidThumbsUp : regularThumbsUp}
-          style={{ color: '#122e3d' }}
           size="lg"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Press to like/dislike!"
+          data-tooltip-variant="success"
         />
       )}
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };

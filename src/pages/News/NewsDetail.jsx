@@ -9,6 +9,7 @@ import { createComment, getByRecipient } from '../../services/comment.service';
 import { getById } from '../../services/news.service';
 import { toggleFavComments } from '../../services/user.service';
 import { CommentDeletion } from '../../components/CommentDeletion/CommentDeletion';
+import { LikeComments } from '../../components/LikeComment/LikeComment';
 
 export const NewsDetail = () => {
   const { id } = useParams();
@@ -43,25 +44,6 @@ export const NewsDetail = () => {
     setResComment(await createComment(id, customFormData));
     setContentValue('');
     setSend(false);
-  };
-  const handleLikeComment = async (commentId) => {
-    try {
-      const isLiked = user.favComments.includes(commentId);
-      const updatedUser = {
-        ...user,
-        favComments: isLiked
-          ? user.favComments.filter((id) => id !== commentId)
-          : [...user.favComments, commentId],
-      };
-      setUser(updatedUser);
-
-      await toggleFavComments(commentId);
-
-      const updatedComments = await getByRecipient('News', id);
-      setComments(updatedComments);
-    } catch (error) {
-      console.error('Error liking comment:', error);
-    }
   };
 
   const getComments = async () => {
@@ -108,16 +90,17 @@ export const NewsDetail = () => {
           {comments &&
             comments?.data?.map((singleComment) => (
               <div key={singleComment?._id}>
-                <Comments
-                  comment={singleComment}
-                  setCommentsByChild={setComments}
-                  handleLikeComment={handleLikeComment}
-                />
-                <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
-                <CommentDeletion
-                  idComment={singleComment._id}
-                  setUpdateComments={setUpdateComments}
-                />
+                <Comments comment={singleComment} setCommentsByChild={setComments} />
+
+                <div>
+                  {singleComment.owner._id === user._id && (
+                    <CommentDeletion
+                      idComment={singleComment._id}
+                      setUpdateComments={setUpdateComments}
+                    />
+                  )}
+                  <LikeComments idComment={singleComment._id} />
+                </div>
               </div>
             ))}
         </div>

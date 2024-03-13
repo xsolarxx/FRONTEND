@@ -28,6 +28,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         ownerRating,
         forumOwner,
         forumFollowing,
+        usersFollowed,
       } = sendData.data.user;
       const userCustom = {
         token: sendData.data.token,
@@ -44,6 +45,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         check,
         forumOwner,
         forumFollowing,
+        usersFollowed,
         _id: sendData.data.user._id,
       };
 

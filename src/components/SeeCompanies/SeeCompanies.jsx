@@ -1,20 +1,19 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/authContext';
 
-export const SeeCompanies = ({ user }) => {
+export const SeeCompanies = () => {
   const navigate = useNavigate();
-
-  const handleNavLinkClick = () => {
-    if (user == null) {
-      navigate('/login');
-    } else {
-      navigate('/company');
-    }
-  };
-
+  const { user } = useAuth();
   return (
-    <NavLink to={user !== null ? '/company' : '/login'} onClick={handleNavLinkClick}>
-      <button className="button--green">See companies</button>
-    </NavLink>
+    <button
+      className="button--green"
+      onClick={() => {
+        user ? navigate('/company') : navigate('/register')
+
+      }}
+    >
+      {user ? 'See companies' : 'Register to see companies'}
+    </button>
   );
 };

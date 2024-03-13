@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 
 export const SeeCompanies = () => {
@@ -9,8 +9,7 @@ export const SeeCompanies = () => {
     <button
       className="button--green"
       onClick={() => {
-        user ? navigate('/company') : navigate('/register')
-
+        user ? navigate('/company') : navigate('/register');
       }}
     >
       {user ? 'See companies' : 'Register to see companies'}

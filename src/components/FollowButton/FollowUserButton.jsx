@@ -31,6 +31,7 @@ export const FollowUserButton = ({ id }) => {
         forumFollowing: res?.data?.user?.forumFollowing,
         usersFollowed: res?.data?.user?.usersFollowed,
         ownerRating: res?.data?.user?.ownerRating,
+        companyPunctuated: res?.data?.user?.companyPunctuated,
         token,
       };
       setUser(() => userUpdate);

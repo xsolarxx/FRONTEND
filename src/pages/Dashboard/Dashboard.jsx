@@ -1,15 +1,26 @@
 import './Dashboard.css';
 
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
-import { DashboardList } from '../../components';
+// import { DashboardList } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { getByIdPopulate } from '../../services/user.service';
+import { SidePanel } from './SidePanel';
+import { CompanyDas } from './CompanyDas';
+import { NewsDash } from './NewsDash';
+import { ForumDas } from './ForumDas';
+import FollowDas from './FollowDas';
+import CommentDas from './CommentDas';
 
 export const Dashboard = () => {
   const { user } = useAuth();
   const [userDashboard, setUserDashboard] = useState(null);
+  const [companyDas, setCompanyDas] = useState(false);
+  const [followDas, setFollowDas] = useState(false);
+  const [newsDas, setNewsDas] = useState(false);
+  const [commentDas, setCommentDas] = useState(false);
+  const [forumDas, setForumDas] = useState(true);
 
   const fetchUserData = async () => {
     const res = await getByIdPopulate(user?._id);
@@ -21,180 +32,74 @@ export const Dashboard = () => {
 
   return (
     <div className="dashboard-conatiner">
-      <section className="user-side-pannel">
-        <h3>
-          Hi {}
-          <span
-            style={{
-              textDecoration: 'underline',
-              textDecorationColor: '#97f85b',
-              textDecorationThickness: '3px',
+      <SidePanel />
+      <div className="user-main-pannel">
+        <div>
+          <button
+            onClick={() => {
+              setCompanyDas(true);
+              setFollowDas(false);
+              setCommentDas(false);
+              setForumDas(false);
+              setNewsDas(false);
             }}
           >
-            {user.name}
-          </span>
-        </h3>
-        <img className="dashboard-profile" src={user.image} alt="foto User" />
-        <p>{user.email}</p>
-        <NavLink to="/profile">
-          <p>Update Profile</p>
-        </NavLink>
-        <hr className="dashboard_line" />
-
-        <h5>Companies summary </h5>
-        {/* <p>Liked companies: {user?.likedCompany?.length}</p>
-        <p> Companies Punctuated: {user.companyPunctuated.length}</p>
-
-        <h5>Forum summary </h5>
-
-        <p>Liked Forum: {user?.likedForum?.length}</p>
-        <p>Creader Forum: {user?.forumOwner?.length}</p>
-        <p>Creader Forum: {user?.forumOwner?.length}</p>
-
-        <h5>Network Summary </h5>
-        <p>Following: {user?.usersFollowed?.length}</p>
-        <p>Followers: {user?.usersFollowers?.length}</p> */}
-      </section>
-
-      <div className="user-main-pannel">
-        <div className="otraCaja">
-          <h2>My companies</h2>
-          <h4>Liked companies</h4>
-
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedCompany ? (
-              userDashboard.likedCompany.map((item, index) => (
-                <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                  <DashboardList
-                    name={item.companyName}
-                    image={item.image}
-                    email={item.email}
-                    key={index}
-                  />
-                </NavLink>
-              ))
-            ) : (
-              <p>No sigues ninguna compañia</p>
-            )}
-          </section>
-
-          <h4>My rated companies</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.companyPunctuated
-              ? userDashboard.companyPunctuated.map((item, index) => (
-                  <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                    <DashboardList
-                      name={item.companyName}
-                      image={item.image}
-                      key={index}
-                    />
-                  </NavLink>
-                ))
-              : null}
-          </section>
+            view Company
+          </button>
+          <button
+            onClick={() => {
+              setCompanyDas(false);
+              setFollowDas(true);
+              setCommentDas(false);
+              setForumDas(false);
+              setNewsDas(false);
+            }}
+          >
+            view Network
+          </button>
+          <button
+            onClick={() => {
+              setCompanyDas(false);
+              setFollowDas(false);
+              setCommentDas(false);
+              setForumDas(false);
+              setNewsDas(true);
+            }}
+          >
+            view News
+          </button>
+          <button
+            onClick={() => {
+              setCompanyDas(false);
+              setFollowDas(false);
+              setCommentDas(true);
+              setForumDas(false);
+              setNewsDas(false);
+            }}
+          >
+            view Comments
+          </button>
+          <button
+            onClick={() => {
+              setCompanyDas(false);
+              setFollowDas(false);
+              setCommentDas(false);
+              setForumDas(true);
+              setNewsDas(false);
+            }}
+          >
+            view Forums
+          </button>
         </div>
+        {companyDas && <CompanyDas userDashboard={userDashboard} />}
 
-        <div className="otraCaja">
-          <h2>My Forum </h2>
-          <h4>Liked Forums</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedForum
-              ? userDashboard.likedForum.map((item, index) => (
-                  <NavLink to={`/ForumDetail/${item._id}`} key={index}>
-                    <DashboardList name={item.title} key={index} image={item.image} />
-                  </NavLink>
-                ))
-              : null}
-          </section>
-          <h4>My created Forums</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.forumOwner
-              ? userDashboard.forumOwner.map((item, index) => (
-                  <NavLink to={`/ForumDetail/${item._id}`} key={index}>
-                    <DashboardList name={item.title} key={index} image={item.image} />
-                  </NavLink>
-                ))
-              : null}
-          </section>
-          <div>
-            <h4>Forum Following</h4>
-            <section className="user-pannel-section">
-              {userDashboard && userDashboard.forumFollowing
-                ? userDashboard.forumFollowing.map((item, index) => (
-                    <NavLink to={`/ForumDetail/${item._id}`} key={index}>
-                      <DashboardList name={item.title} key={index} image={item.image} />
-                    </NavLink>
-                  ))
-                : null}
-            </section>
-          </div>
-        </div>
+        {forumDas && <ForumDas userDashboard={userDashboard} />}
 
-        <div className="otraCaja">
-          <h2>My network </h2>
-          <div>
-            <h4>Following</h4>
-            <section className="user-pannel-section">
-              {userDashboard && userDashboard.usersFollowed
-                ? userDashboard.usersFollowed.map((item, index) => (
-                    <NavLink to={`/profileDetail/${item._id}`} key={index}>
-                      <DashboardList
-                        name={item.userName}
-                        key={index}
-                        image={item.image}
-                      />
-                    </NavLink>
-                  ))
-                : null}
-            </section>
-          </div>
+        {followDas && <FollowDas userDashboard={userDashboard} />}
 
-          <h4>Followers</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.usersFollowers
-              ? userDashboard.usersFollowers.map((item, index) => (
-                  <NavLink to={`/profileDetail/${item._id}`} key={index}>
-                    <DashboardList name={item.userName} key={index} image={item.image} />
-                  </NavLink>
-                ))
-              : null}
-          </section>
-        </div>
-        <div className="otraCaja">
-          <h2>My comments</h2>
-          <h4>Liked comments</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.favComments
-              ? userDashboard.favComments.map((item, index) => (
-                  <NavLink to={`/comment/${item._id}`} key={index}>
-                    <DashboardList content={item.content} key={index} />
-                  </NavLink>
-                ))
-              : null}
-          </section>
-          <h4>Forum Comments</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.comments
-              ? userDashboard.comments.map((item, index) => (
-                  <NavLink to={`/comment/${item._id}`} key={index}>
-                    <DashboardList content={item.content} key={index} />
-                  </NavLink>
-                ))
-              : null}
-          </section>
-        </div>
-        <div className="otraCaja">
-          <h4>Liked News</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedNews
-              ? userDashboard.likedNews.map((item, index) => (
-                  <NavLink to={`/NewsDetail/${item._id}`} key={index}>
-                    <DashboardList name={item.title} key={index} image={item.image} />
-                  </NavLink>
-                ))
-              : null}
-          </section>
-        </div>
+        {commentDas && <CommentDas userDashboard={userDashboard} />}
+
+        {newsDas && <NewsDash userDashboard={userDashboard} />}
       </div>
     </div>
   );

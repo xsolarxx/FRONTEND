@@ -81,3 +81,18 @@
   background-color: var(--color-white);
   background-image: none;
 }
+
+
+.button--add {
+  padding: 12px;
+  color: var(--text-navy-blue);
+  color: var(--color-navy-blue);
+  cursor: pointer;
+  border: transparent;
+  border-radius: 50px;
+  background-image: linear-gradient(215deg, #97f85b 0%, #25dc80 100%);
+}
+
+/* className="material-symbols-outlined"
+>
+  <span>add</span> */

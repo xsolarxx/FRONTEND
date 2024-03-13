@@ -1,4 +1,6 @@
 .commentOwnerContainer {
-    background-color: aqua;
-    height: 100px;
+    background-color: var(--background-color-gray);
+    padding: 2rem;
+    border-radius: var(--img-border-radius);
+    /* gap: 2rem; */
 }

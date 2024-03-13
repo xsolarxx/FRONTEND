@@ -18,6 +18,7 @@ export const ForumDetail = () => {
   const [resComment, setResComment] = useState({});
   const [titleValue, setTitleValue] = useState('');
   const [contentValue, setContentValue] = useState('');
+
   const [comments, setComments] = useState([]);
   const [updateComments, setUpdateComments] = useState(false);
 
@@ -111,7 +112,6 @@ export const ForumDetail = () => {
             <span>add</span>
           </button>
         </div>
-        <h1>LO DEJO A MEDIAS, MAÑANA SIGO </h1>
         <div className="comments-section">
           {comments &&
             comments?.data?.map((singleComment) => (
@@ -121,7 +121,7 @@ export const ForumDetail = () => {
                   setCommentsByChild={setComments}
                   handleLikeComment={handleLikeComment}
                 />
-                <div className="comments-section-subsect">
+                <div>
                   <button onClick={() => handleLikeComment(singleComment._id)}>
                     Like
                   </button>
@@ -129,6 +129,7 @@ export const ForumDetail = () => {
                     idComment={singleComment._id}
                     setUpdateComments={setUpdateComments}
                   />
+                  <img className="icon" src={user.image} alt={user.user} />
                 </div>
               </div>
             ))}

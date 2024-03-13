@@ -83,7 +83,7 @@ export const Dashboard = () => {
 
           <h4>My rated companies</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.companyPunctuated?.length > 0 ? (
+            {userDashboard && userDashboard.companyPunctuated? (
               userDashboard.companyPunctuated.map((item, index) => (
                 <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
                   <DashboardList name={item.companyName} image={item.image} key={index} />
@@ -99,7 +99,7 @@ export const Dashboard = () => {
           <h2>My Forum </h2>
           <h4>Liked Forums</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedForum?.length > 0 ? (
+            {userDashboard && userDashboard.likedForum? (
               userDashboard.likedForum.map((item, index) => (
                 <NavLink to={`/ForumDetail/${item._id}`} key={index}>
                   <DashboardList name={item.title} key={index} image={item.image} />
@@ -111,7 +111,7 @@ export const Dashboard = () => {
           </section>
           <h4>My created Forums</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.forumOwner?.length > 0 ? (
+            {userDashboard && userDashboard.forumOwner? (
               userDashboard.forumOwner.map((item, index) => (
                 <NavLink to={`/ForumDetail/${item._id}`} key={index}>
                   <DashboardList name={item.title} key={index} image={item.image} />
@@ -124,7 +124,7 @@ export const Dashboard = () => {
           <div>
             <h4>Forum Following</h4>
             <section className="user-pannel-section">
-              {userDashboard && userDashboard.forumFollowing?.length > 0 ? (
+              {userDashboard && userDashboard.forumFollowing? (
                 userDashboard.forumFollowing.map((item, index) => (
                   <NavLink to={`/ForumDetail/${item._id}`} key={index}>
                     <DashboardList name={item.title} key={index} image={item.image} />
@@ -142,7 +142,7 @@ export const Dashboard = () => {
           <div>
             <h4>Following</h4>
             <section className="user-pannel-section">
-              {userDashboard && userDashboard.usersFollowed?.length > 0 ? (
+              {userDashboard && userDashboard.usersFollowed? (
                 userDashboard.usersFollowed.map((item, index) => (
                   <NavLink to={`/UserDetail/${item._id}`} key={index}>
                     <DashboardList name={item.userName} key={index} image={item.image} />
@@ -156,7 +156,7 @@ export const Dashboard = () => {
 
           <h4>Followers</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.usersFollowers?.length > 0 ? (
+            {userDashboard && userDashboard.usersFollowers? (
               userDashboard.usersFollowers.map((item, index) => (
                 <NavLink to={`/UserDetail/${item._id}`} key={index}>
                   <DashboardList name={item.userName} key={index} image={item.image} />
@@ -171,7 +171,7 @@ export const Dashboard = () => {
           <h2>My comments</h2>
           <h4>Liked comments</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.favComments?.length > 0 ? (
+            {userDashboard && userDashboard.favComments? (
               userDashboard.favComments.map((item, index) => (
                 <NavLink to={`/comment/${item._id}`} key={index}>
                   <DashboardList content={item.content} key={index} />
@@ -184,7 +184,7 @@ export const Dashboard = () => {
           {/* TESTING COMMENTS FETCH  */}
           <h4>Forum Comments</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.comments?.length > 0 ? (
+            {userDashboard && userDashboard.comments? (
               userDashboard.comments.map((item, index) => (
                 <NavLink to={`/comment/${item._id}`} key={index}>
                   <DashboardList content={item.content} key={index} />
@@ -198,7 +198,7 @@ export const Dashboard = () => {
         <div className="otraCaja">
           <h4>Liked News</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedNews?.length > 0 ? (
+            {userDashboard && userDashboard.likedNews? (
               userDashboard.likedNews.map((item, index) => (
                 <NavLink to={`/NewsDetail/${item._id}`} key={index}>
                   <DashboardList name={item.title} key={index} image={item.image} />

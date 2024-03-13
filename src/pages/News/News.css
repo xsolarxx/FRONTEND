@@ -3,3 +3,27 @@
   flex-wrap: wrap;
   padding: 5rem;
 }
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .NewsPageGrid {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .NewsPageGrid {
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 3rem;
+  }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+  .NewsPageGrid {
+    column-gap: 3rem;
+    padding: 5rem;
+  }
+}

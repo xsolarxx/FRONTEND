@@ -2,7 +2,7 @@ import { deleteComment } from '../../services/comment.service';
 import { useAuth } from '../../context/authContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-
+import './CommentDeletion.css';
 export const CommentDeletion = ({ idComment, setUpdateComments }) => {
   const { user, setUser } = useAuth();
 
@@ -44,9 +44,9 @@ export const CommentDeletion = ({ idComment, setUpdateComments }) => {
   return (
     <>
       <FontAwesomeIcon
+        className="delete-container"
         onClick={handleDeleteComment}
         icon={faTrash}
-        style={{ color: '#2A5C45' }}
       />
     </>
   );

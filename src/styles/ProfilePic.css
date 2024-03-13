@@ -1,8 +1,7 @@
 .ProfilePic {
-    height: 70px;
-    width: 70px;
-    object-fit: cover;
-    border-radius: 100%;
-    border: 2px solid var(--primary-color-green);
-  }
-  
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 2px solid var(--primary-color-green);
+}

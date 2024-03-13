@@ -51,14 +51,13 @@ nav {
   }
   .auxfa logo-mobile1 {
     align-self: center;
-
   }
   .user-logged-in .nav-mobile {
-    padding: 19rem; 
+    padding: 19rem;
   }
 
   .user-logged-out .nav-mobile {
-    padding: 10rem; 
+    padding: 10rem;
   }
 }
 

@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 import { toggleFollowedForum } from '../../services';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark as solidBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as regularBookmark } from '@fortawesome/free-regular-svg-icons';
 
 export const FollowForumButton = ({ id }) => {
   const { user, setUser } = useAuth();
@@ -37,7 +40,14 @@ export const FollowForumButton = ({ id }) => {
 
   return (
     <div className="followForumButton">
-      {user && <button onClick={handleFollowClick}>Follow this</button>}
+      {user && (
+        <FontAwesomeIcon
+          onClick={handleFollowClick}
+          icon={follow ? solidBookmark : regularBookmark}
+          style={{ color: '#122e3d' }}
+          size="lg"
+        />
+      )}
     </div>
   );
 };

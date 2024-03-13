@@ -1,7 +1,7 @@
 /* Noticia en grande con todo el contenido, inclusive el texto entero. Se llega aquí 
 a través de hacer click en "Read More" */
 import './NewsDetailCard.css';
-
+import { LikeNews } from '../../components/LikeButtonCompany/LikeButtonNews';
 export const NewsDetailCard = ({ newsData }) => {
   return (
     <div className="pageContainerNewsDetailed">
@@ -19,6 +19,7 @@ export const NewsDetailCard = ({ newsData }) => {
           <label className="newsTagsDetailed">Tag: {newsData.tags}</label>
         </div>
       </div>
+      <LikeNews />
     </div>
   );
 };

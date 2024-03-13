@@ -13,18 +13,17 @@ export const Comments = ({ comment }) => {
       <div className="commentOwnerContainer">
         <Link to={`/profileDetail/${comment?.owner?._id}`}>
           <div className="commentOwnerContainer_profile">
-            <h5>{comment?.owner?.userName}</h5>
-
             <img
               className="icon"
               src={comment?.owner?.image}
               alt={comment?.owner?.userName}
             />
+            <h5>{comment?.owner?.userName}</h5>
+
             <p>{formattedDate}</p>
           </div>
         </Link>
         <div className="commentOwnerText">
-          <p>{comment?.title}</p>
           <p>{comment?.content}</p>
         </div>
       </div>

@@ -1,0 +1,59 @@
+.Leave-a-commentt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  gap: 1rem;
+  padding: 5rem 3rem 5rem 5rem;
+  margin: 5rem 3rem 5rem 3rem;
+  border-radius: var(--img-border-radius);
+  background-color: var(--color-navy-blue);
+}
+
+.Leave-a-commentt input {
+  border-radius: 50px;
+  border: solid 2px var(--primary-color-blue);
+  /* width: 100%; */
+  text-align: start;
+  height: 50px;
+  padding-left: 10px;
+  background: var(--background-color-gray);
+  width: 250px;
+}
+
+.Leave-a-commentt button {
+  padding: 12px;
+  color: var(--text-navy-blue);
+  color: var(--color-navy-blue);
+  cursor: pointer;
+  border: transparent;
+  border-radius: 50px;
+  background-image: linear-gradient(215deg, #97f85b 0%, #25dc80 100%);
+}
+.comments-sectionn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  gap: 1rem;
+  /* padding: 5rem 3rem 5rem 5rem;
+    margin: 5rem 3rem 5rem  3rem; */
+  border-radius: var(--img-border-radius);
+  background-color: var(--color-navy-blue);
+}
+
+.comments-section-commentt {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  gap: 1rem;
+  /* padding: 5rem 3rem 5rem 5rem;
+    margin: 5rem 3rem 5rem  3rem; */
+  border-radius: var(--img-border-radius);
+  /* background-color: var(--color-navy-blue); */
+  background-color: var(--background-color-gray);
+}

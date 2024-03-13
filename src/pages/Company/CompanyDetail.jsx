@@ -1,3 +1,4 @@
+import './CompanyDetail.css';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
@@ -68,16 +69,15 @@ export const CompanyDetail = () => {
   return (
     <div>
       {fullCompany?.data && <CompanyDetailCard company={fullCompany.data} />}
-      <section className="commentSection">
-        <h6>Leave a comment</h6>
-        <div className="addComment">
+      <section className="commentSectionn">
+        <div className="Leave-a-commentt">
           <input
             className="input_user"
             type="text"
             id="content"
             value={contentValue}
             name="content"
-            placeholder="comment content"
+            placeholder="Leave a comment ..."
             onChange={(e) => setContentValue(e.target.value)}
           />
           <button
@@ -89,10 +89,10 @@ export const CompanyDetail = () => {
             Add comment
           </button>
         </div>
-        <div>
+        <div className="comments-sectionn">
           {comments &&
             comments?.data?.map((singleComment) => (
-              <div key={singleComment?._id}>
+              <div className="comments-section-commentt" key={singleComment?._id}>
                 <Comments comment={singleComment} setCommentsByChild={setComments} />
                 <div>
                   {singleComment.owner._id === user._id && (

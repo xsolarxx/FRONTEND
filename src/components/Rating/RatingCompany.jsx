@@ -2,25 +2,41 @@ import React, { useState, useEffect } from 'react';
 import { Rating } from 'primereact/rating';
 import { createRating } from '../../services/rating.service';
 import { useAuth } from '../../context/authContext';
+import Swal from 'sweetalert2';
 
-export const RatingComponent = ({ idCompany }) => {
+export const RatingComponent = ({ company }) => {
   const { user, setUser } = useAuth();
-  const [rating, setRating] = useState(
-    user.companyPunctuated.find((item) => item === idCompany),
+  console.log('entro ratings', user);
+
+  const foundRating = company.userCompanyRatings.find(
+    (item) => item.userPunctuation == user._id,
   );
+
+  const [rating, setRating] = useState(foundRating ? foundRating.punctuation : null);
 
   const handleRatingChange = async (e) => {
     console.log('rating', rating);
-    setRating(e.value); // Actualiza el estado con la nueva calificación
 
     try {
       const formData = {
         punctuation: e.value,
-        companyPunctuated: idCompany,
+        companyPunctuated: company._id,
       };
 
       const res = await createRating(formData);
       console.log('soy la respuesta', res);
+      if (res.status !== 200) {
+        Swal.fire({
+          icon: 'error',
+          title: `${res.response.data}`,
+          text: 'Please, try again',
+          showConfirmButton: false,
+          timer: 2500,
+        });
+        // Aqui meter swal informando de porque no puede volver a puntuar
+        return;
+      }
+      setRating(e.value); // Actualiza el estado con la nueva calificación
       const { token } = user;
       const updatedUser = {
         name: res?.data?.user?.userName,

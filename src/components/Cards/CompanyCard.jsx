@@ -25,7 +25,7 @@ export const CompanyCard = ({ company }) => {
           </a>
           <br />
           <LikeCompany id={company._id} />
-          <RatingComponent companyId={company._id} /> <br />
+          <RatingComponent company={company} /> <br />
           <button
             className="button--blue"
             onClick={() => {

@@ -19,7 +19,7 @@ export const NewsDetailCard = ({ newsData }) => {
           <label className="newsTagsDetailed">Tag: {newsData.tags}</label>
         </div>
       </div>
-      <LikeNews />
+      <LikeNews id={newsData?._id} />
     </div>
   );
 };

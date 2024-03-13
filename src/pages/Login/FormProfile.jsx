@@ -62,7 +62,6 @@ export const FormProfile = () => {
     console.log(res);
     useUpdateError(res, setRes, setUser, logout);
   }, [res]);
-
   return (
     <>
       <div className="div-user-profile-setting">
@@ -96,7 +95,7 @@ export const FormProfile = () => {
             onClick={() => useDeleteUser(setUser, setDeleteUser)}
             style={{ cursor: 'pointer' }}
           >
-            Delete user
+            Delete user 
           </Link>
           <Link to="/changePassword">Change password</Link>
           <hr className="profile-setting__line" />

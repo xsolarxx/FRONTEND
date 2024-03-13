@@ -111,8 +111,8 @@ export const ForumDetail = () => {
             <span>add</span>
           </button>
         </div>
-
-        <div className="allComments">
+        <h1>LO DEJO A MEDIAS, MAÑANA SIGO </h1>
+        <div className="comments-section">
           {comments &&
             comments?.data?.map((singleComment) => (
               <div key={singleComment?._id}>
@@ -121,11 +121,15 @@ export const ForumDetail = () => {
                   setCommentsByChild={setComments}
                   handleLikeComment={handleLikeComment}
                 />
-                <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
-                <CommentDeletion
-                  idComment={singleComment._id}
-                  setUpdateComments={setUpdateComments}
-                />
+                <div className="comments-section-subsect">
+                  <button onClick={() => handleLikeComment(singleComment._id)}>
+                    Like
+                  </button>
+                  <CommentDeletion
+                    idComment={singleComment._id}
+                    setUpdateComments={setUpdateComments}
+                  />
+                </div>
               </div>
             ))}
         </div>

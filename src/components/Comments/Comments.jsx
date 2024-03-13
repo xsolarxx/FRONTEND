@@ -1,3 +1,4 @@
+import './Comments.css';
 import React from 'react';
 
 export const Comments = ({ comment }) => {

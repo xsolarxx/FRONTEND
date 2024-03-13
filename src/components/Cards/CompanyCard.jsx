@@ -6,7 +6,10 @@ import { ScrollToTopButton } from '../../styles/Buttons/ScrollToTopButton';
 import { RatingComponent } from '../Rating/RatingCompany';
 import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Tooltip } from 'react-tooltip';
 
+
+<Tooltip id="my-tooltip" />
 
 export const CompanyCard = ({ company }) => {
   const navigate = useNavigate();
@@ -26,6 +29,7 @@ export const CompanyCard = ({ company }) => {
             {company.email}
           </a>
           <br />
+          
           <LikeCompany id={company._id} />
           <RatingComponent company={company} /> <br />
           <button

@@ -14,6 +14,7 @@ import { createComment, getByRecipient } from '../../services/comment.service';
 import { getById } from '../../services/forum.service';
 import { toggleFavComments } from '../../services/user.service';
 import { classNames } from 'primereact/utils';
+import { LikeComments } from '../../components/LikeComment/LikeComment';
 
 export const ForumDetail = () => {
   const { id } = useParams();
@@ -60,26 +61,6 @@ export const ForumDetail = () => {
     setComments(await getByRecipient('Forum', id));
   };
 
-  const handleLikeComment = async (commentId) => {
-    try {
-      const isLiked = user.favComments.includes(commentId);
-      const updatedUser = {
-        ...user,
-        favComments: isLiked
-          ? user.favComments.filter((id) => id !== commentId)
-          : [...user.favComments, commentId],
-      };
-      setUser(updatedUser);
-
-      await toggleFavComments(commentId);
-
-      const updatedComments = await getByRecipient('Forum', id);
-      setComments(updatedComments);
-    } catch (error) {
-      console.error('Error liking comment:', error);
-    }
-  };
-
   useEffect(() => {
     fetchFullForum();
   }, [updateComments]);
@@ -122,19 +103,15 @@ export const ForumDetail = () => {
           {comments &&
             comments?.data?.map((singleComment) => (
               <div className="comments-section-comment" key={singleComment?._id}>
-                <Comments
-                  comment={singleComment}
-                  setCommentsByChild={setComments}
-                  handleLikeComment={handleLikeComment}
-                />
+                <Comments comment={singleComment} setCommentsByChild={setComments} />
                 <div>
-                  <LikeForum onClick={() => handleLikeComment(singleComment._id)} />
                   {singleComment.owner._id === user._id && (
                     <CommentDeletion
                       idComment={singleComment._id}
                       setUpdateComments={setUpdateComments}
                     />
                   )}
+                  <LikeComments idComment={singleComment._id} />
                 </div>
               </div>
             ))}

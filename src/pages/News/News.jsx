@@ -21,7 +21,7 @@ export const NewsPage = () => {
 
   return (
     <section className="NewsPageGrid">
-      <div>
+      <div className="tagsfilter">
         <button className="button--blue" onClick={() => handleTagFilter('')}>
           No filter
         </button>

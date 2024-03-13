@@ -125,10 +125,12 @@ export const ForumDetail = () => {
                   <button onClick={() => handleLikeComment(singleComment._id)}>
                     Like
                   </button>
-                  <CommentDeletion
-                    idComment={singleComment._id}
-                    setUpdateComments={setUpdateComments}
-                  />
+                  {singleComment.owner._id === user._id && (
+                    <CommentDeletion
+                      idComment={singleComment._id}
+                      setUpdateComments={setUpdateComments}
+                    />
+                  )}
                 </div>
               </div>
             ))}

@@ -26,7 +26,6 @@
     padding-left: 10px;
     background: var(--background-color-gray);
     width: 250px;
-    
   }
 
   .Leave-a-comment button {
@@ -48,13 +47,30 @@
     align-items: center;
     border: 1px solid ;
     gap: 1rem;
-    padding: 5rem 3rem 5rem 5rem;
-    margin: 5rem 3rem 5rem  3rem;
+    /* padding: 5rem 3rem 5rem 5rem;
+    margin: 5rem 3rem 5rem  3rem; */
     border-radius: var(  --img-border-radius);
     background-color: var(--color-navy-blue);
+
   }
   
   /* .comments-section-subsect {
     display: flex;
   } */
 
+.comments-section-comment {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid ;
+    gap: 1rem;
+    /* padding: 5rem 3rem 5rem 5rem;
+    margin: 5rem 3rem 5rem  3rem; */
+    border-radius: var(  --img-border-radius);
+    /* background-color: var(--color-navy-blue); */
+    background-color: var(--background-color-gray);
+
+
+}

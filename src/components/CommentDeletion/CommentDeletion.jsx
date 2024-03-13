@@ -3,9 +3,8 @@ import { useAuth } from '../../context/authContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-export const CommentDeletion = ({ idComment, onDeleteSuccess, setUpdateComments }) => {
+export const CommentDeletion = ({ idComment, setUpdateComments }) => {
   const { user, setUser } = useAuth();
-  console.log('entro aqui user delete', user);
 
   const handleDeleteComment = async () => {
     try {
@@ -31,7 +30,6 @@ export const CommentDeletion = ({ idComment, onDeleteSuccess, setUpdateComments 
         setUser(updatedComments);
         localStorage.setItem('user', JSON.stringify(updatedComments));
         setUpdateComments((pre) => !pre);
-        onDeleteSuccess(); // Llamar a la función de éxito de eliminación
       }
     } catch (error) {
       console.error('Error deleting comment:', error);

@@ -1,9 +1,7 @@
-import { Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-
 import { deleteUser } from '../services/user.service';
 
-export const useDeleteUser = (setUser, setDeleteUser, user) => {
+export const useDeleteUser = (setUser, setDeleteUser) => {
   Swal.fire({
     title: 'Are you sure you want to delete your profile?',
     icon: 'warning',
@@ -12,8 +10,10 @@ export const useDeleteUser = (setUser, setDeleteUser, user) => {
     cancelButtonColor: '#d33',
     confirmButtonText: 'YES',
   }).then(async (result) => {
+    console.log('result', result);
+
     if (result.isConfirmed) {
-      const res = await deleteUser(user._id);
+      const res = await deleteUser();
 
       switch (res.status) {
         case 200:

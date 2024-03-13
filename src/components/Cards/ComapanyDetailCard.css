@@ -26,8 +26,8 @@
   padding-top: 3rem;
 }
 .companyTagsDetailed {
-  margin-top: 50px; 
-  display:inline-block;
+  margin-top: 50px;
+  display: inline-block;
   text-align: center;
 }
 .companyTagsDetailed label {
@@ -42,20 +42,20 @@
   font-weight: 500;
 }
 .companyContactDetails {
-    margin-top: 15px; 
-    text-align: center;
-    padding: 6px 15px 20px 15px;
-    border-radius: 50px;
-    font-size: 130%;
+  margin-top: 15px;
+  text-align: center;
+  padding: 6px 15px 20px 15px;
+  border-radius: 50px;
+  font-size: 130%;
 }
 .companyContactDetails label {
-    display: inline-block;
-    text-align: center;
-    padding: 6px 15px 5px 15px;
-    border-radius: 50px;
-    font-size: 100%;
-    color: var(--color-navy-blue);
-    font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  padding: 6px 15px 5px 15px;
+  border-radius: 50px;
+  font-size: 100%;
+  color: var(--color-navy-blue);
+  font-weight: 500;
 }
 @media (max-width: 480px) {
   .containerCompany {

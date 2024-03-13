@@ -3,17 +3,26 @@ import './Home.css';
 import { NavLink } from 'react-router-dom';
 import { SeeCompanies } from '../../components/SeeCompanies/SeeCompanies';
 import { ImageHome } from '../../components/ImageHome/ImageHome';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/authContext';
 
 export const Home = () => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
   return (
     <>
       <section className="hero-section">
         <div className="herobox">
           <h1> Connecting conscious consumers with renewable companies </h1>
           <h4>Explore renewable companies and connect with industry professionals</h4>
-          <NavLink to="/register">
-            <button className="button--green">Join us</button>
-          </NavLink>
+          <button
+            className="button--blue"
+            onClick={() => {
+              user ? navigate('/dashboard') : navigate('/register');
+            }}
+          >
+            {user ? 'Your Dashboard' : 'Join us'}
+          </button>
         </div>
       </section>
 

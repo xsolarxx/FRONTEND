@@ -1,69 +1,68 @@
 .containerForum {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding: 3rem 6rem;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 3rem 6rem;
+}
 
-  @media (max-width: 480px) {
-    .containerForum {
-      grid-template-columns: 1fr;
-      padding: 1rem;
-      gap: 2rem;
-      text-align: center;
-    }
+@media (max-width: 480px) {
+  .containerForum {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 2rem;
+    text-align: center;
   }
-  
-  .section-forum__text {
-    display: flex;
-    flex-direction: column;
-    color: var(--color-navy-blue);
-    gap: 10px;
-  }
+}
 
-  .section-forum__text h3 {
-    color: var(--color-navy-blue);
-    font-weight: 700;
-  }
+.section-forum__text {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-navy-blue);
+  gap: 10px;
+}
 
-  .section-forum__text p {
-    display: inline-block;
-    font-size: large;
-  }
+.section-forum__text h3 {
+  color: var(--color-navy-blue);
+  font-weight: 700;
+}
 
-  .forumContent {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    max-height: 3rem;
-    position: relative;
-  }
-  
-  .forumContent::after {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: white;
-  }
-  
-  .containerForumOwner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  
-  .imgOwnerForum {
-    height: 70px;
-    width: 70px;
-    object-fit: cover;
-    border-radius: 100%;
-    border: 2px solid var(--primary-color-green);
-  }
+.section-forum__text p {
+  display: inline-block;
+  font-size: large;
+}
 
-  .forumContainer button {
-    align-items: center;
-    width: 150px;
-  }
+.forumContent {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  max-height: 3rem;
+  position: relative;
+}
+
+.forumContent::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+}
+
+.containerForumOwner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imgOwnerForum {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 2px solid var(--primary-color-green);
+}
+
+.forumContainer button {
+  align-items: center;
+  width: 150px;
+}

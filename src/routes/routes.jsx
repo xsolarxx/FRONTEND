@@ -98,20 +98,15 @@ export const router = createBrowserRouter([
             <FormProfile />
           </Protected>
         ),
-        children: [
-          {
-            path: '/profile/changePassword',
-            element: (
-              <Protected>
-                <ChangePassword />
-              </Protected>
-            ),
-          },
-          // {
-          //   path: '/profile/',
-          //   element: <Protected></Protected>,
-          // },
-        ],
+      },
+
+      {
+        path: '/changePassword',
+        element: (
+          <Protected>
+            <ChangePassword />
+          </Protected>
+        ),
       },
       {
         path: '/forum',

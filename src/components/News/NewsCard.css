@@ -30,7 +30,7 @@
   display: flex;
   justify-content: space-between;
 }
-.authorAndTag label{
+.authorAndTag label {
   background: var(--background-color-gray);
   margin-top: 5px;
   margin-bottom: 10px;
@@ -61,7 +61,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .authorAndTag label{
+  .authorAndTag label {
     background: var(--background-color-gray);
     margin-top: 5px;
     margin-bottom: 10px;
@@ -84,4 +84,4 @@
   .authorAndTag label {
     padding: 0.5em 1em; /* Cambiado */
   }
-} 
+}

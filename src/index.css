@@ -50,6 +50,10 @@ img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+a.active p {
+  color: var( --color-green);
+}
+
 :root {
   /* Colores */
   --primary-color-green: #97f85b;

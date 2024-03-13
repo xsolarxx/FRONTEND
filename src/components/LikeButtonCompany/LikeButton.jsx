@@ -46,9 +46,10 @@ export const LikeCompany = ({ id }) => {
     <div className="likebuttonCompany">
       {user && (
         <FontAwesomeIcon
+          className="likeButton--blue"
           onClick={handleLikeClick}
           icon={like ? solidThumbsUp : regularThumbsUp}
-          style={{ color: '#122e3d' }}
+          // style={{ color: '#122e3d' }}
           size="lg"
         />
       )}

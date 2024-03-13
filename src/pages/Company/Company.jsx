@@ -90,7 +90,7 @@ export const Company = () => {
             {...register('email', { required: true })}
             placeholder="Your email address"
           />
-           <input
+          <input
             className="input_title"
             type="text"
             id="phoneNumber"

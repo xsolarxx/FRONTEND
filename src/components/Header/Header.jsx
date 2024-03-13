@@ -30,7 +30,9 @@ export const Header = () => {
           <i className="fa fa-bars" onClick={handleClickMenu}></i>
           <div className="logo-mobile1"></div>
         </div>
-        <nav className={`nav ${isMobileNavOpen ? 'nav-mobile' : 'nav-large'} ${user ? 'user-logged-in' : 'user-logged-out'}`}>
+        <nav
+          className={`nav ${isMobileNavOpen ? 'nav-mobile' : 'nav-large'} ${user ? 'user-logged-in' : 'user-logged-out'}`}
+        >
           {!isMobileNavOpen && (
             <NavLink className="link-home" to="/" onClick={handleNavLinkClick}>
               <div className="logo"></div>

@@ -2,12 +2,18 @@ import './ForumDetail.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
-import { CommentDeletion, Comments, ForumFigureDetail } from '../../components';
+import {
+  CommentDeletion,
+  Comments,
+  ForumFigureDetail,
+  LikeForum,
+} from '../../components';
 import { useAuth } from '../../context/authContext';
 import { useCommentError } from '../../hooks';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { getById } from '../../services/forum.service';
 import { toggleFavComments } from '../../services/user.service';
+import { classNames } from 'primereact/utils';
 
 export const ForumDetail = () => {
   const { id } = useParams();
@@ -122,9 +128,7 @@ export const ForumDetail = () => {
                   handleLikeComment={handleLikeComment}
                 />
                 <div>
-                  <button onClick={() => handleLikeComment(singleComment._id)}>
-                    Like
-                  </button>
+                  <LikeForum onClick={() => handleLikeComment(singleComment._id)} />
                   {singleComment.owner._id === user._id && (
                     <CommentDeletion
                       idComment={singleComment._id}

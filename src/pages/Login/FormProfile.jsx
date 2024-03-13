@@ -4,7 +4,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 import { Uploadfile } from '../../components';
@@ -98,7 +98,7 @@ export const FormProfile = () => {
           >
             Delete user
           </Link>
-          <Link to="/profile/changePassword">Change password</Link>
+          <Link to="/changePassword">Change password</Link>
           <hr className="profile-setting__line" />
           <form className="form-update-profile" onSubmit={handleSubmit(formSubmit)}>
             <label htmlFor="custom-input">Change username</label>

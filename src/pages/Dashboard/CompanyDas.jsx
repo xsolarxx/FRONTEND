@@ -5,10 +5,12 @@ export const CompanyDas = ({ userDashboard }) => {
   return (
     <div className="otraCaja">
       <h2>My companies</h2>
-      <h4>Liked companies</h4>
 
+      <h4>Liked companies</h4>
       <section className="user-pannel-section">
-        {userDashboard && userDashboard.likedCompany ? (
+        {userDashboard &&
+        userDashboard.likedCompany &&
+        userDashboard.likedCompany.length > 0 ? (
           userDashboard.likedCompany.map((item, index) => (
             <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
               <DashboardList
@@ -20,7 +22,7 @@ export const CompanyDas = ({ userDashboard }) => {
             </NavLink>
           ))
         ) : (
-          <p>No sigues ninguna compañia</p>
+          <p>No liked companies</p>
         )}
       </section>
 

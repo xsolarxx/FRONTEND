@@ -5,6 +5,17 @@
   background-color: var(--background-color-gray);
 }
 
+@media (max-width: 480px) {
+  .dashboard-conatiner {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .user-side-pannel {
+    width: none;
+  }
+
+}
+
 /* side pannel  */
 
 .user-side-pannel {
@@ -71,4 +82,12 @@
 }
 .user-main-pannel h4 {
   color: var(--color-green);
+}
+
+@media (max-width: 480px) {
+  .otraCaja {
+    padding: 0rem;
+
+  }
+
 }

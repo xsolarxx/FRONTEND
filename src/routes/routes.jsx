@@ -100,7 +100,8 @@ export const router = createBrowserRouter([
         ),
       },
 
-      {path:'/changePassword',
+      {
+        path: '/changePassword',
         element: (
           <Protected>
             <ChangePassword />

@@ -1,5 +1,5 @@
 .delete-container {
-    padding: 15px;
+  padding: 15px;
   cursor: pointer;
   border: transparent;
   border-radius: 50px;
@@ -8,8 +8,8 @@
 }
 
 .delete-container:hover {
-    background-image: none;
-    background-color: var(--color-navy-blue);
-    color: white
-    /* background-color: none; */
-  }
+  background-image: none;
+  background-color: var(--color-navy-blue);
+  color: white;
+  /* background-color: none; */
+}

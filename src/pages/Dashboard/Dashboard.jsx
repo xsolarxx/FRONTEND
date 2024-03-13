@@ -62,18 +62,20 @@ export const Dashboard = () => {
           <h4>Liked companies</h4>
 
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedCompany
-              ? userDashboard.likedCompany.map((item, index) => (
-                  <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                    <DashboardList
-                      name={item.companyName}
-                      image={item.image}
-                      email={item.email}
-                      key={index}
-                    />
-                  </NavLink>
-                ))
-              : null}
+            {userDashboard && userDashboard.likedCompany ? (
+              userDashboard.likedCompany.map((item, index) => (
+                <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
+                  <DashboardList
+                    name={item.companyName}
+                    image={item.image}
+                    email={item.email}
+                    key={index}
+                  />
+                </NavLink>
+              ))
+            ) : (
+              <p>No sigues ninguna compañia</p>
+            )}
           </section>
 
           <h4>My rated companies</h4>
@@ -135,7 +137,7 @@ export const Dashboard = () => {
             <section className="user-pannel-section">
               {userDashboard && userDashboard.usersFollowed
                 ? userDashboard.usersFollowed.map((item, index) => (
-                    <NavLink to={`/UserDetail/${item._id}`} key={index}>
+                    <NavLink to={`/profileDetail/${item._id}`} key={index}>
                       <DashboardList
                         name={item.userName}
                         key={index}
@@ -151,7 +153,7 @@ export const Dashboard = () => {
           <section className="user-pannel-section">
             {userDashboard && userDashboard.usersFollowers
               ? userDashboard.usersFollowers.map((item, index) => (
-                  <NavLink to={`/UserDetail/${item._id}`} key={index}>
+                  <NavLink to={`/profileDetail/${item._id}`} key={index}>
                     <DashboardList name={item.userName} key={index} image={item.image} />
                   </NavLink>
                 ))

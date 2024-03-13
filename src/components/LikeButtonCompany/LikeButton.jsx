@@ -32,6 +32,7 @@ export const LikeCompany = ({ id }) => {
         forumOwner: res?.data?.user?.forumOwner,
         forumFollowing: res?.data?.user?.forumFollowing,
         usersFollowed: res?.data?.user?.usersFollowed,
+        ownerRating: res?.data?.user?.ownerRating,
         token,
       };
       setUser(() => userUpdate);

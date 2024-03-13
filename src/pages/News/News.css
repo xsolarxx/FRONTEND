@@ -27,3 +27,9 @@
     padding: 5rem;
   }
 }
+.tagsfilter {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  gap: 2rem;
+}

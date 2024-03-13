@@ -29,21 +29,21 @@ export const CompanyPage = () => {
       <div className="filter-controls">
         <button
           onClick={() => setOrderBy('asc')}
-          className={`button ${orderBy === 'asc' ? 'active' : ''} button--blue`}
+          className={`button1 ${orderBy === 'asc' ? 'active' : ''} button--blue`}
         >
           Least Liked Companies
         </button>
         <button
           onClick={() => setOrderBy('desc')}
-          className={`button ${orderBy === 'desc' ? 'active' : ''} button--blue`}
+          className={`button2 ${orderBy === 'desc' ? 'active' : ''} button--blue`}
         >
           Most Liked Companies
         </button>
         <button
           onClick={() => setOrderBy(null)}
-          className={`button ${!orderBy ? 'active' : ''} button--blue`}
+          className={`button3 ${!orderBy ? 'active' : ''} button--blue`}
         >
-          Sin filtro
+          No filter
         </button>
       </div>
       {companyList &&

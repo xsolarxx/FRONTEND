@@ -1,0 +1,20 @@
+.ForumFigureDetail-Container {
+display: flex;
+flex-direction: column;
+text-align: center;
+color: var(--color-navy-blue);
+margin: 0 5rem 0 5rem;
+gap: 2rem
+
+}
+
+.ForumFigureDetail-Container img {
+    border-radius: var(--img-border-radius);
+    margin: 0 10rem 0 10rem;
+
+
+}
+
+.ForumFigureDetail-Container p {
+    font-size: large;
+}

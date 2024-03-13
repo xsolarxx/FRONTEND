@@ -91,7 +91,7 @@
   cursor: pointer;
   border: transparent;
   border-radius: 50px;
-  border: 1px solid;
+  outline: 1px solid;
   color: var(--color-navy-blue);
   font-size: inherit
   

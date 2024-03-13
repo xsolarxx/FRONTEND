@@ -1,4 +1,5 @@
-import './CompanyDetail.css';
+import '../Forum/ForumDetail.css';
+
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
@@ -67,12 +68,12 @@ export const CompanyDetail = () => {
   }, [fullCompany]);
 
   return (
-    <div>
+    <div className="ForumDetail-comment-container">
       {fullCompany?.data && <CompanyDetailCard company={fullCompany.data} />}
-      <section className="commentSectionn">
-        <div className="Leave-a-commentt">
+      <section className="commentSection">
+        <div className="Leave-a-comment">
+          <img className="icon" src={user.image} alt={user.user} />
           <input
-            className="input_user"
             type="text"
             id="content"
             value={contentValue}
@@ -81,27 +82,32 @@ export const CompanyDetail = () => {
             onChange={(e) => setContentValue(e.target.value)}
           />
           <button
-            className="button--blue"
             type="submit"
             disabled={send}
             onClick={() => handleComment()}
+            className="material-symbols-outlined"
           >
-            Add comment
+            <span>add</span>
           </button>
         </div>
-        <div className="comments-sectionn">
+        <div className="comments-box">
           {comments &&
             comments?.data?.map((singleComment) => (
-              <div className="comments-section-commentt" key={singleComment?._id}>
+              <div className="comments-section-comment" key={singleComment?._id}>
                 <Comments comment={singleComment} setCommentsByChild={setComments} />
                 <div>
-                  {singleComment.owner._id === user._id && (
-                    <CommentDeletion
+                  <div className="comments-icons">
+                    {singleComment.owner._id === user._id && (
+                      <CommentDeletion
+                        idComment={singleComment._id}
+                        setUpdateComments={setUpdateComments}
+                      />
+                    )}
+                    <LikeComments
+                      className="LikeIcon--green"
                       idComment={singleComment._id}
-                      setUpdateComments={setUpdateComments}
                     />
-                  )}
-                  <LikeComments idComment={singleComment._id} />
+                  </div>
                 </div>
               </div>
             ))}

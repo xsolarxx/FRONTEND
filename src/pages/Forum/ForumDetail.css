@@ -1,6 +1,6 @@
 .ForumDetail-comment-container {
-  /* padding: 3rem;
-    gap: 3rem; */
+  padding: 3rem;
+    gap: 3rem;
 }
 
 /* leave a comment  */
@@ -40,34 +40,35 @@
 
 /* comment section  */
 
-.comments-section {
+.comments-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
-  gap: 1rem;
+  gap: 1rem; 
+  margin: 3rem;
+  /* border: 1px solid; */
   /* padding: 5rem 3rem 5rem 5rem;
     margin: 5rem 3rem 5rem  3rem; */
   border-radius: var(--img-border-radius);
-  background-color: var(--color-navy-blue);
+  /* background-color: var(--color-navy-blue); */
 }
 
-/* .comments-section-subsect {
-    display: flex;
-  } */
-
 .comments-section-comment {
+  border-radius: var(--img-border-radius);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+
+  /* border: 1px solid; */
   gap: 1rem;
-  /* padding: 5rem 3rem 5rem 5rem;
-    margin: 5rem 3rem 5rem  3rem; */
-  border-radius: var(--img-border-radius);
-  /* background-color: var(--color-navy-blue); */
   background-color: var(--background-color-gray);
+}
+
+.comments-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem
 }

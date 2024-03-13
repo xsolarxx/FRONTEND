@@ -8,23 +8,31 @@ export const CommentDas = ({ userDashboard }) => {
       <h2>My comments</h2>
       <h4>Liked comments</h4>
       <section className="user-pannel-section">
-        {userDashboard && userDashboard.favComments
-          ? userDashboard.favComments.map((item, index) => (
-              <NavLink to={`/comment/${item._id}`} key={index}>
-                <DashboardList content={item.content} key={index} />
-              </NavLink>
-            ))
-          : null}
+        {userDashboard &&
+        userDashboard.favComments &&
+        userDashboard.favComments.length > 0 ? (
+          userDashboard.favComments.map((item, index) => (
+            <NavLink to={`/comment/${item._id}`} key={index}>
+              <DashboardList content={item.content} key={index} />
+            </NavLink>
+          ))
+        ) : (
+          <>
+            <p>No liked comments available</p>
+          </>
+        )}
       </section>
       <h4>Comments</h4>
       <section className="user-pannel-section">
-        {userDashboard && userDashboard.comments
-          ? userDashboard.comments.map((item, index) => (
-              <NavLink to={`/comment/${item._id}`} key={index}>
-                <DashboardList content={item.content} key={index} />
-              </NavLink>
-            ))
-          : null}
+        {userDashboard && userDashboard.comments && userDashboard.comments.length > 0 ? (
+          userDashboard.comments.map((item, index) => (
+            <NavLink to={`/comment/${item._id}`} key={index}>
+              <DashboardList content={item.content} key={index} />
+            </NavLink>
+          ))
+        ) : (
+          <p>No comments available</p>
+        )}
       </section>
     </div>
   );

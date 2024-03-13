@@ -19,9 +19,6 @@ export const Dashboard = () => {
     fetchUserData();
   }, []);
 
-  // userDashboard?.item.map((item) => {
-  //   console.log('entreooo', item);
-  // });
   return (
     <div className="dashboard-conatiner">
       <section className="user-side-pannel">
@@ -45,7 +42,7 @@ export const Dashboard = () => {
         <hr className="dashboard_line" />
 
         <h5>Companies summary </h5>
-        <p>Liked companies: {user?.likedCompany?.length}</p>
+        {/* <p>Liked companies: {user?.likedCompany?.length}</p>
         <p> Companies Punctuated: {user.companyPunctuated.length}</p>
 
         <h5>Forum summary </h5>
@@ -56,7 +53,7 @@ export const Dashboard = () => {
 
         <h5>Network Summary </h5>
         <p>Following: {user?.usersFollowed?.length}</p>
-        <p>Followers: {user?.usersFollowers?.length}</p>
+        <p>Followers: {user?.usersFollowers?.length}</p> */}
       </section>
 
       <div className="user-main-pannel">
@@ -65,33 +62,33 @@ export const Dashboard = () => {
           <h4>Liked companies</h4>
 
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedCompany?.length > 0 ? (
-              userDashboard.likedCompany.map((item, index) => (
-                <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                  <DashboardList
-                    name={item.companyName}
-                    image={item.image}
-                    email={item.email}
-                    key={index}
-                  />
-                </NavLink>
-              ))
-            ) : (
-              <p>No liked companies. Give some likes!</p>
-            )}
+            {userDashboard && userDashboard.likedCompany
+              ? userDashboard.likedCompany.map((item, index) => (
+                  <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
+                    <DashboardList
+                      name={item.companyName}
+                      image={item.image}
+                      email={item.email}
+                      key={index}
+                    />
+                  </NavLink>
+                ))
+              : null}
           </section>
 
           <h4>My rated companies</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.companyPunctuated? (
-              userDashboard.companyPunctuated.map((item, index) => (
-                <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
-                  <DashboardList name={item.companyName} image={item.image} key={index} />
-                </NavLink>
-              ))
-            ) : (
-              <p>No rated companies.</p>
-            )}
+            {userDashboard && userDashboard.companyPunctuated
+              ? userDashboard.companyPunctuated.map((item, index) => (
+                  <NavLink to={`/CompanyDetail/${item._id}`} key={index}>
+                    <DashboardList
+                      name={item.companyName}
+                      image={item.image}
+                      key={index}
+                    />
+                  </NavLink>
+                ))
+              : null}
           </section>
         </div>
 
@@ -99,40 +96,34 @@ export const Dashboard = () => {
           <h2>My Forum </h2>
           <h4>Liked Forums</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedForum? (
-              userDashboard.likedForum.map((item, index) => (
-                <NavLink to={`/ForumDetail/${item._id}`} key={index}>
-                  <DashboardList name={item.title} key={index} image={item.image} />
-                </NavLink>
-              ))
-            ) : (
-              <p>No liked forums.</p>
-            )}
-          </section>
-          <h4>My created Forums</h4>
-          <section className="user-pannel-section">
-            {userDashboard && userDashboard.forumOwner? (
-              userDashboard.forumOwner.map((item, index) => (
-                <NavLink to={`/ForumDetail/${item._id}`} key={index}>
-                  <DashboardList name={item.title} key={index} image={item.image} />
-                </NavLink>
-              ))
-            ) : (
-              <p>You havent created any forum yet</p>
-            )}
-          </section>
-          <div>
-            <h4>Forum Following</h4>
-            <section className="user-pannel-section">
-              {userDashboard && userDashboard.forumFollowing? (
-                userDashboard.forumFollowing.map((item, index) => (
+            {userDashboard && userDashboard.likedForum
+              ? userDashboard.likedForum.map((item, index) => (
                   <NavLink to={`/ForumDetail/${item._id}`} key={index}>
                     <DashboardList name={item.title} key={index} image={item.image} />
                   </NavLink>
                 ))
-              ) : (
-                <p>No forums followed.</p>
-              )}
+              : null}
+          </section>
+          <h4>My created Forums</h4>
+          <section className="user-pannel-section">
+            {userDashboard && userDashboard.forumOwner
+              ? userDashboard.forumOwner.map((item, index) => (
+                  <NavLink to={`/ForumDetail/${item._id}`} key={index}>
+                    <DashboardList name={item.title} key={index} image={item.image} />
+                  </NavLink>
+                ))
+              : null}
+          </section>
+          <div>
+            <h4>Forum Following</h4>
+            <section className="user-pannel-section">
+              {userDashboard && userDashboard.forumFollowing
+                ? userDashboard.forumFollowing.map((item, index) => (
+                    <NavLink to={`/ForumDetail/${item._id}`} key={index}>
+                      <DashboardList name={item.title} key={index} image={item.image} />
+                    </NavLink>
+                  ))
+                : null}
             </section>
           </div>
         </div>
@@ -142,71 +133,64 @@ export const Dashboard = () => {
           <div>
             <h4>Following</h4>
             <section className="user-pannel-section">
-              {userDashboard && userDashboard.usersFollowed? (
-                userDashboard.usersFollowed.map((item, index) => (
-                  <NavLink to={`/UserDetail/${item._id}`} key={index}>
-                    <DashboardList name={item.userName} key={index} image={item.image} />
-                  </NavLink>
-                ))
-              ) : (
-                <p>No users followed.</p>
-              )}
+              {userDashboard && userDashboard.usersFollowed
+                ? userDashboard.usersFollowed.map((item, index) => (
+                    <NavLink to={`/UserDetail/${item._id}`} key={index}>
+                      <DashboardList
+                        name={item.userName}
+                        key={index}
+                        image={item.image}
+                      />
+                    </NavLink>
+                  ))
+                : null}
             </section>
           </div>
 
           <h4>Followers</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.usersFollowers? (
-              userDashboard.usersFollowers.map((item, index) => (
-                <NavLink to={`/UserDetail/${item._id}`} key={index}>
-                  <DashboardList name={item.userName} key={index} image={item.image} />
-                </NavLink>
-              ))
-            ) : (
-              <p>No followers.</p>
-            )}
+            {userDashboard && userDashboard.usersFollowers
+              ? userDashboard.usersFollowers.map((item, index) => (
+                  <NavLink to={`/UserDetail/${item._id}`} key={index}>
+                    <DashboardList name={item.userName} key={index} image={item.image} />
+                  </NavLink>
+                ))
+              : null}
           </section>
         </div>
         <div className="otraCaja">
           <h2>My comments</h2>
           <h4>Liked comments</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.favComments? (
-              userDashboard.favComments.map((item, index) => (
-                <NavLink to={`/comment/${item._id}`} key={index}>
-                  <DashboardList content={item.content} key={index} />
-                </NavLink>
-              ))
-            ) : (
-              <p>No liked comments.</p>
-            )}
+            {userDashboard && userDashboard.favComments
+              ? userDashboard.favComments.map((item, index) => (
+                  <NavLink to={`/comment/${item._id}`} key={index}>
+                    <DashboardList content={item.content} key={index} />
+                  </NavLink>
+                ))
+              : null}
           </section>
-          {/* TESTING COMMENTS FETCH  */}
           <h4>Forum Comments</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.comments? (
-              userDashboard.comments.map((item, index) => (
-                <NavLink to={`/comment/${item._id}`} key={index}>
-                  <DashboardList content={item.content} key={index} />
-                </NavLink>
-              ))
-            ) : (
-              <p>No forum comments.</p>
-            )}
+            {userDashboard && userDashboard.comments
+              ? userDashboard.comments.map((item, index) => (
+                  <NavLink to={`/comment/${item._id}`} key={index}>
+                    <DashboardList content={item.content} key={index} />
+                  </NavLink>
+                ))
+              : null}
           </section>
         </div>
         <div className="otraCaja">
           <h4>Liked News</h4>
           <section className="user-pannel-section">
-            {userDashboard && userDashboard.likedNews? (
-              userDashboard.likedNews.map((item, index) => (
-                <NavLink to={`/NewsDetail/${item._id}`} key={index}>
-                  <DashboardList name={item.title} key={index} image={item.image} />
-                </NavLink>
-              ))
-            ) : (
-              <p>No liked news.</p>
-            )}
+            {userDashboard && userDashboard.likedNews
+              ? userDashboard.likedNews.map((item, index) => (
+                  <NavLink to={`/NewsDetail/${item._id}`} key={index}>
+                    <DashboardList name={item.title} key={index} image={item.image} />
+                  </NavLink>
+                ))
+              : null}
           </section>
         </div>
       </div>

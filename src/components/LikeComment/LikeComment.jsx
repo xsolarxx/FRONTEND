@@ -42,15 +42,15 @@ export const LikeComments = ({ idComment }) => {
     }
   };
   return (
-    <div className="likefavComments">
+    <>
       {user && (
         <FontAwesomeIcon
           onClick={handleLikeCommentsClick}
           icon={like ? solidThumbsUp : regularThumbsUp}
-          style={{ color: '#122e3d' }}
           size="lg"
+          className="LikeIcon--blue"
         />
       )}
-    </div>
+    </>
   );
 };

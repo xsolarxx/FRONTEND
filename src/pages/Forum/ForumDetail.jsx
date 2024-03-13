@@ -112,7 +112,10 @@ export const ForumDetail = () => {
                         setUpdateComments={setUpdateComments}
                       />
                     )}
-                    <LikeComments idComment={singleComment._id} />
+                    <LikeComments
+                      className="LikeIcon--green"
+                      idComment={singleComment._id}
+                    />
                   </div>
                 </div>
               </div>

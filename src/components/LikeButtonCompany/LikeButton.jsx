@@ -1,16 +1,14 @@
 import './LikeButton.css';
-
 import { faThumbsUp as regularThumbsUp } from '@fortawesome/free-regular-svg-icons';
 import { faThumbsUp as solidThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-
 import { useAuth } from '../../context/authContext';
 import { toggleLikedCompany } from '../../services/user.service';
+import { Tooltip } from 'react-tooltip';
 
 export const LikeCompany = ({ id }) => {
   const { user, setUser } = useAuth();
-
   const [like, setLike] = useState(!!user?.likedCompany?.find((item) => item === id));
 
   const handleLikeClick = async () => {
@@ -50,10 +48,13 @@ export const LikeCompany = ({ id }) => {
           className="likeButton--blue"
           onClick={handleLikeClick}
           icon={like ? solidThumbsUp : regularThumbsUp}
-          // style={{ color: '#122e3d' }}
           size="lg"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Press to like!"
+          data-tooltip-variant="success"
         />
       )}
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };

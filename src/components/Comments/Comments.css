@@ -1,6 +1,24 @@
 .commentOwnerContainer {
-    background-color: var(--background-color-gray);
-    padding: 2rem;
     border-radius: var(--img-border-radius);
-    /* gap: 2rem; */
+    display: flex;
+    align-items: center;
+}
+
+.commentOwnerContainer_profile {
+    align-items: center;
+}
+
+.commentOwnerText {
+    background-color: white;
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: var(--img-border-radius);
+}
+
+.commentOwnerContainer a {
+    /* color: var(--color-green); */
+    color: var( --color-navy-blue)
+}
+
+.commentOwnerContainer {
+    font-size: small;
 }

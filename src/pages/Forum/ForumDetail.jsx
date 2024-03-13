@@ -115,7 +115,7 @@ export const ForumDetail = () => {
         <div className="comments-section">
           {comments &&
             comments?.data?.map((singleComment) => (
-              <div key={singleComment?._id}>
+              <div className="comments-section-comment" key={singleComment?._id}>
                 <Comments
                   comment={singleComment}
                   setCommentsByChild={setComments}

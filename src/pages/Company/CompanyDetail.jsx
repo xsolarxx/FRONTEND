@@ -7,8 +7,8 @@ import { Comments } from '../../components/Comments/Comments';
 import { CompanyDetailCard } from '../../components/Cards/ComapanyDetailCard';
 import { getByIdCompany } from '../../services/company.service';
 import { createComment, getByRecipient } from '../../services/comment.service';
-import { toggleFavComments } from '../../services/user.service';
 import { CommentDeletion } from '../../components/CommentDeletion/CommentDeletion';
+import { LikeComments } from '../../components/LikeComment/LikeComment';
 
 export const CompanyDetail = () => {
   const { id } = useParams();
@@ -49,21 +49,6 @@ export const CompanyDetail = () => {
 
   const fetchComments = async () => {
     setComments(await getByRecipient('Company', id));
-  };
-
-  const handleLikeComment = async (commentId) => {
-    try {
-      await toggleFavComments(commentId);
-
-      const updatedComments = await getByRecipient('Company', id);
-      setComments(updatedComments);
-
-      // Actualizar el estado del usuario con el nuevo comentario favorito
-      const updatedUser = { ...user, favComments: [...user.favComments, commentId] };
-      setUser(updatedUser);
-    } catch (error) {
-      console.error('Error liking comment:', error);
-    }
   };
 
   useEffect(() => {
@@ -108,21 +93,15 @@ export const CompanyDetail = () => {
           {comments &&
             comments?.data?.map((singleComment) => (
               <div key={singleComment?._id}>
-                <Comments
-                  comment={singleComment}
-                  setCommentsByChild={setComments}
-                  handleLikeComment={handleLikeComment}
-                />
+                <Comments comment={singleComment} setCommentsByChild={setComments} />
                 <div>
-                  <button onClick={() => handleLikeComment(singleComment._id)}>
-                    Like
-                  </button>
                   {singleComment.owner._id === user._id && (
                     <CommentDeletion
                       idComment={singleComment._id}
                       setUpdateComments={setUpdateComments}
                     />
                   )}
+                  <LikeComments idComment={singleComment._id} />
                 </div>
               </div>
             ))}

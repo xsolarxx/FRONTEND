@@ -21,24 +21,39 @@
 .dark-mode .login_container {
   background-color: gray;
 }
+.dark-mode .login_container h4 {
+  color: black;
+}
 .dark-mode .register_container {
   background-color: gray;
 }
+.dark-mode .register_container h4 {
+  color: black;
+}
 .dark-mode .reset_password {
   background-color: gray;
+}
+.dark-mode .reset_password h4 {
+  color: black;
 }
 .dark-mode .dashboard-conatiner {
   background-color: gray;
   color: black;
 }
 
-.dark-mode .user-side-pannel {
+.dark-mode .user-side-pannel p {
+  color: black;
+}
+.dark-mode .user-main-pannel h2 {
+  color: black;
+}
+.dark-mode .user-main-pannel p {
   color: black;
 }
 .dark-mode p,
 .dark-mode h6,
 .dark-mode h5,
-/* .dark-mode h4, */
+.dark-mode h4,
 .dark-mode h3,
 .dark-mode h2,
 .dark-mode h1 {

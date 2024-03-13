@@ -108,7 +108,6 @@ export const CompanyDetail = () => {
           {comments &&
             comments?.data?.map((singleComment) => (
               <div key={singleComment?._id}>
-                <p>{singleComment.content}</p>
                 <Comments
                   comment={singleComment}
                   setCommentsByChild={setComments}

@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { ScrollToTopButton } from '../../styles/Buttons/ScrollToTopButton';
 import { RatingComponent } from '../Rating/RatingCompany';
 import { LikeCompany } from '../LikeButtonCompany/LikeButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export const CompanyCard = ({ company }) => {
   const navigate = useNavigate();
@@ -20,7 +22,7 @@ export const CompanyCard = ({ company }) => {
           <a href={`tel:+34${company.phoneNumber}`} className="companyPhone">
             {company.phoneNumber}
           </a>
-          <a href={`mailto:${company.email}`} className="companyPhone">
+          <a href={`mailto:${company.email}`} className="companyMail">
             {company.email}
           </a>
           <br />

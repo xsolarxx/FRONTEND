@@ -82,7 +82,6 @@
   background-image: none;
 }
 
-
 .button--add {
   padding: 12px;
   color: var(--text-navy-blue);
@@ -96,9 +95,8 @@
 .button--add:hover {
   background-image: none;
   background-color: var(--color-navy-blue);
-  color: white
+  color: white;
 }
-
 
 /* className="material-symbols-outlined"
 >

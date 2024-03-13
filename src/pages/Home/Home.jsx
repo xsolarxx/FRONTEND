@@ -16,13 +16,13 @@ export const Home = () => {
           <h1> Connecting conscious consumers with renewable companies </h1>
           <h4>Explore renewable companies and connect with industry professionals</h4>
           <button
-      className="button--blue"
-      onClick={() => {
-        user ? navigate('/dashboard') : navigate('/register');
-      }}
-    >
-      {user ? 'Your Dashboard' : 'Join us'}
-    </button>
+            className="button--blue"
+            onClick={() => {
+              user ? navigate('/dashboard') : navigate('/register');
+            }}
+          >
+            {user ? 'Your Dashboard' : 'Join us'}
+          </button>
         </div>
       </section>
 

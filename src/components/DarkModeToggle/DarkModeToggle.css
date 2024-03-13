@@ -9,7 +9,6 @@
   text-decoration: underline;
 }
 
-
 .light-mode {
   color: #000000;
 }
@@ -38,9 +37,8 @@
 }
 
 .dark-mode .darkModeToggle {
-color: aqua;
+  color: aqua;
 }
-
 
 @media (max-width: 650px) {
   .darkModeToggle {

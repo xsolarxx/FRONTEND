@@ -96,7 +96,7 @@ export const FormProfile = () => {
             onClick={() => useDeleteUser(setUser, setDeleteUser)}
             style={{ cursor: 'pointer' }}
           >
-            Delete user 
+            Delete user
           </Link>
           <Link to="/changePassword">Change password</Link>
           <hr className="profile-setting__line" />

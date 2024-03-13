@@ -1,3 +1,4 @@
+import './ForumDetail.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
@@ -88,30 +89,30 @@ export const ForumDetail = () => {
   }, [fullForum]);
 
   return (
-    <>
+    <div className="ForumDetail-comment-container">
       <div>{fullForum?.data && <ForumFigureDetail forumData={fullForum.data} />}</div>
       <section className="commentSection">
-        <h6>Leave a comment</h6>
-        <div className="addComment">
+        <div className="Leave-a-comment">
+          <img className="icon" src={user.image} alt={user.user} />
           <input
-            className="input_user"
             type="text"
             id="content"
             value={contentValue}
             name="content"
-            placeholder="comment content"
+            placeholder="Leave a comment ..."
             onChange={(e) => setContentValue(e.target.value)}
           />
           <button
-            className="button--blue"
             type="submit"
             disabled={send}
             onClick={() => handleComment()}
+            className="material-symbols-outlined"
           >
-            Add comment
+            <span>add</span>
           </button>
         </div>
-        <div className="allComments">
+        <h1>LO DEJO A MEDIAS, MAÑANA SIGO </h1>
+        <div className="comments-section">
           {comments &&
             comments?.data?.map((singleComment) => (
               <div key={singleComment?._id}>
@@ -120,15 +121,19 @@ export const ForumDetail = () => {
                   setCommentsByChild={setComments}
                   handleLikeComment={handleLikeComment}
                 />
-                <button onClick={() => handleLikeComment(singleComment._id)}>Like</button>
-                <CommentDeletion
-                  idComment={singleComment._id}
-                  setUpdateComments={setUpdateComments}
-                />
+                <div className="comments-section-subsect">
+                  <button onClick={() => handleLikeComment(singleComment._id)}>
+                    Like
+                  </button>
+                  <CommentDeletion
+                    idComment={singleComment._id}
+                    setUpdateComments={setUpdateComments}
+                  />
+                </div>
               </div>
             ))}
         </div>
       </section>
-    </>
+    </div>
   );
 };

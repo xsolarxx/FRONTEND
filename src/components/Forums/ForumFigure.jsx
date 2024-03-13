@@ -42,8 +42,6 @@ export const ForumFigure = ({ forum }) => {
           <h5 className="nameOwnerForum">
             {forum?.owner?.userName} {}
           </h5>
-          <br />
-          <p className="nameOwnerForum">{forum?.owner?.email}</p>
         </div>
       </div>
     </div>

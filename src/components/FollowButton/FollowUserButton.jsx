@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import { useAuth } from '../../context/authContext';
-import { toggleFollowedForum } from '../../services';
+import { toggleFollow } from '../../services';
 
-export const FollowForumButton = ({ id }) => {
+export const FollowUserButton = ({ id }) => {
   const { user, setUser } = useAuth();
   const [follow, setFollow] = useState(
-    !!user.forumFollowing?.find((item) => item === id),
+    !!user?.usersFollowed?.find((item) => item === id),
   );
 
   const handleFollowClick = async () => {
     if (user) {
       const { token } = user;
-      const res = await toggleFollowedForum(id);
+      const res = await toggleFollow(id);
+      console.log('RES FOLLOW USER', res);
       const userUpdate = {
         name: res?.data?.user?.userName,
         email: res?.data?.user?.email,
@@ -31,13 +32,13 @@ export const FollowForumButton = ({ id }) => {
       setUser(() => userUpdate);
       localStorage.removeItem('user');
       localStorage.setItem('user', JSON.stringify(userUpdate));
-      setFollow(!!res.data.user.forumFollowing.find((item) => item === id));
+      setFollow(!!res?.data?.user?.usersFollowed?.find((item) => item === id));
     }
   };
 
   return (
-    <div className="followForumButton">
-      {user && <button onClick={handleFollowClick}>Follow this</button>}
+    <div className="followUserButton">
+      {user && <button onClick={handleFollowClick}>Follow this user</button>}
     </div>
   );
 };

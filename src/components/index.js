@@ -24,3 +24,5 @@ export * from './FollowButton/FollowForumButton';
 export * from './Cards/ProfileCard';
 export * from './SeeCompanies/SeeCompanies';
 export * from './UpdateComments/UpdateComments';
+export * from './Cards/ProfileDetailCard';
+export * from './FollowButton/FollowUserButton';

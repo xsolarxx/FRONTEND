@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { ProfileCard } from '../../components';
 import { getByLikesCompany, getByDescLikesCompany } from '../../services/company.service';
 
-
 export const ProfilePage = () => {
   const [profileList, setProfileList] = useState(null);
   const [orderBy, setOrderBy] = useState(null);

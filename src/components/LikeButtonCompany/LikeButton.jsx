@@ -11,7 +11,7 @@ import { toggleLikedCompany } from '../../services/user.service';
 export const LikeCompany = ({ id }) => {
   const { user, setUser } = useAuth();
 
-  const [like, setLike] = useState(!!user.likedCompany?.find((item) => item === id));
+  const [like, setLike] = useState(!!user?.likedCompany?.find((item) => item === id));
 
   const handleLikeClick = async () => {
     console.log('entro', like);
@@ -31,12 +31,13 @@ export const LikeCompany = ({ id }) => {
         likedNews: res?.data?.user?.likedNews,
         forumOwner: res?.data?.user?.forumOwner,
         forumFollowing: res?.data?.user?.forumFollowing,
+        usersFollowed: res?.data?.user?.usersFollowed,
         token,
       };
       setUser(() => userUpdate);
       localStorage.removeItem('user');
       localStorage.setItem('user', JSON.stringify(userUpdate));
-      setLike(!!res.data.user.likedCompany.find((item) => item === id));
+      setLike(!!res?.data?.user?.likedCompany?.find((item) => item === id));
     }
   };
 

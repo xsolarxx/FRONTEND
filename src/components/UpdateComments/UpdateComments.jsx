@@ -1,16 +1,18 @@
-import { deleteComment } from '../../services/comment.service';
+import { update } from '../../services/comment.service';
 import { useAuth } from '../../context/authContext';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 
-export const CommentDeletion = ({ idComment, setUpdateComments }) => {
+export const UpdateComment = ({ id }) => {
   const { user, setUser } = useAuth();
+  const [updatedContent, setUpdatedContent] = useState('');
 
-  const handleDeleteComment = async () => {
+  const handleUpdateComment = async () => {
     try {
       if (user) {
         const { token } = user;
-        const res = await deleteComment(idComment);
+        const res = await update(id);
         console.log('soy una respuesta', res);
         const updatedComments = {
           name: res?.data?.user?.userName,
@@ -29,23 +31,22 @@ export const CommentDeletion = ({ idComment, setUpdateComments }) => {
         };
         setUser(updatedComments);
         localStorage.setItem('user', JSON.stringify(updatedComments));
-        setUpdateComments((pre) => !pre);
       }
     } catch (error) {
       console.error('Error deleting comment:', error);
     }
   };
 
-  // Verificar si el comentario pertenece al usuario actual
-  /*const isCurrentUserComment = user && user.comments && user.comments.includes(idComment);*/
+  const handleChange = (e) => {
+    setUpdatedContent(e.target.value); // Actualiza el estado del contenido del comentario
+  };
 
   return (
-    <>
-      <FontAwesomeIcon
-        onClick={handleDeleteComment}
-        icon={faTrash}
-        style={{ color: '#2A5C45' }}
-      />
-    </>
+    <div>
+      <textarea value={updatedContent} onChange={handleChange} />
+      <button onClick={handleUpdateComment}>
+        <FontAwesomeIcon icon={faPenToSquare} style={{ color: '#2A5C45' }} />
+      </button>
+    </div>
   );
 };

@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import './ForumFigureDetail.css';
+import { TopBar } from '../../layouts/TopBar';
 
 export const ForumFigureDetail = ({ forumData }) => {
   const creationDate = new Date(forumData.createdAt);
@@ -7,23 +9,23 @@ export const ForumFigureDetail = ({ forumData }) => {
   });
 
   return (
-    <div className="containerForum">
-      <div className="containerForumOwner">
+    <>
+      <div className="ForumFigureDetail-Container">
+        <h1>{forumData.title}</h1>
+        <img src={forumData.image} alt={forumData.title} />
+
         <Link to={`/profileDetail/${forumData?.owner?._id}`}>
           <img
             className="imgOwnerForum"
             src={forumData.owner.image}
             alt={forumData.owner.userName}
           />
-          <h6 className="nameOwnerForum">{forumData.owner.userName}</h6>
+          <h6>{forumData.owner.userName}</h6>
         </Link>
+
+        <p>{formattedDate}</p>
+        <p>{forumData.content}</p>
       </div>
-      <div className="containerForumInfo">
-        <img className="imgForum" src={forumData.image} alt={forumData.title} />
-        <h3 className="forumTitle">{forumData.title}</h3>
-        <p className="forumCreation">{formattedDate}</p>
-        <p className="forumContent">{forumData.content}</p>
-      </div>
-    </div>
+    </>
   );
 };

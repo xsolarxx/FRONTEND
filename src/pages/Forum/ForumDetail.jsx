@@ -99,19 +99,21 @@ export const ForumDetail = () => {
             <span>add</span>
           </button>
         </div>
-        <div className="comments-section">
+        <div className="comments-box">
           {comments &&
             comments?.data?.map((singleComment) => (
               <div className="comments-section-comment" key={singleComment?._id}>
                 <Comments comment={singleComment} setCommentsByChild={setComments} />
                 <div>
-                  {singleComment.owner._id === user._id && (
-                    <CommentDeletion
-                      idComment={singleComment._id}
-                      setUpdateComments={setUpdateComments}
-                    />
-                  )}
-                  <LikeComments idComment={singleComment._id} />
+                  <div className="comments-icons">
+                    {singleComment.owner._id === user._id && (
+                      <CommentDeletion
+                        idComment={singleComment._id}
+                        setUpdateComments={setUpdateComments}
+                      />
+                    )}
+                    <LikeComments idComment={singleComment._id} />
+                  </div>
                 </div>
               </div>
             ))}

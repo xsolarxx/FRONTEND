@@ -30,6 +30,9 @@
 .tagsfilter {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rem;
+  margin-bottom: 2rem;
 }

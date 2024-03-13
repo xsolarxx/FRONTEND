@@ -86,7 +86,7 @@
 >
   <span>add</span> */
 
-.LikeIcon--blue {
+/* .LikeIcon--blue {
   padding: 15px;
   cursor: pointer;
   border: transparent;
@@ -102,10 +102,10 @@
   background-image: none;
   background-color: var(--color-navy-blue);
   color: white;
-  /* background-color: none; */
   font-size: inherit;
 
-}
+} */
+
 
 .LikeIcon--green {
   padding: 15px;

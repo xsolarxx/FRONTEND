@@ -50,7 +50,7 @@ export const LikeCompany = ({ id }) => {
           icon={like ? solidThumbsUp : regularThumbsUp}
           size="lg"
           data-tooltip-id="my-tooltip"
-          data-tooltip-content="Press to like!"
+          data-tooltip-content="Press to like/dislike!"
           data-tooltip-variant="success"
         />
       )}

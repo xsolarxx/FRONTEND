@@ -4,6 +4,7 @@ import { faThumbsUp as regularThumbsUp } from '@fortawesome/free-regular-svg-ico
 import { faThumbsUp as solidThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 
 import { useAuth } from '../../context/authContext';
 import { toggleLikedForum } from '../../services/user.service';
@@ -49,8 +50,12 @@ export const LikeForum = ({ id }) => {
           onClick={handleLikeClick}
           icon={like ? solidThumbsUp : regularThumbsUp}
           size="lg"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Press to like/dislike!"
+          data-tooltip-variant="success"
         />
       )}
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };

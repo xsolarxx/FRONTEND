@@ -1,3 +1,4 @@
+import './NewsDetail.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -63,18 +64,17 @@ export const NewsDetail = () => {
     }
   }, [fullNews]);
   return (
-    <>
-      <div>{fullNews?.data && <NewsDetailCard newsData={fullNews.data} />}</div>
-      <section className="commentSection">
-        <h6>Leave a comment</h6>
-        <div className="addComment">
+    <div>
+      {fullNews?.data && <NewsDetailCard newsData={fullNews.data} />}
+      <section className="commentSections">
+        <div className="Leave-a-commenttt">
           <input
             className="input_user"
             type="text"
             id="content"
             value={contentValue}
             name="content"
-            placeholder="comment content"
+            placeholder="Leave a comment ..."
             onChange={(e) => setContentValue(e.target.value)}
           />
           <button
@@ -86,12 +86,11 @@ export const NewsDetail = () => {
             Add comment
           </button>
         </div>
-        <div className="allComments">
+        <div className="comments-sectionnn">
           {comments &&
             comments?.data?.map((singleComment) => (
-              <div key={singleComment?._id}>
+              <div className="comments-section-commenttt" key={singleComment?._id}>
                 <Comments comment={singleComment} setCommentsByChild={setComments} />
-
                 <div>
                   {singleComment.owner._id === user._id && (
                     <CommentDeletion
@@ -105,6 +104,6 @@ export const NewsDetail = () => {
             ))}
         </div>
       </section>
-    </>
+    </div>
   );
 };

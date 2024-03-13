@@ -1,5 +1,4 @@
 import './Home.css';
-import '../../components/Buttons/button.css';
 
 import { NavLink } from 'react-router-dom';
 import { SeeCompanies } from '../../components/SeeCompanies/SeeCompanies';

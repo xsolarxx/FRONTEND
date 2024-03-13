@@ -81,8 +81,8 @@ export const CompanyDetail = () => {
   }, [fullCompany]);
 
   return (
-    <>
-      <div>{fullCompany?.data && <CompanyDetailCard company={fullCompany.data} />}</div>
+    <div>
+      {fullCompany?.data && <CompanyDetailCard company={fullCompany.data} />}
       <section className="commentSection">
         <h6>Leave a comment</h6>
         <div className="addComment">
@@ -104,26 +104,31 @@ export const CompanyDetail = () => {
             Add comment
           </button>
         </div>
-        {/* Aquí utilizamos el componente Comments para mostrar los comentarios */}
-        {comments &&
-          comments?.data?.map((singleComment) => (
-            <div key={singleComment?._id}>
-              <p>{singleComment.content}</p>
-              {user && user._id === singleComment.owner._id && (
-                <>
+        <div>
+          {comments &&
+            comments?.data?.map((singleComment) => (
+              <div key={singleComment?._id}>
+                <p>{singleComment.content}</p>
+                <Comments
+                  comment={singleComment}
+                  setCommentsByChild={setComments}
+                  handleLikeComment={handleLikeComment}
+                />
+                <div>
                   <button onClick={() => handleLikeComment(singleComment._id)}>
                     Like
                   </button>
-                </>
-              )}
-              {singleComment.createdAt && <p>Created at: {singleComment.createdAt}</p>}
-              <CommentDeletion
-                idComment={singleComment._id}
-                setUpdateComments={setUpdateComments}
-              />
-            </div>
-          ))}
+                  {singleComment.owner._id === user._id && (
+                    <CommentDeletion
+                      idComment={singleComment._id}
+                      setUpdateComments={setUpdateComments}
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
+        </div>
       </section>
-    </>
+    </div>
   );
 };

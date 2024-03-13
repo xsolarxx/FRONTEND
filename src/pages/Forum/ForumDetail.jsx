@@ -129,7 +129,6 @@ export const ForumDetail = () => {
                     idComment={singleComment._id}
                     setUpdateComments={setUpdateComments}
                   />
-                  <img className="icon" src={user.image} alt={user.user} />
                 </div>
               </div>
             ))}

@@ -16,6 +16,7 @@
   padding: 4rem;
   border-radius: var(--img-border-radius);
   gap: 0.5rem;
+  width: 200px;
 }
 
 .dashboard_line {
@@ -58,6 +59,11 @@
   border-radius: var(--img-border-radius);
 }
 
+.user-main-pannel button {
+  height: 40px;
+  margin: 0.3rem;
+}
+
 .user-main-pannel h2,
 .user-main-pannel h4 {
   margin-bottom: 20px;
@@ -66,3 +72,4 @@
 .user-main-pannel h4 {
   color: var(--color-green);
 }
+

@@ -1,9 +1,7 @@
 import './Dashboard.css';
 
 import { useEffect, useState } from 'react';
-// import { NavLink } from 'react-router-dom';
 
-// import { DashboardList } from '../../components';
 import { useAuth } from '../../context/authContext';
 import { getByIdPopulate } from '../../services/user.service';
 import { SidePanel } from './SidePanel';
@@ -34,8 +32,9 @@ export const Dashboard = () => {
     <div className="dashboard-conatiner">
       <SidePanel />
       <div className="user-main-pannel">
-        <div>
+        <div className="otraCaja">
           <button
+            className="button--green"
             onClick={() => {
               setCompanyDas(true);
               setFollowDas(false);
@@ -47,6 +46,7 @@ export const Dashboard = () => {
             view Company
           </button>
           <button
+            className="button--green"
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(true);
@@ -58,6 +58,7 @@ export const Dashboard = () => {
             view Network
           </button>
           <button
+            className="button--green"
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(false);
@@ -69,6 +70,7 @@ export const Dashboard = () => {
             view News
           </button>
           <button
+            className="button--green"
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(false);
@@ -80,6 +82,7 @@ export const Dashboard = () => {
             view Comments
           </button>
           <button
+            className="button--green"
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(false);

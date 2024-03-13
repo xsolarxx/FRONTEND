@@ -1,12 +1,14 @@
 /* Noticia en la sección principal(columna). Aparece información breve y la 
 opción de "Read More" para abrir el contenido entero de dicha noticia */
 
+import { useAuth } from '../../context/authContext';
 import './NewsCard.css';
 
 import { useNavigate } from 'react-router-dom';
 
 export const NewsCard = ({ news }) => {
   const navigate = useNavigate();
+  const { user } = useAuth();
   return (
     <div className="containerNews">
       <section className="newsImageContainer">
@@ -22,10 +24,11 @@ export const NewsCard = ({ news }) => {
         <button
           className="button--blue"
           onClick={() => {
-            navigate(`/newsDetail/${news._id}`);
+            user ?  navigate(`/newsDetail/${news._id}`) :  navigate(`/register`)
+          
           }}
         >
-          Read more
+         {user ? 'Read more' : 'Register to read more'}
         </button>
       </div>
     </div>

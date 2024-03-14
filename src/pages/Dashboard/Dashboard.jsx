@@ -19,10 +19,12 @@ export const Dashboard = () => {
   const [newsDas, setNewsDas] = useState(false);
   const [commentDas, setCommentDas] = useState(false);
   const [forumDas, setForumDas] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const fetchUserData = async () => {
     const res = await getByIdPopulate(user?._id);
     setUserDashboard(res.data);
+    setIsAdmin(res.data && res.data.rol === 'admin');
   };
   useEffect(() => {
     fetchUserData();
@@ -93,6 +95,26 @@ export const Dashboard = () => {
           >
             view Forums
           </button>
+          {isAdmin && (
+            <>
+              <button
+                className="button--blue"
+                onClick={() => {
+                  window.location.href = "http://localhost:5173/createnews";
+                }}
+              >
+                Create News
+              </button>
+              <button
+                className="button--blue"
+                onClick={() => {
+                  window.location.href = "http://localhost:5173/createcompany";
+                }}
+              >
+                Create Company
+              </button>
+            </>
+          )}
         </div>
         {companyDas && <CompanyDas userDashboard={userDashboard} />}
 

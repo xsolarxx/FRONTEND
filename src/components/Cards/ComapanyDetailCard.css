@@ -17,14 +17,14 @@
 .sectionCompanyDescription {
   font-size: x-large;
   font-weight: 200;
-  text-align: justify;
+  text-align: center;
   line-height: 2rem;
 }
 .sectionCompanyText h2 {
   color: var(--color-navy-blue);
   text-align: center;
   font-weight: 600;
-  line-height: 8rem;
+  line-height: 5rem;
 }
 .sectionCompanyText h4 {
   text-align: center;
@@ -76,12 +76,6 @@
 
 h5 {
   font-size: 140%;
-}
-.companyLikesCompany {
-  display: flex;
-  grid-column: span 2; /* Para que el componente Likes abarque el ancho de las dos columnas */
-  margin-top: 20px;
-  text-align: center; /* Centra el botón Likes horizontalmente */
 }
 
 @media (max-width: 480px) {

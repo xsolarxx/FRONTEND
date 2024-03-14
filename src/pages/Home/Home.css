@@ -217,55 +217,6 @@
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
-
-@media (max-width: 480px) {
-  .services-parent-container .service1,
-  .services-parent-container .service4,
-  .services-parent-container .service5,
-  .services-parent-container .service6 {
-    display: none;
-  }
-  @media (max-width: 480px) {
-    .services-container div {
-      display: flex;
-      flex-direction: column;
-      background-position: 100%;
-      background-size: contain;
-      width: 100%;
-    }
-    .services-parent-container .services-container .Blue-box-title {
-      width: 480px;
-      background-size: cover;
-    }
-    .Blue-box-title {
-      background-size: cover;
-    }
-  }
-
-  .services-container {
-    padding: 0;
-  }
-
-  .services-parent-container {
-    padding: 0;
-  }
-
-  .services-container div {
-    margin: 0;
-    gap: 0;
-  }
-
-  .Blue-box-title {
-    margin: 0;
-    padding: 0;
-    flex: 0;
-  }
-}
-
-/* 3 services finish */
-
-/* Section banner (Solar by Nature)  */
-
 .section-banner {
   background-color: var(--color-navy-blue);
   display: flex;
@@ -274,7 +225,7 @@
   padding: 0 5rem 0rem 5rem;
   /* align-items: center; */
 }
-
+/* Section banner (Solar by Nature)  */
 .div-banner,
 .solarbynature {
   flex: 1;
@@ -291,6 +242,40 @@
 }
 
 @media (max-width: 480px) {
+  .services-parent-container .service1,
+  .services-parent-container .service4,
+  .services-parent-container .service5,
+  .services-parent-container .service6 {
+    display: none;
+  }
+  .services-container div {
+    display: flex;
+    flex-direction: column;
+    background-position: 100%;
+    background-size: contain;
+    width: 100%;
+    gap: 2rem;
+  }
+  .services-container {
+    display: block;
+  }
+
+  .Blue-box-title {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .Blue-box-title p {
+    text-align: center;
+  }
+  .services-parent-container {
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
   .section-banner {
     display: flex;
     flex-direction: column;
@@ -298,6 +283,7 @@
     justify-content: center;
     text-align: center;
     padding: 2rem;
+    margin: 4rem 0;
   }
 
   .div-banner,
@@ -312,6 +298,25 @@
     font-size: 20px;
     margin-bottom: 25px;
   }
+}
+
+.services-container {
+  padding: 0;
+}
+
+.services-parent-container {
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.services-container div {
+  margin: 0;
+}
+
+.Blue-box-title {
+  margin: 0;
+  padding: 0;
+  flex: 0;
 }
 
 .section-banner button:hover {

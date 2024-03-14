@@ -48,6 +48,10 @@ nav {
   .nav-mobile p:hover {
     color: var(--primary-color-green);
   }
+  .nav-mobile.user-logged-in {
+    padding-bottom: 20rem;
+    margin-top: 5rem;
+  }
 }
 
 nav button {

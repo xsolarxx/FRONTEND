@@ -15,12 +15,15 @@ border-radius: 50px;
 .followed {
 color: var(--text-navy-blue);
 background-image: linear-gradient(215deg, #97f85b 0%, #25dc80 100%);
+border: 1px solid white;
 
 }
 
 .notFollowed {
 background-color: white;
 color: var(--text-navy-blue);
+border: 1px solid #122e3d;
+
 }
 
 .FollowIcon {

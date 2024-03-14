@@ -23,7 +23,7 @@ export const ForumFigure = ({ forum }) => {
         <h2 className="forumTitle">{forum?.title}</h2>
         <p className="forumCreation">{formattedDate}</p>
         <p className="forumContent">{forum?.content}</p>
-        <LikeForum id={forum?._id} />
+
         <FollowForumButton id={forum?._id} />
         <button
           className="button--blue"

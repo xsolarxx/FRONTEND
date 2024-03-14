@@ -6,6 +6,9 @@
   margin: 0 5rem 0 5rem;
   gap: 5rem;
 }
+.newsShortContent {
+  text-align: center;
+}
 
 .pageContainerNewsDetailed img {
   border-radius: var(--img-border-radius);

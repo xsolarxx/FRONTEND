@@ -114,8 +114,8 @@
   color: aqua;
 }
 
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
   .darkModeToggle {
     display: none;
   }
-}
+} */

@@ -26,6 +26,11 @@
     padding: 0.5rem;
     padding-bottom: 1.5rem;
   }
+  .formNews h5 {
+    justify-content: left;
+    padding: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
   .input_title {
     border-radius: 30px;
     border: solid 2px var(--primary-color-blue);
@@ -81,26 +86,30 @@
     width:500px;
     gap: 3rem;
   }
-  .companyServices_container {
+  .newsTag_container {
     margin-bottom: 20px;
     width: 100%;
     display:flex;
   }
   
-  .companyServices_container label {
+  newsTag_container tags{
+    display: flex;
+    padding: auto;
+    margin-right: 30px;
+  }
+  .newsTag_container label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
   }
-  .companyServices_container p{
+  .newsTag_container p{
     display: flex;
     margin-bottom: 16px;
   }
-  .companyServices_container h5{
+  .newsTag_container h5{
     display: flex;
     margin-bottom: 16px;
   }
-  .companyServices_container select {
+  .newsTag_container select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -109,7 +118,7 @@
     font-size: 16px;
   }
   
-  .companyServices_container select[multiple] {
+  .newsTag_container select[multiple] {
     height: auto;
   }
   description

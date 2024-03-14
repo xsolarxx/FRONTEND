@@ -97,43 +97,43 @@ export const News = () => {
             {...register('author', { required: true })}
             placeholder="News author"
           />
-          <div className="companyServices_container form-group">
-            <div className="companyServices_Container">
-              <h5>Choose a category for your article:</h5>
-              <input
-                type="checkbox"
-                name="tags"
-                id="tags"
-                value="Solar panels"
-                {...register('tags')}
-              />
-              <label htmlFor="Solar panels" className="label-checkbox Solar panels">
-                Solar panels
-              </label>
-              <input
-                type="checkbox"
-                name="tags"
-                id="Wind power"
-                value="Wind power"
-                {...register('tags')}
-              />
-              <label htmlFor="Wind power" className="label-checkbox Wind power">
-                Wind power
-              </label>
-
-              <input
-                type="checkbox"
-                name="tags"
-                id="Others"
-                value="Others"
-                {...register('tags')}
-              />
-              <label htmlFor="Others" className="label-checkbox Others">
-                Others
-              </label>
-            </div>
+          <h5>Choose a category for your article:</h5>
+          <div className="newsTag_container">
+            <input
+              type="checkbox"
+              name="tags"
+              id="tags"
+              value="Solar panels"
+              {...register('tags')}
+            />
+            <label htmlFor="Solar panels" className="label-checkbox Solar panels">
+              Solar panels
+            </label>
           </div>
-
+          <div className="newsTag_container">
+            <input
+              type="checkbox"
+              name="tags"
+              id="Wind power"
+              value="Wind power"
+              {...register('tags')}
+            />
+            <label htmlFor="Wind power" className="label-checkbox Wind power">
+              Wind power
+            </label>
+          </div>
+          <div className="newsTag_container">
+            <input
+              type="checkbox"
+              name="tags"
+              id="Others"
+              value="Others"
+              {...register('tags')}
+            />
+            <label htmlFor="Others" className="label-checkbox Others">
+              Others
+            </label>
+          </div>
           <Uploadfile />
 
           <div className="btn_container">

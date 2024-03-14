@@ -51,11 +51,8 @@ export const FollowUserButton = ({ id }) => {
             className={`FollowButton ${follow ? 'notFollowed' : 'followed'}`}
             onClick={handleFollowClick}
           >
-            <FontAwesomeIcon
-              // className={`icon ${follow ? 'notFollowed' : 'followed'}`}
-              icon={solidfaUserPlus}
-            />
-            <p>{follow ? 'Follow user!' : 'Unfollow'}</p>
+            <FontAwesomeIcon icon={solidfaUserPlus} />
+            <p>{follow ? 'Unfollow' : 'Follow'}</p>
           </button>
         </>
       )}

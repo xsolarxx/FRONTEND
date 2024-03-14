@@ -1,5 +1,6 @@
+import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
-export const useUpdateError = (res, setRes, setUser, logout) => {
+export const useUpdateError = (res, setRes, user, setUser, setUpdatedUser) => {
   //!---------------------------------------> 200
   let contador;
   if (res?.data) {
@@ -24,8 +25,32 @@ export const useUpdateError = (res, setRes, setUser, logout) => {
       }
     });
     if (res?.status == 200) {
-      //logout();
+      console.log('res en hook', res);
+      const { token } = user;
+      const userUpdate = {
+        name: res?.data?.updateUser?.userName,
+        email: res?.data?.updateUser?.email,
+        image: res?.data?.updateUser?.image,
+        check: res?.data?.updateUser?.check,
+        _id: res?.data?.updateUser?._id,
+        likedCompany: res?.updateUser?.user?.likedCompany,
+        comments: res?.data?.updateUser?.comments,
+        favComments: res?.data?.updateUser?.favComments,
+        likedForum: res?.data?.updateUser?.likedForum,
+        likedNews: res?.data?.updateUser?.likedNews,
+        forumOwner: res?.data?.updateUser?.forumOwner,
+        forumFollowing: res?.data?.updateUser?.forumFollowing,
+        usersFollowed: res?.data?.updateUser?.usersFollowed,
+        ownerRating: res?.data?.updateUser?.ownerRating,
+        companyPunctuated: res?.data?.updateUser?.companyPunctuated,
+        token,
+      };
+      localStorage.removeItem('user');
+      localStorage.setItem('user', JSON.stringify(userUpdate));
+      setUser(() => userUpdate);
+      setUpdatedUser(() => true);
       setRes(() => ({}));
+
       return Swal.fire({
         icon: 'success',
         title: `Update data user✅`,

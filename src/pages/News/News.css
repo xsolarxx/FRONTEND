@@ -4,18 +4,16 @@
   padding: 5rem;
 }
 
-
-@media (max-width: 480px) {
-  
-    .NewsPageGrid {
-      padding: 0;
-    }
-  
+.tagsfilter {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0 auto ;
   }
- 
-  
 
-
+  .tagsfilter button {
+    width: 150px;
+  }
 
 
 /* @media (max-width: 480px) {

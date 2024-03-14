@@ -34,8 +34,11 @@ export const Register = () => {
       setRes(await registerWithRedirect(custonFormData));
       setSend(false);
     } else {
+      const custonFormData = {
+        ...formData,
+      };
       setSend(true);
-      setRes(await registerWithRedirect(formData));
+      setRes(await registerWithRedirect(custonFormData));
       setSend(false);
     }
   };

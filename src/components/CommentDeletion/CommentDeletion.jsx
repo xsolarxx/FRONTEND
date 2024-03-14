@@ -3,6 +3,7 @@ import { useAuth } from '../../context/authContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import './CommentDeletion.css';
+import { Tooltip } from 'react-tooltip';
 export const CommentDeletion = ({ idComment, setUpdateComments }) => {
   const { user, setUser } = useAuth();
 
@@ -48,7 +49,11 @@ export const CommentDeletion = ({ idComment, setUpdateComments }) => {
         className="delete-container"
         onClick={handleDeleteComment}
         icon={faTrash}
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="Delete comment"
+        data-tooltip-variant="success"
       />
+      <Tooltip id="my-tooltip" />
     </>
   );
 };

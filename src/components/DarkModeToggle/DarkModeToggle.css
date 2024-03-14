@@ -76,6 +76,15 @@
 .dark-mode .ForumDetail-comment-container .pageContainerNewsDetailed .likebuttonNews svg {
   color: white;
 }
+.dark-mode .forumContainer .containerForum .likebuttonForum svg {
+  color: white;
+}
+.dark-mode .forumContainer .containerForum .likebuttonForum svg {
+  color: white;
+}
+.dark-mode .forumContainer .containerForum .followForumButton svg {
+  color: white;
+}
 .dark-mode p,
 .dark-mode h6,
 .dark-mode h5,

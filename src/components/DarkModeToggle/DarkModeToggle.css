@@ -61,10 +61,13 @@
 .dark-mode .user-side-pannel h4 {
   color: black;
 }
-.dark-mode .user-main-pannel h2 {
+.dark-mode .user-main-panel h2 {
   color: black;
 }
-.dark-mode .user-main-pannel p {
+.dark-mode .user-main-panel p {
+  color: black;
+}
+.dark-mode .user-main-panel h4 {
   color: black;
 }
 .dark-mode .ForumDetail-comment-container .comments-box p {
@@ -131,4 +134,3 @@
 .dark-mode .news_container h5 {
   color: #000000;
 }
-  

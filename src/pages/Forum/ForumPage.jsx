@@ -41,7 +41,7 @@ export const ForumPage = () => {
           </div>
         </div>
 
-        <section className="Company-Page-grid">
+        <section className="Forum-Page-grid">
           {forumList &&
             forumList.data.map((forum, index) => (
               <div key={index}>

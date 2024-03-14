@@ -1,5 +1,6 @@
 .commentOwnerContainer {
   border-radius: var(--img-border-radius);
+  width: 60rem
 }
 
 .commentOwnerContainer_profile {

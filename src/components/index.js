@@ -27,9 +27,5 @@ export * from './UpdateComments/UpdateComments';
 export * from './Cards/ProfileDetailCard';
 export * from './FollowButton/FollowUserButton';
 export * from './LikeButtonCompany/LikeButtonNews';
-<<<<<<< HEAD
 export * from './DeletePages/DeletePageNews';
 export * from './News/NewsDetailCard';
-=======
-// export * from './DeletePages/DeletePageNews';
->>>>>>> ed269a5c709aa9208d830f8e6ce447495584cc50

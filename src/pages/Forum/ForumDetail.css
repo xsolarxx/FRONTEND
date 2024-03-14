@@ -68,10 +68,10 @@
 }
 
 @media (max-width: 480px) {
-  /* .ForumDetail-comment-container {
-    margin: 0;
+  .ForumDetail-comment-container {
+    padding: 0;
   }
-  .comments-section-comment {
+  /* .comments-section-comment {
     padding: 0rem;
   } */
   .Leave-a-comment {

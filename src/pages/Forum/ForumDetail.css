@@ -75,7 +75,7 @@
     padding: 0rem;
   } */
   .Leave-a-comment {
-    margin: 3rem -5rem 0 -5rem;
+    margin: 3rem -5rem 3rem -5rem;
     display: flex;
     flex-direction: column;
   }

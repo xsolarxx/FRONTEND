@@ -16,3 +16,16 @@
   font-size: large;
   line-height: 2.1rem;
 }
+
+@media (max-width: 480px) {
+
+  .ForumFigureDetail-Container  {
+    margin: 0;
+
+  }
+  .ForumFigureDetail-Container h1 {
+    font-size: 40px;
+  }
+  
+ 
+}

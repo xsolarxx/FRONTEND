@@ -55,7 +55,7 @@
 .company-tags p {
   background: var(--background-color-gray);
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 9px 15px 9px 15px;
   border-radius: 50px;
   /* font-size: large; */

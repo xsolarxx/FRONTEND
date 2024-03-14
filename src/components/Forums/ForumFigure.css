@@ -12,6 +12,10 @@
     gap: 2rem;
     text-align: center;
   }
+  .section-forum__text{
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .section-forum__text {

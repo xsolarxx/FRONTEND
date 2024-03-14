@@ -4,25 +4,22 @@
     padding: 0 15px 0 15px;
     display: flex;
     align-items: center;
-    text-align: center;
-    width: 150px;
+justify-content: center;    
+width: 150px;
     font-weight: bold;
-    font-size: medium;
+    font-size: large;
     border-radius: 50px;
 }
 
 
-.notFollowed {
+.followed {
 color: white;
 background-image: linear-gradient(215deg, #97f85b 0%, #25dc80 100%);
 }
 
-.followed {
-background-color: blueviolet;
+.notFollowed {
+    border: 1px solid blue ;
+background-color: white;
 color: var(--text-navy-blue);
 }
 
-/* .icon {
-height: 40px;
-width: 40px;
-} */

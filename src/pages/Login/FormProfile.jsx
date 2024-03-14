@@ -18,6 +18,8 @@ export const FormProfile = () => {
   const [res, setRes] = useState({});
   const [send, setSend] = useState(false);
 
+  console.log('esto es el user?', user);
+
   const defaultData = {
     userName: user?.user,
   };
@@ -59,7 +61,7 @@ export const FormProfile = () => {
   //! -------------- 2 ) useEffect que gestiona la parte de la respuesta ------- customHook
 
   useEffect(() => {
-    console.log(res);
+    console.log('USTED QUIEN ES', res);
     useUpdateError(res, setRes, setUser, logout);
   }, [res]);
   return (
@@ -92,10 +94,10 @@ export const FormProfile = () => {
           Delete user */}
           <Link
             className="delete-user"
-            onClick={() => useDeleteUser(setUser, setDeleteUser)}
+            onClick={() => useDeleteUser(user, setUser, setDeleteUser)}
             style={{ cursor: 'pointer' }}
           >
-            Delete user 
+            Delete user
           </Link>
           <Link to="/changePassword">Change password</Link>
           <hr className="profile-setting__line" />

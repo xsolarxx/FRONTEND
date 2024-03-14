@@ -81,9 +81,14 @@ export const Home = () => {
           <div className="Blue-box-title">
             <h1>Forum</h1>
             <p>A platform to share your thoughts</p>
-            <NavLink to="/register">
-              <button className="button--green">Explore forums</button>
-            </NavLink>
+            <button
+              className="button--green"
+              onClick={() => {
+                user ? navigate('/ForumPage') : navigate(`/register`);
+              }}
+            >
+              {user ? 'Explore forums' : 'Register to see forums'}
+            </button>
           </div>
         </div>
       </div>

@@ -1,7 +1,13 @@
 .p-rating-icon {
-    width: 25px; 
-    height: 25px;
+    padding-top: 8px;
+    width: 35px; 
+    height: 35px;
     /* stroke: var(--primary-color-green);
     stroke-width: 0.5px; 
     fill: var(--color-green) */
+}
+
+.rating {
+    margin: auto;
+    text-align: center;
 }

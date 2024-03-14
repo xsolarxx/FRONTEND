@@ -40,6 +40,8 @@ export const CompanyDetailCard = ({ company }) => {
       <div className="ratingContainer">
         <h5>Rate this company:</h5>
         <RatingComponent company={company} />
+      </div>
+      <div>
         <LikeCompany id={company._id} />
       </div>
     </div>

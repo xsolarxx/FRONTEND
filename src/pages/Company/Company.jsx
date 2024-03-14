@@ -108,95 +108,102 @@ export const Company = () => {
             {...register('description', { required: true })}
             placeholder="About the Company"
           />
-          <div className="companyServices_container form-group">
-            <div className="companyServices_Container">
-              <h5>Choose as many services as you want:</h5>
-              <input
-                type="checkbox"
-                name="companyServices"
-                id="companyServices"
-                value="Installation budget"
-                {...register('companyServices')}
-              />
-              <label
-                htmlFor="Installation budget"
-                className="label-checkbox Installation budget"
-              >
-                Installation budget
-              </label>
-              <input
-                type="checkbox"
-                name="companyServices"
-                id="photovoltaicPanelBudget"
-                value="Photovoltaic panel budget"
-                {...register('companyServices')}
-              />
-              <label
-                htmlFor="photovoltaicPanelBudget"
-                className="label-checkbox photovoltaicPanelBudget"
-              >
-                Photovoltaic panel Budget
-              </label>
-
-              <input
-                type="checkbox"
-                name="companyServices"
-                id="energyStudy"
-                value="Energy study"
-                {...register('companyServices')}
-              />
-              <label htmlFor="energyStudy" className="label-checkbox energyStudy">
-                Energy study
-              </label>
-
-              <input
-                type="checkbox"
-                name="companyServices"
-                id="maintenance"
-                value="Maintenance"
-                {...register('companyServices')}
-              />
-              <label htmlFor="maintenance" className="label-checkbox maintenance">
-                Maintenance
-              </label>
-
-              <input
-                type="checkbox"
-                name="companyServices"
-                id="sizingAndModeling"
-                value="Sizing and modeling of the installation"
-                {...register('companyServices')}
-              />
-              <label
-                htmlFor="sizingAndModeling"
-                className="label-checkbox sizingAndModeling"
-              >
-                Sizing and modeling of the installation
-              </label>
-
-              <input
-                type="checkbox"
-                name="companyServices"
-                id="safetyStudy"
-                value="Safety study"
-                {...register('companyServices')}
-              />
-              <label htmlFor="safetyStudy" className="label-checkbox safetyStudy">
-                Safety study
-              </label>
-
-              <input
-                type="checkbox"
-                name="companyServices"
-                id="others"
-                value="Others"
-                {...register('companyServices')}
-              />
-              <label htmlFor="others" className="label-checkbox others">
-                Others
-              </label>
-            </div>
+          <h5>Choose as many services as you want:</h5>
+          <div className="companyServices_Container">
+            <input
+              type="checkbox"
+              name="companyServices"
+              id="companyServices"
+              value="Installation budget"
+              {...register('companyServices')}
+            />
+            <label
+              htmlFor="Installation budget"
+              className="label-checkbox Installation budget"
+            >
+              Installation budget
+            </label>
           </div>
+          <div className="companyServices_Container">
+            <input
+              type="checkbox"
+              name="companyServices"
+              id="photovoltaicPanelBudget"
+              value="Photovoltaic panel budget"
+              {...register('companyServices')}
+            />
+            <label
+              htmlFor="photovoltaicPanelBudget"
+              className="label-checkbox photovoltaicPanelBudget"
+            >
+              Photovoltaic panel Budget
+            </label>
+          </div>
+          <div className="companyServices_Container">
+            <input
+              type="checkbox"
+              name="companyServices"
+              id="energyStudy"
+              value="Energy study"
+              {...register('companyServices')}
+            />
+
+            <label htmlFor="energyStudy" className="label-checkbox energyStudy">
+              Energy study
+            </label>
+          </div>
+          <div className="companyServices_Container">
+            <input
+              type="checkbox"
+              name="companyServices"
+              id="maintenance"
+              value="Maintenance"
+              {...register('companyServices')}
+            />
+            <label htmlFor="maintenance" className="label-checkbox maintenance">
+              Maintenance
+            </label>
+          </div>
+          <div className="companyServices_Container">
+            <input
+              type="checkbox"
+              name="companyServices"
+              id="sizingAndModeling"
+              value="Sizing and modeling of the installation"
+              {...register('companyServices')}
+            />
+            <label
+              htmlFor="sizingAndModeling"
+              className="label-checkbox sizingAndModeling"
+            >
+              Sizing and modeling of the installation
+            </label>
+          </div>
+          <div className="companyServices_Container">
+            <input
+              type="checkbox"
+              name="companyServices"
+              id="safetyStudy"
+              value="Safety study"
+              {...register('companyServices')}
+            />
+            <label htmlFor="safetyStudy" className="label-checkbox safetyStudy">
+              Safety study
+            </label>
+          </div>
+          <div className="companyServices_Container">
+            <input
+              type="checkbox"
+              name="companyServices"
+              id="others"
+              value="Others"
+              {...register('companyServices')}
+            />
+            <label htmlFor="others" className="label-checkbox others">
+              Others
+            </label>
+          </div>
+          <div className="companyServices_Container"></div>
           <h5>Upload your company´s logo:</h5>
 
           <Uploadfile />

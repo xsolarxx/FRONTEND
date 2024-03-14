@@ -6,8 +6,27 @@
   margin: 0 5rem 0 5rem;
   gap: 5rem;
 }
-.newsShortContent {
+#newsShortContent {
+  font-size: x-large;
+  font-weight: 300;
   text-align: center;
+}
+
+#authorAndTag {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+#authorAndTag label {
+  background: var(--background-color-gray);
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 50px;
+  color: var(--color-tags);
+  font-weight: 500;
+  display: flex;
 }
 
 .pageContainerNewsDetailed img {
@@ -18,4 +37,5 @@
 .pageContainerNewsDetailed p {
   font-size: large;
   text-align: justify;
+  line-height: 1.8rem;
 }

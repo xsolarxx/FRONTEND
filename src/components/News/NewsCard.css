@@ -28,7 +28,8 @@
 }
 .authorAndTag {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 1rem;
 }
 .authorAndTag label {
   background: var(--background-color-gray);
@@ -40,6 +41,11 @@
   font-weight: 500;
   display: flex;
 }
+
+.newsText button {
+width: 150px;
+}
+
 @media (max-width: 768px) {
   .containerNews {
     grid-template-columns: 1fr;

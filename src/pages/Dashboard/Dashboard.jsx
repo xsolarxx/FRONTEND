@@ -45,7 +45,7 @@ export const Dashboard = () => {
               setNewsDas(false);
             }}
           >
-            view Company
+            Companies
           </button>
           <button
             className="button--green"
@@ -57,7 +57,7 @@ export const Dashboard = () => {
               setNewsDas(false);
             }}
           >
-            view Network
+            Network
           </button>
           <button
             className="button--green"
@@ -69,7 +69,7 @@ export const Dashboard = () => {
               setNewsDas(true);
             }}
           >
-            view News
+            News
           </button>
           <button
             className="button--green"
@@ -81,7 +81,7 @@ export const Dashboard = () => {
               setNewsDas(false);
             }}
           >
-            view Comments
+            Comments
           </button>
           <button
             className="button--green"
@@ -93,14 +93,14 @@ export const Dashboard = () => {
               setNewsDas(false);
             }}
           >
-            view Forums
+            Forums
           </button>
           {isAdmin && (
             <>
               <button
                 className="button--blue"
                 onClick={() => {
-                  window.location.href = "http://localhost:5173/createnews";
+                  window.location.href = 'http://localhost:5173/createnews';
                 }}
               >
                 Create News
@@ -108,7 +108,7 @@ export const Dashboard = () => {
               <button
                 className="button--blue"
                 onClick={() => {
-                  window.location.href = "http://localhost:5173/createcompany";
+                  window.location.href = 'http://localhost:5173/createcompany';
                 }}
               >
                 Create Company

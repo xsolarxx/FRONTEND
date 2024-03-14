@@ -95,7 +95,6 @@
   newsTag_container tags{
     display: flex;
     padding: auto;
-    margin-right: 30px;
   }
   .newsTag_container label {
     display: flex;

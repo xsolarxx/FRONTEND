@@ -6,8 +6,8 @@ export const NewsDetailCard = ({ newsData }) => {
   return (
     <>
       <div className="pageContainerNewsDetailed">
-        <h1 className="newsTitleDetailed">{newsData.title} </h1>
-
+        <h1>{newsData.title} </h1>
+        <p className="newsShortContent"> {newsData.shortContent}</p>
         <img src={newsData.image} alt={newsData.name} />
 
         <p> {newsData.fullContent}</p>

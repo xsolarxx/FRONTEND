@@ -61,6 +61,7 @@
   .input_title::placeholder,
   .input_content::placeholder {
     font-size: 14px;
+    font-family: 'Outfit', sans-serif;
   }
   
   .formCompany section {

@@ -23,4 +23,10 @@
   .commentOwnerContainer{
       width: 250px;
   }
+  .commentOwnerContainer_profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 15px;
+  }
 }

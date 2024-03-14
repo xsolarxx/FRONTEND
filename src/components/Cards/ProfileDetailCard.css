@@ -10,7 +10,7 @@
 .random-side-pannel {
   color: var(--color-navy-blue);
   display: flex;
-  background-color: white;
+  background-color: blue;
   flex-direction: column;
   align-items: center;
   padding: 4rem;

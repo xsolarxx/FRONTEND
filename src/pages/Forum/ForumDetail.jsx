@@ -52,6 +52,7 @@ export const ForumDetail = () => {
     };
     setSend(true);
     setResComment(await createComment(id, customFormData));
+
     setTitleValue('');
     setContentValue('');
     setSend(false);
@@ -67,7 +68,7 @@ export const ForumDetail = () => {
 
   useEffect(() => {
     console.log('updateComments', updateComments);
-    useCommentError(resComment, setResComment, setUpdateComments);
+    useCommentError(resComment, setResComment, setUpdateComments, user, setUser);
   }, [resComment, updateComments]);
 
   useEffect(() => {

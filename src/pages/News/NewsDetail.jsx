@@ -56,7 +56,7 @@ export const NewsDetail = () => {
   useEffect(() => {
     console.log('updateComments', updateComments);
     //Para el manejo de errores
-    useCommentError(resComment, setResComment, setUpdateComments);
+    useCommentError(resComment, setResComment, setUpdateComments, user, setUser);
   }, [resComment, updateComments]);
   useEffect(() => {
     if (fullNews != null) {

@@ -29,6 +29,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         forumOwner,
         forumFollowing,
         usersFollowed,
+        usersFollowers,
       } = sendData.data.user;
       const userCustom = {
         token: sendData.data.token,
@@ -46,6 +47,7 @@ export const useAutoLogin = async (allUser, userLogin) => {
         forumOwner,
         forumFollowing,
         usersFollowed,
+        usersFollowers,
         _id: sendData.data.user._id,
       };
 

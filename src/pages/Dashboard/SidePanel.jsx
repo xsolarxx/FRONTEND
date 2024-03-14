@@ -24,16 +24,20 @@ export const SidePanel = () => {
       </NavLink>
       <hr className="dashboard_line" />
 
-      <p className="pdash1" style={{ fontWeight: 'bold' }}>Companies summary</p>
+      <p className="pdash1" style={{ fontWeight: 'bold' }}>
+        Companies summary
+      </p>
       <p>Liked companies: {user?.likedCompany?.length}</p>
       {/* <p> Companies Punctuated: {user.companyPunctuated.length}</p> */}
       {console.log('punctuated', user)}
 
-      <p className="pdash2" style={{ fontWeight: 'bold' }}>Forum summary</p>
+      <p className="pdash2" style={{ fontWeight: 'bold' }}>
+        Forum summary
+      </p>
 
       <p>Liked Forum: {user?.likedForum?.length}</p>
       <p>Creader Forum: {user?.forumOwner?.length}</p>
-      <p>Followed Forum: {user?.followed?.length}</p>
+      <p>Followed Forum: {user?.forumFollowing?.length}</p>
 
       <p style={{ fontWeight: 'bold' }}>Network Summary</p>
 

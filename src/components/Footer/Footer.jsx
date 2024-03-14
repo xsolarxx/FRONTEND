@@ -37,7 +37,7 @@ export const Footer = () => {
               News
             </NavLink>
 
-            <NavLink className="links" to="/companies">
+            <NavLink className="links" to="/company">
               Companies
             </NavLink>
 

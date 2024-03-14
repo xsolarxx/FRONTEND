@@ -10,7 +10,7 @@ export const NewsDetailCard = ({ newsData }) => {
         <h1>{newsData.title} </h1>
         <p id="newsShortContent"> {newsData.shortContent}</p>
         <img src={newsData.image} alt={newsData.name} />
-        <p> {newsData.fullContent}</p>
+        <p dangerouslySetInnerHTML={{ __html: newsData.fullContent }}/> 
         <div id="authorAndTag">
           <label className="newsAuthor">By: {newsData.author}</label>
           <label className="newsTags">Tag: {newsData.tags}</label>

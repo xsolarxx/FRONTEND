@@ -10,7 +10,10 @@ export const CompanyDetailCard = ({ company }) => {
       <img className="sectionCompanyImg" src={company.image} alt={company.name} />
       <div className="sectionCompanyText">
         <h2 className="sectionCompanyName"> {company.companyName} </h2>
-        <h4 className="sectionCompanyDescription">{company.description}</h4>
+        <h4
+          className="sectionCompanyDescription"
+          dangerouslySetInnerHTML={{ __html: company.description }}
+        />
         <div className="companyContactDetails">
           <label className="companyPhone">
             <a href={`tel:+34${company.phoneNumber}`}>

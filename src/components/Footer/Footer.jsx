@@ -42,7 +42,7 @@ export const Footer = () => {
             </NavLink>
 
             <NavLink className="links" to="/forum">
-              forum
+              Forum
             </NavLink>
           </div>
         </footer>

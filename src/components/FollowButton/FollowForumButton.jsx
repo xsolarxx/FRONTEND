@@ -29,7 +29,7 @@ export const FollowForumButton = ({ id }) => {
         forumOwner: res?.data?.user?.forumOwner,
         forumFollowing: res?.data?.user?.forumFollowing,
         usersFollowed: res?.data?.user?.usersFollowed,
-        usersFollowers: res?.data?.updateUser?.usersFollowers,
+        usersFollowers: res?.data?.user?.usersFollowers,
         ownerRating: res?.data?.user?.ownerRating,
         companyPunctuated: res?.data?.user?.companyPunctuated,
         token,

@@ -27,6 +27,10 @@ export const UpdateComment = ({ id }) => {
           likedNews: res?.data?.user?.likedNews,
           forumOwner: res?.data?.user?.forumOwner,
           forumFollowing: res?.data?.user?.forumFollowing,
+          usersFollowed: res?.data?.user?.usersFollowed,
+          usersFollowers: res?.data?.user?.usersFollowers,
+          ownerRating: res?.data?.user?.ownerRating,
+          companyPunctuated: res?.data?.user?.companyPunctuated,
           token,
         };
         setUser(updatedComments);

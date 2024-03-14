@@ -10,7 +10,7 @@ import { createComment, getByRecipient } from '../../services/comment.service';
 import { getById } from '../../services/news.service';
 import { CommentDeletion } from '../../components/CommentDeletion/CommentDeletion';
 import { LikeComments } from '../../components/LikeComment/LikeComment';
-import { DeletePageNews } from '../../components/DeletePages/DeletePageNews';
+// import { DeletePageNews } from '../../components/DeletePages/DeletePageNews';
 
 export const NewsDetail = () => {
   const { id } = useParams();

@@ -24,10 +24,10 @@ export const NewsCard = ({ news }) => {
         <button
           className="button--blue"
           onClick={() => {
-            user ? navigate(`/newsDetail/${news._id}`) : navigate(`/register`);
+            user ? navigate(`/newsDetail/${news._id}`) : navigate(`/login`);
           }}
         >
-          {user ? 'Read more' : 'Register to read more'}
+          {user ? 'Read more' : 'Login to read more'}
         </button>
       </div>
     </div>

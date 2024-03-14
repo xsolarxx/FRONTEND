@@ -39,3 +39,25 @@
   text-align: justify;
   line-height: 2.1rem;
 }
+
+@media (max-width: 400px) {
+  .pageContainerNewsDetailed {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 2rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .pageContainerNewsDetailed h1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+  }
+  .pageContainerNewsDetailed p {
+    font-size: 18px;
+  }
+  #newsShortContent {
+    font-size: 20px;
+  }
+}

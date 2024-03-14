@@ -8,14 +8,13 @@ import { useAuth } from '../../context/authContext';
 import { useCommentError } from '../../hooks';
 import { createComment, getByRecipient } from '../../services/comment.service';
 import { getById } from '../../services/news.service';
-import { toggleFavComments } from '../../services/user.service';
 import { CommentDeletion } from '../../components/CommentDeletion/CommentDeletion';
 import { LikeComments } from '../../components/LikeComment/LikeComment';
+import { DeletePageNews } from '../../components/DeletePages/DeletePageNews';
 
 export const NewsDetail = () => {
   const { id } = useParams();
   const { user, setUser } = useAuth();
-  console.log('entro likes', user);
   const [fullNews, setFullNews] = useState();
   const [send, setSend] = useState(false);
   const [resComment, setResComment] = useState({});
@@ -104,6 +103,7 @@ export const NewsDetail = () => {
                       idComment={singleComment._id}
                     />
                   </div>
+                  <DeletePageNews id={singleComment._id} />
                 </div>
               </div>
             ))}

@@ -5,7 +5,7 @@ import { DashboardList } from '../../components';
 export const ForumDas = ({ userDashboard }) => {
   return (
     <div className="otraCaja">
-      <h2>My Forum </h2>
+      <h2>Forum </h2>
       <h4>Liked Forums</h4>
       <section className="user-pannel-section">
         {userDashboard?.likedForum?.length ? (

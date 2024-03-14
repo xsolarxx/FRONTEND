@@ -5,7 +5,7 @@ import { DashboardList } from '../../components';
 export const CommentDas = ({ userDashboard }) => {
   return (
     <div className="otraCaja">
-      <h2>My comments</h2>
+      <h2>Comments</h2>
       <h4>Liked comments</h4>
       <section className="user-pannel-section">
         {userDashboard &&

@@ -75,3 +75,6 @@ a.active p {
   --screenMax-phone: 460px;
   --screenMax: 1600;
 }
+.placeholderFont {
+  font-family: 'Outfit', sans-serif;
+}

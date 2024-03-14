@@ -14,10 +14,17 @@
   flex-direction: column;
   margin-right: 35px;
 }
+.sectionCompanyDescription {
+  font-size: x-large;
+  font-weight: 200;
+  text-align: justify;
+  line-height: 2rem;
+}
 .sectionCompanyText h2 {
   color: var(--color-navy-blue);
   text-align: center;
   font-weight: 600;
+  line-height: 5rem;
 }
 .sectionCompanyText h4 {
   text-align: center;

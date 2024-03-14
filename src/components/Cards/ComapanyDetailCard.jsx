@@ -12,7 +12,7 @@ export const CompanyDetailCard = ({ company }) => {
       <img className="sectionCompanyImg" src={company.image} alt={company.name} />
       <div className="sectionCompanyText">
         <h2 className="sectionCompanyName"> {company.companyName} </h2>
-        <h4
+        <p
           className="sectionCompanyDescription"
           dangerouslySetInnerHTML={{ __html: company.description }}
         />

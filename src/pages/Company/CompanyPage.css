@@ -1,13 +1,14 @@
 .Company-Page-grid {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 5rem 0rem;
 }
-.filter-controls {
+/* .filter-controls {
   display: flex;
   flex-direction: row;
   align-content: space-between;
   gap: 2rem;
-}
+} */

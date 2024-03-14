@@ -68,23 +68,22 @@
 }
 
 @media (max-width: 480px) {
-  .ForumDetail-comment-container {
+  /* .ForumDetail-comment-container {
     margin: 0;
   }
   .comments-section-comment {
     padding: 0rem;
-  }
+  } */
   .Leave-a-comment {
-    /* padding: 5rem; */
     margin: 3rem -5rem 0 -5rem;
     display: flex;
     flex-direction: column;
   }
-  .ForumFigureDetail-Container h1 {
+  /* .ForumFigureDetail-Container h1 {
     text-align: center;
     font-size: 30px;
   }
   .ForumFigureDetail-Container {
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  }
+  } */
 }

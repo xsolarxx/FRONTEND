@@ -26,6 +26,7 @@ export const useCommentError = (
       forumOwner: resComment?.data?.user?.forumOwner,
       forumFollowing: resComment?.data?.user?.forumFollowing,
       usersFollowed: resComment?.data?.user?.usersFollowed,
+      usersFollowers: resComment?.data?.user?.usersFollowers,
       ownerRating: resComment?.data?.user?.ownerRating,
       companyPunctuated: resComment?.data?.user?.companyPunctuated,
       token,

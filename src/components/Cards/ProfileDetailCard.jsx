@@ -33,7 +33,7 @@ export const ProfileDetailCard = ({ profileData }) => {
 
       <p>Liked Forum: {profileData?.likedForum?.length}</p>
       <p>Creader Forum: {profileData?.forumOwner?.length}</p>
-      <p>Followed Forum: {profileData?.followed?.length}</p>
+      <p>Followed Forum: {profileData?.forumFollowing?.length}</p>
 
       <p style={{ fontWeight: 'bold' }}>Network Summary</p>
 

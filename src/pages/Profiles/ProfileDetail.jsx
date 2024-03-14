@@ -94,14 +94,14 @@ export const ProfileDetail = () => {
             Forums
           </button>
         </div>
-        {companyDas && <CompanyDas randomUser={randomUser} />}
+        {companyDas && <CompanyDas userDashboard={randomUser?.data} />}
 
-        {forumDas && <ForumDas randomUser={randomUser} />}
+        {forumDas && <ForumDas userDashboard={randomUser?.data} />}
 
-        {followDas && <FollowDas randomUser={randomUser} />}
+        {followDas && <FollowDas userDashboard={randomUser?.data} />}
 
-        {commentDas && <CommentDas randomUser={randomUser} />}
-        {newsDas && <NewsDash randomUser={randomUser} />}
+        {commentDas && <CommentDas userDashboard={randomUser?.data} />}
+        {newsDas && <NewsDash userDashboard={randomUser?.data} />}
       </div>
     </div>
   );

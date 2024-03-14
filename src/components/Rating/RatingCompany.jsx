@@ -53,6 +53,7 @@ export const RatingComponent = ({ company }) => {
         forumOwner: res?.data?.user?.forumOwner,
         forumFollowing: res?.data?.user?.forumFollowing,
         usersFollowed: res?.data?.user?.usersFollowed,
+        usersFollowers: res?.data?.user?.usersFollowers,
         token,
       };
       setUser(() => updatedUser);

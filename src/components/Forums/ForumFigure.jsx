@@ -24,7 +24,6 @@ export const ForumFigure = ({ forum }) => {
         <p className="forumCreation">{formattedDate}</p>
         <p className="forumContent">{forum?.content}</p>
 
-        <FollowForumButton id={forum?._id} />
         <button
           className="button--blue"
           onClick={() => {

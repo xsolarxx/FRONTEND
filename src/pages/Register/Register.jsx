@@ -109,7 +109,7 @@ export const Register = () => {
             </label>
             <div className="gender">
               <label htmlFor="hombre" className="label-radio hombre">
-                Hombre
+                Male
               </label>
               <input
                 type="radio"
@@ -119,7 +119,7 @@ export const Register = () => {
                 {...register('gender')}
               />
               <label htmlFor="mujer" className="label-radio mujer">
-                Mujer
+                Female
               </label>
               <input
                 type="radio"

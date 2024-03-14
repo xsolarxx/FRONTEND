@@ -65,11 +65,14 @@
     text-align: center;
   }
 }
-
+.p-rating-icon {
+  padding-top: 8px;
+  width: 35px;
+  height: 18px;
+}
 .ratingContainer {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
 }
 
 h5 {

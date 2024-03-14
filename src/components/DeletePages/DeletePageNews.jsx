@@ -1,23 +1,18 @@
 import { useState } from 'react';
 import { useAuth } from '../../context/authContext';
-import { toggleFollow } from '../../services';
+import { deleteNews } from '../../services/news.service';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserPlus as solidfaUserPlus } from '@fortawesome/free-solid-svg-icons';
-// import { faBookmark as regularBookmark } from '@fortawesome/free-regular-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-import './FollowButton.css';
-
-export const FollowUserButton = ({ id }) => {
+export const DeletePageNews = ({ id }) => {
   const { user, setUser } = useAuth();
-  const [follow, setFollow] = useState(
-    !!user?.usersFollowed?.find((item) => item === id),
-  );
 
-  const handleFollowClick = async () => {
-    if (user) {
+  const handleDeletPageNewsClick = async () => {
+    console.log('entro delele', id);
+    if (user && user.role === 'admin') {
       const { token } = user;
-      const res = await toggleFollow(id);
-      console.log('RES FOLLOW USER', res);
+      const res = await deleteNews(id);
+      console.log('resssssssss', res);
       const userUpdate = {
         name: res?.data?.user?.userName,
         email: res?.data?.user?.email,
@@ -39,26 +34,21 @@ export const FollowUserButton = ({ id }) => {
       setUser(() => userUpdate);
       localStorage.removeItem('user');
       localStorage.setItem('user', JSON.stringify(userUpdate));
-      setFollow(!!res?.data?.user?.usersFollowed?.find((item) => item === id));
     }
   };
 
   return (
-    <>
-      {user && (
-        <>
-          <button
-            className={`FollowButton ${follow ? 'notFollowed' : 'followed'}`}
-            onClick={handleFollowClick}
-          >
-            <FontAwesomeIcon
-              // className={`icon ${follow ? 'notFollowed' : 'followed'}`}
-              icon={solidfaUserPlus}
-            />
-            <p>{follow ? 'Follow user!' : 'Unfollow'}</p>
-          </button>
-        </>
+    <div className="deletePageNews">
+      {user && user.role === 'admin' && (
+        <FontAwesomeIcon
+          className="delete-container"
+          onClick={handleDeletPageNewsClick}
+          icon={faTrash}
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Delete comment"
+          data-tooltip-variant="success"
+        />
       )}
-    </>
+    </div>
   );
 };

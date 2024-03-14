@@ -1,63 +1,52 @@
 import { FollowUserButton } from '../FollowButton/FollowUserButton';
-import './ProfileDetailCard.css';
-
-import React from 'react';
+// import './ProfileDetailCard.css';
 
 export const ProfileDetailCard = ({ profileData }) => {
   return (
-    <div className="profile-container">
-      <section className="random-side-panel">
-        <h3>{profileData.userName}</h3>
-        <img
-          className="random-image"
-          src={profileData.image}
-          alt={profileData.userName}
-        />
-        <p>{profileData.email}</p>
-        <FollowUserButton id={profileData._id} />
-      </section>
+    <section className="user-side-pannel">
+      <h4>
+        This is
+        <span
+          style={{
+            textDecoration: 'underline',
+            textDecorationColor: '#97f85b',
+            textDecorationThickness: '3px',
+          }}
+        >
+          {profileData.name}
+        </span>
+      </h4>
+      <img className="dashboard-profile" src={profileData.image} alt="foto User" />
+      <FollowUserButton id={profileData._id} />
 
-      <div className="random-main-pannel">
-        <section className="random-pannel-section">
-          <div className="randomList">
-            <h3>Liked companies</h3>
-            {profileData.likedCompany.map((company) => (
-              <div key={company._id}>
-                <img
-                  className="randomList_icon"
-                  src={company.image}
-                  alt={company.companyName}
-                />
-                <p>{company.companyName}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+      <hr className="dashboard_line" />
 
-        <section className="random-pannel-section">
-          <div className="randomList">
-            <h3>Liked news</h3>
-            {profileData.likedNews.map((news) => (
-              <div key={news._id}>
-                <p>{news.title}</p>
-                <p>{news.author}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+      <p className="pdash1" style={{ fontWeight: 'bold' }}>
+        Companies summary
+      </p>
+      <p>Liked companies: {profileData?.likedCompany?.length}</p>
+      <p> Companies Punctuated: {profileData.companyPunctuated.length}</p>
+      {console.log('punctuated', profileData)}
 
-        <section className="random-panel-section">
-          <div className="randomList">
-            <h3>Interested in this forums</h3>
-            {profileData.forumFollowing.map((forum) => (
-              <div key={forum._id}>
-                <p>{forum.title}</p>
-                <p>{forum.content}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
-    </div>
+      <p className="pdash2" style={{ fontWeight: 'bold' }}>
+        Forum summary
+      </p>
+
+      <p>Liked Forum: {profileData?.likedForum?.length}</p>
+      <p>Creader Forum: {profileData?.forumOwner?.length}</p>
+      <p>Followed Forum: {profileData?.followed?.length}</p>
+
+      <p style={{ fontWeight: 'bold' }}>Network Summary</p>
+
+      <p>Following: {profileData?.usersFollowed?.length}</p>
+      <p>Followers: {profileData?.usersFollowers?.length}</p>
+
+      <p style={{ fontWeight: 'bold' }}>News Summary</p>
+      <p>Liked News: {profileData?.likedNews?.length}</p>
+
+      <p style={{ fontWeight: 'bold' }}>Comments Summary</p>
+      <p>Liked favComments: {profileData?.usersFollowed?.length}</p>
+      <p>My Comments: {profileData?.comments?.length}</p>
+    </section>
   );
 };

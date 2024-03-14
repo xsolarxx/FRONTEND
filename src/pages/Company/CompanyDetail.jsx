@@ -58,7 +58,7 @@ export const CompanyDetail = () => {
   }, [updateComments]);
 
   useEffect(() => {
-    useCommentError(resComment, setResComment, setUpdateComments);
+    useCommentError(resComment, setResComment, setUpdateComments, user, setUser);
   }, [resComment, updateComments]);
 
   useEffect(() => {

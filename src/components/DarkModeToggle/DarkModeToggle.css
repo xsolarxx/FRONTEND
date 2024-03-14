@@ -76,14 +76,21 @@
 .dark-mode .ForumDetail-comment-container .pageContainerNewsDetailed .likebuttonNews svg {
   color: white;
 }
-.dark-mode .forumContainer .containerForum .likebuttonForum svg {
+.dark-mode .forumContainer .containerForum svg {
   color: white;
 }
-.dark-mode .forumContainer .containerForum .likebuttonForum svg {
-  color: white;
-}
+
 .dark-mode .forumContainer .containerForum .followForumButton svg {
   color: white;
+}
+.dark-mode .Company-Page-grid .company-tags p {
+  color: black;
+}
+.dark-mode .Company-Page-grid svg {
+  color: white;
+}
+.dark-mode .Company-Page-grid .companyDescription p {
+  background: transparent;
 }
 .dark-mode p,
 .dark-mode h6,

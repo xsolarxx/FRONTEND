@@ -46,3 +46,8 @@
   background: var(--background-color-gray);
   width: 250px;
 }
+
+@media (max-width: 480px) {
+  .Start-a-post {
+  }
+}

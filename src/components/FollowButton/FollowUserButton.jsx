@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 import { toggleFollow } from '../../services';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark as solidBookmark } from '@fortawesome/free-solid-svg-icons';
-import { faBookmark as regularBookmark } from '@fortawesome/free-regular-svg-icons';
+import { faUserPlus as solidfaUserPlus } from '@fortawesome/free-solid-svg-icons';
+// import { faBookmark as regularBookmark } from '@fortawesome/free-regular-svg-icons';
+
+import './FollowButton.css';
 
 export const FollowUserButton = ({ id }) => {
   const { user, setUser } = useAuth();
@@ -42,15 +44,21 @@ export const FollowUserButton = ({ id }) => {
   };
 
   return (
-    <div className="followUserButton">
+    <>
       {user && (
-        <FontAwesomeIcon
-          onClick={handleFollowClick}
-          icon={follow ? solidBookmark : regularBookmark}
-          style={{ color: '#122e3d' }}
-          size="lg"
-        />
+        <>
+          <button
+            className={`FollowButton ${follow ? 'notFollowed' : 'followed'}`}
+            onClick={handleFollowClick}
+          >
+            <FontAwesomeIcon
+              // className={`icon ${follow ? 'notFollowed' : 'followed'}`}
+              icon={solidfaUserPlus}
+            />
+            <p>{follow ? 'Follow user!' : 'Unfollow'}</p>
+          </button>
+        </>
       )}
-    </div>
+    </>
   );
 };

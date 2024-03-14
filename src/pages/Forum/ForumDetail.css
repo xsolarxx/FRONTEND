@@ -45,7 +45,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
   margin: 3rem;
   border-radius: var(--img-border-radius);
 }
@@ -64,18 +64,27 @@
 .comments-icons {
   display: flex;
   align-items: center;
-  gap: 2rem
+  gap: 2rem;
 }
 
 @media (max-width: 480px) {
-  
+  .ForumDetail-comment-container {
+    margin: 0;
+  }
   .comments-section-comment {
-    padding:  2rem 5rem 2rem 5rem;
+    padding: 0rem;
   }
   .Leave-a-comment {
     /* padding: 5rem; */
     margin: 3rem -5rem 0 -5rem;
     display: flex;
     flex-direction: column;
+  }
+  .ForumFigureDetail-Container h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .ForumFigureDetail-Container {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   }
 }

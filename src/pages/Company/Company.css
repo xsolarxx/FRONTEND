@@ -82,8 +82,7 @@
 .companyServices_container {
   margin-bottom: 20px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: block
 }
 
 .companyServices_container label {
@@ -110,4 +109,8 @@
 
 .companyServices_container select[multiple] {
   height: auto;
+}
+.companyServicesContainer {
+  width: 100%;
+  gap: 2rem;
 }

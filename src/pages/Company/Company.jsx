@@ -108,9 +108,9 @@ export const Company = () => {
             {...register('description', { required: true })}
             placeholder="About the Company"
           />
-          <div className="companyServices_container form-group">
+          <h5>Choose as many services as you want:</h5>
+          <div className="companyServicesContainer">
             <div className="companyServices_Container">
-              <h5>Choose as many services as you want:</h5>
               <input
                 type="checkbox"
                 name="companyServices"
@@ -124,6 +124,8 @@ export const Company = () => {
               >
                 Installation budget
               </label>
+            </div>
+            <div className="companyServices_Container">
               <input
                 type="checkbox"
                 name="companyServices"
@@ -137,7 +139,8 @@ export const Company = () => {
               >
                 Photovoltaic panel Budget
               </label>
-
+            </div>
+            <div className="companyServices_Container">
               <input
                 type="checkbox"
                 name="companyServices"
@@ -145,10 +148,12 @@ export const Company = () => {
                 value="Energy study"
                 {...register('companyServices')}
               />
+
               <label htmlFor="energyStudy" className="label-checkbox energyStudy">
                 Energy study
               </label>
-
+            </div>
+            <div className="companyServices_Container">
               <input
                 type="checkbox"
                 name="companyServices"
@@ -159,7 +164,8 @@ export const Company = () => {
               <label htmlFor="maintenance" className="label-checkbox maintenance">
                 Maintenance
               </label>
-
+            </div>
+            <div className="companyServices_Container">
               <input
                 type="checkbox"
                 name="companyServices"
@@ -173,7 +179,8 @@ export const Company = () => {
               >
                 Sizing and modeling of the installation
               </label>
-
+            </div>
+            <div className="companyServices_Container">
               <input
                 type="checkbox"
                 name="companyServices"
@@ -184,7 +191,8 @@ export const Company = () => {
               <label htmlFor="safetyStudy" className="label-checkbox safetyStudy">
                 Safety study
               </label>
-
+            </div>
+            <div className="companyServices_Container">
               <input
                 type="checkbox"
                 name="companyServices"
@@ -197,6 +205,7 @@ export const Company = () => {
               </label>
             </div>
           </div>
+          <div className="companyServices_Container"></div>
           <h5>Upload your company´s logo:</h5>
 
           <Uploadfile />

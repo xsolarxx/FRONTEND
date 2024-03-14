@@ -5,7 +5,7 @@ import { DashboardList } from '../../components';
 const FollowDas = ({ userDashboard }) => {
   return (
     <div className="otraCaja">
-      <h2>My network</h2>
+      <h2>Network</h2>
       <div>
         <h4>Following</h4>
         <section className="user-pannel-section">

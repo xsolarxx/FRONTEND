@@ -4,7 +4,7 @@ import { DashboardList } from '../../components';
 export const CompanyDas = ({ userDashboard }) => {
   return (
     <div className="otraCaja">
-      <h2>My companies</h2>
+      <h2>Companies</h2>
 
       <h4>Liked companies</h4>
       <section className="user-pannel-section">

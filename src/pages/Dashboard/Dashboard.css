@@ -61,7 +61,10 @@
   flex-wrap: wrap;
   /* border: 1px solid; */
 }
-
+.btn-active {
+  background: var(--color-navy-blue);
+  color: white;
+}
 .otraCaja {
   background-color: white;
   padding: 3rem;

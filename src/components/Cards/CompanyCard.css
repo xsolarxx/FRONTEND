@@ -77,7 +77,8 @@
   width: 150px;
 }
 .likebuttonCompany {
-  padding:9px 15px 9px 15px
+  padding:9px 15px 9px 15px;
+  width: 30%
 }
 @media (max-width: 480px) {
   .containerCompany {

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './ForumFigureDetail.css';
 import { TopBar } from '../../layouts/TopBar';
+import { LikeForum } from '../LikeButtonCompany/LikeButtonForum';
 
 export const ForumFigureDetail = ({ forumData }) => {
   const creationDate = new Date(forumData.createdAt);
@@ -25,6 +26,7 @@ export const ForumFigureDetail = ({ forumData }) => {
 
         <p>{formattedDate}</p>
         <p>{forumData.content}</p>
+        <LikeForum id={forumData?._id} />
       </div>
     </>
   );

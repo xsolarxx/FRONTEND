@@ -73,8 +73,9 @@
     padding:  2rem 5rem 2rem 5rem;
   }
   .Leave-a-comment {
-    padding: 5rem;
+    /* padding: 5rem; */
     margin: 3rem -5rem 0 -5rem;
-
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -49,7 +49,12 @@
   background-color: gray;
   color: black;
 }
-
+.dark-mode .div-user-profile-setting {
+  background-color: gray;
+}
+.dark-mode .div-user-profile-setting-card h5 {
+  color: black;
+}
 .dark-mode .user-side-pannel p {
   color: black;
 }

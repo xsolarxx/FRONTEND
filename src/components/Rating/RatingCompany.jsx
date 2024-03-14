@@ -66,7 +66,12 @@ export const RatingComponent = ({ company }) => {
   };
 
   return (
-    <div className="rating">
+    <div
+      className="rating"
+      data-tooltip-id="my-tooltip"
+      data-tooltip-content="Rate this company"
+      data-tooltip-variant="success"
+    >
       <Rating value={rating} onChange={handleRatingChange} cancel={false} />
     </div>
   );

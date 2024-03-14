@@ -67,6 +67,15 @@
 .dark-mode .user-main-pannel p {
   color: black;
 }
+.dark-mode .ForumDetail-comment-container .comments-box p {
+  color: black;
+}
+.dark-mode .ForumDetail-comment-container .pageContainerNewsDetailed label {
+  color: white;
+}
+.dark-mode .ForumDetail-comment-container .pageContainerNewsDetailed .likebuttonNews svg {
+  color: white;
+}
 .dark-mode p,
 .dark-mode h6,
 .dark-mode h5,

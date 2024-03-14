@@ -128,6 +128,12 @@
 .dark-mode .company_container h5 {
   color: #000000;
 }
+.dark-mode .Company-Page-grid .containerCompany h3 {
+  color: #000000;
+}
+.dark-mode .Company-Page-grid .containerCompany p {
+  color: #000000;
+}
 .dark-mode .news_container h4 {
   color: #000000;
 }

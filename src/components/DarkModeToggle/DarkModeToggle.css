@@ -24,10 +24,16 @@
 .dark-mode .login_container h4 {
   color: black;
 }
+.dark-mode .login_container p {
+  color: black;
+}
 .dark-mode .register_container {
   background-color: gray;
 }
 .dark-mode .register_container h4 {
+  color: black;
+}
+.dark-mode .register_container p {
   color: black;
 }
 .dark-mode .reset_password {
@@ -35,6 +41,9 @@
 }
 .dark-mode .reset_password h4 {
   color: black;
+}
+.dark-mode .reset_password p {
+  background-color: gray;
 }
 .dark-mode .dashboard-conatiner {
   background-color: gray;

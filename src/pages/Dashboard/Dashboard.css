@@ -8,12 +8,17 @@
 @media (max-width: 480px) {
   .dashboard-conatiner {
     flex-direction: column;
-    padding: 0.5rem;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
   }
-  .user-side-pannel {
-    width: none;
+  .user-main-pannel .otraCaja {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
   }
-
 }
 
 /* side pannel  */
@@ -87,7 +92,5 @@
 @media (max-width: 480px) {
   .otraCaja {
     padding: 0rem;
-
   }
-
 }

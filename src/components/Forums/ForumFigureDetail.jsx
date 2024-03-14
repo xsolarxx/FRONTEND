@@ -25,7 +25,7 @@ export const ForumFigureDetail = ({ forumData }) => {
         </Link>
 
         <p>{formattedDate}</p>
-        <p>{forumData.content}</p>
+        <p dangerouslySetInnerHTML={{ __html: forumData.content }} />
         <LikeForum id={forumData?._id} />
       </div>
     </>

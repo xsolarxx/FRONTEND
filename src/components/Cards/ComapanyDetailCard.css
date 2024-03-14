@@ -2,7 +2,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
-  padding: 8rem 6rem;
+  padding: 2rem;
 }
 .sectionCompanyImg {
   border-radius: var(--img-border-radius);
@@ -64,4 +64,14 @@
     gap: 2rem;
     text-align: center;
   }
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
+}
+
+h5 {
+    font-size: 140%;
 }

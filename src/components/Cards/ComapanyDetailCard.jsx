@@ -31,6 +31,9 @@ export const CompanyDetailCard = ({ company }) => {
         <label className="companyServicesDetailed">
           Services offered : {company.companyServices}
         </label>
+      </div>
+      <div className="ratingContainer">
+        <h5>Rate this company:</h5>
         <RatingComponent company={company} />
       </div>
     </div>

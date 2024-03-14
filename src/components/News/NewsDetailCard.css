@@ -59,5 +59,12 @@
   }
   #newsShortContent {
     font-size: 20px;
+    text-align: justify;
+  }
+  .pageContainerNewsDetailed img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
   }
 }

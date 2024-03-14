@@ -28,7 +28,6 @@ export const CompanyCard = ({ company }) => {
             {company.email}
           </a>
           <br />
-          <LikeCompany id={company._id} />
           <br />
           <button
             className="button--blue"

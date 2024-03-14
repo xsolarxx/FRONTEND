@@ -18,3 +18,9 @@
 .commentOwnerContainer a {
   color: var(--color-navy-blue);
 }
+
+@media (max-width: 480px) {
+  .commentOwnerContainer{
+      width: 250px;
+  }
+}

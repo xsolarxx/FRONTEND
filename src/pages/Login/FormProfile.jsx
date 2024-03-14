@@ -4,7 +4,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, Navigate, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 
 import { Uploadfile } from '../../components';
@@ -13,15 +13,17 @@ import { useDeleteUser, useUpdateError } from '../../hooks';
 import { update } from '../../services/user.service';
 
 export const FormProfile = () => {
-  const { user, setUser, setDeleteUser, logout } = useAuth();
+  const { user, setUser, setDeleteUser } = useAuth();
   const { register, handleSubmit } = useForm();
   const [res, setRes] = useState({});
   const [send, setSend] = useState(false);
+  const [updatedUser, setUpdatedUser] = useState(false);
+  const navigate = useNavigate();
 
   console.log('esto es el user?', user);
 
   const defaultData = {
-    userName: user?.user,
+    userName: user?.name,
   };
 
   //! ------------ 1) La funcion que gestiona el formulario----
@@ -42,9 +44,11 @@ export const FormProfile = () => {
             ...formData,
             image: inputFile[0],
           };
+          console.log('con imagen', custonFormData);
 
           setSend(true);
           setRes(await update(custonFormData));
+
           setSend(false);
         } else {
           const custonFormData = {
@@ -52,6 +56,8 @@ export const FormProfile = () => {
           };
           setSend(true);
           setRes(await update(custonFormData));
+          console.log('sin imagen', custonFormData);
+
           setSend(false);
         }
       }
@@ -61,9 +67,16 @@ export const FormProfile = () => {
   //! -------------- 2 ) useEffect que gestiona la parte de la respuesta ------- customHook
 
   useEffect(() => {
-    console.log('USTED QUIEN ES', res);
-    useUpdateError(res, setRes, setUser, logout);
+    useUpdateError(res, setRes, user, setUser, setUpdatedUser);
   }, [res]);
+
+  useEffect(() => {
+    if (updatedUser) {
+      setUpdatedUser(false);
+      navigate('/dashboard');
+    }
+  }, [res]);
+
   return (
     <>
       <div className="div-user-profile-setting">
@@ -109,7 +122,7 @@ export const FormProfile = () => {
               id="userName"
               name="userName"
               autoComplete="false"
-              defaultValue={defaultData?.name}
+              defaultValue={defaultData?.userName}
               {...register('userName')}
             />
             <label htmlFor="file-upload-form">Change profile photo</label>

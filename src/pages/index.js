@@ -17,3 +17,4 @@ export * from './Register/Register';
 export * from './News/NewsCreator';
 export * from './Profiles/ProfileDetail';
 //export * from './Profiles/Profile';
+export * from './News/NewsDetail';

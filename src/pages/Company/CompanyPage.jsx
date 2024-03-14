@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { getAllCompany } from '../../services/company.service';
 import { CompanyCard } from '../../components';
 import { getByLikesCompany, getByDescLikesCompany } from '../../services/company.service';
+import { TopBar } from '../../layouts/TopBar';
 
 export const CompanyPage = () => {
   const [companyList, setCompanyList] = useState(null);
@@ -26,7 +27,7 @@ export const CompanyPage = () => {
 
   return (
     <section className="Company-Page-grid">
-      <div className="filter-controls">
+      {/* <div className="filter-controls">
         <button
           onClick={() => setOrderBy('asc')}
           className={`button1 ${orderBy === 'asc' ? 'active' : ''} button--blue`}
@@ -45,7 +46,7 @@ export const CompanyPage = () => {
         >
           No filter
         </button>
-      </div>
+      </div> */}
       {companyList &&
         companyList.data.map((company, index) => (
           <CompanyCard company={company} key={index} />

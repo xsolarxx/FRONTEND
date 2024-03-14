@@ -1,10 +1,15 @@
 .containerCompany {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 3rem 6rem;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;  
+  background-color: var(--background-color-gray);
+  margin: 1rem;
+  padding: 2rem 0rem 2rem 0rem;
+  gap: 2rem;
+  border-radius: var(--img-border-radius);
 }
-
 
 .section-company__image {
   background-size: cover;
@@ -19,6 +24,8 @@
   flex-direction: column;
   color: var(--color-navy-blue);
   gap: 15px;
+  margin: 2rem;
+  align-items: center;
 }
 
 .companyDescription {
@@ -26,9 +33,9 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  max-height: 3rem;
-  position: relative;
+  -webkit-line-clamp: 3;
+  /* position: relative; */
+  width: 200px;
 }
 
 .companyDescription::after {
@@ -43,39 +50,45 @@
   font-weight: 700;
 }
 
-.section-company__text p {
-  display: inline-block;
-  font-size: large;
-}
-.company-tags {
-  margin-top: 10px;
-  padding: 9px 15px 9px 15px;
+.tag {
+  /* padding: 9px 15px 9px 15px; */
   font-weight: 300;
-}
-.company-tags p {
-  background: var(--background-color-gray);
-  margin-right: 10px;
-  margin-bottom: 20px;
   padding: 9px 15px 9px 15px;
   border-radius: 50px;
-  /* font-size: large; */
   color: var(--color-tags);
   font-weight: 500;
+  background: white;
+
 }
-.company-tags a {
+
+.tag a {
   background: var(--background-color-gray);
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 9px 15px 9px 15px;
+  /* margin-right: 10px; */
+  /* margin-bottom: 10px; */
+  /* padding: 9px 15px 9px 15px; */
   border-radius: 50px;
-  /* font-size: large; */
   color: #122E3D;
   font-weight: 500;
   
 }
+
 .section-company__text button {
   width: 150px;
 }
+
+.section-company__text p {
+  font-size: large;
+}
+
+/* 
+
+.section-company__text {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-navy-blue);
+  gap: 15px;
+}
+
 .likebuttonCompany {
   padding:9px 15px 9px 15px;
   width: 30%
@@ -91,4 +104,4 @@
     padding:9px 15px 9px 15px;
     align-items: left;  
   }
-}
+} */

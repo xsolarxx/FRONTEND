@@ -119,3 +119,16 @@
     display: none;
   }
 } */
+.dark-mode .company_container h4 {
+  color: #000000;
+}
+.dark-mode .company_container h5 {
+  color: #000000;
+}
+.dark-mode .news_container h4 {
+  color: #000000;
+}
+.dark-mode .news_container h5 {
+  color: #000000;
+}
+  

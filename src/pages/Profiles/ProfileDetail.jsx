@@ -34,7 +34,7 @@ export const ProfileDetail = () => {
       <div className="user-main-pannel">
         <div className="otraCaja">
           <button
-            className="button--green"
+            className={`button--green ${companyDas ? 'btn-active' : ''}`}
             onClick={() => {
               setCompanyDas(true);
               setFollowDas(false);
@@ -46,7 +46,7 @@ export const ProfileDetail = () => {
             Companies
           </button>
           <button
-            className="button--green"
+            className={`button--green ${followDas ? 'btn-active' : ''}`}
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(true);
@@ -58,7 +58,7 @@ export const ProfileDetail = () => {
             Network
           </button>
           <button
-            className="button--green"
+            className={`button--green ${newsDas ? 'btn-active' : ''}`}
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(false);
@@ -70,7 +70,7 @@ export const ProfileDetail = () => {
             News
           </button>
           <button
-            className="button--green"
+            className={`button--green ${commentDas ? 'btn-active' : ''}`}
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(false);
@@ -82,7 +82,7 @@ export const ProfileDetail = () => {
             Comments
           </button>
           <button
-            className="button--green"
+            className={`button--green ${forumDas ? 'btn-active' : ''}`}
             onClick={() => {
               setCompanyDas(false);
               setFollowDas(false);

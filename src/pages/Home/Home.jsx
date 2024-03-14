@@ -80,9 +80,9 @@ export const Home = () => {
           <div className="service6"></div>
           <div className="Blue-box-title">
             <h1>Forum</h1>
-            <p>Energía Renovable en Titulares</p>
-            <NavLink to="/forumPage">
-              <button className="button--green">Explore forum</button>
+            <p>A platform to share your thoughts</p>
+            <NavLink to="/register">
+              <button className="button--green">Explore forums</button>
             </NavLink>
           </div>
         </div>

@@ -69,9 +69,9 @@
 .ratingContainer {
   display: flex;
   flex-direction: column;
-  margin-right: 35px;
+  margin-right: 20px;
 }
 
 h5 {
-    font-size: 140%;
+  font-size: 140%;
 }

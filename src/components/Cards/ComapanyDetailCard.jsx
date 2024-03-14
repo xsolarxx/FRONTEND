@@ -1,5 +1,6 @@
 import './ComapanyDetailCard.css';
 import { RatingComponent } from '../Rating/RatingCompany';
+import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 // el componente para mostrar todo el contenido
 // sera importado en la CompanyDetail.jsx
 //<p className="companyTypeDetailed"> Type: {company.type}</p>
@@ -17,12 +18,16 @@ export const CompanyDetailCard = ({ company }) => {
         />
         <div className="companyContactDetails">
           <label className="companyPhone">
-            Phone number: <a href={`tel:+34${company.phoneNumber}`}>
+            Phone number:{' '}
+            <a href={`tel:+34${company.phoneNumber}`}>
               <b>{company.phoneNumber}</b>
             </a>
           </label>
           <label className="companyEmail">
-            Email address: <a href={`mailto:${company.email}`}><b>{company.email}</b></a>
+            Email address:{' '}
+            <a href={`mailto:${company.email}`}>
+              <b>{company.email}</b>
+            </a>
           </label>
         </div>
       </div>
@@ -35,6 +40,7 @@ export const CompanyDetailCard = ({ company }) => {
       <div className="ratingContainer">
         <h5>Rate this company:</h5>
         <RatingComponent company={company} />
+        <LikeCompany id={company._id} />
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ export const LikeComments = ({ idComment }) => {
   return (
     <>
       {user && (
-       <FontAwesomeIcon
+        <FontAwesomeIcon
           className="likeButton--blue"
           onClick={handleLikeCommentsClick}
           icon={like ? solidThumbsUp : regularThumbsUp}

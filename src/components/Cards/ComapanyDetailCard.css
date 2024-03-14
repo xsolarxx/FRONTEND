@@ -73,6 +73,7 @@
 .ratingContainer {
   display: flex;
   flex-direction: column;
+
 }
 
 h5 {

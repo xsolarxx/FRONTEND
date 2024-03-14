@@ -24,10 +24,16 @@
 .dark-mode .login_container h4 {
   color: black;
 }
+.dark-mode .login_container p {
+  color: black;
+}
 .dark-mode .register_container {
   background-color: gray;
 }
 .dark-mode .register_container h4 {
+  color: black;
+}
+.dark-mode .register_container p {
   color: black;
 }
 .dark-mode .reset_password {
@@ -36,11 +42,19 @@
 .dark-mode .reset_password h4 {
   color: black;
 }
+.dark-mode .reset_password p {
+  color: black;
+}
 .dark-mode .dashboard-conatiner {
   background-color: gray;
   color: black;
 }
-
+.dark-mode .div-user-profile-setting {
+  background-color: gray;
+}
+.dark-mode .div-user-profile-setting-card h5 {
+  color: black;
+}
 .dark-mode .user-side-pannel p {
   color: black;
 }
@@ -52,6 +66,31 @@
 }
 .dark-mode .user-main-pannel p {
   color: black;
+}
+.dark-mode .ForumDetail-comment-container .comments-box p {
+  color: black;
+}
+.dark-mode .ForumDetail-comment-container .pageContainerNewsDetailed label {
+  color: white;
+}
+.dark-mode .ForumDetail-comment-container .pageContainerNewsDetailed .likebuttonNews svg {
+  color: white;
+}
+.dark-mode .forumContainer .containerForum svg {
+  color: white;
+}
+
+.dark-mode .forumContainer .containerForum .followForumButton svg {
+  color: white;
+}
+.dark-mode .Company-Page-grid .company-tags p {
+  color: black;
+}
+.dark-mode .Company-Page-grid svg {
+  color: white;
+}
+.dark-mode .Company-Page-grid .companyDescription p {
+  background: transparent;
 }
 .dark-mode p,
 .dark-mode h6,

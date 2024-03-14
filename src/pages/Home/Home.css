@@ -226,13 +226,19 @@
     display: none;
   }
   @media (max-width: 480px) {
-    .services-parent-container .service2,
-    .services-parent-container .service3,
-    .services-parent-container .service7 {
+    .services-container div {
       display: flex;
       flex-direction: column;
+      background-position: 100%;
       background-size: contain;
       width: 100%;
+    }
+    .services-parent-container .services-container .Blue-box-title {
+      width: 480px;
+      background-size: cover;
+    }
+    .Blue-box-title {
+      background-size: cover;
     }
   }
 

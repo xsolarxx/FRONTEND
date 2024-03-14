@@ -65,10 +65,6 @@ a.active p {
   --background-color-gray: #f0f0f0;
   --background-color-opacity: #00000071;
 
-  /* Colores para los links y la acción de hover (se pueden cambiar) */
-  --link-text: #1b1c1b;
-  --link-hover: #bad5e5;
-
   /* Elementos adicionales */
   --img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --img-border-radius: 30px;

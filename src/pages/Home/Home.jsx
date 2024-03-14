@@ -95,7 +95,9 @@ export const Home = () => {
             xSolarx is increasingly recognized in the European market as a major player in
             the promotion and development of renewable energy
           </h4>
-          <button className="button--green">Discover more</button>
+          <NavLink to="/register">
+            <button className="button--green">Discover more</button>
+          </NavLink>
         </div>
       </section>
 

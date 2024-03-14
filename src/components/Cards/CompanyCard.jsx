@@ -3,7 +3,6 @@ import './CompanyCard.css';
 import { useNavigate } from 'react-router-dom';
 
 import { ScrollToTopButton } from '../../styles/Buttons/ScrollToTopButton';
-import { RatingComponent } from '../Rating/RatingCompany';
 import { LikeCompany } from '../LikeButtonCompany/LikeButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Tooltip } from 'react-tooltip';
@@ -11,6 +10,7 @@ import { Tooltip } from 'react-tooltip';
 <Tooltip id="my-tooltip" />;
 
 export const CompanyCard = ({ company }) => {
+  console.log('CompanyCard', company);
   const navigate = useNavigate();
   return (
     <div className="containerCompany">
@@ -29,7 +29,7 @@ export const CompanyCard = ({ company }) => {
           </a>
           <br />
           <LikeCompany id={company._id} />
-          <RatingComponent company={company} /> <br />
+          <br />
           <button
             className="button--blue"
             onClick={() => {

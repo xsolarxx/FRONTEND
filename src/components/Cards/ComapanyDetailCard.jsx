@@ -1,10 +1,11 @@
 import './ComapanyDetailCard.css';
-
+import { RatingComponent } from '../Rating/RatingCompany';
 // el componente para mostrar todo el contenido
 // sera importado en la CompanyDetail.jsx
 //<p className="companyTypeDetailed"> Type: {company.type}</p>
 //<p className="companyServicesDetailed">Services offered: {company.companyServices}</p>
 export const CompanyDetailCard = ({ company }) => {
+  console.log('detail', company);
   return (
     <div className="containerCompanyDetailed">
       <img className="sectionCompanyImg" src={company.image} alt={company.name} />
@@ -30,6 +31,7 @@ export const CompanyDetailCard = ({ company }) => {
         <label className="companyServicesDetailed">
           Services offered : {company.companyServices}
         </label>
+        <RatingComponent company={company} />
       </div>
     </div>
   );

@@ -7,8 +7,6 @@ import './Rating.css';
 
 export const RatingComponent = ({ company }) => {
   const { user, setUser } = useAuth();
-  console.log('entro ratings', user);
-
   const foundRating = company.userCompanyRatings.find(
     (item) => item.userPunctuation == user._id,
   );

@@ -3,6 +3,7 @@ import { Rating } from 'primereact/rating';
 import { createRating } from '../../services/rating.service';
 import { useAuth } from '../../context/authContext';
 import Swal from 'sweetalert2';
+import './Rating.css';
 
 export const RatingComponent = ({ company }) => {
   const { user, setUser } = useAuth();
@@ -66,7 +67,7 @@ export const RatingComponent = ({ company }) => {
   };
 
   return (
-    <div className="card flex justify-content-center">
+    <div className="rating">
       <Rating value={rating} onChange={handleRatingChange} cancel={false} />
     </div>
   );

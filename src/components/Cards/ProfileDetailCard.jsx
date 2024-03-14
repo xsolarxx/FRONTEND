@@ -4,8 +4,7 @@ import { FollowUserButton } from '../FollowButton/FollowUserButton';
 export const ProfileDetailCard = ({ profileData }) => {
   return (
     <section className="user-side-pannel">
-      <h4>
-        This is
+      <h3>
         <span
           style={{
             textDecoration: 'underline',
@@ -13,9 +12,9 @@ export const ProfileDetailCard = ({ profileData }) => {
             textDecorationThickness: '3px',
           }}
         >
-          {profileData.name}
+          {profileData.userName}
         </span>
-      </h4>
+      </h3>
       <img className="dashboard-profile" src={profileData.image} alt="foto User" />
       <FollowUserButton id={profileData._id} />
 

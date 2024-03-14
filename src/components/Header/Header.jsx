@@ -76,7 +76,7 @@ export const Header = () => {
           )}
           {user !== null ? (
             <NavLink to="/dashboard" onClick={handleNavLinkClick}>
-              <img className="icon" src={user.image} alt={user.user} />
+              <img className="icon" src={user?.image} alt={user?.user} />
             </NavLink>
           ) : null}
           <DarkModeToggle />

@@ -17,12 +17,12 @@ export const CompanyDetailCard = ({ company }) => {
         />
         <div className="companyContactDetails">
           <label className="companyPhone">
-            <a href={`tel:+34${company.phoneNumber}`}>
-              Phone number: {company.phoneNumber}
+            Phone number: <a href={`tel:+34${company.phoneNumber}`}>
+              <b>{company.phoneNumber}</b>
             </a>
           </label>
           <label className="companyEmail">
-            <a href={`mailto:${company.email}`}>Email address: {company.email}</a>
+            Email address: <a href={`mailto:${company.email}`}><b>{company.email}</b></a>
           </label>
         </div>
       </div>

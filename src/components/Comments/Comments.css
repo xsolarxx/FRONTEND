@@ -1,12 +1,11 @@
 .commentOwnerContainer {
   border-radius: var(--img-border-radius);
-  width: 60rem
+  width: 60rem;
 }
 
 .commentOwnerContainer_profile {
   align-items: center;
   display: flex;
-  /* flex-direction: row; */
   gap: 3rem;
 }
 
@@ -17,8 +16,5 @@
 }
 
 .commentOwnerContainer a {
-  /* color: var(--color-green); */
   color: var(--color-navy-blue);
 }
-
-

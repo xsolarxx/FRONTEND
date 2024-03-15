@@ -14,7 +14,7 @@ export const ForumFigureDetail = ({ forumData }) => {
     <>
       <div className="ForumFigureDetail-Container">
         <h1>{forumData.title}</h1>
-        <img src={forumData.image} alt={forumData.title} />
+        <img className="ForumImage" src={forumData.image} alt={forumData.title} />
 
         <Link to={`/profileDetail/${forumData?.owner?._id}`}>
           <img

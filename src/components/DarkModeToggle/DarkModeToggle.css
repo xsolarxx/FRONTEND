@@ -18,40 +18,61 @@
   background-color: #222222;
 }
 
-.dark-mode .login_container {
-  background-color: gray;
+.dark-mode .logo {
+  background-image: url('/logo2.png');
 }
+
+.dark-mode nav p:hover {
+  color: var(--primary-color-green);
+}
+
+/* CONTAINERS  */
+
+.dark-mode .login_container, 
+.dark-mode .register_container, 
+.dark-mode .reset_password, 
+.dark-mode .dashboard-conatiner, 
+.dark-mode .div-user-profile-setting,
+.dark-mode .news_container {
+  background-color: rgb(64, 64, 64);
+}
+
+.dark-mode .user-side-pannel,
+.dark-mode .otraCaja, 
+.dark-mode .formNews {
+  background-color: rgb(134, 134, 134);
+}
+.dark-mode .DashboardList {
+  background-color: rgb(184, 184, 184);
+}
+
+.dark-mode .dashboard-conatiner {
+  color: black;
+}
+
+
 .dark-mode .login_container h4 {
   color: black;
 }
 .dark-mode .login_container p {
   color: black;
 }
-.dark-mode .register_container {
-  background-color: gray;
-}
+
 .dark-mode .register_container h4 {
   color: black;
 }
 .dark-mode .register_container p {
   color: black;
 }
-.dark-mode .reset_password {
-  background-color: gray;
-}
+
 .dark-mode .reset_password h4 {
   color: black;
 }
 .dark-mode .reset_password p {
   color: black;
 }
-.dark-mode .dashboard-conatiner {
-  background-color: gray;
-  color: black;
-}
-.dark-mode .div-user-profile-setting {
-  background-color: gray;
-}
+
+
 .dark-mode .div-user-profile-setting-card h5 {
   color: black;
 }
@@ -105,23 +126,6 @@
   color: white;
 }
 
-.dark-mode .logo {
-  background-image: url('/logo2.png');
-}
-
-.dark-mode nav p:hover {
-  color: var(--primary-color-green);
-}
-
-.dark-mode .darkModeToggle {
-  color: aqua;
-}
-
-/* @media (max-width: 650px) {
-  .darkModeToggle {
-    display: none;
-  }
-} */
 .dark-mode .company_container h4 {
   color: #000000;
 }

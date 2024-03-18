@@ -40,8 +40,8 @@ export const NewsPage = () => {
           </button>
         </div>
         {newsList &&
-          newsList.data
-            .filter((news) => {
+          newsList?.data
+            ?.filter((news) => {
               return selectedTag === '' || news.tags.includes(selectedTag);
             })
             .map((news, index) => <NewsCard news={news} key={index} />)}

@@ -4,8 +4,7 @@ import { updateToken } from '../utils/updateToken';
 
 export const extraConfig = () => {
   return axios.create({
-    baseURL: 'https://xsolarx-71hfd923x-xsolarxs-projects.vercel.app',
-
+    baseURL: 'http://localhost:8081/api/v1',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',

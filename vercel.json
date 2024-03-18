@@ -1,0 +1,25 @@
+{
+    "routes": [
+      { "src": "/", "dest": "/" },
+      { "src": "/register", "dest": "/" },
+      { "src": "/login", "dest": "/" },
+      { "src": "/company", "dest": "/" },
+      { "src": "/companyDetail/:id", "dest": "/" },
+      { "src": "/createcompany", "dest": "/" },
+      { "src": "/profiles", "dest": "/" },
+      { "src": "/news", "dest": "/" },
+      { "src": "/newsDetail/:id", "dest": "/" },
+      { "src": "/createnews", "dest": "/" },
+      { "src": "/dashboard", "dest": "/" },
+      { "src": "/forgotPassword", "dest": "/" },
+      { "src": "/verifyCode", "dest": "/" },
+      { "src": "/profile", "dest": "/" },
+      { "src": "/changePassword", "dest": "/" },
+      { "src": "/forum", "dest": "/" },
+      { "src": "/forumPage", "dest": "/" },
+      { "src": "/forumDetail/:id", "dest": "/" },
+      { "src": "/profileDetail/:id", "dest": "/" },
+      { "src": "/[^.]+", "dest": "/", "status": 200 }
+    ]
+  }
+  

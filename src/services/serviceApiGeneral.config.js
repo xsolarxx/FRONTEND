@@ -8,7 +8,11 @@ export const extraConfig = () => {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Credentials': 'true',
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Max-Age': '1800',
+      'Access-Control-Allow-Headers': 'content-type',
+      'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS',
       Authorization: `Bearer ${updateToken()}`,
     },
     timeout: 60000,

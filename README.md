@@ -16,9 +16,10 @@ Sigue las instrucciones a continuación para configurar el entorno de desarrollo
 
    ```bash
    npm i
-````
+   ````
 
 3. Inicia el servidor de desarrollo:
+   
    ```bash
    npm run dev
    ```

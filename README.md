@@ -12,8 +12,6 @@ Sigue las instrucciones a continuación para configurar el entorno de desarrollo
    git clone https://github.com/xsolarxx/FRONTEND.git
    ```
 
-````
-
 2. Instala las dependencias:
 
    ```bash

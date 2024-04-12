@@ -1,8 +1,42 @@
-# React + Vite
+## FRONT REPO XSOLARX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene el código del front de xsolarx, un proyecto desarrollado como parte de un bootcamp. Para empezar a explorar y trabajar con la aplicación localmente, sigue los pasos que se detallan a continuación:
 
-Currently, two official plugins are available:
+**IMPORTANTE:** Recuerda iniciar el backend y mantenerlo en ejecución para que el frontend funcione correctamente. Además, asegúrate de tener el archivo `.env` presente en el proyecto. Si no lo tienes, ponte en contacto con algún miembro del equipo o consulta en Notion. Este archivo debería estar en el backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Sigue las instrucciones a continuación para configurar el entorno de desarrollo:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/xsolarxx/FRONTEND.git
+   ```
+
+````
+
+2. Instala las dependencias:
+
+   ```bash
+   npm i
+````
+
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+Si todo se realiza correctamente, verás algo similar a esto en la terminal:
+
+```bash
+frontxsolarx@0.0.0 dev
+
+> vite
+
+The CJS build of Vite's Node API is deprecated. See <https://vitejs.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated> for more details.
+
+VITE v5.1.4 ready in 320 ms
+
+➜ Local: <http://localhost:5173/>
+➜ Network: use --host to expose
+➜ press h + enter to show help
+```
